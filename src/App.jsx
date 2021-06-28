@@ -1,44 +1,19 @@
 import React, { useState } from 'react'
+import { HomePage, AboutPage } from './Pages'
 import logo from './logo.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  function doNameShit() {
+    // have a list of names, pick a name, type it out with the cursor flashing and everything, then cursor highlights and selects it and cut it away, pick another name randomly, type that one out, repeat forever
+    // choose a name, loop through the number of characters in that name and type out each character with a little bit of sleep, once finished typing it all out, remove all the characters, use sleeps and shit to add some humanity to it
+    // then have a function call and call and call again and finally call the first one again to randomly pick a name and start the shit over 
+  }
+
+  const [page, setPage] = useState("HomePage")
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-blue-400">Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <AboutPage />
   )
 }
 
