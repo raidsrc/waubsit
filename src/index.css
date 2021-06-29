@@ -6,3 +6,13 @@
 .the-big-nicknames-banner {
   font-family: 'Times New Roman', Times, serif;
 }
+
+.selected-effect {
+  background-color: black;
+  color: white;
+}
+.not-selected {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  color: black;
+}

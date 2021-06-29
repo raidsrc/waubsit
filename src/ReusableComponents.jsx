@@ -1,6 +1,7 @@
 import React from "react"
 
 function Navbar(props) {
+   let setPage = props.setPage
 
    return (
       <div>
@@ -15,9 +16,9 @@ function Navbar(props) {
                sm:space-x-7
                md:space-x-9
                lg:space-x-12">
-                  <div className="w-auto">About</div>
-                  <div className="w-auto">Résumé</div>
-                  <div className="w-auto">Find Me</div>
+                  <Button className="w-auto" onClick={()=>{setPage("AboutPage")}}>About</Button>
+                  <Button className="w-auto" onClick={()=>{setPage("ResumePage")}}>Résumé</Button>
+                  <Button className="w-auto" onClick={()=>{setPage("FindMePage")}}>Find Me</Button>
                </div>
             </div>
          </div>
@@ -28,6 +29,9 @@ function Navbar(props) {
 
 function Button(props) {
 
+   return (
+      <button className={props.className} onClick={props.onClick}>{props.children}</button>
+   )
 }
 
 function ClickableRaidsrcIcon(props) {
@@ -38,5 +42,11 @@ function ClickableRaidsrcIcon(props) {
    )
 }
 
-export { Navbar, Button, ClickableRaidsrcIcon }
+function CenteredFullPageFlexContainer(props) {
+   return (
+      <div className="flex justify-center w-full">{props.children}</div>
+   )
+}
+
+export { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer }
 

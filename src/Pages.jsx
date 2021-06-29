@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react"
 import './index.css'
-import { Navbar, Button, ClickableRaidsrcIcon } from './ReusableComponents'
+import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer } from './ReusableComponents'
 
 function HomePage(props) {
-
+   return (
+      <div>
+         This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      </div>
+   )
 }
 
 function AboutPage(props) {
    const [nameStage, setNameStage] = useState("empty")
    const [nameBoxContents, setNameBoxContents] = useState("")
+   const [timeToSelect, setTimeToSelect] = useState(false)
 
    function doNameShit() {
       if (nameStage == "empty") { // if we ain't run yet
@@ -21,7 +26,7 @@ function AboutPage(props) {
 
       function randomlyPickName() { // returns a random name string from this namesList
          const namesList = [
-            "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "Lei Mung", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Half of Sonar Alchemy", "Big Head"
+            "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "Ray Mahn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Half of Sonar Alchemy", "1337+", "Big Head"
          ]
          function getRandomInt(min, max) {
             min = Math.ceil(min);
@@ -33,14 +38,10 @@ function AboutPage(props) {
       }
 
       setTimeout(function () { letsGo() }, 200) // start the infinite function calling cycle 
-      
+
       function letsGo() {
          let randomlyChosenName = randomlyPickName()
          setTimeout(function () { typeInName(randomlyChosenName, 0) }, 200)
-      }
-
-      function alwaysChooseFirstThreeNames() {
-
       }
 
       function typeInName(name, i) {
@@ -55,44 +56,72 @@ function AboutPage(props) {
              */
             let nameSubstring = name.substring(0, i)
             setNameBoxContents(nameSubstring)
-            setTimeout(function () { typeInName(name, i + 1) }, 100)
+            setTimeout(function () { typeInName(name, i + 1) }, 70)
          } else {
-            console.log("done")
             setNameStage("finished")
-            setTimeout((name) => { eraseName(name) }, 2000)
+            setTimeout((name) => { eraseName(name) }, 1500)
          }
       }
       function eraseName(name) {
-         // need to make it look like i'm selecting the text and deleting it. need a css pseudostate select thing. idk.
-         setTimeout(() => { setNameBoxContents("") }, 1000)
-         // setNameStage("empty")
-         setTimeout(() => { letsGo() }, 1000)
+         setTimeToSelect(true) // this will make the text look like it got selected 
+         setTimeout(() => { setNameBoxContents("") }, 750) // after it gets selected, we wait 1 second, then we erase the shit
+         setTimeout(() => { setTimeToSelect(false) }, 690) // after it gets selected, we wait and remove the selected effect. interestingly this timeout doesn't start up after setting the name box contents. it begins immediately after setTimeToSelect 
+         setTimeout(() => { letsGo() }, 2000) // 2 seconds after we remove the selected effect, we restart the cycle 
       }
 
    }
 
+   function NameInputTypingEffectBox(props) {
+      let timeToSelect = props.timeToSelect
+      let theClassName = props.className
+      if (timeToSelect) {
+         theClassName += "font-bold selected-effect"
+      } else {
+         theClassName += "font-bold not-selected"
+      }
+      return (
+         <span className={theClassName} readOnly type="text">{nameBoxContents}</span>
+      )
+   }
+
    return (
       <div>
-         <Navbar />
-         <div className="flex justify-center w-full">
-            <div className="w-11/12 max-w-screen-xl flex flex-col justify-center">
-               <div className="the-big-nicknames-banner rounded-md p-6 mt-24 bg-gray-100 font-serif text-xl font-bold
+         <Navbar setPage={props.setPage} />
+         <CenteredFullPageFlexContainer>
+            <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-24">
+               <span className="text-6xl bg-red-600 mb-6">
+                  site construction in progress BE PATIENT
+               </span>
+               <div className="the-big-nicknames-banner rounded-md p-6 bg-gray-100 font-serif text-xl font-bold
                tiny-screen:text-2xl
                sm:text-3xl
                lg:text-3xl
                xl:text-4xl
-               2xl:text-5xl" onLoad={doNameShit()}>
-                  <input className="font-bold" readOnly type="text" value={nameBoxContents} /> <br />
-                  site constru ction in progress BE PATIENT
+               2xl:text-5xl" >
+                  <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} /> <br />
                </div>
                <p className="text-center text-white py-10 text-xl">
-                  I'm Ray. I've gone by many names in my life. Some of those names were given. Some of them were chosen. Some are funny, and some are cool. Some of them I really like. Others, not so much. But these names reflect how the world sees me, and I've taken them to heart. <br /><br />
-                  i'm aiming to make this a react app that shows you various shits if you click on buttons up top like my resume and where you can find me online, scrollable up and down here on the main page and everything. i think i ought to make the things on different pages though so when you click you go to a different page, not just a single page app type thing, gotta have multiple pages to click to and from, but reuse your components to practice designing reactively and efficiently. nah never mind i'll make it a single page react app. it's cooler that way lol  </p>
+                  I'm Ray. People have known me by many names throughout my life. Some of those names were given to me. Some of them I chose. Some are funny, and some are cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.<br /><br />
+
+                  I come from the San Francisco Bay Area. I've seen and experienced a great deal of the world; still, the Bay remains my favorite place, and California remains my favorite state. <br /><br />
+
+                  text text text alsdkfjasldkfjasldkfj asdlfkj asdlkf jasdlkf jasd i'm aiming to make this a react app that shows you various shits if you click on buttons up top like my resume and where you can find me online, scrollable up and down here on the main page and everything. i think i ought to make the things on different pages though so when you click you go to a different page, not just a single page app type thing, gotta have multiple pages to click to and from, but reuse your components to practice designing reactively and efficiently. nah never mind i'll make it a single page react app. it's cooler that way lol  </p>
                <a href="elsewhere.html" className="text-white">wsup</a>
             </div>
-         </div>
+         </CenteredFullPageFlexContainer>
       </div>
    )
 }
 
-export { HomePage, AboutPage }
+function ResumePage(props) {
+   return (
+      <div>
+         <Navbar setPage={props.setPage} />
+         <CenteredFullPageFlexContainer>
+            resume goes here eventually
+         </CenteredFullPageFlexContainer>
+      </div>
+   )
+}
+
+export { HomePage, AboutPage, ResumePage }
