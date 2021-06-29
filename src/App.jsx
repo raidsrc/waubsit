@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
 
-  const [page, setPage] = useState("AboutPage")
+  const [page, setPage] = useState("HomePage")
 
 
   if (page === "HomePage") {
