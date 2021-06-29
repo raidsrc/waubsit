@@ -69,7 +69,7 @@ function AboutPage(props) {
              */
             let nameSubstring = name.substring(0, i)
             setNameBoxContents(nameSubstring)
-            setTimeout(function () { typeInName(name, i + 1) }, 70)
+            setTimeout(function () { typeInName(name, i + 1) }, 60)
          } else {
             setNameStage("finished")
             setTimeout((name) => { eraseName(name) }, 1500)
@@ -77,8 +77,8 @@ function AboutPage(props) {
       }
       function eraseName(name) {
          setTimeToSelect(true) // this will make the text look like it got selected 
-         setTimeout(() => { setNameBoxContents("") }, 750) // after it gets selected, we wait 1 second, then we erase the shit
-         setTimeout(() => { setTimeToSelect(false) }, 690) // after it gets selected, we wait and remove the selected effect. interestingly this timeout doesn't start up after setting the name box contents. it begins immediately after setTimeToSelect 
+         setTimeout(() => { setNameBoxContents("") }, 550) // after it gets selected, we wait, then we erase the shit
+         setTimeout(() => { setTimeToSelect(false) }, 600) // after it gets selected, we wait and remove the selected effect. interestingly this timeout doesn't start up after setting the name box contents. it begins immediately after setTimeToSelect. must be javascript immediately jumping through my shit to be fast. asynchronous actions. i think. 
          if (abort == false) {
             setTimeout(() => { letsGo() }, 2000) // 2 seconds after we remove the selected effect, we restart the cycle 
          }
