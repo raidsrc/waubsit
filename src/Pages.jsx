@@ -5,7 +5,10 @@ import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer } f
 function HomePage(props) {
    return (
       <div>
-         This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+         <Navbar setPage={props.setPage} />
+         <CenteredFullPageFlexContainer>
+            <br /><br /><br /><br /> This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+         </CenteredFullPageFlexContainer>
       </div>
    )
 }
@@ -88,7 +91,6 @@ function AboutPage(props) {
       <div>
          <Navbar setPage={props.setPage} />
          <CenteredFullPageFlexContainer>
-            <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-24">
                <span className="text-6xl bg-red-600 mb-6">
                   site construction in progress BE PATIENT
                </span>
@@ -101,13 +103,12 @@ function AboutPage(props) {
                   <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} /> <br />
                </div>
                <p className="text-center text-white py-10 text-xl">
-                  I'm Ray. People have known me by many names throughout my life. Some of those names were given to me. Some of them I chose. Some are funny, and some are cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.<br /><br />
+                  I'm Ray. People have known me by many names throughout my life. Some of these names were given to me. Some of them I chose. Some are funny, and some are cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.<br /><br />
 
                   I come from the San Francisco Bay Area. I've seen and experienced a great deal of the world; still, the Bay remains my favorite place, and California remains my favorite state. <br /><br />
 
                   text text text alsdkfjasldkfjasldkfj asdlfkj asdlkf jasdlkf jasd i'm aiming to make this a react app that shows you various shits if you click on buttons up top like my resume and where you can find me online, scrollable up and down here on the main page and everything. i think i ought to make the things on different pages though so when you click you go to a different page, not just a single page app type thing, gotta have multiple pages to click to and from, but reuse your components to practice designing reactively and efficiently. nah never mind i'll make it a single page react app. it's cooler that way lol  </p>
                <a href="elsewhere.html" className="text-white">wsup</a>
-            </div>
          </CenteredFullPageFlexContainer>
       </div>
    )
@@ -118,10 +119,21 @@ function ResumePage(props) {
       <div>
          <Navbar setPage={props.setPage} />
          <CenteredFullPageFlexContainer>
-            resume goes here eventually
+            <br /><br /><br /><br />resume goes here eventually
          </CenteredFullPageFlexContainer>
       </div>
    )
 }
 
-export { HomePage, AboutPage, ResumePage }
+function FindMePage(props) {
+   return (
+      <div>
+         <Navbar setPage={props.setPage} />
+         <CenteredFullPageFlexContainer>
+            <br /><br /><br /><br />twitter youtube that's it lol i ain't online a whole lot
+         </CenteredFullPageFlexContainer>
+      </div>
+   )
+}
+
+export { HomePage, AboutPage, ResumePage, FindMePage }

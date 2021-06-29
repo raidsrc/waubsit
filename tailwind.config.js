@@ -2,7 +2,11 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        'yuge': '1700px',
+      },
+    },
     screens: {
       'puny-ass-screen': '360px',
       // => @media (min-width: 640px) { ... }
@@ -13,6 +17,7 @@ module.exports = {
       "xl": "1280px",
       "2xl": "1536px",
     },
+
   },
   variants: {
     extend: {},
