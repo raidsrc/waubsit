@@ -5,7 +5,7 @@ function Navbar(props) {
 
    return (
       <div>
-         <div className="bg-gray-900 shadow-lg flex fixed justify-center w-full">
+         <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
             <div className="flex flex-row text-white top-0 w-full justify-between py-2 px-4 items-center max-w-yuge
             tiny-screen:py-3 tiny-screen:px-5
             sm:px-10

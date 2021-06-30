@@ -104,12 +104,14 @@ function AboutPage(props) {
 
    return (
       <div>
-         <Navbar setPage={props.setPage} />
+         <Navbar setPage={props.setPage} /> {
+            // TODO: IMPLEMENT HAMBURGER MENU FOR MOBILE SMALL SCREEN
+         }
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
             </span>
-            <div className="the-big-nicknames-banner rounded-md p-6 bg-gray-100 font-serif text-xl font-bold
+            <div className="the-big-nicknames-banner rounded-md p-6 bg-gray-100 font-serif text-xl font-bold shadow-sm
                tiny-screen:text-2xl
                sm:text-3xl
                lg:text-3xl
@@ -117,7 +119,9 @@ function AboutPage(props) {
                2xl:text-5xl" >
                <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} /> <br />
             </div>
-            <p className="text-center text-white py-10 text-xl">
+            <p className="text-center text-white py-10 text-lg
+            sm:text-xl
+            xl:text-2xl">
                I'm Ray. People have known me by many names throughout my life. Some of these names were given to me. Some of them I chose. Some are funny, and some are cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.<br /><br />
 
                I come from the San Francisco Bay Area. I've seen and experienced a great deal of the world; still, the Bay remains my favorite place, and California remains my favorite state. <br /><br />
