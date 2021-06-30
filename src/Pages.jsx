@@ -6,6 +6,9 @@ function HomePage(props) {
    return (
       <div>
          <Navbar setPage={props.setPage} />
+         {
+            // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
+         }
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
@@ -165,6 +168,9 @@ function FindMePage(props) {
                   <span className="px-4 text-lg font-semibold">/c/raidsrc</span>
                </div>
             </div>
+            {
+               // TODO: CREDIT ICONMONSTR FOR THE ICONS
+            }
          </CenteredFullPageFlexContainer>
       </div>
    )
