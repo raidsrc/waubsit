@@ -59,10 +59,11 @@ function CenteredFullPageFlexContainer(props) {
    const animationProps = useSpring({
       to: { opacity: 1 },
       from: { opacity: 0 },
-      delay: 50,
+      delay: 10,
       config: {
-         duration: 500
+         duration: 250
       }
+      //TODO: ADD TRANSITION FADES INTO AND OUT OF EACH PAGE WHEN YOU CLICK
    })
    return (
       <animated.div className="flex justify-center w-full" style={animationProps}>
