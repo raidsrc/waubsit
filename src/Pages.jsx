@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useSpring, animated } from "react-spring"
 import './index.css'
-import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer } from './ReusableComponents'
+import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount } from './ReusableComponents'
 
 function HomePage(props) {
    const animationProps = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 800 })

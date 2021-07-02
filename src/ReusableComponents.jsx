@@ -1,5 +1,5 @@
-import React from "react"
-import { useSpring, animated } from "react-spring"
+import React, { useState } from "react"
+import { useSpring, useTransition, animated, config } from "react-spring"
 
 function Navbar(props) {
    let setPage = props.setPage
@@ -65,14 +65,34 @@ function CenteredFullPageFlexContainer(props) {
       }
       //TODO: ADD TRANSITION FADES INTO AND OUT OF EACH PAGE WHEN YOU CLICK
    })
+   //const transition = useTransition()
    return (
       <animated.div className="flex justify-center w-full" style={animationProps}>
          <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-24">
             {props.children}
+            <div className="tiny-animation-test-div text-5xl text-center mt-10">
+               sup
+               <Mount className="mt-24"></Mount>
+            </div>
          </div>
       </animated.div>
    )
 }
+function Mount() {
+   const [show, set] = useState(false)
+   const transitions = useTransition(show, { // useTransition returns a function. this makes transitions a function.
+      from: { opacity: 0.5 },
+      enter: { opacity: 1 },
+      leave: { opacity: 0.5 },
+      reverse: show,
+      delay: 200,
+      config: config.molasses,
+      onRest: () => set(!show),
+   })
+   return transitions( // transitions is a function!!!
+      (styles, item) => item && <animated.div style={styles}>✌️</animated.div>
+   )
+}
 
-export { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer }
+export { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount }
 
