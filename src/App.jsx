@@ -10,19 +10,19 @@ function App() {
 
   if (page === "HomePage") {
     return (
-      <HomePage setPage={setPage} />
+      <HomePage page={page} setPage={setPage} />
     )
   } else if (page === "AboutPage") {
     return (
-      <AboutPage setPage={setPage} />
+      <AboutPage page={page} setPage={setPage} />
     )
   } else if (page === "ResumePage") {
     return (
-      <ResumePage setPage={setPage} />
+      <ResumePage page={page} setPage={setPage} />
     )
   } else if (page === "FindMePage") {
     return (
-      <FindMePage setPage={setPage} />
+      <FindMePage page={page} setPage={setPage} />
     )
   }
 }

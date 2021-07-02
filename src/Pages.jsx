@@ -11,7 +11,7 @@ function HomePage(props) {
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
-         <CenteredFullPageFlexContainer>
+         <CenteredFullPageFlexContainer page={props.page}>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
             </span>

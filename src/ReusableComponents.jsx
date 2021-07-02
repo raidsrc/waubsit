@@ -1,5 +1,5 @@
-import React from "react"
-import { useSpring, animated } from "react-spring"
+import React, { useState } from "react"
+import { Transition, useSpring, animated, useTransition } from "react-spring"
 
 function Navbar(props) {
    let setPage = props.setPage
@@ -56,20 +56,33 @@ function ClickableRaidsrcIcon(props) {
 }
 
 function CenteredFullPageFlexContainer(props) {
-   const animationProps = useSpring({
-      to: { opacity: 1 },
-      from: { opacity: 0 },
-      delay: 50,
-      config: {
-         duration: 500
-      }
+   const [isVisible, setIsVisible] = useState(true)
+   let page = props.page
+   // const animationProps = useSpring({
+   //    to: { opacity: 1, },
+   //    from: { opacity: 0, },
+   //    delay: 50,
+   //    config: {
+   //       duration: 500
+   //    }
+   // })
+   const transition = useTransition(page, {
+      from: { opacity: 0.5 },
+      enter: { opacity: 1 },
+      leave: { opacity: 0.1 },
    })
    return (
-      <animated.div className="flex justify-center w-full" style={animationProps}>
-         <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-24">
-            {props.children}
-         </div>
-      </animated.div>
+      <div>
+         hi
+         {transition((style, item) => {
+            item ? <animated.div style={style}>sldkf<br />jal<br />ks<br />djf<br />alk<br />sdjfla<br />ks<br />jdf</animated.div> : <div>no</div>
+            // <animated.div className="flex justify-center w-full" style={style}>
+            //    <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-24">
+            //       {props.children}
+            //    </div>
+            // </animated.div>
+         })}
+      </div>
    )
 }
 
