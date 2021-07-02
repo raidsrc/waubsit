@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react"
+import { useSpring, animated } from "react-spring"
 import './index.css'
 import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer } from './ReusableComponents'
 
 function HomePage(props) {
+   const animationProps = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 800 })
    return (
       <div>
          <Navbar setPage={props.setPage} />
@@ -32,7 +34,6 @@ function AboutPage(props) {
          setAbort(true)
       }
    })
-
 
    function doNameShit() {
       if (nameStage == "empty" && abort == false) { // if we ain't run yet

@@ -1,8 +1,8 @@
 import React from "react"
+import { useSpring, animated } from "react-spring"
 
 function Navbar(props) {
    let setPage = props.setPage
-
    return (
       <div>
          <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
@@ -56,12 +56,20 @@ function ClickableRaidsrcIcon(props) {
 }
 
 function CenteredFullPageFlexContainer(props) {
+   const animationProps = useSpring({
+      to: { opacity: 1 },
+      from: { opacity: 0 },
+      delay: 50,
+      config: {
+         duration: 500
+      }
+   })
    return (
-      <div className="flex justify-center w-full">
+      <animated.div className="flex justify-center w-full" style={animationProps}>
          <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-24">
             {props.children}
          </div>
-      </div>
+      </animated.div>
    )
 }
 
