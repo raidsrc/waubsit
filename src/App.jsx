@@ -20,7 +20,7 @@ function App() {
       )
     } else if (page === "ResumePage") {
       return (
-        <ResumePage showMount={showMount} setShowMount={setShowMount}/>
+        <ResumePage showMount={showMount} setShowMount={setShowMount} />
       )
     } else if (page === "FindMePage") {
       return (
@@ -28,10 +28,10 @@ function App() {
       )
     }
   }
-
+  
   return (
     <div>
-      <Navbar setPage={setPage} setShowMount={setShowMount}/>
+      <Navbar setPage={setPage} setShowMount={setShowMount} />
       <PickThePage />
     </div>
   )

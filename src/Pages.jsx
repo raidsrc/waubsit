@@ -147,10 +147,6 @@ function ResumePage(props) {
    function unmount() {
       setShowMount(false)
    }
-   useEffect(() => {
-      setShowMount(true)
-      console.log("used effect ")
-   })
    return (
       <div>
          <CenteredFullPageFlexContainer>
