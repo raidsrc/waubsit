@@ -151,11 +151,15 @@ function ResumePage(props) {
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
             </span>
-            resume goes here eventually
+            resume goes here eventually<br /><br />
+            <span className="text-base">
+               the peace sign emoji gets mounted along with everything else on this page when we load up. you can click the ugly ass button below to unmount. the mount and unmount will both be animated. also, clicking another button on the navbar to navigate away from this page of the react app will technically unmount the peace sign emoji, but it won't trigger a smooth sliding away animation because the act of clicking a button on the navbar does not directly set the showMount state variable and thus does not trigger an animation. <br />
+               <button className="border-4 font-black" onClick={() => unmount()}>unmount the peace sign emoji</button>
+            </span>
          </CenteredFullPageFlexContainer>
          <div className="text-6xl text-center mt-10">
-            <button className="border-4" onClick={() => unmount()}>Get rid of that mount component (unmount it!)</button>
-            <Mount show={showMount} setShow={setShowMount}/>
+
+            <Mount show={showMount} setShow={setShowMount} />
          </div>
       </div>
    )

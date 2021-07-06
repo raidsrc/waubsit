@@ -82,7 +82,7 @@ function CenteredFullPageFlexContainer(props) {
 
 function Mount(props) {
    let show = props.show
-   let set = props.setShow 
+   let set = props.setShow
    useEffect(() => {
       // set(true)
       // console.log("used effect ")
@@ -92,16 +92,30 @@ function Mount(props) {
       }
    })
    const transitions = useTransition(show, {
-      from: { opacity: 0, x: -400 },
-      enter: { opacity: 1, x: -250 },
-      leave: { opacity: 0, x: -100 },
+      from: { opacity: 0, x: -200 },
+      enter: { opacity: 1, x: 0},
+      leave: { opacity: 0, x: 200 },
       //reverse: show,
       delay: 1,
       //config: config.molasses,
+      config: {
+         duration: 2000,
+      }
       //onRest: () => set(!show),
    })
    return transitions(
-      (styles, item) => item && <animated.div style={styles}>✌️</animated.div>
+      (styles, item) => item &&
+         <animated.div style={styles}>
+            <div className="text-sm">
+               ✌️ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, mollitia.</span>
+               <div>
+                  There's a lot of stuff in this div
+               </div>
+               <div>
+                  12345678901234567890-=-0-=-=_)-09*90-)9876%43@#$567*()
+               </div>
+            </div>
+         </animated.div>
    )
 }
 
