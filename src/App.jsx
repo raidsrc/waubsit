@@ -7,8 +7,14 @@ function App() {
 
   const [page, setPage] = useState("HomePage")
   const [showMount, setShowMount] = useState(true)
+  function doSetShowMount (value) {
+    setShowMount(value)
+  }
 
   function PickThePage(props) {
+    let showMount = props.showMount 
+    let doSetShowMount = props.doSetShowMount 
+    let page=props.page
 
     if (page === "HomePage") {
       return (
@@ -20,7 +26,7 @@ function App() {
       )
     } else if (page === "ResumePage") {
       return (
-        <ResumePage showMount={showMount} setShowMount={setShowMount} />
+        <ResumePage page={page} showMount={showMount} doSetShowMount={doSetShowMount} />
       )
     } else if (page === "FindMePage") {
       return (
@@ -32,7 +38,7 @@ function App() {
   return (
     <div>
       <Navbar setPage={setPage} setShowMount={setShowMount} />
-      <PickThePage />
+      <PickThePage page={page} showMount={showMount} doSetShowMount={doSetShowMount}/>
     </div>
   )
 }
