@@ -145,11 +145,11 @@ function ResumePage(props) {
    let showMount = props.showMount
    let doSetShowMount = props.doSetShowMount
    let page = props.page
-   useEffect(() => {
-      if (showMount === false && page === "ResumePage") {
-         doSetShowMount(true)
-      }
-   })
+   // useEffect(() => {
+   //    if (showMount === false && page === "ResumePage") {
+   //       doSetShowMount(true)
+   //    }
+   // })
    function unmount() {
       doSetShowMount(false)
    }

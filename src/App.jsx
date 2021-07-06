@@ -3,6 +3,30 @@ import { HomePage, AboutPage, ResumePage, FindMePage } from './Pages'
 import { Navbar } from './ReusableComponents'
 import './App.css'
 
+function PickThePage(props) {
+  let showMount = props.showMount 
+  let doSetShowMount = props.doSetShowMount 
+  let page=props.page
+
+  if (page === "HomePage") {
+    return (
+      <HomePage />
+    )
+  } else if (page === "AboutPage") {
+    return (
+      <AboutPage />
+    )
+  } else if (page === "ResumePage") {
+    return (
+      <ResumePage page={page} showMount={showMount} doSetShowMount={doSetShowMount} />
+    )
+  } else if (page === "FindMePage") {
+    return (
+      <FindMePage />
+    )
+  }
+}
+
 function App() {
 
   const [page, setPage] = useState("HomePage")
@@ -11,29 +35,6 @@ function App() {
     setShowMount(value)
   }
 
-  function PickThePage(props) {
-    let showMount = props.showMount 
-    let doSetShowMount = props.doSetShowMount 
-    let page=props.page
-
-    if (page === "HomePage") {
-      return (
-        <HomePage />
-      )
-    } else if (page === "AboutPage") {
-      return (
-        <AboutPage />
-      )
-    } else if (page === "ResumePage") {
-      return (
-        <ResumePage page={page} showMount={showMount} doSetShowMount={doSetShowMount} />
-      )
-    } else if (page === "FindMePage") {
-      return (
-        <FindMePage />
-      )
-    }
-  }
   
   return (
     <div>

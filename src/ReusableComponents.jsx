@@ -3,6 +3,7 @@ import { useSpring, useTransition, animated, config } from "react-spring"
 
 function Navbar(props) {
    let setPage = props.setPage
+   let setShowMount = props.setShowMount 
    return (
       <div>
          <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
@@ -84,22 +85,23 @@ function Mount(props) {
    let show = props.show
    let set = props.doSetShow
    let page = props.page
+   console.log("rendered mount. show:", show)
 
-   useEffect(() => {
-      //set(true)
-      //console.log("used effect ")
-      return function cleanup() {
-         console.log("cleaned up")
-         set(false)
-      }
-   })
+   // useEffect(() => {
+   //    //set(true)
+   //    //console.log("used effect ")
+   //    return function cleanup() {
+   //       console.log("cleaned up")
+   //       set(false)
+   //    }
+   // })
 
    const transitions = useTransition(show, {
       from: { opacity: 0, x: -200 },
       enter: { opacity: 1, x: 0 },
       leave: { opacity: 0, x: 200 },
       //reverse: show,
-      delay: 1,
+      delay: 10,
       //config: config.molasses,
       // config: {
       //    duration: 2000,
