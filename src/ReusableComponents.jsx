@@ -82,6 +82,7 @@ function CenteredFullPageFlexContainer(props) {
 
 function Mount(props) {
    useEffect(() => {
+      set(true)
       return function cleanup () {
          set(false)
       }
@@ -94,7 +95,7 @@ function Mount(props) {
       leave: { opacity: 0, x: 100 },
       reverse: show,
       delay: 100,
-      config: config.molasses,
+      //config: config.molasses,
       onRest: () => set(!show), // onRest (when the animation finishes and we are resting there not doing anything not transitioning not doing shit[or when the animation is sitting still at the start!!!]) we flip the value of show. if it's true it's now false. if it's false it's now true. 
    })
    return transitions( // transitions is a function!!! it accepts a callback function that takes 4 arguments but you only need to worry about 2 for now: the animated values, aka styles, and the item you want to animate. 
