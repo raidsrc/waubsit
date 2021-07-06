@@ -3,11 +3,14 @@ import { useSpring, animated } from "react-spring"
 import './index.css'
 import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount } from './ReusableComponents'
 
+//TODO: make navbar always present and unchanging on every single page, but change the stuff underneath it over and over and over again 
+// what the fuck do i do?
+// i should make homepage and aboutpage and all that shit not include the navbar. make it like the lyluck site. homepage will refer to the stuff underneath the navbar. the navbar will always be present. navbar is forever. navbar is eternal. navbar is all there is. navbar is the world. navbar is the universe 
+
 function HomePage(props) {
    const animationProps = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 800 })
    return (
       <div>
-         <Navbar setPage={props.setPage} />
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
@@ -108,7 +111,7 @@ function AboutPage(props) {
 
    return (
       <div>
-         <Navbar setPage={props.setPage} /> {
+         {
             // TODO: IMPLEMENT HAMBURGER MENU FOR MOBILE SMALL SCREEN
          }
          <CenteredFullPageFlexContainer>
@@ -138,15 +141,18 @@ function AboutPage(props) {
 }
 
 function ResumePage(props) {
+   const [show, set] = useState(true)
    return (
       <div>
-         <Navbar setPage={props.setPage} />
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
             </span>
             resume goes here eventually
          </CenteredFullPageFlexContainer>
+         <div className="text-6xl text-center mt-10">
+            <Mount />
+         </div>
       </div>
    )
 }
@@ -154,7 +160,6 @@ function ResumePage(props) {
 function FindMePage(props) {
    return (
       <div>
-         <Navbar setPage={props.setPage} />
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
