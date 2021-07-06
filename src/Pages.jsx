@@ -143,7 +143,7 @@ function AboutPage(props) {
 function ResumePage(props) {
    console.log("rendered resume page")
    let showMount = props.showMount
-   let doSetShowMount = props.doSetShowMount
+   let setShowMount = props.setShowMount
    let page = props.page
    // useEffect(() => {
    //    if (showMount === false && page === "ResumePage") {
@@ -151,7 +151,7 @@ function ResumePage(props) {
    //    }
    // })
    function unmount() {
-      doSetShowMount(false)
+      setShowMount(false)
    }
    return (
       <div>
@@ -166,7 +166,7 @@ function ResumePage(props) {
             </span>
          </CenteredFullPageFlexContainer>
          <div className="text-6xl text-center mt-10">
-            <Mount page={page} show={showMount} doSetShow={doSetShowMount} />
+            <Mount page={page} show={showMount} setShow={setShowMount} />
          </div>
       </div>
    )

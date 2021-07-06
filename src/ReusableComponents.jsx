@@ -3,7 +3,7 @@ import { useSpring, useTransition, animated, config } from "react-spring"
 
 function Navbar(props) {
    let setPage = props.setPage
-   let setShowMount = props.setShowMount 
+   let setShowMount = props.setShowMount
    return (
       <div>
          <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
@@ -40,7 +40,6 @@ function Navbar(props) {
 }
 
 function Button(props) {
-
    return (
       <button className={props.className} onClick={props.onClick}>{props.children}</button>
    )
@@ -83,7 +82,7 @@ function CenteredFullPageFlexContainer(props) {
 
 function Mount(props) {
    let show = props.show
-   let set = props.doSetShow
+   let set = props.setShow
    let page = props.page
    console.log("rendered mount. show:", show)
 

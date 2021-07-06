@@ -4,9 +4,9 @@ import { Navbar } from './ReusableComponents'
 import './App.css'
 
 function PickThePage(props) {
-  let showMount = props.showMount 
-  let doSetShowMount = props.doSetShowMount 
-  let page=props.page
+  let showMount = props.showMount
+  let setShowMount = props.setShowMount
+  let page = props.page
 
   if (page === "HomePage") {
     return (
@@ -18,7 +18,7 @@ function PickThePage(props) {
     )
   } else if (page === "ResumePage") {
     return (
-      <ResumePage page={page} showMount={showMount} doSetShowMount={doSetShowMount} />
+      <ResumePage page={page} showMount={showMount} setShowMount={setShowMount} />
     )
   } else if (page === "FindMePage") {
     return (
@@ -28,18 +28,13 @@ function PickThePage(props) {
 }
 
 function App() {
-
   const [page, setPage] = useState("HomePage")
   const [showMount, setShowMount] = useState(true)
-  function doSetShowMount (value) {
-    setShowMount(value)
-  }
 
-  
   return (
     <div>
       <Navbar setPage={setPage} setShowMount={setShowMount} />
-      <PickThePage page={page} showMount={showMount} doSetShowMount={doSetShowMount}/>
+      <PickThePage page={page} showMount={showMount} setShowMount={setShowMount} />
     </div>
   )
 }
