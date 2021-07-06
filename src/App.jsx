@@ -6,7 +6,7 @@ import './App.css'
 function App() {
 
   const [page, setPage] = useState("HomePage")
-  
+  const [showMount, setShowMount] = useState(true)
 
   function PickThePage(props) {
 
@@ -20,7 +20,7 @@ function App() {
       )
     } else if (page === "ResumePage") {
       return (
-        <ResumePage />
+        <ResumePage showMount={showMount} setShowMount={setShowMount}/>
       )
     } else if (page === "FindMePage") {
       return (
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div>
-      <Navbar setPage={setPage} />
+      <Navbar setPage={setPage} setShowMount={setShowMount}/>
       <PickThePage />
     </div>
   )

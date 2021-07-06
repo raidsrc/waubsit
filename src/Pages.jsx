@@ -141,7 +141,8 @@ function AboutPage(props) {
 }
 
 function ResumePage(props) {
-   const [showMount, setShowMount] = useState(true)
+   let showMount = props.showMount
+   let setShowMount = props.setShowMount
    function unmount() {
       setShowMount(false)
    }
@@ -158,7 +159,6 @@ function ResumePage(props) {
             </span>
          </CenteredFullPageFlexContainer>
          <div className="text-6xl text-center mt-10">
-
             <Mount show={showMount} setShow={setShowMount} />
          </div>
       </div>

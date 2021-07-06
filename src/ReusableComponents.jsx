@@ -93,14 +93,14 @@ function Mount(props) {
    })
    const transitions = useTransition(show, {
       from: { opacity: 0, x: -200 },
-      enter: { opacity: 1, x: 0},
+      enter: { opacity: 1, x: 0 },
       leave: { opacity: 0, x: 200 },
       //reverse: show,
       delay: 1,
       //config: config.molasses,
-      config: {
-         duration: 2000,
-      }
+      // config: {
+      //    duration: 2000,
+      // }
       //onRest: () => set(!show),
    })
    return transitions(
@@ -112,7 +112,7 @@ function Mount(props) {
                   There's a lot of stuff in this div
                </div>
                <div>
-                  12345678901234567890-=-0-=-=_)-09*90-)9876%43@#$567*()
+                  12345678901234567890-=-0-=-=_)-09*90-)9876%43@#$567*()*(&*^765^46&%7^(8&(*)(*)*-9*_0(*8_)))
                </div>
             </div>
          </animated.div>
