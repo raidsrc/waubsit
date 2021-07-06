@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useSpring, animated } from "react-spring"
+import { useSpring, useTransition, animated, config } from "react-spring"
 import './index.css'
 import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount } from './ReusableComponents'
 
@@ -141,7 +141,7 @@ function AboutPage(props) {
 }
 
 function ResumePage(props) {
-   console.log("rendered resume page")
+   // NOW. TRY TO ANIMATE THE ENTIRETY OF RESUMEPAGE TRANSITIONING AWAY.
    let showMount = props.showMount
    let setShowMount = props.setShowMount
    let page = props.page
@@ -153,21 +153,34 @@ function ResumePage(props) {
    function unmount() {
       setShowMount(false)
    }
-   return (
+
+   const transitions = useTransition(page, {
+      from: { opacity: 0, x: -200 },
+      enter: { opacity: 1, x: 0 },
+      leave: { opacity: 0, x: 200 },
+      //config: config.molasses,
+      config: {
+         duration: 30000,
+      }
+   })
+   return transitions((styles, item) => item &&
       <div>
-         <CenteredFullPageFlexContainer>
-            <span className="text-5xl bg-red-600 mb-6">
-               site construction in progress BE PATIENT
-            </span>
-            resume goes here eventually<br /><br />
-            <span className="text-base">
-               the peace sign emoji gets mounted along with everything else on this page when we load up. you can click the ugly ass button below to unmount. the mount and unmount will both be animated. also, clicking another button on the navbar to navigate away from this page of the react app will technically unmount the peace sign emoji, but it won't trigger a smooth sliding away animation because the act of clicking a button on the navbar does not directly set the showMount state variable and thus does not trigger an animation. <br />
-               <button className="border-4 font-black" onClick={() => unmount()}>unmount the peace sign emoji</button>
-            </span>
-         </CenteredFullPageFlexContainer>
-         <div className="text-6xl text-center mt-10">
-            <Mount page={page} show={showMount} setShow={setShowMount} />
-         </div>
+         <div className="h-14"></div>
+         <animated.div style={styles}>
+            <CenteredFullPageFlexContainer>
+               <span className="text-5xl bg-red-600 mb-6">
+                  site construction in progress BE PATIENT
+               </span>
+               resume goes here eventually<br /><br />
+               <span className="text-base">
+                  the peace sign emoji gets mounted along with everything else on this page when we load up. you can click the ugly ass button below to unmount. the mount and unmount will both be animated. also, clicking another button on the navbar to navigate away from this page of the react app will technically unmount the peace sign emoji, but it won't trigger a smooth sliding away animation because the act of clicking a button on the navbar does not directly set the showMount state variable and thus does not trigger an animation. <br />
+                  <button className="border-4 font-black" onClick={() => unmount()}>unmount the peace sign emoji</button>
+               </span>
+            </CenteredFullPageFlexContainer>
+            <div className="text-6xl text-center mt-10">
+               <Mount page={page} show={showMount} setShow={setShowMount} />
+            </div>
+         </animated.div>
       </div>
    )
 }
