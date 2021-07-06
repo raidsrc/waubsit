@@ -83,14 +83,16 @@ function CenteredFullPageFlexContainer(props) {
 function Mount(props) {
    let show = props.show
    let set = props.setShow
+
    useEffect(() => {
-      // set(true)
-      // console.log("used effect ")
+      //set(true)
+      //console.log("used effect ")
       return function cleanup() {
          console.log("cleaned up")
          set(false)
       }
    })
+
    const transitions = useTransition(show, {
       from: { opacity: 0, x: -200 },
       enter: { opacity: 1, x: 0 },

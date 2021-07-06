@@ -141,11 +141,16 @@ function AboutPage(props) {
 }
 
 function ResumePage(props) {
+   console.log("rendered resume page")
    let showMount = props.showMount
    let setShowMount = props.setShowMount
    function unmount() {
       setShowMount(false)
    }
+   useEffect(() => {
+      setShowMount(true)
+      console.log("used effect ")
+   })
    return (
       <div>
          <CenteredFullPageFlexContainer>
