@@ -141,7 +141,10 @@ function AboutPage(props) {
 }
 
 function ResumePage(props) {
-   const [show, set] = useState(true)
+   const [showMount, setShowMount] = useState(true)
+   function unmount() {
+      setShowMount(false)
+   }
    return (
       <div>
          <CenteredFullPageFlexContainer>
@@ -151,7 +154,8 @@ function ResumePage(props) {
             resume goes here eventually
          </CenteredFullPageFlexContainer>
          <div className="text-6xl text-center mt-10">
-            <Mount />
+            <button className="border-4" onClick={() => unmount()}>Get rid of that mount component (unmount it!)</button>
+            <Mount show={showMount} setShow={setShowMount}/>
          </div>
       </div>
    )
