@@ -4,10 +4,8 @@ import { Navbar } from './ReusableComponents'
 import './App.css'
 
 function App() {
-
   const [page, setPage] = useState("HomePage")
   
-
   function PickThePage(props) {
 
     if (page === "HomePage") {
@@ -19,6 +17,7 @@ function App() {
         <AboutPage />
       )
     } else if (page === "ResumePage") {
+      console.log("mounting ResumePage")
       return (
         <ResumePage />
       )

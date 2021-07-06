@@ -81,6 +81,7 @@ function CenteredFullPageFlexContainer(props) {
 }
 
 function Mount(props) {
+   console.log("rendered Mount")
    let show = props.show
    let set = props.setShow
    useEffect(() => {

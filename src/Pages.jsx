@@ -141,7 +141,9 @@ function AboutPage(props) {
 }
 
 function ResumePage(props) {
+   console.log("rendered ResumePage")
    const [showMount, setShowMount] = useState(true)
+   console.log("showMount:", showMount)
    function unmount() {
       setShowMount(false)
    }
