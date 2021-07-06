@@ -14,6 +14,7 @@ function HomePage(props) {
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
+         <div className="h-20"></div>
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
@@ -114,6 +115,7 @@ function AboutPage(props) {
          {
             // TODO: IMPLEMENT HAMBURGER MENU FOR MOBILE SMALL SCREEN
          }
+         <div className="h-20"></div>
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
@@ -155,17 +157,17 @@ function ResumePage(props) {
    }
 
    const transitions = useTransition(page, {
-      from: { opacity: 0, x: -200 },
+      from: { opacity: 0, x: -100 },
       enter: { opacity: 1, x: 0 },
-      leave: { opacity: 0, x: 200 },
+      leave: { opacity: 0, x: 100 },
       //config: config.molasses,
-      config: {
-         duration: 30000,
-      }
+      // config: {
+      //    duration: 30000,
+      // }
    })
    return transitions((styles, item) => item &&
       <div>
-         <div className="h-14"></div>
+         <div className="h-20"></div>
          <animated.div style={styles}>
             <CenteredFullPageFlexContainer>
                <span className="text-5xl bg-red-600 mb-6">
@@ -188,6 +190,7 @@ function ResumePage(props) {
 function FindMePage(props) {
    return (
       <div>
+         <div className="h-20"></div>
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT

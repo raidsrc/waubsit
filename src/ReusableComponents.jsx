@@ -3,7 +3,6 @@ import { useSpring, useTransition, animated, config } from "react-spring"
 
 function Navbar(props) {
    let setPage = props.setPage
-   let setShowMount = props.setShowMount
    return (
       <div>
          <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
@@ -70,7 +69,7 @@ function CenteredFullPageFlexContainer(props) {
       <animated.div className="flex justify-center w-full"
       //style={animationProps}
       >
-         <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-24">
+         <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-10">
             {props.children}
             <div className="tiny-animation-test-div text-5xl text-center mt-10">
                sup

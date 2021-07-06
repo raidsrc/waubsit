@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div>
-      <Navbar setPage={setPage} setShowMount={setShowMount} />
+      <Navbar setPage={setPage} />
       <PickThePage page={page} showMount={showMount} setShowMount={setShowMount} />
     </div>
   )
