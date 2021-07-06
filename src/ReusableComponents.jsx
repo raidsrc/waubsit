@@ -84,8 +84,8 @@ function Mount(props) {
    let show = props.show
    let set = props.setShow 
    useEffect(() => {
-      set(true)
-      console.log("used effect ")
+      // set(true)
+      // console.log("used effect ")
       return function cleanup() {
          console.log("cleaned up")
          set(false)
