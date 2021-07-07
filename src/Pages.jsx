@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useSpring, useTransition, animated, config } from "react-spring"
 import './index.css'
-import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount } from './ReusableComponents'
+import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount } from './ReusableComponents'
 
 
 function HomePage(props) {
