@@ -3,24 +3,36 @@ import { useSpring, useTransition, animated, config } from "react-spring"
 import './index.css'
 import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount } from './ReusableComponents'
 
-//TODO: make navbar always present and unchanging on every single page, but change the stuff underneath it over and over and over again 
-// what the fuck do i do?
-// i should make homepage and aboutpage and all that shit not include the navbar. make it like the lyluck site. homepage will refer to the stuff underneath the navbar. the navbar will always be present. navbar is forever. navbar is eternal. navbar is all there is. navbar is the world. navbar is the universe 
 
 function HomePage(props) {
    const animationProps = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 800 })
-   return (
+
+   let page = props.page
+   const transitions = useTransition(page, {
+      from: { opacity: 0, x: -100 },
+      enter: { opacity: 1, x: 0 },
+      leave: { opacity: 0, x: 100 },
+      //delay: 1000,
+      config: config.slow,
+      // config: {
+      //    duration: 30000,
+      // }
+   })
+
+   return transitions((style, item) => item &&
       <div className="homepage">
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
          <div className="h-20"></div>
-         <CenteredFullPageFlexContainer>
-            <span className="text-5xl bg-red-600 mb-6">
-               site construction in progress BE PATIENT
-            </span>
-            This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-         </CenteredFullPageFlexContainer>
+         <animated.div style={style}>
+            <CenteredFullPageFlexContainer>
+               <span className="text-5xl bg-red-600 mb-6">
+                  site construction in progress BE PATIENT
+               </span>
+               This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            </CenteredFullPageFlexContainer>
+         </animated.div>
       </div>
    )
 }
@@ -147,6 +159,7 @@ function ResumePage(props) {
    let showMount = props.showMount
    let setShowMount = props.setShowMount
    let page = props.page
+   let setShowPage = props.setShowPage
    // useEffect(() => {
    //    if (showMount === false && page === "ResumePage") {
    //       doSetShowMount(true)
@@ -154,6 +167,9 @@ function ResumePage(props) {
    // })
    function unmount() {
       setShowMount(false)
+   }
+   function unmount2() {
+      setShowPage("FadeOutResumePage")
    }
 
    const transitions = useTransition(page, {
@@ -176,7 +192,8 @@ function ResumePage(props) {
                resume goes here eventually<br /><br />
                <span className="text-base">
                   the peace sign emoji gets mounted along with everything else on this page when we load up. you can click the ugly ass button below to unmount. the mount and unmount will both be animated. also, clicking another button on the navbar to navigate away from this page of the react app will technically unmount the peace sign emoji, but it won't trigger a smooth sliding away animation because the act of clicking a button on the navbar does not directly set the showMount state variable and thus does not trigger an animation. <br />
-                  <button className="border-4 font-black" onClick={() => unmount()}>unmount the peace sign emoji</button>
+                  <button className="border-4 font-black" onClick={() => unmount()}>unmount the peace sign emoji</button><br />
+                  <button className="border-4 font-black mt-8" onClick={() => unmount2()}>unmount the entire resume page</button>
                </span>
             </CenteredFullPageFlexContainer>
             <div className="text-6xl text-center mt-10">

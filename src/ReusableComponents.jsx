@@ -3,7 +3,6 @@ import { useSpring, useTransition, animated, config } from "react-spring"
 
 function Navbar(props) {
    let setPage = props.setPage
-   console.log("rerendered navbar")
    return (
       <nav>
          <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
@@ -100,10 +99,10 @@ function Mount(props) {
       enter: { opacity: 1, x: 0 },
       leave: { opacity: 0, x: 200 },
       //reverse: show,
-      delay: 10,
+      delay: 200,
       //config: config.molasses,
       // config: {
-      //    duration: 2000,
+      //    duration: 10000,
       // }
       //onRest: () => set(!show),
    })
