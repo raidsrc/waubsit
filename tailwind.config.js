@@ -20,7 +20,11 @@ module.exports = {
 
   },
   variants: {
-    extend: {},
+    extend: {
+      textColor: ["active"],
+      brightness: ["active"],
+      filter: ["active"],
+    },
   },
   plugins: [],
 }

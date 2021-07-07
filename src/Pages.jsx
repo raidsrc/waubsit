@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import './index.css'
-import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer,  } from './ReusableComponents'
+import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, } from './ReusableComponents'
 
 
 function HomePage(props) {
@@ -153,7 +153,6 @@ function ResumePage(props) {
                   site construction in progress BE PATIENT
                </span>
                resume goes here eventually<br /><br />
-
             </CenteredFullPageFlexContainer>
             <div className="text-6xl text-center mt-10">
             </div>

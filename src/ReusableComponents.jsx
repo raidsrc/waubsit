@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
+import "./index.css"
 
 function Navbar(props) {
    return (
@@ -9,15 +10,15 @@ function Navbar(props) {
             <div className="flex flex-row text-white top-0 w-full justify-between py-2 px-4 items-center max-w-yuge tiny-screen:py-3 tiny-screen:px-5 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
                <ClickableRaidsrcIcon to="/" />
                <div className="flex flex-row justify-around space-x-4 sm:space-x-7 md:space-x-9 lg:space-x-12">
-                  <NavButton className="w-auto text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
+                  <NavButton className="w-auto hover:text-gray-200 active:text-gray-600 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
                      to="/about" >
                      About
                   </NavButton>
-                  <NavButton className="w-auto text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
+                  <NavButton className="w-auto hover:text-gray-200 active:text-gray-600 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
                      to="/resume">
                      Résumé
                   </NavButton>
-                  <NavButton className="w-auto text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
+                  <NavButton className="w-auto hover:text-gray-200 active:text-gray-600 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
                      to="/contact">
                      Find Me
                   </NavButton>
@@ -48,7 +49,7 @@ function ClickableRaidsrcIcon(props) {
    return (
       <div className="w-12">
          <Link className={theClass} to={props.to}>
-            <img src="src\raid handwritten alone thick very white no padding.png"></img>
+            <img src="src\raid handwritten alone thick very white no padding.png" className="active:filter active:brightness-50" ></img>
          </Link>
       </div>
    )
@@ -62,9 +63,6 @@ function CenteredFullPageFlexContainer(props) {
       >
          <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-10">
             {props.children}
-            <div className="tiny-animation-test-div text-5xl text-center mt-10">
-               sup
-            </div>
          </div>
       </div>
    )
