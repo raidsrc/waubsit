@@ -115,23 +115,15 @@ function AboutPage(props) {
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
             </span>
-            <div className="the-big-nicknames-banner rounded-md p-6 bg-gray-100 font-serif text-xl font-bold shadow-sm
-               tiny-screen:text-2xl
-               sm:text-3xl
-               lg:text-3xl
-               xl:text-4xl
-               2xl:text-5xl" >
+            <div className="the-big-nicknames-banner rounded-md p-6 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl" >
                <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} /> <br />
             </div>
-            <p className="text-center text-white py-10 text-lg
-            sm:text-xl
-            xl:text-2xl">
+            <p className="text-center text-white py-10 text-lg sm:text-xl xl:text-2xl">
                I'm Ray. People have known me by many names throughout my life. Some of these names were given to me. Some of them I chose. Some are funny, and some are cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.<br /><br />
 
                I come from the San Francisco Bay Area. I've seen and experienced a great deal of the world; still, the Bay remains my favorite place, and California remains my favorite state. <br /><br />
 
-               text text text alsdkfjasldkfjasldkfj asdlfkj asdlkf jasdlkf jasd i'm aiming to make this a react app that shows you various shits if you click on buttons up top like my resume and where you can find me online, scrollable up and down here on the main page and everything. i think i ought to make the things on different pages though so when you click you go to a different page, not just a single page app type thing, gotta have multiple pages to click to and from, but reuse your components to practice designing reactively and efficiently. nah never mind i'll make it a single page react app. it's cooler that way lol  </p>
-            <a href="elsewhere.html" className="text-white">wsup</a>
+            </p>
          </CenteredFullPageFlexContainer>
       </div>
    )
