@@ -49,7 +49,7 @@ function ClickableRaidsrcIcon(props) {
    return (
       <div className="w-12">
          <Link className={theClass} to={props.to}>
-            <img src="src\raid handwritten alone thick very white no padding.png" className="active:filter active:brightness-50" ></img>
+            <img src="src\raid handwritten alone thick very white no padding.png" className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
       </div>
    )

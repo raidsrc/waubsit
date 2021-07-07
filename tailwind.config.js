@@ -22,7 +22,7 @@ module.exports = {
   variants: {
     extend: {
       textColor: ["active"],
-      brightness: ["active"],
+      brightness: ["active", "hover"],
       filter: ["active"],
     },
   },
