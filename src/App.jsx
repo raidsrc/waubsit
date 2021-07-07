@@ -1,30 +1,44 @@
-import React, { useState } from 'react'
+import React, { useState, useContextjj, useContext } from 'react'
 import { HomePage, AboutPage, ResumePage, FindMePage } from './Pages'
+import { Navbar } from './ReusableComponents'
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom"
+import { TransitionGroup, CSSTransition } from "react-transition-group"
 import './App.css'
+import "./animationStyles.css"
+import "./otherStyles.css"
 
 function App() {
 
+  let location = useLocation()
+  console.log(location)
 
-  const [page, setPage] = useState("HomePage")
+  return (
+    <div className="whole-app">
+      <Navbar />
+      <div className="content">
+        <div className="h-20"></div>
+        <TransitionGroup>
+          <CSSTransition key={location.key} classNames="fade" timeout={1000}>
 
-
-  if (page === "HomePage") {
-    return (
-      <HomePage setPage={setPage} />
-    )
-  } else if (page === "AboutPage") {
-    return (
-      <AboutPage setPage={setPage} />
-    )
-  } else if (page === "ResumePage") {
-    return (
-      <ResumePage setPage={setPage} />
-    )
-  } else if (page === "FindMePage") {
-    return (
-      <FindMePage setPage={setPage} />
-    )
-  }
+            <Switch location={location}>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route exact path="/about">
+                <AboutPage />
+              </Route>
+              <Route exact path="/resume">
+                <ResumePage />
+              </Route>
+              <Route exact path="/contact">
+                <FindMePage />
+              </Route>
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+      </div>
+    </div>
+  )
 }
 
 export default App

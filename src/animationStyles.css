@@ -1,0 +1,30 @@
+/* this shit below here is needed for react transition group and css transition*/
+
+.fade-enter {
+    /* right before it comes in */
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translate(0px, 60px);
+}
+
+.fade-enter-active {
+    /* applied immediately after fade-enter, also as it's coming in, how we want it to look when we end */
+    opacity: 1;
+    left: 0;
+    transform: translate(0px, 0px);
+    transition: opacity 300ms ease, transform 300ms ease;
+    transition-delay: 300ms;
+}
+
+.fade-exit {
+    /* as it's leaving */
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    transition: opacity 300ms ease-out;
+}

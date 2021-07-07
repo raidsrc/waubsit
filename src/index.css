@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .the-big-nicknames-banner {
   font-family: 'Times New Roman', Times, serif;
   /*font-family: monospace;*/
@@ -26,5 +27,11 @@
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
+  /* Firefox (it doesn't work lol) */
+}
+
+html {
+  /* this here makes the scrollbar vanish on firefox while still allowing for scrolling. why the fuck we need to apply this shit to body in the later versions of firefox? i don't fucking know. but it works. */
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
