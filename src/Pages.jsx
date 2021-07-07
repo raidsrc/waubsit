@@ -6,15 +6,17 @@ import { useSpring, animated, config } from "react-spring"
 import "./animationStyles.css"
 
 function HomePage(props) {
-   const [animateShit, setAnimateShit] = useState(false)
-   const [reverse, setReverse] = useState(true)
+   const [reverse, setReverse] = useState(false)
    const animatedStyles = useSpring({
-      from: { opacity: 0 },
-      to: { opacity: 1 },
+      from: { opacity: 0.5, color: "#FF69B4", },
+      to: { opacity: 1, color: "#124563", },
       reverse: reverse,
-      reset: true,
       onRest: () => { setReverse(!reverse) },
-      config: config.slow,
+      config: {
+         mass: 1,
+         tension: 500,
+         friction: 6,
+      },
    })
    return (
 
@@ -28,7 +30,7 @@ function HomePage(props) {
                   site construction in progress BE PATIENT
                </span>
                <animated.div style={animatedStyles}>
-                  <span className="text-yellow-900 text-2xl">This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+                  <span className="text-2xl">This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
                </animated.div>
             </CenteredFullPageFlexContainer>
          </div>
