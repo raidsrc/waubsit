@@ -5,8 +5,6 @@ import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mo
 
 
 function HomePage(props) {
-   const animationProps = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 800 })
-
    let page = props.page
    const transitions = useTransition(page, {
       from: { opacity: 0, x: -100 },

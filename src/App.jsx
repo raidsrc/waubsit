@@ -4,6 +4,8 @@ import { useTransition } from '@react-spring/core'
 import { Navbar } from './ReusableComponents'
 import './App.css'
 
+// how do i get the fucking pages to animate between one another? i need to have a bottom layer div that stays there forever. on the App component. i need to have the pages (homepage about page etc.) switch out while sitting on top of that div that stays forever. i need to control those animations from somewhere. i don't fucking know. i'll start by having homepage come and go.
+
 function PickThePage(props) {
   let showMount = props.showMount
   let setShowMount = props.setShowMount
