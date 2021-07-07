@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom"
 function Navbar(props) {
    return (
       <nav>
-         <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
+         <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full z-10">
             <div className="flex flex-row text-white top-0 w-full justify-between py-2 px-4 items-center max-w-yuge tiny-screen:py-3 tiny-screen:px-5 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
                <ClickableRaidsrcIcon to="/" />
                <div className="flex flex-row justify-around space-x-4 sm:space-x-7 md:space-x-9 lg:space-x-12">
