@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react"
 import './index.css'
 import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, } from './ReusableComponents'
-
+import { TransitionGroup, CSSTransition } from "react-transition-group"
+import "./animationStyles.css"
 
 function HomePage(props) {
+   const [animateShit, setAnimateShit] = useState(false)
    return (
+
       <div className="homepage">
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
@@ -14,10 +17,18 @@ function HomePage(props) {
                <span className="text-5xl bg-red-600 mb-6">
                   site construction in progress BE PATIENT
                </span>
-               This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+               <CSSTransition unmountOnExit in={animateShit} classNames="homepage-swoop" timeout={1000}>
+                  <div>
+                     This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <br />
+                     <button onClick={() => setAnimateShit(false)}>click to get rid of this shit </button>
+                  </div>
+               </CSSTransition>
+               <button onClick={() => setAnimateShit(true)}>
+                  click to make some shit appear
+               </button>
             </CenteredFullPageFlexContainer>
          </div>
-      </div>
+      </div >
    )
 }
 

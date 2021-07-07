@@ -10,7 +10,7 @@ import "./otherStyles.css"
 function App() {
 
   let location = useLocation()
-  console.log(location)
+  //console.log(location)
 
   return (
     <div className="whole-app">
@@ -18,8 +18,10 @@ function App() {
       <div className="content">
         <div className="h-20"></div>
         <TransitionGroup>
-          <CSSTransition key={location.key} classNames="fade" timeout={1000}>
-
+          <CSSTransition key={location.key} classNames="fade" timeout={500}> 
+          {
+            //might need to make this timeout prop above more accurate to the lengths of the css transitions in animationStyles.css
+          }
             <Switch location={location}>
               <Route exact path="/">
                 <HomePage />
