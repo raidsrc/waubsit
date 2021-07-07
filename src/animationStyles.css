@@ -1,21 +1,25 @@
 
 /* this shit below here is needed for react transition group and css transition*/
 
-.fade-enter {
+.fade-enter { /* as it's coming in */
     opacity: 0;
     z-index: 1;
     position: absolute;
     left: 0;
     right: 0;
-    transition: opacity 1000ms ease;
+    transition: opacity 500ms ease;
   }
   
-  .fade-enter.fade-enter-active {
+  .fade-enter-active { /* applied immediately after fade-enter, also as it's coming in */
     opacity: 1;
     transition: opacity 500ms ease-in;
   }
   
-  .fade-exit {
+  .fade-exit { /* as it's leaving */
     opacity: 0;
-    transition: opacity 1000ms ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: opacity 500ms ease;
   }

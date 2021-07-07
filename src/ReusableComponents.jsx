@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 
 function Navbar(props) {
-
    return (
       <nav>
          <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
