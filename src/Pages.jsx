@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { useSpring, animated } from "react-spring"
 import './index.css'
-import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer } from './ReusableComponents'
+import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, TransitioningThing } from './ReusableComponents'
+import { Transition } from "react-transition-group"
+
+const animationDuration = 1000
 
 function HomePage(props) {
    const animationProps = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 800 })
@@ -17,6 +20,7 @@ function HomePage(props) {
             </span>
             This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
          </CenteredFullPageFlexContainer>
+         <TransitioningThing></TransitioningThing>
       </div>
    )
 }

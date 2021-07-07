@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { useSpring, animated } from "react-spring"
+import {Transition} from "react-transition-group"
 
 function Navbar(props) {
    let setPage = props.setPage
@@ -74,5 +75,19 @@ function CenteredFullPageFlexContainer(props) {
    )
 }
 
-export { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer }
+function TransitioningThing(props) {
+   const [inProp, setInProp] = useState(false);
+   return (
+      <div>
+         <Transition in={inProp} timeout={500}>
+            <div>asdlkfjaslkdfjalskdjflaskjd</div>
+         </Transition>
+         <button onClick={() => setInProp(true)}>
+            Click to Enter
+         </button>
+      </div>
+   );
+}
+
+export { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, TransitioningThing }
 
