@@ -10,7 +10,7 @@ import { Navbar, Button, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mo
 function HomePage(props) {
    const animationProps = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 800 })
    return (
-      <div>
+      <div className="homepage">
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
@@ -111,7 +111,7 @@ function AboutPage(props) {
    }
 
    return (
-      <div>
+      <div className="about-page">
          {
             // TODO: IMPLEMENT HAMBURGER MENU FOR MOBILE SMALL SCREEN
          }
@@ -160,13 +160,13 @@ function ResumePage(props) {
       from: { opacity: 0, x: -100 },
       enter: { opacity: 1, x: 0 },
       leave: { opacity: 0, x: 100 },
-      //config: config.molasses,
+      config: config.slow,
       // config: {
       //    duration: 30000,
       // }
    })
    return transitions((styles, item) => item &&
-      <div>
+      <div className="resume-page">
          <div className="h-20"></div>
          <animated.div style={styles}>
             <CenteredFullPageFlexContainer>
@@ -189,7 +189,7 @@ function ResumePage(props) {
 
 function FindMePage(props) {
    return (
-      <div>
+      <div className="find-me-page">
          <div className="h-20"></div>
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">

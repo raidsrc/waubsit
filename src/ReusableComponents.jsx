@@ -3,8 +3,9 @@ import { useSpring, useTransition, animated, config } from "react-spring"
 
 function Navbar(props) {
    let setPage = props.setPage
+   console.log("rerendered navbar")
    return (
-      <div>
+      <nav>
          <div className="bg-gray-800 shadow-lg flex fixed justify-center w-full">
             <div className="flex flex-row text-white top-0 w-full justify-between py-2 px-4 items-center max-w-yuge
             tiny-screen:py-3 tiny-screen:px-5
@@ -34,7 +35,7 @@ function Navbar(props) {
                </div>
             </div>
          </div>
-      </div>
+      </nav>
    )
 }
 

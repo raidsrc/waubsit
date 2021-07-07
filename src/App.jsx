@@ -30,9 +30,11 @@ function PickThePage(props) {
 function App() {
   const [page, setPage] = useState("HomePage")
   const [showMount, setShowMount] = useState(true)
+  const [arrayOfAnimatedShit, setArrayOfAnimatedShit] = useState([])
+  console.log("rerendered App")
 
   return (
-    <div>
+    <div className="everything-dawg">
       <Navbar setPage={setPage} />
       <PickThePage page={page} showMount={showMount} setShowMount={setShowMount} />
     </div>
