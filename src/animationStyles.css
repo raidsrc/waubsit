@@ -34,20 +34,3 @@
     transform: scale(0.7);
     transition: opacity 200ms ease-out, transform 300ms ease-in;
 }
-
-.homepage-swoop-enter {
-    opacity: 0;
-    height: 0px;
-}
-.homepage-swoop-enter-active {
-    opacity: 1;
-    height: 50px;
-    transition: opacity 1000ms ease, height 1000ms ease;
-}
-.homepage-swoop-exit {
-    opacity: 1;
-}
-.homepage-swoop-exit-active {
-    opacity: 0;
-    transition: opacity 1000ms ease;
-}

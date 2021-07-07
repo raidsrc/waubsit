@@ -2,10 +2,20 @@ import React, { useState, useEffect } from "react"
 import './index.css'
 import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, } from './ReusableComponents'
 import { TransitionGroup, CSSTransition } from "react-transition-group"
+import { useSpring, animated, config } from "react-spring"
 import "./animationStyles.css"
 
 function HomePage(props) {
    const [animateShit, setAnimateShit] = useState(false)
+   const [reverse, setReverse] = useState(true)
+   const animatedStyles = useSpring({
+      from: { opacity: 0 },
+      to: { opacity: 1 },
+      reverse: reverse,
+      reset: true,
+      onRest: () => { setReverse(!reverse) },
+      config: config.slow,
+   })
    return (
 
       <div className="homepage">
@@ -17,15 +27,9 @@ function HomePage(props) {
                <span className="text-5xl bg-red-600 mb-6">
                   site construction in progress BE PATIENT
                </span>
-               <CSSTransition unmountOnExit in={animateShit} classNames="homepage-swoop" timeout={1000}>
-                  <div>
-                     This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <br />
-                     <button onClick={() => setAnimateShit(false)}>click to get rid of this shit </button>
-                  </div>
-               </CSSTransition>
-               <button onClick={() => setAnimateShit(true)}>
-                  click to make some shit appear
-               </button>
+               <animated.div style={animatedStyles}>
+                  <span className="text-yellow-900 text-2xl">This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+               </animated.div>
             </CenteredFullPageFlexContainer>
          </div>
       </div >
