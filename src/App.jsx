@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch, useLocation } from "react-route
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import './App.css'
 import "./animationStyles.css"
+import "./otherStyles.css"
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       <div className="content">
         <div className="h-20"></div>
         <TransitionGroup>
-          <CSSTransition key={location.key} classNames="fade" timeout={10}>
+          <CSSTransition key={location.key} classNames="fade" timeout={1000}>
 
             <Switch location={location}>
               <Route exact path="/">

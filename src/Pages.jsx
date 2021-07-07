@@ -9,7 +9,6 @@ function HomePage(props) {
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
-         <div className="h-20"></div>
          <div>
             <CenteredFullPageFlexContainer>
                <span className="text-5xl bg-red-600 mb-6">
@@ -112,7 +111,6 @@ function AboutPage(props) {
          {
             // TODO: IMPLEMENT HAMBURGER MENU FOR MOBILE SMALL SCREEN
          }
-         <div className="h-20"></div>
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
@@ -149,7 +147,6 @@ function ResumePage(props) {
 
    return (
       <div className="resume-page">
-         <div className="h-20"></div>
          <div>
             <CenteredFullPageFlexContainer>
                <span className="text-5xl bg-red-600 mb-6">
@@ -168,7 +165,6 @@ function ResumePage(props) {
 function FindMePage(props) {
    return (
       <div className="find-me-page">
-         <div className="h-20"></div>
          <CenteredFullPageFlexContainer>
             <span className="text-5xl bg-red-600 mb-6">
                site construction in progress BE PATIENT
