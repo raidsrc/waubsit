@@ -1,36 +1,23 @@
 import React, { useState, useEffect } from "react"
-import { useSpring, useTransition, animated, config } from "react-spring"
 import './index.css'
-import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount } from './ReusableComponents'
+import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer,  } from './ReusableComponents'
 
 
 function HomePage(props) {
-   let page = props.page
-   const transitions = useTransition(page, {
-      from: { opacity: 0, x: -100 },
-      enter: { opacity: 1, x: 0 },
-      leave: { opacity: 0, x: 100 },
-      //delay: 1000,
-      config: config.slow,
-      // config: {
-      //    duration: 30000,
-      // }
-   })
-
-   return transitions((style, item) => item &&
+   return (
       <div className="homepage">
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
          <div className="h-20"></div>
-         <animated.div style={style}>
+         <div>
             <CenteredFullPageFlexContainer>
                <span className="text-5xl bg-red-600 mb-6">
                   site construction in progress BE PATIENT
                </span>
                This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             </CenteredFullPageFlexContainer>
-         </animated.div>
+         </div>
       </div>
    )
 }
@@ -154,50 +141,26 @@ function AboutPage(props) {
 
 function ResumePage(props) {
    // NOW. TRY TO ANIMATE THE ENTIRETY OF RESUMEPAGE TRANSITIONING AWAY.
-   let showMount = props.showMount
-   let setShowMount = props.setShowMount
-   let page = props.page
-   let setShowPage = props.setShowPage
    // useEffect(() => {
    //    if (showMount === false && page === "ResumePage") {
    //       doSetShowMount(true)
    //    }
    // })
-   function unmount() {
-      setShowMount(false)
-   }
-   function unmount2() {
-      setShowPage("FadeOutResumePage")
-   }
 
-   const transitions = useTransition(page, {
-      from: { opacity: 0, x: -100 },
-      enter: { opacity: 1, x: 0 },
-      leave: { opacity: 0, x: 100 },
-      config: config.slow,
-      // config: {
-      //    duration: 30000,
-      // }
-   })
-   return transitions((styles, item) => item &&
+   return (
       <div className="resume-page">
          <div className="h-20"></div>
-         <animated.div style={styles}>
+         <div>
             <CenteredFullPageFlexContainer>
                <span className="text-5xl bg-red-600 mb-6">
                   site construction in progress BE PATIENT
                </span>
                resume goes here eventually<br /><br />
-               <span className="text-base">
-                  the peace sign emoji gets mounted along with everything else on this page when we load up. you can click the ugly ass button below to unmount. the mount and unmount will both be animated. also, clicking another button on the navbar to navigate away from this page of the react app will technically unmount the peace sign emoji, but it won't trigger a smooth sliding away animation because the act of clicking a button on the navbar does not directly set the showMount state variable and thus does not trigger an animation. <br />
-                  <button className="border-4 font-black" onClick={() => unmount()}>unmount the peace sign emoji</button><br />
-                  <button className="border-4 font-black mt-8" onClick={() => unmount2()}>unmount the entire resume page</button>
-               </span>
+
             </CenteredFullPageFlexContainer>
             <div className="text-6xl text-center mt-10">
-               <Mount page={page} show={showMount} setShow={setShowMount} />
             </div>
-         </animated.div>
+         </div>
       </div>
    )
 }

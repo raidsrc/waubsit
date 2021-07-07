@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { useSpring, useTransition, animated, config } from "react-spring"
-
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 
 
@@ -45,18 +43,9 @@ function ClickableRaidsrcIcon(props) {
 }
 
 function CenteredFullPageFlexContainer(props) {
-   const animationProps = useSpring({
-      to: { opacity: 1 },
-      from: { opacity: 0 },
-      delay: 10,
-      config: {
-         duration: 250
-      }
-      //TODO: ADD TRANSITION FADES INTO AND OUT OF EACH PAGE WHEN YOU CLICK
-   })
-   //const transition = useTransition()
+   
    return (
-      <animated.div className="flex justify-center w-full"
+      <div className="flex justify-center w-full"
       //style={animationProps}
       >
          <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-10">
@@ -65,52 +54,9 @@ function CenteredFullPageFlexContainer(props) {
                sup
             </div>
          </div>
-      </animated.div>
+      </div>
    )
 }
 
-function Mount(props) {
-   let show = props.show
-   //let set = props.setShow
-   //let page = props.page
-   console.log("rendered mount. show:", show)
-
-   // useEffect(() => {
-   //    //set(true)
-   //    //console.log("used effect ")
-   //    return function cleanup() {
-   //       console.log("cleaned up")
-   //       set(false)
-   //    }
-   // })
-
-   const transitions = useTransition(show, {
-      from: { opacity: 0, x: -200 },
-      enter: { opacity: 1, x: 0 },
-      leave: { opacity: 0, x: 200 },
-      //reverse: show,
-      delay: 200,
-      //config: config.molasses,
-      // config: {
-      //    duration: 10000,
-      // }
-      //onRest: () => set(!show),
-   })
-   return transitions(
-      (styles, item) => item &&
-         <animated.div style={styles}>
-            <div className="text-sm">
-               ✌️ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, mollitia.</span>
-               <div>
-                  There's a lot of stuff in this div
-               </div>
-               <div>
-                  12345678901234567890-=-0-=-=_)-09*90-)9876%43@#$567*()*(&*^765^46&%7^(8&(*)(*)*-9*_0(*8_)))
-               </div>
-            </div>
-         </animated.div>
-   )
-}
-
-export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, Mount }
+export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer }
 
