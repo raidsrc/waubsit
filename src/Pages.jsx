@@ -7,10 +7,20 @@ import "./animationStyles.css"
 
 function HomePage(props) {
    const [reverse, setReverse] = useState(false)
+   const [reset, setReset] = useState(false)
+   const [cancel, setCancel] = useState(false)
+   useEffect(() => {
+      setCancel(false)
+      return () => {
+         setCancel(true)
+      }
+   })
    const animatedStyles = useSpring({
       from: { opacity: 0.5, color: "#FF69B4", },
       to: { opacity: 1, color: "#124563", },
       reverse: reverse,
+      reset: reset,
+      cancel: cancel,
       onRest: () => { setReverse(!reverse) },
       config: {
          mass: 1,
