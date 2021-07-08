@@ -4,6 +4,7 @@ import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer,
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import "./animationStyles.css"
+import bananasJpg from "./bananas.jpg"
 
 function HomePage(props) {
    const [reverse, setReverse] = useState(false)
@@ -138,40 +139,50 @@ function AboutPage(props) {
          }
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
-            <div className="the-big-nicknames-banner rounded-md p-6 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl" >
-               <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} /> <br />
+            <div className="flex justify-center">
+               <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl" >
+                  <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} />
+               </div>
             </div>
             {
                // in widescreen view, do grid with 3 columns, text taking up two columns and an image taking up 1 col. in phone or thin view, have single column layout and show things one by one in a single column since we got no fucking space 
             }
-            <div className="py-9 grid grid-cols-1 grid-rows-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="py-2 grid grid-cols-1 grid-rows-8 md:py-8 md:grid-rows-4 md:grid-cols-2 lg:grid-cols-3">
                {
                   // MEDIUM AND UP: 2 COLUMNS, TEXT TAKES UP 1 COLUMN OF SPACE
                   // LARGE AND UP: 3 COLUMNS, TEXT TAKES UP 2 COLUMNS WORTH OF SPACE
                }
-               <p className="about-me-paragraph row-start-1 col-start-1 lg:col-end-3">
-                  Hi. I'm Raymond Chen. I usually go by Ray, but people have known me by many names throughout my life. Some of these names were given to me. Some of them were chosen. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
-               </p>
-               <div>
-                  an image will go here eventually 
+               <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-3">
+                  <p className="about-me-paragraph">
+                     Hi. I'm Raymond Chen. I usually go by Ray, but people have known me by many names throughout my life. Some of these names were given to me. Some of them were chosen. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
+                  </p>
                </div>
-               <p className="about-me-paragraph row-start-3 md:row-start-2 md:col-start-2 lg:col-end-4">
-                  I come from the San Francisco Bay Area. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place.
-               </p>
-               <div>
-                  an image will go here eventually 
+               <div className="flex justify-center items-center">
+                  <img src={bananasJpg} className="w-3/5" />
                </div>
-               <p className="about-me-paragraph row-start-5 md:row-start-3 lg:col-end-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo ullam ut hic similique fugit id quia officia dolores possimus.
-               </p>
-               <div>
-                  an image will go here eventually 
+               <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-end-4">
+                  <p className="about-me-paragraph">
+                     I'm from the San Francisco Bay Area. I was born here and I've lived here for most of my life. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
+                  </p>
                </div>
-               <p className="about-me-paragraph row-start-7 md:row-start-4 md:col-start-2 lg:col-end-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo ullam ut hic similique fugit id quia officia dolores possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam tempore cum repudiandae quod suscipit ut delectus quae provident quasi maxime quis aliquid pariatur numquam modi fugit, dolor rerum libero dolorem.
-               </p>
-               <div>
-                  an image will go here eventually 
+               <div className="flex justify-center items-center">
+                  <img src={bananasJpg} className="w-3/5" />
+               </div>
+               <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-3">
+                  <p className="about-me-paragraph">
+                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science.
+                  </p>
+               </div>
+               <div className="flex justify-center items-center">
+                  <img src={bananasJpg} className="w-3/5" />
+               </div>
+               <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-end-4">
+                  <p className="about-me-paragraph">
+                     When I'm not busy butchering sketches of Haworth projections or <a className="underline active:text-blue-900 text-blue-600 hover:text-blue-700" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a> I spend my time programming, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
+                  </p>
+               </div>
+               <div className="flex justify-center items-center">
+                  <img src={bananasJpg} className="w-3/5" />
                </div>
             </div>
          </CenteredFullPageFlexContainer>

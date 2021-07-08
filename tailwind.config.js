@@ -7,9 +7,20 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      width: {
+        '400px': '400px',
+        '900px': '900px',
+      },
       maxWidth: {
         'yuge': '1700px',
       },
+      gridTemplateRows: {
+        // Simple 8 row grid
+        '7': 'repeat(7, minmax(0, 1fr))',
+        '8': 'repeat(8, minmax(0, 1fr))',
+        '9': 'repeat(9, minmax(0, 1fr))',
+        '10': 'repeat(10, minmax(0, 1fr))',
+      }
     },
     screens: {
       'puny-ass-screen': '360px',

@@ -37,7 +37,7 @@ function NavButton(props) {
       theClass += " disabled-link"
    }
    return (
-      <Link className={theClass} to={props.to}>{props.children}</Link>
+      <Link className={theClass} to={props.to} onClick={smoothScrollToTop}>{props.children}</Link>
    )
 }
 
@@ -49,7 +49,7 @@ function ClickableRaidsrcIcon(props) {
    }
    return (
       <div className="w-12">
-         <Link className={theClass} to={props.to}>
+         <Link className={theClass} onClick={smoothScrollToTop} to={props.to}>
             <img src={raidsrcLogoUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
       </div>
@@ -77,6 +77,14 @@ function SiteConstructionBanner(props) {
          </span>
       </div>
    )
+}
+
+function smoothScrollToTop() {
+   window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+   })
 }
 
 export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, SiteConstructionBanner }
