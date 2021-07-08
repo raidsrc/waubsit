@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import './index.css'
-import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, } from './ReusableComponents'
+import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, SiteConstructionBanner, } from './ReusableComponents'
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import "./animationStyles.css"
@@ -36,9 +36,7 @@ function HomePage(props) {
          }
          <div>
             <CenteredFullPageFlexContainer>
-               <span className="text-5xl bg-red-600 mb-6">
-                  site construction in progress BE PATIENT
-               </span>
+               <SiteConstructionBanner />
                <animated.div style={animatedStyles}>
                   <span className="text-2xl">This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
                </animated.div>
@@ -139,9 +137,7 @@ function AboutPage(props) {
             // TODO: IMPLEMENT HAMBURGER MENU FOR MOBILE SMALL SCREEN
          }
          <CenteredFullPageFlexContainer>
-            <span className="text-5xl bg-red-600 mb-6">
-               site construction in progress BE PATIENT
-            </span>
+            <SiteConstructionBanner />
             <div className="the-big-nicknames-banner rounded-md p-6 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl" >
                <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} /> <br />
             </div>
@@ -168,9 +164,7 @@ function ResumePage(props) {
       <div className="resume-page">
          <div>
             <CenteredFullPageFlexContainer>
-               <span className="text-5xl bg-red-600 mb-6">
-                  site construction in progress BE PATIENT
-               </span>
+               <SiteConstructionBanner />
                resume goes here eventually<br /><br />
             </CenteredFullPageFlexContainer>
             <div className="text-6xl text-center mt-10">
@@ -184,9 +178,7 @@ function FindMePage(props) {
    return (
       <div className="find-me-page">
          <CenteredFullPageFlexContainer>
-            <span className="text-5xl bg-red-600 mb-6">
-               site construction in progress BE PATIENT
-            </span>
+            <SiteConstructionBanner />
             <div className="grid grid-cols-3 grid-rows-6">
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center">
                   <a target="_blank" rel="noreferrer noopener" href="https://twitter.com/raidsrc"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg></a>

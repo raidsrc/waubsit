@@ -68,5 +68,15 @@ function CenteredFullPageFlexContainer(props) {
    )
 }
 
-export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer }
+function SiteConstructionBanner(props) {
+   return (
+      <div className="mb-6">
+         <span className="text-5xl bg-red-600">
+            site construction in progress BE PATIENT
+         </span>
+      </div>
+   )
+}
+
+export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, SiteConstructionBanner }
 
