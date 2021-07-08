@@ -71,7 +71,7 @@ function AboutPage(props) {
 
       function randomlyPickName() { // returns a random name string from this namesList
          const namesList = [
-            "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "Ray Mahn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Half of Sonar Alchemy", "1337+", "Big Head"
+            "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "raymawn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Drummer @ Sonar Alchemy", "1337+", "Big Head",
          ]
          function getRandomInt(min, max) {
             min = Math.ceil(min);
@@ -101,7 +101,7 @@ function AboutPage(props) {
              */
             let nameSubstring = name.substring(0, i)
             setNameBoxContents(nameSubstring)
-            setTimeout(function () { typeInName(name, i + 1) }, 60)
+            setTimeout(function () { typeInName(name, i + 1) }, 50)
          } else {
             setNameStage("finished")
             setTimeout((name) => { eraseName(name) }, 1500)

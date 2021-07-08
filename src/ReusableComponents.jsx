@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import "./index.css"
+import raidsrcLogoUrl from "./raid handwritten alone thick very white no padding.png"
 
 function Navbar(props) {
    return (
@@ -49,7 +50,7 @@ function ClickableRaidsrcIcon(props) {
    return (
       <div className="w-12">
          <Link className={theClass} to={props.to}>
-            <img src="src\raid handwritten alone thick very white no padding.png" className="filter hover:brightness-75 active:brightness-50" ></img>
+            <img src={raidsrcLogoUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
       </div>
    )
