@@ -141,12 +141,39 @@ function AboutPage(props) {
             <div className="the-big-nicknames-banner rounded-md p-6 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl" >
                <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} /> <br />
             </div>
-            <p className="text-center text-white py-10 text-lg sm:text-xl xl:text-2xl">
-               I'm Ray. People have known me by many names throughout my life. Some of these names were given to me. Some of them I chose. Some are funny, and some are cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.<br /><br />
-
-               I come from the San Francisco Bay Area. I've seen and experienced a great deal of the world; still, the Bay remains my favorite place, and California remains my favorite state. <br /><br />
-
-            </p>
+            {
+               // in widescreen view, do grid with 3 columns, text taking up two columns and an image taking up 1 col. in phone or thin view, have single column layout and show things one by one in a single column since we got no fucking space 
+            }
+            <div className="py-9 grid grid-cols-1 grid-rows-6 md:grid-cols-2 lg:grid-cols-3">
+               {
+                  // MEDIUM AND UP: 2 COLUMNS, TEXT TAKES UP 1 COLUMN OF SPACE
+                  // LARGE AND UP: 3 COLUMNS, TEXT TAKES UP 2 COLUMNS WORTH OF SPACE
+               }
+               <p className="about-me-paragraph row-start-1 col-start-1 lg:col-end-3">
+                  Hi. I'm Raymond Chen. I usually go by Ray, but people have known me by many names throughout my life. Some of these names were given to me. Some of them were chosen. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
+               </p>
+               <div>
+                  an image will go here eventually 
+               </div>
+               <p className="about-me-paragraph row-start-3 md:row-start-2 md:col-start-2 lg:col-end-4">
+                  I come from the San Francisco Bay Area. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place.
+               </p>
+               <div>
+                  an image will go here eventually 
+               </div>
+               <p className="about-me-paragraph row-start-5 md:row-start-3 lg:col-end-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo ullam ut hic similique fugit id quia officia dolores possimus.
+               </p>
+               <div>
+                  an image will go here eventually 
+               </div>
+               <p className="about-me-paragraph row-start-7 md:row-start-4 md:col-start-2 lg:col-end-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo ullam ut hic similique fugit id quia officia dolores possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam tempore cum repudiandae quod suscipit ut delectus quae provident quasi maxime quis aliquid pariatur numquam modi fugit, dolor rerum libero dolorem.
+               </p>
+               <div>
+                  an image will go here eventually 
+               </div>
+            </div>
          </CenteredFullPageFlexContainer>
       </div>
    )

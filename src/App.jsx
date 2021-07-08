@@ -18,7 +18,7 @@ function App() {
       <div className="content">
         <div className="h-20"></div>
         <TransitionGroup>
-          <CSSTransition key={location.key} classNames="fade" timeout={500}> 
+          <CSSTransition key={location.key} classNames="fade" timeout={600}> 
           {
             //might need to make this timeout prop above more accurate to the lengths of the css transitions in animationStyles.css
           }
