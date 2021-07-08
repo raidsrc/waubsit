@@ -7,6 +7,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'gray-450': 'rgb(140, 150, 160)',
+      },
       width: {
         '400px': '400px',
         '900px': '900px',

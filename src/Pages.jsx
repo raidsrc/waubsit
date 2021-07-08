@@ -30,7 +30,6 @@ function HomePage(props) {
       },
    })
    return (
-
       <div className="homepage">
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
@@ -54,7 +53,7 @@ function AboutPage(props) {
    const [abort, setAbort] = useState(false)
 
    useEffect(() => {
-      setAbort(false) // i hope this'll set abort to false when we render the page, then set abort to true when we hop off
+      setAbort(false) // i hope this'll set abort to false when we first render + re-render the page, then set abort to true when we hop off
       return function cleanThatShitUpDawg() {
          setNameStage("stop")
          setAbort(true)
@@ -147,7 +146,7 @@ function AboutPage(props) {
             {
                // in widescreen view, do grid with 3 columns, text taking up two columns and an image taking up 1 col. in phone or thin view, have single column layout and show things one by one in a single column since we got no fucking space 
             }
-            <div className="py-2 grid grid-cols-1 grid-rows-8 md:py-8 md:grid-rows-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="py-2 grid-cols-1 grid-rows-8 md:grid md:py-8 md:grid-rows-4 md:grid-cols-2 lg:grid-cols-3">
                {
                   // MEDIUM AND UP: 2 COLUMNS, TEXT TAKES UP 1 COLUMN OF SPACE
                   // LARGE AND UP: 3 COLUMNS, TEXT TAKES UP 2 COLUMNS WORTH OF SPACE
@@ -170,7 +169,7 @@ function AboutPage(props) {
                </div>
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-3">
                   <p className="about-me-paragraph">
-                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science.
+                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. 
                   </p>
                </div>
                <div className="flex justify-center items-center">
@@ -191,13 +190,6 @@ function AboutPage(props) {
 }
 
 function ResumePage(props) {
-   // NOW. TRY TO ANIMATE THE ENTIRETY OF RESUMEPAGE TRANSITIONING AWAY.
-   // useEffect(() => {
-   //    if (showMount === false && page === "ResumePage") {
-   //       doSetShowMount(true)
-   //    }
-   // })
-
    return (
       <div className="resume-page">
          <div>
@@ -217,7 +209,7 @@ function FindMePage(props) {
       <div className="find-me-page">
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
-            <div className="grid grid-cols-3 grid-rows-6">
+            <div className="grid grid-cols-3 grid-rows-7">
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center">
                   <a target="_blank" rel="noreferrer noopener" href="https://twitter.com/raidsrc"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg></a>
                   <span className="px-4 text-lg font-semibold">@raidsrc</span>
