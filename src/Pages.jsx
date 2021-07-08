@@ -51,6 +51,9 @@ function AboutPage(props) {
    const [nameBoxContents, setNameBoxContents] = useState("")
    const [timeToSelect, setTimeToSelect] = useState(false)
    const [abort, setAbort] = useState(false)
+   let firstRun = true // this ensures that we always show the name "Raymond" first 
+   let prevFiveNames = [".",".",".",".","."]
+   let newName = "sup"
 
    useEffect(() => {
       setAbort(false) // i hope this'll set abort to false when we first render + re-render the page, then set abort to true when we hop off
@@ -78,8 +81,20 @@ function AboutPage(props) {
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
          }
-         let index = getRandomInt(0, namesList.length)
-         return namesList[index]
+         // if (firstRun) {
+         //    let index = 0
+         // } else {
+         //    let index = getRandomInt(0, namesList.length)
+         // }
+         prevFiveNames.shift()
+         prevFiveNames.push(newName)
+         while (prevFiveNames.includes(newName) ) {
+            let index = firstRun ? 0 : getRandomInt(0, namesList.length)
+            newName = namesList[index]
+         }
+         firstRun = false
+         console.log(prevFiveNames)
+         return newName
       }
 
       setTimeout(function () { letsGo() }, 200) // start the infinite function calling cycle 
@@ -101,10 +116,10 @@ function AboutPage(props) {
              */
             let nameSubstring = name.substring(0, i)
             setNameBoxContents(nameSubstring)
-            setTimeout(function () { typeInName(name, i + 1) }, 50)
+            setTimeout(function () { typeInName(name, i + 1) }, 40)
          } else {
             setNameStage("finished")
-            setTimeout((name) => { eraseName(name) }, 1500)
+            setTimeout((name) => { eraseName(name) }, 1300)
          }
       }
       function eraseName(name) {
@@ -169,7 +184,7 @@ function AboutPage(props) {
                </div>
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-3">
                   <p className="about-me-paragraph">
-                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. 
+                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science.
                   </p>
                </div>
                <div className="flex justify-center items-center">
