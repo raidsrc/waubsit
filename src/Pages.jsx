@@ -36,7 +36,7 @@ function HomePage(props) {
          }
          <div className="mb-20">
             <div className="w-full py-16 lg:py-0">
-               <img className="w-full lg:hidden" src={rayShiprock} />
+               <img className="h-96 object-cover sm:w-full sm:h-auto lg:hidden" src={rayShiprock} />
                <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center" src={rayShiprockWide} />
             </div>
             <CenteredFullPageFlexContainer>
@@ -180,7 +180,7 @@ function AboutPage(props) {
             {
                // in widescreen view, do grid with 3 columns, text taking up two columns and an image taking up 1 col. in phone or thin view, have single column layout and show things one by one in a single column since we got no fucking space 
             }
-            <div className="py-2 grid-cols-1 grid-rows-8 md:grid md:py-8 md:grid-rows-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="py-2 grid-cols-1 grid-rows-8 mb-12 md:mb-0 md:grid md:py-8 md:grid-rows-4 md:grid-cols-2 lg:grid-cols-3">
                {
                   // MEDIUM AND UP: 2 COLUMNS, TEXT TAKES UP 1 COLUMN OF SPACE
                   // LARGE AND UP: 3 COLUMNS, TEXT TAKES UP 2 COLUMNS WORTH OF SPACE
