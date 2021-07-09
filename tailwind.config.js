@@ -15,6 +15,9 @@ module.exports = {
         '900px': '900px',
       },
       height: {
+        '112': '28rem',
+        '128': '32rem',
+        '144': '36rem',
         '50vh': '50vh',
         '60vh': '60vh',
         '70vh': '70vh',
