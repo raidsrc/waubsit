@@ -93,7 +93,7 @@ function AboutPage(props) {
 
       function randomlyPickName() { // returns a random name string from this namesList
          const namesList = [
-            "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "raymawn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Drummer @ Sonar Alchemy", "1337+", "Big Head",
+            "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "raymawn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Drummer @ Sonar Alchemy", "1337+", "Big Head", "Rayon",
          ]
          function getRandomInt(min, max) {
             min = Math.ceil(min);
@@ -180,21 +180,21 @@ function AboutPage(props) {
             {
                // in widescreen view, do grid with 3 columns, text taking up two columns and an image taking up 1 col. in phone or thin view, have single column layout and show things one by one in a single column since we got no fucking space 
             }
-            <div className="py-2 grid-cols-1 grid-rows-8 mb-12 md:mb-0 md:grid md:py-8 md:grid-rows-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="py-2 grid-cols-1 grid-rows-10 mb-12 items-center md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-3">
                {
                   // MEDIUM AND UP: 2 COLUMNS, TEXT TAKES UP 1 COLUMN OF SPACE
                   // LARGE AND UP: 3 COLUMNS, TEXT TAKES UP 2 COLUMNS WORTH OF SPACE
                }
                <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-3">
-                  <p className="about-me-paragraph">
-                     Yo. In case you don't know me, I'm Raymond Chen. I usually go by Ray, but people have known me by many names throughout my life. Some of these names were given to me. Some of them were chosen. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
+                  <p className="about-me-paragraph text-black">
+                     Yo. In case you don't know me, I'm Raymond Chen. I usually go by Ray, but people have known me by many names. Some of these names were given to me. Some of them I chose myself. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
                   </p>
                </div>
                <div className="flex justify-center items-center">
                   <img src={bananasJpg} className="w-3/5" />
                </div>
                <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-end-4">
-                  <p className="about-me-paragraph">
+                  <p className="about-me-paragraph md:text-right">
                      I'm from the San Francisco Bay Area. I was born here and I've lived here for most of my life. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
                   </p>
                </div>
@@ -202,15 +202,31 @@ function AboutPage(props) {
                   <img src={bananasJpg} className="w-3/5" />
                </div>
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-3">
-                  <p className="about-me-paragraph">
-                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science.
+                  <p className="about-me-paragraph text-black">
+                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been genetics, protein structure and function, bioinformatics, the ethics of technology, full-stack web development, and the neuroscience of music. I also really dig writing, proofreading, and teaching.
                   </p>
                </div>
                <div className="flex justify-center items-center">
                   <img src={bananasJpg} className="w-3/5" />
                </div>
                <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-end-4">
-                  <p className="about-me-paragraph">
+                  <p className="about-me-paragraph md:text-right">
+                     My career aspirations are simple. I'll cure cancer at the age of 26, then be a busker in San Francisco for a decade, and then retire to a log cabin deep in the Sierra Nevadas with my crossbow and Siberian Husky.<br/><span className="text-gray-450">(just joking. i hope to make a career out of being a freelance science + technology + music tutor for society's disadvantaged)</span>
+                  </p>
+               </div>
+               <div className="flex justify-center items-center">
+                  <img src={bananasJpg} className="w-3/5" />
+               </div>
+               <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-3">
+                  <p className="about-me-paragraph text-black">
+                     I like Kendrick Lamar, Fullmetal Alchemist, Bill Evans, grilled wild salmon, California poppies, and challah bread. I don't like candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
+                  </p>
+               </div>
+               <div className="flex justify-center items-center">
+                  <img src={bananasJpg} className="w-3/5" />
+               </div>
+               <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-end-4">
+                  <p className="about-me-paragraph md:text-right">
                      When I'm not busy butchering sketches of Haworth projections or <a className="underline active:text-blue-900 text-blue-600 hover:text-blue-700" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a> I spend my time programming, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
                   </p>
                </div>
