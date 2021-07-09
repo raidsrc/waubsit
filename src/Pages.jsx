@@ -187,7 +187,7 @@ function AboutPage(props) {
                }
                <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-3">
                   <p className="about-me-paragraph">
-                     Hi. I'm Raymond Chen. I usually go by Ray, but people have known me by many names throughout my life. Some of these names were given to me. Some of them were chosen. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of me—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
+                     Yo. In case you don't know me, I'm Raymond Chen. I usually go by Ray, but people have known me by many names throughout my life. Some of these names were given to me. Some of them were chosen. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though each and every one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
                   </p>
                </div>
                <div className="flex justify-center items-center">
