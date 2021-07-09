@@ -16,7 +16,6 @@ function App() {
     <div className="whole-app">
       <Navbar />
       <div className="content">
-        <div className="h-20"></div>
         <TransitionGroup>
           <CSSTransition key={location.key} classNames="fade" timeout={600}> 
           {

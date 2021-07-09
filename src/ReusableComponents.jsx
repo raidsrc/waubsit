@@ -57,7 +57,6 @@ function ClickableRaidsrcIcon(props) {
 }
 
 function CenteredFullPageFlexContainer(props) {
-
    return (
       <div className="flex justify-center w-full"
       //style={animationProps}
@@ -71,7 +70,7 @@ function CenteredFullPageFlexContainer(props) {
 
 function SiteConstructionBanner(props) {
    return (
-      <div className="mb-6">
+      <div className="mb-6 mt-12">
          <span className="text-5xl bg-red-600">
             site construction in progress BE PATIENT
          </span>

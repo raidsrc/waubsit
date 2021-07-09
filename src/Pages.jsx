@@ -5,10 +5,10 @@ import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import "./animationStyles.css"
 import bananasJpg from "./static/bananas.jpg"
+import rayShiprock from "./static/ray atop shiprock wide.jpeg"
 
 function HomePage(props) {
    const [reverse, setReverse] = useState(false)
-   const [reset, setReset] = useState(false)
    const [cancel, setCancel] = useState(false)
    useEffect(() => {
       setCancel(false)
@@ -20,7 +20,6 @@ function HomePage(props) {
       from: { opacity: 0.5, color: "#FF69B4", },
       to: { opacity: 1, color: "#124563", },
       reverse: reverse,
-      reset: reset,
       cancel: cancel,
       onRest: () => { setReverse(!reverse) },
       config: {
@@ -35,11 +34,13 @@ function HomePage(props) {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
          <div>
+            <div className="w-full">
+               <img className="w-full h-screen object-cover object-center" src={rayShiprock}></img>
+            </div>
             <CenteredFullPageFlexContainer>
                <SiteConstructionBanner />
-
                <animated.div style={animatedStyles}>
-                  <span className="text-2xl">This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+                  <span className="text-2xl">This is the Home Page!!!!!!! !!!!!!!!!!!!! !!!!!!!!!! !!!!!!!!!! !!!!!!!</span>
                </animated.div>
             </CenteredFullPageFlexContainer>
          </div>
@@ -53,7 +54,7 @@ function AboutPage(props) {
    const [timeToSelect, setTimeToSelect] = useState(false)
    const [abort, setAbort] = useState(false)
    let firstRun = true // this ensures that we always show the name "Raymond" first 
-   let prevFiveNames = [".",".",".",".","."]
+   let prevFiveNames = [".", ".", ".", ".", "."]
    let newName = "sup"
 
    useEffect(() => {
@@ -89,12 +90,12 @@ function AboutPage(props) {
          // }
          prevFiveNames.shift()
          prevFiveNames.push(newName)
-         while (prevFiveNames.includes(newName) ) {
+         while (prevFiveNames.includes(newName)) {
             let index = firstRun ? 0 : getRandomInt(0, namesList.length)
             newName = namesList[index]
          }
          firstRun = false
-         console.log(prevFiveNames)
+         // console.log(prevFiveNames)
          return newName
       }
 
