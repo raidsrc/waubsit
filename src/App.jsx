@@ -3,7 +3,6 @@ import { HomePage, AboutPage, ResumePage, FindMePage } from './Pages'
 import { Navbar } from './ReusableComponents'
 import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-import './App.css'
 import "./animationStyles.css"
 import "./otherStyles.css"
 
