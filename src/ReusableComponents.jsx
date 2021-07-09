@@ -68,7 +68,7 @@ function CenteredFullPageFlexContainer(props) {
 
 function SiteConstructionBanner(props) {
    return (
-      <div className="mb-6 mt-12">
+      <div className="mb-6 mt-24">
          <span className="text-5xl bg-red-600">
             site construction in progress BE PATIENT
          </span>

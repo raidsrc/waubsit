@@ -42,4 +42,7 @@ html {
   .about-me-grid-item {
     @apply py-1 px-4
   }
+  .homepage-paragraph {
+    @apply about-me-paragraph py-3 px-0 text-left 
+  }
 }

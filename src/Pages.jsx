@@ -34,16 +34,31 @@ function HomePage(props) {
          {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
-         <div>
+         <div className="mb-20">
             <div className="w-full py-16 lg:py-0">
                <img className="w-full lg:hidden" src={rayShiprock} />
                <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center" src={rayShiprockWide} />
             </div>
             <CenteredFullPageFlexContainer>
                <SiteConstructionBanner />
+               { /*
                <animated.div style={animatedStyles}>
                   <span className="text-2xl">This is the Home Page!!!!!!! !!!!!!!!!!!!! !!!!!!!!!! !!!!!!!!!! !!!!!!!</span>
                </animated.div>
+               */
+               }
+               <h1 className="text-xl sm:text-2xl 2xl:text-3xl text-white mb-5">
+                  <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">H</span>ey. I'm Ray, and this is my personal website. Welcome.
+               </h1>
+               <p className="homepage-paragraph text-black">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus fuga eum expedita qui impedit eos, itaque quis quidem quod?
+               </p>
+               <p className="homepage-paragraph">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, molestiae?
+               </p>
+               <p className="homepage-paragraph text-black">
+                  Enjoy your stay.
+               </p>
             </CenteredFullPageFlexContainer>
          </div>
       </div >
