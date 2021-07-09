@@ -4,7 +4,7 @@ import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer,
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import "./animationStyles.css"
-import bananasJpg from "./bananas.jpg"
+import bananasJpg from "./static/bananas.jpg"
 
 function HomePage(props) {
    const [reverse, setReverse] = useState(false)
@@ -37,6 +37,7 @@ function HomePage(props) {
          <div>
             <CenteredFullPageFlexContainer>
                <SiteConstructionBanner />
+
                <animated.div style={animatedStyles}>
                   <span className="text-2xl">This is the Home Page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
                </animated.div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import "./index.css"
-import raidsrcLogoUrl from "./raid handwritten alone thick very white no padding.png"
+import raidsrcLogoUrl from "./static/raid handwritten alone thick very white no padding.png"
 
 function Navbar(props) {
    return (
