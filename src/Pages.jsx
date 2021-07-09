@@ -5,7 +5,8 @@ import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import "./animationStyles.css"
 import bananasJpg from "./static/bananas.jpg"
-import rayShiprock from "./static/ray atop shiprock wide.jpeg"
+import rayShiprock from "./static/ray atop shiprock.jpg"
+import rayShiprockWide from "./static/ray atop shiprock wide.jpeg"
 
 function HomePage(props) {
    const [reverse, setReverse] = useState(false)
@@ -34,8 +35,9 @@ function HomePage(props) {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
          <div>
-            <div className="w-full">
-               <img className="w-full h-screen object-cover object-center" src={rayShiprock}></img>
+            <div className="w-full py-16 lg:py-0">
+               <img className="w-full lg:hidden" src={rayShiprock} />
+               <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center" src={rayShiprockWide} />
             </div>
             <CenteredFullPageFlexContainer>
                <SiteConstructionBanner />

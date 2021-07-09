@@ -14,6 +14,13 @@ module.exports = {
         '400px': '400px',
         '900px': '900px',
       },
+      height: {
+        '50vh': '50vh',
+        '60vh': '60vh',
+        '70vh': '70vh',
+        '80vh': '80vh',
+        '90vh': '90vh',
+      },
       maxWidth: {
         'yuge': '1700px',
       },
