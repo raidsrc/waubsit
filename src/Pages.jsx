@@ -36,7 +36,7 @@ function HomePage(props) {
          }
          <div className="mb-20">
             <div className="w-full py-16 lg:py-0">
-               <img className="h-112 object-cover sm:w-full sm:h-50vh md:w-full md:h-60vh lg:hidden" src={rayShiprock} />
+               <img className="h-112 w-full object-cover sm:h-50vh md:h-60vh lg:hidden" src={rayShiprock} />
                <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center" src={rayShiprockWide} />
             </div>
             <CenteredFullPageFlexContainer>
