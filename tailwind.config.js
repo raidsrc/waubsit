@@ -50,7 +50,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      textColor: ["active"],
+      textColor: ["active", "visited"],
       brightness: ["active", "hover"],
       filter: ["active"],
     },

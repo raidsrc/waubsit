@@ -149,7 +149,7 @@ function AboutPage(props) {
          setTimeout(() => { setNameBoxContents("") }, 550) // after it gets selected, we wait, then we erase the shit
          setTimeout(() => { setTimeToSelect(false) }, 551) // after it gets selected, we wait and remove the selected effect. interestingly this timeout doesn't start up after setting the name box contents. it begins immediately after setTimeToSelect. must be javascript immediately jumping through my shit to be fast. asynchronous actions. i think. 
          if (abort == false) {
-            setTimeout(() => { letsGo() }, 2000) // 2 seconds after we remove the selected effect, we restart the cycle 
+            setTimeout(() => { letsGo() }, 1500) // 2 seconds after we remove the selected effect, we restart the cycle 
          }
       }
 
@@ -230,7 +230,7 @@ function AboutPage(props) {
                </div>
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-end-4">
                   <p className="about-me-paragraph md:text-right">
-                     When I'm not busy butchering sketches of Haworth projections or <a className="underline active:text-blue-900 text-blue-600 hover:text-blue-700" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a> I spend my time programming, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
+                     When I'm not busy butchering sketches of Haworth projections or <a className="underline active:text-blue-900 text-blue-600 hover:text-blue-700 visited:text-purple-600" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a> I spend my time programming, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
                   </p>
                </div>
                <div className="flex justify-center items-center">
