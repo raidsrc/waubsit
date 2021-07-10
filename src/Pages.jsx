@@ -250,11 +250,13 @@ function ResumePage(props) {
          <div>
             <CenteredFullPageFlexContainer>
                <SiteConstructionBanner />
-               resume goes here eventually<br /><br />
-               <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="640" height="480" allow="autoplay"></iframe>
-               <object data="http://africau.edu/images/default/sample.pdf" type="application/pdf" width="100%" height="800px">
+               <div className="flex justify-center h-80vh">
+                  <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" allow="autoplay" />
+               </div>
+
+               {/* <object data="http://africau.edu/images/default/sample.pdf" type="application/pdf" width="100%" height="800px">
                   <p>Alternative text - include a link <a href="http://africau.edu/images/default/sample.pdf">to the PDF!</a></p>
-               </object>
+               </object> */}
             </CenteredFullPageFlexContainer>
             <div className="text-6xl text-center mt-10">
             </div>
