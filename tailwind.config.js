@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'gray-450': 'rgb(140, 150, 160)',
+        'gray-449': 'rgb(145, 155, 165)',
       },
       width: {
         '400px': '400px',

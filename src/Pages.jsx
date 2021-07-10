@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import "./animationStyles.css"
 import bananasJpg from "./static/bananas.jpg"
+import bananas2Jpg from "./static/bananas2.jpg"
 import rayShiprock from "./static/ray atop shiprock.jpg"
 import rayShiprockWide from "./static/ray atop shiprock wide.jpeg"
 
@@ -180,7 +181,7 @@ function AboutPage(props) {
             {
                // in widescreen view, do grid with 3 columns, text taking up two columns and an image taking up 1 col. in phone or thin view, have single column layout and show things one by one in a single column since we got no fucking space 
             }
-            <div className="py-2 grid-cols-1 grid-rows-10 mb-12 items-center md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid-cols-1 grid-rows-10 mb-12 items-center lg:py-2 md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-3">
                {
                   // MEDIUM AND UP: 2 COLUMNS, TEXT TAKES UP 1 COLUMN OF SPACE
                   // LARGE AND UP: 3 COLUMNS, TEXT TAKES UP 2 COLUMNS WORTH OF SPACE
@@ -191,7 +192,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananasJpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="w-3/5" />
                </div>
                <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-end-4">
                   <p className="about-me-paragraph md:text-right">
@@ -199,23 +200,23 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananasJpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="w-3/5" />
                </div>
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-3">
                   <p className="about-me-paragraph text-black">
-                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been genetics, protein structure and function, bioinformatics, the ethics of technology, full-stack web development, and the neuroscience of music. I also really dig writing, proofreading, and teaching.
+                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been genetics, protein structure and function, bioinformatics, the ethics of technology, full-stack web development, and the neuroscience of music. I'm also pretty interested in writing, proofreading, teaching, and political activism.
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananasJpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="w-3/5" />
                </div>
                <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-end-4">
                   <p className="about-me-paragraph md:text-right">
-                     My career aspirations are simple. I'll cure cancer at the age of 26, then be a busker in San Francisco for a decade, and then retire to a log cabin deep in the Sierra Nevadas with my crossbow and Siberian Husky.<br/><span className="text-gray-450">(just joking. i hope to make a career out of being a freelance science + technology + music tutor for society's disadvantaged)</span>
+                     My career aspirations are simple. I'll cure cancer at the age of 26, then be a busker in San Francisco for a decade, and then retire to a log cabin deep in the Sierra Nevadas with my crossbow and my Siberian Husky.<br /><span className="text-gray-449">(just joking. i hope to make a career out of being a freelance science + technology + music tutor for society's disadvantaged)</span>
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananasJpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="w-3/5" />
                </div>
                <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-3">
                   <p className="about-me-paragraph text-black">
@@ -223,7 +224,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananasJpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="w-3/5" />
                </div>
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-end-4">
                   <p className="about-me-paragraph md:text-right">
@@ -231,7 +232,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananasJpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="w-3/5" />
                </div>
             </div>
          </CenteredFullPageFlexContainer>
@@ -259,6 +260,7 @@ function FindMePage(props) {
       <div className="find-me-page">
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
+            <div className="text-center py-5 px-2 text-base md:text-lg">I don't have accounts on most major social media platforms. But here are two places where you can find me online if you really need to.</div>
             <div className="grid grid-cols-3 grid-rows-7">
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center">
                   <a target="_blank" rel="noreferrer noopener" href="https://twitter.com/raidsrc"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg></a>

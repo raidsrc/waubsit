@@ -59,7 +59,7 @@ function CenteredFullPageFlexContainer(props) {
       <div className="flex justify-center w-full"
       //style={animationProps}
       >
-         <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-10">
+         <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-14 py-7 tiny-screen:mt-16 md:mt-20">
             {props.children}
          </div>
       </div>
@@ -68,10 +68,15 @@ function CenteredFullPageFlexContainer(props) {
 
 function SiteConstructionBanner(props) {
    return (
+      <div>
+         { /*
       <div className="mb-6 mt-24">
-         <span className="text-5xl bg-red-600">
-            site construction in progress BE PATIENT
-         </span>
+      <span className="text-5xl bg-red-600">
+      site construction in progress BE PATIENT
+      </span>
+      </div>
+      */
+         }
       </div>
    )
 }
