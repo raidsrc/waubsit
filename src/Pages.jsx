@@ -3,16 +3,18 @@ import './index.css'
 import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, SiteConstructionBanner, } from './ReusableComponents'
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
+import { Document, Page } from 'react-pdf'
 import "./animationStyles.css"
 import bananasJpg from "./static/bananas.jpg"
 import bananas2Jpg from "./static/bananas2.jpg"
 import rayShiprock from "./static/ray atop shiprock.jpg"
 import rayShiprockWide from "./static/ray atop shiprock wide.jpeg"
+//import internetConnectionLog1 from "./static/Internet connection log 1.pdf"
 
 function HomePage(props) {
    const [reverse, setReverse] = useState(false)
    const [cancel, setCancel] = useState(false)
-   
+
 
    useEffect(() => {
       setCancel(false)
@@ -249,6 +251,10 @@ function ResumePage(props) {
             <CenteredFullPageFlexContainer>
                <SiteConstructionBanner />
                resume goes here eventually<br /><br />
+               <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="640" height="480" allow="autoplay"></iframe>
+               <object data="http://africau.edu/images/default/sample.pdf" type="application/pdf" width="100%" height="800px">
+                  <p>Alternative text - include a link <a href="http://africau.edu/images/default/sample.pdf">to the PDF!</a></p>
+               </object>
             </CenteredFullPageFlexContainer>
             <div className="text-6xl text-center mt-10">
             </div>
