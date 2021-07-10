@@ -48,4 +48,7 @@ html {
   .about-me-img {
     @apply w-11/12 py-4 tiny-screen:w-4/5 sm:w-3/5 md:py-1 md:w-10/12 lg:w-11/12 lg:py-4 xl:w-10/12 xl:py-2
   }
+  .blue-n-purple-link {
+    @apply underline active:text-blue-900 text-blue-600 hover:text-blue-700 visited:text-purple-600
+  }
 }

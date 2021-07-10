@@ -230,7 +230,7 @@ function AboutPage(props) {
                </div>
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-end-4">
                   <p className="about-me-paragraph md:text-right">
-                     When I'm not busy butchering sketches of Haworth projections or <a className="underline active:text-blue-900 text-blue-600 hover:text-blue-700 visited:text-purple-600" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a> I spend my time programming, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
+                     When I'm not busy butchering sketches of Haworth projections or <a className="blue-n-purple-link" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a> I spend my time programming, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
                   </p>
                </div>
                <div className="flex justify-center items-center">
@@ -254,8 +254,8 @@ function ResumePage(props) {
                </div> */}
 
                <div className="flex justify-center h-80vh">
-                  <object data="https://www.acgov.org/cda/hcd/documents/EvictionMoratoriumOrdinanceSummaryFAQ8.11.20.pdf" type="application/pdf" width="100%" height="auto">
-                     <p>It appears your browser cannot display this PDF. Here's a <a href="https://www.acgov.org/cda/hcd/documents/EvictionMoratoriumOrdinanceSummaryFAQ8.11.20.pdf">link to it!</a></p>
+                  <object data="https://firebasestorage.googleapis.com/v0/b/raidsrc-me.appspot.com/o/some%20static%20site%20assets%2FInternet%20connection%20log%201.pdf?alt=media&token=10ec7b0c-8251-40d2-91f4-0b98bb1bf2a6" type="application/pdf" width="100%" height="auto">
+                     <p>It appears your browser cannot display this PDF. Here's a <a href="https://firebasestorage.googleapis.com/v0/b/raidsrc-me.appspot.com/o/some%20static%20site%20assets%2FInternet%20connection%20log%201.pdf?alt=media&token=10ec7b0c-8251-40d2-91f4-0b98bb1bf2a6" className="blue-n-purple-link">link to it!</a></p>
                   </object>
                </div>
             </CenteredFullPageFlexContainer>
