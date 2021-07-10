@@ -7,9 +7,12 @@ import "./animationStyles.css"
 import "./otherStyles.css"
 
 function App() {
-
   let location = useLocation()
-  //console.log(location)
+  const [alerted, setAlerted] = useState(false)
+   if (!alerted) {
+      setTimeout(() => alert("site construction is in progress. please excuse the presence of any wack shit"), 420)
+      setAlerted(true)
+   }
 
   return (
     <div className="whole-app">
