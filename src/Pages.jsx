@@ -174,14 +174,14 @@ function AboutPage(props) {
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
             <div className="flex justify-center">
-               <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl" >
+               <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl xl:mb-4 2xl:text-5xl" >
                   <NameInputTypingEffectBox className="px-2 py-2 " onLoad={doNameShit()} timeToSelect={timeToSelect} />
                </div>
             </div>
             {
                // in widescreen view, do grid with 3 columns, text taking up two columns and an image taking up 1 col. in phone or thin view, have single column layout and show things one by one in a single column since we got no fucking space 
             }
-            <div className="grid-cols-1 grid-rows-10 mb-12 items-center lg:py-2 md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="flex flex-col justify-center grid-cols-1 grid-rows-10 mb-12 items-center lg:py-2 md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-3">
                {
                   // MEDIUM AND UP: 2 COLUMNS, TEXT TAKES UP 1 COLUMN OF SPACE
                   // LARGE AND UP: 3 COLUMNS, TEXT TAKES UP 2 COLUMNS WORTH OF SPACE
@@ -192,7 +192,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananas2Jpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="about-me-img" />
                </div>
                <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-end-4">
                   <p className="about-me-paragraph md:text-right">
@@ -200,7 +200,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananas2Jpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="about-me-img" />
                </div>
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-3">
                   <p className="about-me-paragraph text-black">
@@ -208,7 +208,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananas2Jpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="about-me-img" />
                </div>
                <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-end-4">
                   <p className="about-me-paragraph md:text-right">
@@ -216,7 +216,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananas2Jpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="about-me-img" />
                </div>
                <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-3">
                   <p className="about-me-paragraph text-black">
@@ -224,7 +224,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananas2Jpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="about-me-img" />
                </div>
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-end-4">
                   <p className="about-me-paragraph md:text-right">
@@ -232,7 +232,7 @@ function AboutPage(props) {
                   </p>
                </div>
                <div className="flex justify-center items-center">
-                  <img src={bananas2Jpg} className="w-3/5" />
+                  <img src={bananas2Jpg} className="about-me-img" />
                </div>
             </div>
          </CenteredFullPageFlexContainer>

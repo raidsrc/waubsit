@@ -45,4 +45,7 @@ html {
   .homepage-paragraph {
     @apply about-me-paragraph py-3 px-0 text-left 
   }
+  .about-me-img {
+    @apply w-11/12 py-4 tiny-screen:w-4/5 sm:w-3/5 md:py-1 md:w-10/12 lg:w-11/12 lg:py-4 xl:w-10/12 xl:py-2
+  }
 }
