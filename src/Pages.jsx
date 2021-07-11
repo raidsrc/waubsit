@@ -256,6 +256,7 @@ function AboutPage(props) {
 }
 
 // load the page. don't show iframe yet because iframe fucks with the smooth scrolling animation. show loading anim. wait for however long it takes for the smooth scroll to finish, maybe half a second. after half a second, trigger a re-render somehow. i think by changing the putIframeOnPage state variable. after that becomes true, then i mount the iframe. 
+// you know that weird issue where when you scroll to the bottom of the homepage and click the resume link, the auto scroll to top doesn't actually scroll to the top of the page before the next page loads? for some reason everything is fine on mobile. 
 function ResumePage(props) {
    const [firstRender, setFirstRender] = useState(true)
    const [putIframeOnPage, setPutIframeOnPage] = useState(false)

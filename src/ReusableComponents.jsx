@@ -97,7 +97,7 @@ function HamburgerMenu(props) {
    return (
       <div className={props.className}>
          <button onClick={() => setShowRightSideMenu(!showRightSideMenu)}>
-            <img src="https://img.icons8.com/material-rounded/24/ffffff/menu--v1.png" />
+            <div className="w-6"><img src="https://img.icons8.com/material-rounded/192/ffffff/menu--v1.png" /></div>
          </button>
       </div>
    )
@@ -141,7 +141,7 @@ function SiteConstructionBanner(props) {
 }
 
 function smoothScrollToTop() {
-   window.scroll({top: 0, left: 0, behavior: 'smooth',})
+   window.scroll({ top: 0, left: 0, behavior: 'smooth', })
 }
 
 export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner }
