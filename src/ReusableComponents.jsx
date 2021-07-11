@@ -54,8 +54,8 @@ function ClickableRaidsrcIcon(props) {
 function RightSideMenuThatAppearsWhenYouClickTheHamburger(props) {
    let setShowRightSideMenu = props.setShowRightSideMenu
    return (
-      <div className="absolute bg-gray-700 sm:hidden right-4 top-20 w-3/5 h-60 flex items-center justify-center">
-         <TheNavButtonsAllTogether className="flex flex-col space-y-1 text-center" setShowRightSideMenu={setShowRightSideMenu} />
+      <div className="absolute bg-gray-700 sm:hidden right-4 top-20 w-5/12 h-60 flex items-center justify-center">
+         <TheNavButtonsAllTogether className="flex flex-col space-y-3 text-center" setShowRightSideMenu={setShowRightSideMenu} />
       </div>
    )
 }
@@ -63,23 +63,23 @@ function RightSideMenuThatAppearsWhenYouClickTheHamburger(props) {
 function TheNavButtonsAllTogether(props) {
    return (
       <div className={props.className}>
-         <NavButton className="navbutton-style"
+         <NavButton className="navbutton-rightsidemenu-style sm:navbutton-style"
             to="/about" setShowRightSideMenu={props.setShowRightSideMenu}>
             About
          </NavButton>
-         <NavButton className="navbutton-style"
+         <NavButton className="navbutton-rightsidemenu-style sm:navbutton-style"
             to="/resume" setShowRightSideMenu={props.setShowRightSideMenu}>
             Résumé
          </NavButton>
-         <NavButton className="navbutton-style"
+         <NavButton className="navbutton-rightsidemenu-style sm:navbutton-style"
             to="/contact" setShowRightSideMenu={props.setShowRightSideMenu}>
             Find Me
          </NavButton>
-         <NavButton className="navbutton-style"
+         <NavButton className="navbutton-rightsidemenu-style sm:navbutton-style"
             to="/links" setShowRightSideMenu={props.setShowRightSideMenu}>
             Links
          </NavButton>
-         <NavButton className="navbutton-style"
+         <NavButton className="navbutton-rightsidemenu-style sm:navbutton-style"
             to="/siteinfo" setShowRightSideMenu={props.setShowRightSideMenu}>
             Site Info
          </NavButton>

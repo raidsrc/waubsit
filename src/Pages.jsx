@@ -10,6 +10,7 @@ import rayShiprock from "./static/ray atop shiprock.jpg"
 import rayShiprockWide from "./static/ray atop shiprock wide.jpeg"
 import rayPiano2017 from "./static/IMG_8031.MOV_snapshot_00.35_[2020.04.09_10.03.38].jpg"
 import rayDrummingMonochrome from "./static/20200913_185258-01.jpeg"
+import stinkyTofu from "./static/stinky_tofu_lol.jpg"
 
 function HomePage(props) {
    const [reverse, setReverse] = useState(false)
@@ -56,10 +57,10 @@ function HomePage(props) {
                   <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">H</span>ey. I'm Ray, and this is my personal website. Welcome.
                </h1>
                <p className="homepage-paragraph text-black">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus fuga eum expedita qui impedit eos, itaque quis quidem quod? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a tiny little space out of the world wide web that belongs completely to me (mostly).
                </p>
                <p className="homepage-paragraph">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint alias repellendus voluptatem molestiae natus.
+                  Have a look around! I know you'll find something worth your time. You can read a little about me in the "About" section. You can view my résumé in the "Résumé" section. Check out "Find Me" if you want to know where you can contact me. I've got links to this site's subdomains and some of my work in "Links." And if you want to know how I built this site, check out "Site Info."
                </p>
                <p className="homepage-paragraph text-black">
                   Enjoy your stay.
@@ -195,48 +196,54 @@ function AboutPage(props) {
                      Yo. In case you don't know me, I'm Raymond Chen. I usually go by Ray, but people have known me by many names. Some of these names were given to me. Some of them I chose myself. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
                   </p>
                </div>
-               <div className="flex justify-center items-center lg:col-start-4 lg:col-end-6">
+               <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                   <img src={rayDrummingMonochrome} className="about-me-img" />
+                  <span className="about-me-img-caption">Fig. 1; me, in my basement, drumming very intensely as I read a text message from my neighbor telling me to quiet down.</span>
                </div>
                <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
                      I'm from the San Francisco Bay Area. I was born here and I've lived here for most of my life. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
                   </p>
                </div>
-               <div className="flex justify-center items-center lg:col-start-1 lg:col-end-3">
+               <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={bananas2Jpg} className="about-me-img" />
+                  <span className="about-me-img-caption text-white">Fig. 2; bananana.</span>
                </div>
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
                      Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been genetics, protein structure and function, bioinformatics, the ethics of technology, full-stack web development, and the neuroscience of music. I'm also pretty interested in writing, proofreading, teaching, and activism.
                   </p>
                </div>
-               <div className="flex justify-center items-center lg:col-start-4 lg:col-end-6">
+               <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                   <img src={bananas2Jpg} className="about-me-img" />
+                  <span className="about-me-img-caption">Fig. 3; banaba.</span>
                </div>
                <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
-                     My career aspirations are simple. I'll cure cancer at the age of 26, then be a busker in San Francisco for a decade, and then retire to a log cabin deep in the Sierra Nevadas with my crossbow and my Siberian Husky.<br /><span className="text-gray-449">(just joking. i hope to make a career out of being a freelance science + technology + music tutor for society's disadvantaged)</span>
+                     My career aspirations are simple. I'll cure cancer at the age of 26, then be a busker in San Francisco for a decade, and then retire to a log cabin deep in the Sierra Nevadas with my crossbow and my Siberian Husky.<br /><span className="text-gray-449">(just joking. i'm hoping to make a career out of being a freelance science + technology + music tutor for society's disadvantaged)</span>
                   </p>
                </div>
-               <div className="flex justify-center items-center lg:col-start-1 lg:col-end-3">
+               <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={bananas2Jpg} className="about-me-img lg:col-end-3" />
+                  <span className="about-me-img-caption text-white">Fig. 4; something else lol banaba bananb bananana.</span>
                </div>
                <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
                      I like Kendrick Lamar, Fullmetal Alchemist, steamed pork buns, Bill Evans, grilled salmon, California poppies, and challah bread. I don't like candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
                   </p>
                </div>
-               <div className="flex justify-center items-center lg:col-start-4 lg:col-end-6">
-                  <img src={bananas2Jpg} className="about-me-img" />
+               <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
+                  <img src={stinkyTofu} className="about-me-img" />
+                  <span className="about-me-img-caption">Fig. 5; me, right, just ate a mushroom, probably, i don't know. friend, left, is ecstatic.</span>
                </div>
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
                      When I'm not busy butchering sketches of Haworth projections or <a className="blue-n-purple-link" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a> I spend my time programming, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
                   </p>
                </div>
-               <div className="flex justify-center items-center lg:col-start-1 lg:col-end-3">
+               <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={rayPiano2017} className="about-me-img" />
+                  <span className="about-me-img-caption text-white">Fig. 6; c. 2017. performing a piano piece from the homestuck discography in front of a few hundred people. his palms are sweaty, knees weak, arms are heavy,,,, </span>
                </div>
             </div>
          </CenteredFullPageFlexContainer>
@@ -254,12 +261,19 @@ function ResumePage(props) {
                   <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" 
                   allow="autoplay" />
                </div> */}
-
-               <div className="flex justify-center h-80vh">
+               {/* <div className="flex justify-center h-80vh">
                   <object data="https://firebasestorage.googleapis.com/v0/b/raidsrc-me.appspot.com/o/some%20static%20site%20assets%2FInternet%20connection%20log%201.pdf?alt=media&token=10ec7b0c-8251-40d2-91f4-0b98bb1bf2a6" type="application/pdf" width="100%" height="auto">
+                     <div className="flex justify-center h-80vh">
+                        <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto"
+                           allow="autoplay" />
+                     </div>
                      <p>It appears your browser cannot display this PDF. Here's a <a href="https://firebasestorage.googleapis.com/v0/b/raidsrc-me.appspot.com/o/some%20static%20site%20assets%2FInternet%20connection%20log%201.pdf?alt=media&token=10ec7b0c-8251-40d2-91f4-0b98bb1bf2a6" className="blue-n-purple-link">link to it!</a></p>
                   </object>
+               </div> */}
+               <div className="flex justify-center h-70vh md:h-80vh">
+                  <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" />
                </div>
+
             </CenteredFullPageFlexContainer>
             <div className="text-6xl text-center mt-10">
             </div>
