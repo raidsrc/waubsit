@@ -28,7 +28,6 @@ function NavButton(props) {
    }
    function wheneverNavButtonClicked() {
       smoothScrollToTop()
-      console.log("I OUGHT TO BE SMOOTH SCROLLIN TO THE TOP")
       setShowRightSideMenu(false)
    }
    return (

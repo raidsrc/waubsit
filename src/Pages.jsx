@@ -255,10 +255,16 @@ function AboutPage(props) {
    )
 }
 
+// load the page. don't show iframe yet because iframe fucks with the smooth scrolling animation. show loading anim. wait for however long it takes for the smooth scroll to finish, maybe half a second. after half a second, trigger a re-render somehow. i think by changing the putIframeOnPage state variable. after that becomes true, then i mount the iframe. 
 function ResumePage(props) {
+   const [firstRender, setFirstRender] = useState(true)
+   const [putIframeOnPage, setPutIframeOnPage] = useState(false)
    const [iframeLoaded, setIframeLoaded] = useState(false)
    const [iframeClassName, setIframeClassName] = useState("hidden")
-   
+   useEffect(() => {
+      setFirstRender(false)
+      setTimeout(() => { setPutIframeOnPage(true) }, 1500)
+   }, [firstRender])
    function whenIframeLoaded() {
       setIframeLoaded(true)
       setIframeClassName("inline-block")
@@ -285,12 +291,15 @@ function ResumePage(props) {
                <div className="flex justify-center h-70vh md:h-80vh">
                   {iframeLoaded ? "" :
                      <div className="w-5/12 flex flex-col justify-center items-center tiny-screen:w-4/12 sm:w-2/5 max-w-2xs">
-                        <div className="w-2/4 sm:3/4">
-                           <Bars opacity="0.9" width="100%" height="auto" />
+                        <div className=" flex w-2/4 sm:3/4 justify-center items-center">
+                           <div>
+                              <Bars opacity="0.9" width="100%" height="auto" />
+                              <div className="text-center w-full text-base lg:text-lg">pdf loading. sit tight.</div>
+                           </div>
                         </div>
-                        <div className="text-center w-full text-base lg:text-lg">iframe loading. sit tight.</div>
-                     </div>}
-                  <iframe className={iframeClassName} src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" allow="autoplay" onLoad={whenIframeLoaded} />
+                     </div>
+                  }
+                  {putIframeOnPage ? <iframe className={iframeClassName} src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" allow="autoplay" onLoad={whenIframeLoaded} /> : ""}
                </div>
 
             </CenteredFullPageFlexContainer>
