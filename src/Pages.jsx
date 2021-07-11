@@ -258,6 +258,7 @@ function AboutPage(props) {
 function ResumePage(props) {
    const [iframeLoaded, setIframeLoaded] = useState(false)
    const [iframeClassName, setIframeClassName] = useState("hidden")
+   
    function whenIframeLoaded() {
       setIframeLoaded(true)
       setIframeClassName("inline-block")
