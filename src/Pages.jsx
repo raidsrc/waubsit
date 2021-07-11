@@ -370,10 +370,10 @@ function SiteInfoPage(props) {
                Site Info
             </h1>
             <p className="about-me-paragraph text-black">I built this site using React, mostly. I learned about React from ECS 162 - Web Programming, a course I took in Spring Quarter 2021 at UC Davis. I've been enthralled since.</p>
-            <p className="about-me-paragraph">To put it all together, I enlisted the help of vitejs, svg-loaders-react, react-transition-group, react-spring, and tailwindcss. The </p>
+            <p className="about-me-paragraph">To put it all together, I enlisted the help of vitejs, svg-loaders-react, react-transition-group, react-spring, and tailwindcss.</p>
             <p className="about-me-paragraph text-black">Building the site took me a couple weeks of on-and-off work. Much of it was spent teaching myself how to use the technologies listed above. I struggled a lot with react-spring in particular, spending hours staring at my laptop screen in the dark cabin of an airplane wondering what was going wrong.</p>
             <p className="about-me-paragraph">If you're reading this right now, I'm still building the site, so I guess the first sentence of the previous paragraph was a lie, since I'm not done yet and I don't know how long it'll take me to finish. Welcome to my in-progress personal website. How the hell did you get here? I haven't told anyone about this site or advertised it anywhere...</p>
-            <div className="flex justify-center mt-20">
+            <div className="flex justify-center mt-28">
                <a href="https://icons8.com/icon/83195/menu" className="blue-n-purple-link mb-1 text-center text-xs font-semibold">
                   mobile hamburger menu icon © Icons8
                </a>

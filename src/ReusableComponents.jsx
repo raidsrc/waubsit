@@ -8,9 +8,9 @@ function Navbar(props) {
    //const [hamburgerVisible, setHamburgerVisible] = useState(false)
    const [showRightSideMenu, setShowRightSideMenu] = useState(false)
    return (
-      <nav className="bg-gray-800 shadow-lg flex fixed justify-center w-full z-10">
+      <nav className="bg-gray-800 shadow-xl flex fixed justify-center w-full z-10">
          <div className="flex flex-row text-white top-0 w-full justify-between py-3 px-5 items-center max-w-yuge tiny-screen:px-7 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
-            <ClickableRaidsrcIcon to="/" setShowRightSideMenu={setShowRightSideMenu}/>
+            <ClickableRaidsrcIcon to="/" setShowRightSideMenu={setShowRightSideMenu} />
             <HamburgerMenu className="sm:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
             {showRightSideMenu ? <RightSideMenuThatAppearsWhenYouClickTheHamburger setShowRightSideMenu={setShowRightSideMenu} /> : ""}
             <TheNavButtonsAllTogether setShowRightSideMenu={setShowRightSideMenu} className="hidden flex-row justify-around space-x-4 sm:flex tiny-screen:visible sm:space-x-7 md:space-x-9 lg:space-x-12" />
@@ -44,7 +44,7 @@ function ClickableRaidsrcIcon(props) {
    }
    return (
       <div className="w-12">
-         <Link className={theClass} onClick={() => {smoothScrollToTop(); setShowRightSideMenu(false)}} to={props.to}>
+         <Link className={theClass} onClick={() => { smoothScrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
             <img src={raidsrcLogoUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
       </div>
@@ -117,9 +117,7 @@ function CenteredFullPageFlexContainer(props) {
 
 function HomepageCenteredFullPageFlexContainer(props) {
    return (
-      <div className="flex justify-center w-full"
-      //style={animationProps}
-      >
+      <div className="flex justify-center w-full">
          <div className="w-10/12 max-w-screen-xl flex flex-col justify-center mt-2 py-0 md:w-11/12 tiny-screen:mt-3 md:mt-0 lg:mt-10">
             {props.children}
          </div>
