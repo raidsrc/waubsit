@@ -9,10 +9,10 @@ import "./otherStyles.css"
 function App() {
   let location = useLocation()
   const [alerted, setAlerted] = useState(false)
-  //  if (!alerted) {
-  //     setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
-  //     setAlerted(true)
-  //  }
+   if (!alerted) {
+      setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
+      setAlerted(true)
+   }
 
   return (
     <div className="whole-app">
