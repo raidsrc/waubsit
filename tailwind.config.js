@@ -26,6 +26,7 @@ module.exports = {
         '90vh': '90vh',
       },
       maxWidth: {
+        '2xs': '280px',
         'yuge': '1700px',
       },
       gridTemplateRows: {

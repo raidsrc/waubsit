@@ -3,6 +3,7 @@ import './index.css'
 import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, SiteConstructionBanner, } from './ReusableComponents'
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
+import { Bars } from "svg-loaders-react"
 import "./animationStyles.css"
 //import bananasJpg from "./static/bananas.jpg"
 import bananas2Jpg from "./static/bananas2.jpg"
@@ -198,7 +199,7 @@ function AboutPage(props) {
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                   <img src={rayDrummingMonochrome} className="about-me-img" />
-                  <span className="about-me-img-caption">Fig. 1; me, in my basement, drumming very intensely as I read a text message from my neighbor telling me to quiet down.</span>
+                  <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 1;</span> me, in my basement, drumming very intensely as I read a text message from my neighbor telling me to quiet down. yeah, they complain a lot.</span>
                </div>
                <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
@@ -207,7 +208,7 @@ function AboutPage(props) {
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={bananas2Jpg} className="about-me-img" />
-                  <span className="about-me-img-caption text-white">Fig. 2; bananana.</span>
+                  <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 2;</span> bananana.</span>
                </div>
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
@@ -216,7 +217,7 @@ function AboutPage(props) {
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                   <img src={bananas2Jpg} className="about-me-img" />
-                  <span className="about-me-img-caption">Fig. 3; banaba.</span>
+                  <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 3;</span> banaba.</span>
                </div>
                <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
@@ -225,7 +226,7 @@ function AboutPage(props) {
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={bananas2Jpg} className="about-me-img lg:col-end-3" />
-                  <span className="about-me-img-caption text-white">Fig. 4; something else lol banaba bananb bananana.</span>
+                  <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 4;</span> something else lol banaba bananb bananana.</span>
                </div>
                <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
@@ -234,7 +235,7 @@ function AboutPage(props) {
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                   <img src={stinkyTofu} className="about-me-img" />
-                  <span className="about-me-img-caption">Fig. 5; me, right, just ate a mushroom, probably, i don't know. friend, left, is ecstatic.</span>
+                  <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5;</span> me, right, just ate a mushroom, probably, i don't know. friend, left, is ecstatic.</span>
                </div>
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
@@ -243,7 +244,7 @@ function AboutPage(props) {
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={rayPiano2017} className="about-me-img" />
-                  <span className="about-me-img-caption text-white">Fig. 6; c. 2017. performing a piano piece from the homestuck discography in front of a few hundred people. his palms are sweaty, knees weak, arms are heavy,,,, </span>
+                  <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6;</span> c. 2017. performing a piece from the homestuck discography in front of a few hundred people. his palms are sweaty, knees weak, arms are heavy,,,, </span>
                </div>
             </div>
          </CenteredFullPageFlexContainer>
@@ -252,6 +253,12 @@ function AboutPage(props) {
 }
 
 function ResumePage(props) {
+   const [iframeLoaded, setIframeLoaded] = useState(false)
+   const [iframeClassName, setIframeClassName] = useState("hidden")
+   function whenIframeLoaded() {
+      setIframeLoaded(true)
+      setIframeClassName("inline-block")
+   }
    return (
       <div className="resume-page">
          <div>
@@ -270,8 +277,16 @@ function ResumePage(props) {
                      <p>It appears your browser cannot display this PDF. Here's a <a href="https://firebasestorage.googleapis.com/v0/b/raidsrc-me.appspot.com/o/some%20static%20site%20assets%2FInternet%20connection%20log%201.pdf?alt=media&token=10ec7b0c-8251-40d2-91f4-0b98bb1bf2a6" className="blue-n-purple-link">link to it!</a></p>
                   </object>
                </div> */}
+
                <div className="flex justify-center h-70vh md:h-80vh">
-                  <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" />
+                  {iframeLoaded ? "" :
+                     <div className="w-5/12 flex flex-col justify-center items-center tiny-screen:w-4/12 sm:w-2/5 max-w-2xs">
+                        <div className="w-2/4 sm:3/4">
+                           <Bars opacity="0.65" width="100%" height="auto"/>
+                        </div>
+                        <div className="text-center w-full text-base lg:text-lg">iframe loading. sit tight.</div>
+                     </div>}
+                  <iframe className={iframeClassName} src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" onLoad={whenIframeLoaded} />
                </div>
 
             </CenteredFullPageFlexContainer>
