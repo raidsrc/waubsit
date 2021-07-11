@@ -141,11 +141,7 @@ function SiteConstructionBanner(props) {
 }
 
 function smoothScrollToTop() {
-   window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-   })
+   window.scroll({top: 0, left: 0, behavior: 'smooth',})
 }
 
 export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner }
