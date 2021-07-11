@@ -4,7 +4,7 @@ import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer,
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import { Bars } from "svg-loaders-react"
-import "./animationStyles.css"
+//import "./animationStyles.css"
 //import bananasJpg from "./static/bananas.jpg"
 import bananas2Jpg from "./static/bananas2.jpg"
 import rayShiprock from "./static/ray atop shiprock.jpg"

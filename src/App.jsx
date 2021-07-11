@@ -19,7 +19,7 @@ function App() {
       <Navbar />
       <div className="content">
         <TransitionGroup>
-          <CSSTransition key={location.key} classNames="fade" timeout={600}> 
+          <CSSTransition key={location.key} classNames="fade" timeout={1000}> 
           {
             //might need to make this timeout prop above more accurate to the lengths of the css transitions in animationStyles.css
           }
