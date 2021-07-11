@@ -9,7 +9,7 @@ function Navbar(props) {
    const [showRightSideMenu, setShowRightSideMenu] = useState(false)
    return (
       <nav className="bg-gray-800 shadow-lg flex fixed justify-center w-full z-10">
-         <div className="flex flex-row text-white top-0 w-full justify-between py-2 px-4 items-center max-w-yuge tiny-screen:py-3 tiny-screen:px-5 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
+         <div className="flex flex-row text-white top-0 w-full justify-between py-3 px-5 items-center max-w-yuge tiny-screen:px-7 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
             <ClickableRaidsrcIcon to="/" setShowRightSideMenu={setShowRightSideMenu}/>
             <HamburgerMenu className="sm:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
             {showRightSideMenu ? <RightSideMenuThatAppearsWhenYouClickTheHamburger setShowRightSideMenu={setShowRightSideMenu} /> : ""}
@@ -28,6 +28,7 @@ function NavButton(props) {
    }
    function wheneverNavButtonClicked() {
       smoothScrollToTop()
+      console.log("I OUGHT TO BE SMOOTH SCROLLIN TO THE TOP")
       setShowRightSideMenu(false)
    }
    return (
@@ -134,7 +135,7 @@ function smoothScrollToTop() {
    window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
    })
 }
 

@@ -58,7 +58,7 @@ function HomePage(props) {
                   <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">H</span>ey. I'm Ray, and this is my personal website. Welcome.
                </h1>
                <p className="homepage-paragraph text-black">
-                  I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a tiny little space out of the world wide web that belongs completely to me (mostly).
+                  I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a tiny little space out of the Web that belongs completely to me (mostly).
                </p>
                <p className="homepage-paragraph">
                   Have a look around! I know you'll find something worth your time. You can read a little about me in the "About" section. You can view my résumé in the "Résumé" section. Check out "Find Me" if you want to know where you can contact me. I've got links to this site's subdomains and some of my work in "Links." And if you want to know how I built this site, check out "Site Info."
@@ -179,6 +179,9 @@ function AboutPage(props) {
          }
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
+            <h1 className="mb-5 px-2 text-white">
+               About Me
+            </h1>
             <div className="flex justify-center">
                <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl xl:mb-4 2xl:text-5xl" >
                   <NameInputTypingEffectBox className="px-2 py-2 " onLoad={setTimeout(() => doNameShit(), 420)} timeToSelect={timeToSelect} />
@@ -235,7 +238,7 @@ function AboutPage(props) {
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                   <img src={stinkyTofu} className="about-me-img" />
-                  <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5;</span> me, right, just ate a mushroom, probably, i don't know. friend, left, is ecstatic.</span>
+                  <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5;</span>just ate a mushroom, probably, i don't know. friend appears very happy about it.</span>
                </div>
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
@@ -282,11 +285,11 @@ function ResumePage(props) {
                   {iframeLoaded ? "" :
                      <div className="w-5/12 flex flex-col justify-center items-center tiny-screen:w-4/12 sm:w-2/5 max-w-2xs">
                         <div className="w-2/4 sm:3/4">
-                           <Bars opacity="0.65" width="100%" height="auto"/>
+                           <Bars opacity="0.9" width="100%" height="auto" />
                         </div>
                         <div className="text-center w-full text-base lg:text-lg">iframe loading. sit tight.</div>
                      </div>}
-                  <iframe className={iframeClassName} src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" onLoad={whenIframeLoaded} />
+                  <iframe className={iframeClassName} src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" allow="autoplay" onLoad={whenIframeLoaded} />
                </div>
 
             </CenteredFullPageFlexContainer>
@@ -302,19 +305,30 @@ function FindMePage(props) {
       <div className="find-me-page">
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
-            <div className="text-center py-5 px-2 text-base md:text-lg">I don't have accounts on most major social media platforms. But here are two places where you can find me online if you really need to.</div>
-            <div className="grid grid-cols-3 grid-rows-7">
+            <h1 className="mb-5 px-2 text-white">
+               Contact
+            </h1>
+            <div className="text-center py-5 px-2 text-base md:text-lg">
+               I don't have accounts on most major social media platforms. But here are two places where you can find me online if you really need to.
+            </div>
+            <div className="grid grid-cols-3 grid-rows-5">
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center">
                   <a target="_blank" rel="noreferrer noopener" href="https://twitter.com/raidsrc"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg></a>
-                  <span className="px-4 text-lg font-semibold">@raidsrc</span>
+                  <span className="px-4 text-lg font-semibold text-white">@raidsrc</span>
                </div>
                <div className="row-start-4 col-start-2 flex flex-row items-center justify-center">
                   <a target="_blank" rel="noreferrer noopener" href="https://youtube.com/c/raidsrc"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" /></svg></a>
-                  <span className="px-4 text-lg font-semibold">/c/raidsrc</span>
+                  <span className="px-4 text-lg font-semibold text-white">/c/raidsrc</span>
                </div>
-               <div className="row-start-6 col-start-2 mt-4 text-center text-xs font-semibold">
-                  icons © 2021 iconmonstr
-               </div>
+            </div>
+            <div className="text-center py-5 px-2 text-base md:text-lg">
+               Alternatively, you could email me at the address below.
+            </div>
+            <div className="grid grid-cols-3 grid-rows-6">
+               <div className="row-start-2 col-start-2 flex flex-row items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" /></svg><span className="px-4 text-lg font-semibold text-white col-start-2">rsrchen@ucdavis.edu</span></div>
+            </div>
+            <div className="mt-4 mb-1 text-center text-xs font-semibold">
+               icons © 2021 iconmonstr
             </div>
          </CenteredFullPageFlexContainer>
       </div>
@@ -326,7 +340,12 @@ function LinksPage(props) {
       <div className="links-page">
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
-            <span className="text-5xl">asldkfja lksdjf alksdjf laskdjf laksdjf lkasdjf links </span>
+            <h1 className="mb-5 px-2">
+               Links
+            </h1>
+            <p className="about-me-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatibus accusantium iste, quis nam expedita labore laborum blanditiis at ex!</p>
+            <p className="about-me-paragraph text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem recusandae aliquid reprehenderit, illum impedit dicta rerum. Dolorum eius possimus cum asperiores aliquid? Magni non eligendi doloremque enim recusandae provident ducimus?</p>
+            <p className="about-me-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo sed facere veniam odio pariatur voluptates? Illum repellendus est nisi incidunt, ut placeat nihil? Asperiores, provident.</p>
          </CenteredFullPageFlexContainer>
       </div>
    )
@@ -337,7 +356,13 @@ function SiteInfoPage(props) {
       <div className="site-info-page">
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
-            <span className="text-5xl">wertyuidfvghjkcvbnm site info </span>
+            <h1 className="text-white mb-5 px-2">
+               Site Info
+            </h1>
+            <p className="about-me-paragraph text-black">I built this site using React, mostly. I learned about React from ECS 162 - Web Programming, a course I took in Spring Quarter 2021 at UC Davis. I've been enthralled since.</p>
+            <p className="about-me-paragraph">To put it all together, I enlisted the help of vitejs, svg-loaders-react, react-transition-group, react-spring, and tailwindcss. </p>
+            <p className="about-me-paragraph text-black">Building the site took me a couple weeks of on-and-off work. Much of it was spent teaching myself how to use the technologies listed above. I struggled a lot with react-spring in particular, spending hours staring at my laptop screen in the dark cabin of an airplane wondering what was going wrong.</p>
+            <p className="about-me-paragraph">If you're reading this right now, I'm still building the site, so I guess the first sentence of the previous paragraph was a lie, since I'm not done yet and I don't know how long it'll take me to finish. Welcome to my in-progress personal website. How the hell did you get here? I haven't told anyone about this site or advertised it anywhere...</p>
          </CenteredFullPageFlexContainer>
       </div>
    )
