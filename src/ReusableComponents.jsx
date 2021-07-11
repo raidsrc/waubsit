@@ -12,52 +12,30 @@ function Navbar(props) {
          <div className="flex flex-row text-white top-0 w-full justify-between py-2 px-4 items-center max-w-yuge tiny-screen:py-3 tiny-screen:px-5 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
             <ClickableRaidsrcIcon to="/" />
             <HamburgerMenu className="sm:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
-            {showRightSideMenu ?
-               <div className="absolute bg-gray-700 sm:hidden right-4 top-20 w-3/5 h-60 flex items-center justify-center">
-                  <div className="flex flex-col space-y-1 text-center">
-                     <NavButton className="navbutton-style"
-                        to="/about" >
-                        About
-                     </NavButton>
-                     <NavButton className="navbutton-style"
-                        to="/resume">
-                        Résumé
-                     </NavButton>
-                     <NavButton className="navbutton-style"
-                        to="/contact">
-                        Find Me
-                     </NavButton>
-                  </div>
-               </div> : ""}
-            <div className="hidden flex-row justify-around space-x-4 sm:flex tiny-screen:visible sm:space-x-7 md:space-x-9 lg:space-x-12">
-               <NavButton className="navbutton-style"
-                  to="/about" >
-                  About
-               </NavButton>
-               <NavButton className="navbutton-style"
-                  to="/resume">
-                  Résumé
-               </NavButton>
-               <NavButton className="navbutton-style"
-                  to="/contact">
-                  Find Me
-               </NavButton>
-            </div>
+            {showRightSideMenu ? <RightSideMenuThatAppearsWhenYouClickTheHamburger setShowRightSideMenu={setShowRightSideMenu} /> : ""}
+            <TheNavButtonsAllTogether setShowRightSideMenu={setShowRightSideMenu} className="hidden flex-row justify-around space-x-4 sm:flex tiny-screen:visible sm:space-x-7 md:space-x-9 lg:space-x-12" />
          </div>
       </nav>
    )
 }
 
 function NavButton(props) {
+   let setShowRightSideMenu = props.setShowRightSideMenu
    let location = useLocation()
    let theClass = props.className
    if (location.pathname === props.to) {
       theClass += " disabled-link"
    }
+   function wheneverNavButtonClicked() {
+      smoothScrollToTop()
+      setShowRightSideMenu(false)
+   }
    return (
-      <Link className={theClass} to={props.to} onClick={smoothScrollToTop}>{props.children}</Link>
+      <Link className={theClass} to={props.to} onClick={() => wheneverNavButtonClicked()}>{props.children}</Link>
    )
 }
+
+
 
 function ClickableRaidsrcIcon(props) {
    let location = useLocation()
@@ -70,6 +48,42 @@ function ClickableRaidsrcIcon(props) {
          <Link className={theClass} onClick={smoothScrollToTop} to={props.to}>
             <img src={raidsrcLogoUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
+      </div>
+   )
+}
+
+function RightSideMenuThatAppearsWhenYouClickTheHamburger(props) {
+   let setShowRightSideMenu = props.setShowRightSideMenu
+   return (
+      <div className="absolute bg-gray-700 sm:hidden right-4 top-20 w-3/5 h-60 flex items-center justify-center">
+         <TheNavButtonsAllTogether className="flex flex-col space-y-1 text-center" setShowRightSideMenu={setShowRightSideMenu} />
+      </div>
+   )
+}
+
+function TheNavButtonsAllTogether(props) {
+   return (
+      <div className={props.className}>
+         <NavButton className="navbutton-style"
+            to="/about" setShowRightSideMenu={props.setShowRightSideMenu}>
+            About
+         </NavButton>
+         <NavButton className="navbutton-style"
+            to="/resume" setShowRightSideMenu={props.setShowRightSideMenu}>
+            Résumé
+         </NavButton>
+         <NavButton className="navbutton-style"
+            to="/contact" setShowRightSideMenu={props.setShowRightSideMenu}>
+            Find Me
+         </NavButton>
+         <NavButton className="navbutton-style"
+            to="/links" setShowRightSideMenu={props.setShowRightSideMenu}>
+            Links
+         </NavButton>
+         <NavButton className="navbutton-style"
+            to="/siteinfo" setShowRightSideMenu={props.setShowRightSideMenu}>
+            Site Info
+         </NavButton>
       </div>
    )
 }
