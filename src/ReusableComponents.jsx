@@ -5,20 +5,40 @@ import "./index.css"
 import raidsrcLogoUrl from "./static/raid handwritten alone thick very white no padding.png"
 
 function Navbar(props) {
+   //const [hamburgerVisible, setHamburgerVisible] = useState(false)
+   const [showRightSideMenu, setShowRightSideMenu] = useState(false)
    return (
       <nav className="bg-gray-800 shadow-lg flex fixed justify-center w-full z-10">
          <div className="flex flex-row text-white top-0 w-full justify-between py-2 px-4 items-center max-w-yuge tiny-screen:py-3 tiny-screen:px-5 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
             <ClickableRaidsrcIcon to="/" />
-            <div className="flex flex-row justify-around space-x-4 sm:space-x-7 md:space-x-9 lg:space-x-12">
-               <NavButton className="w-auto hover:text-gray-200 active:text-gray-600 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
+            <HamburgerMenu className="sm:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
+            {showRightSideMenu ?
+               <div className="absolute bg-gray-700 sm:hidden right-4 top-20 w-3/5 h-60 flex items-center justify-center">
+                  <div className="flex flex-col space-y-1 text-center">
+                     <NavButton className="navbutton-style"
+                        to="/about" >
+                        About
+                     </NavButton>
+                     <NavButton className="navbutton-style"
+                        to="/resume">
+                        Résumé
+                     </NavButton>
+                     <NavButton className="navbutton-style"
+                        to="/contact">
+                        Find Me
+                     </NavButton>
+                  </div>
+               </div> : ""}
+            <div className="hidden flex-row justify-around space-x-4 sm:flex tiny-screen:visible sm:space-x-7 md:space-x-9 lg:space-x-12">
+               <NavButton className="navbutton-style"
                   to="/about" >
                   About
                </NavButton>
-               <NavButton className="w-auto hover:text-gray-200 active:text-gray-600 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
+               <NavButton className="navbutton-style"
                   to="/resume">
                   Résumé
                </NavButton>
-               <NavButton className="w-auto hover:text-gray-200 active:text-gray-600 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl"
+               <NavButton className="navbutton-style"
                   to="/contact">
                   Find Me
                </NavButton>
@@ -50,6 +70,22 @@ function ClickableRaidsrcIcon(props) {
          <Link className={theClass} onClick={smoothScrollToTop} to={props.to}>
             <img src={raidsrcLogoUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
+      </div>
+   )
+}
+
+function HamburgerMenu(props) {
+   {
+      // TODO: put this somewhere <a href="https://icons8.com/icon/83195/menu">Menu icon by Icons8</a> in the site info section of the site to give them credit for the hamburger icon
+      // ALSO TODO: animate the swingin out of the hamburger menu and swingin back in from the right side using react-spring 
+   }
+   let showRightSideMenu = props.showRightSideMenu
+   let setShowRightSideMenu = props.setShowRightSideMenu
+   return (
+      <div className={props.className}>
+         <button onClick={() => setShowRightSideMenu(!showRightSideMenu)}>
+            <img src="https://img.icons8.com/material-rounded/24/ffffff/menu--v1.png" />
+         </button>
       </div>
    )
 }

@@ -36,6 +36,9 @@ html {
 }
 
 @layer components {
+  .navbutton-style {
+    @apply w-auto hover:text-gray-200 active:text-gray-600 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl
+  }
   .about-me-paragraph {
     @apply text-white py-4 px-2 text-lg sm:text-xl 2xl:text-2xl col-start-1
   }

@@ -10,7 +10,7 @@ function App() {
   let location = useLocation()
   const [alerted, setAlerted] = useState(false)
    if (!alerted) {
-      setTimeout(() => alert("site construction is in progress. please excuse the presence of any wack shit"), 420)
+      setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
       setAlerted(true)
    }
 
