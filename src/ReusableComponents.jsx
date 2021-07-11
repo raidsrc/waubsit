@@ -108,7 +108,19 @@ function CenteredFullPageFlexContainer(props) {
       <div className="flex justify-center w-full"
       //style={animationProps}
       >
-         <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-14 py-7 tiny-screen:mt-16 md:mt-20">
+         <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-14 py-7 tiny-screen:mt-16 md:mt-20 homepage-centeredfullpageflexcontainer-style">
+            {props.children}
+         </div>
+      </div>
+   )
+}
+
+function HomepageCenteredFullPageFlexContainer(props) {
+   return (
+      <div className="flex justify-center w-full"
+      //style={animationProps}
+      >
+         <div className="w-10/12 max-w-screen-xl flex flex-col justify-center mt-2 py-0 md:w-11/12 tiny-screen:mt-3 md:mt-0 lg:mt-10">
             {props.children}
          </div>
       </div>
@@ -138,5 +150,5 @@ function smoothScrollToTop() {
    })
 }
 
-export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, SiteConstructionBanner }
+export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner }
 

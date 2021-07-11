@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import './index.css'
-import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, SiteConstructionBanner, } from './ReusableComponents'
+import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, } from './ReusableComponents'
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import { Bars } from "svg-loaders-react"
@@ -42,11 +42,11 @@ function HomePage(props) {
             // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
          }
          <div className="mb-20">
-            <div className="w-full py-16 lg:py-0">
+            <div className="w-full py-12 md:py-16 lg:py-0">
                <img className="h-112 w-full object-cover sm:h-50vh md:h-60vh lg:hidden" src={rayShiprock} />
                <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center" src={rayShiprockWide} />
             </div>
-            <CenteredFullPageFlexContainer>
+            <HomepageCenteredFullPageFlexContainer>
                <SiteConstructionBanner />
                { /*
                <animated.div style={animatedStyles}>
@@ -66,7 +66,7 @@ function HomePage(props) {
                <p className="homepage-paragraph text-black">
                   Enjoy your stay.
                </p>
-            </CenteredFullPageFlexContainer>
+            </HomepageCenteredFullPageFlexContainer>
          </div>
       </div >
    )
@@ -338,7 +338,7 @@ function FindMePage(props) {
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" /></svg><span className="px-4 text-lg font-semibold text-white col-start-2">rsrchen@ucdavis.edu</span></div>
             </div>
             <div className="mt-4 mb-1 text-center text-xs font-semibold">
-               icons © 2021 iconmonstr
+               twitter, youtube, email icons © 2021 iconmonstr
             </div>
          </CenteredFullPageFlexContainer>
       </div>
@@ -370,9 +370,14 @@ function SiteInfoPage(props) {
                Site Info
             </h1>
             <p className="about-me-paragraph text-black">I built this site using React, mostly. I learned about React from ECS 162 - Web Programming, a course I took in Spring Quarter 2021 at UC Davis. I've been enthralled since.</p>
-            <p className="about-me-paragraph">To put it all together, I enlisted the help of vitejs, svg-loaders-react, react-transition-group, react-spring, and tailwindcss. </p>
+            <p className="about-me-paragraph">To put it all together, I enlisted the help of vitejs, svg-loaders-react, react-transition-group, react-spring, and tailwindcss. The </p>
             <p className="about-me-paragraph text-black">Building the site took me a couple weeks of on-and-off work. Much of it was spent teaching myself how to use the technologies listed above. I struggled a lot with react-spring in particular, spending hours staring at my laptop screen in the dark cabin of an airplane wondering what was going wrong.</p>
             <p className="about-me-paragraph">If you're reading this right now, I'm still building the site, so I guess the first sentence of the previous paragraph was a lie, since I'm not done yet and I don't know how long it'll take me to finish. Welcome to my in-progress personal website. How the hell did you get here? I haven't told anyone about this site or advertised it anywhere...</p>
+            <div className="flex justify-center mt-20">
+               <a href="https://icons8.com/icon/83195/menu" className="blue-n-purple-link mb-1 text-center text-xs font-semibold">
+                  mobile hamburger menu icon © Icons8
+               </a>
+            </div>
          </CenteredFullPageFlexContainer>
       </div>
    )
