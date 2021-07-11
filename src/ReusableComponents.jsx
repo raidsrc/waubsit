@@ -10,7 +10,7 @@ function Navbar(props) {
    return (
       <nav className="bg-gray-800 shadow-lg flex fixed justify-center w-full z-10">
          <div className="flex flex-row text-white top-0 w-full justify-between py-2 px-4 items-center max-w-yuge tiny-screen:py-3 tiny-screen:px-5 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
-            <ClickableRaidsrcIcon to="/" />
+            <ClickableRaidsrcIcon to="/" setShowRightSideMenu={setShowRightSideMenu}/>
             <HamburgerMenu className="sm:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
             {showRightSideMenu ? <RightSideMenuThatAppearsWhenYouClickTheHamburger setShowRightSideMenu={setShowRightSideMenu} /> : ""}
             <TheNavButtonsAllTogether setShowRightSideMenu={setShowRightSideMenu} className="hidden flex-row justify-around space-x-4 sm:flex tiny-screen:visible sm:space-x-7 md:space-x-9 lg:space-x-12" />
@@ -35,9 +35,8 @@ function NavButton(props) {
    )
 }
 
-
-
 function ClickableRaidsrcIcon(props) {
+   let setShowRightSideMenu = props.setShowRightSideMenu
    let location = useLocation()
    let theClass = props.className
    if (location.pathname === props.to) {
@@ -45,7 +44,7 @@ function ClickableRaidsrcIcon(props) {
    }
    return (
       <div className="w-12">
-         <Link className={theClass} onClick={smoothScrollToTop} to={props.to}>
+         <Link className={theClass} onClick={() => {smoothScrollToTop(); setShowRightSideMenu(false)}} to={props.to}>
             <img src={raidsrcLogoUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
       </div>

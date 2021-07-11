@@ -292,4 +292,26 @@ function FindMePage(props) {
    )
 }
 
-export { HomePage, AboutPage, ResumePage, FindMePage }
+function LinksPage(props) {
+   return (
+      <div className="links-page">
+         <CenteredFullPageFlexContainer>
+            <SiteConstructionBanner />
+            <span className="text-5xl">asldkfja lksdjf alksdjf laskdjf laksdjf lkasdjf links </span>
+         </CenteredFullPageFlexContainer>
+      </div>
+   )
+}
+
+function SiteInfoPage(props) {
+   return (
+      <div className="site-info-page">
+         <CenteredFullPageFlexContainer>
+            <SiteConstructionBanner />
+            <span className="text-5xl">wertyuidfvghjkcvbnm site info </span>
+         </CenteredFullPageFlexContainer>
+      </div>
+   )
+}
+
+export { HomePage, AboutPage, ResumePage, FindMePage, LinksPage, SiteInfoPage }

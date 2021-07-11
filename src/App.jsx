@@ -1,5 +1,5 @@
 import React, { useState, useContextjj, useContext } from 'react'
-import { HomePage, AboutPage, ResumePage, FindMePage } from './Pages'
+import { HomePage, AboutPage, ResumePage, FindMePage, LinksPage, SiteInfoPage } from './Pages'
 import { Navbar } from './ReusableComponents'
 import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
@@ -35,6 +35,12 @@ function App() {
               </Route>
               <Route exact path="/contact">
                 <FindMePage />
+              </Route>
+              <Route exact path="/links">
+                <LinksPage />
+              </Route>
+              <Route exact path="/siteinfo">
+                <SiteInfoPage />
               </Route>
             </Switch>
           </CSSTransition>
