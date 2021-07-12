@@ -15,8 +15,8 @@
     opacity: 1;
     left: 0;
     transform: translate(0px, 0px);
-    transition: opacity 200ms ease-in-out, transform 300ms ease-out;
-    transition-delay: 420ms;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-out;
+    transition-delay: 300ms;
 }
 
 .fade-exit {

@@ -141,7 +141,17 @@ function SiteConstructionBanner(props) {
 }
 
 function smoothScrollToTop() {
-   window.scroll({ top: 0, left: 0, behavior: 'smooth', })
+   // window.scroll({ 
+   //    top: 0, 
+   //    left: 0, 
+   //    //behavior: "smooth",
+   // }) // the scrolling issue goes away when the behavior property is removed or set to auto
+   // what if i try scrollBy instead of scroll? and set the amount to some massive number that will always be greater than the height of the page?
+   window.scrollBy({
+      top: -10000,
+      left: 0,
+      behavior: "smooth",
+   }) // IT LOOKS LIKE IT FUCKING WORKS!!!!!!!!!!!!!!!!!!!!!
 }
 
 export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner }
