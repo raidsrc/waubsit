@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import "./index.css"
 import raidsrcLogoUrl from "./static/raid handwritten alone thick very white no padding.png"
+import raidsrcLogoSvgUrl from "./static/raid_logo_thick_white.svg"
 
 function Navbar(props) {
    //const [hamburgerVisible, setHamburgerVisible] = useState(false)
@@ -45,7 +46,7 @@ function ClickableRaidsrcIcon(props) {
    return (
       <div className="w-12">
          <Link className={theClass} onClick={() => { smoothScrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
-            <img src={raidsrcLogoUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
+            <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
       </div>
    )
@@ -152,6 +153,7 @@ function smoothScrollToTop() {
       left: 0,
       behavior: "smooth",
    }) // IT LOOKS LIKE IT FUCKING WORKS!!!!!!!!!!!!!!!!!!!!!
+   // just fucking kidding. tested again and it doesn't work. god fucking dammit. fuck. at least i'm certain it only appears in firefox and not in chrome
 }
 
 export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner }
