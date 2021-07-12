@@ -58,7 +58,7 @@ function HomePage(props) {
                   <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">H</span>ey. I'm Ray, and this is my personal website. Welcome.
                </h1>
                <p className="homepage-paragraph text-black">
-                  I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a tiny little space out of the Web that belongs completely to me (mostly).
+                  I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a little space out of the Web that belongs completely to me (mostly).
                </p>
                <p className="homepage-paragraph">
                   Have a look around! I know you'll find something worth your time. You can read a little about me in the "About" section. You can view my résumé in the "Résumé" section. Check out "Find Me" if you want to know where you can contact me. I've got links to this site's subdomains and some of my work in "Links." And if you want to know how I built this site, check out "Site Info."
@@ -204,24 +204,27 @@ function AboutPage(props) {
                   <img src={rayDrummingMonochrome} className="about-me-img" />
                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 1;</span> me, in my basement, drumming very intensely as I read a text message from my neighbor telling me to quiet down. yeah, they complain a lot.</span>
                </div>
+
                <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
-                     I'm from the San Francisco Bay Area. I was born here and I've lived here for most of my life. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
+                     I'm from the San Francisco Bay Area. I was born here and I've lived most of my life here. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={bananas2Jpg} className="about-me-img" />
                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 2;</span> bananana.</span>
                </div>
+
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
-                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been genetics, protein structure and function, bioinformatics, the ethics of technology, full-stack web development, and the neuroscience of music. I'm also pretty interested in writing, proofreading, teaching, and activism.
+                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been genetics, protein structure and function, bioinformatics, the ethics of technology, full-stack web development, and the neuroscience of music. I'm also pretty interested in writing, editing, teaching, and activism.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                   <img src={bananas2Jpg} className="about-me-img" />
                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 3;</span> banaba.</span>
                </div>
+
                <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
                      My career aspirations are simple. I'll cure cancer at the age of 26, then be a busker in San Francisco for a decade, and then retire to a log cabin deep in the Sierra Nevadas with my crossbow and my Siberian Husky.<br /><span className="text-gray-449">(just joking. i'm hoping to make a career out of being a freelance science + technology + music tutor for society's disadvantaged)</span>
@@ -231,18 +234,20 @@ function AboutPage(props) {
                   <img src={bananas2Jpg} className="about-me-img lg:col-end-3" />
                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 4;</span> something else lol banaba bananb bananana.</span>
                </div>
+
                <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
-                     I like Kendrick Lamar, Fullmetal Alchemist, steamed pork buns, Bill Evans, grilled salmon, California poppies, and challah bread. I don't like candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
+                     I like Kendrick Lamar, Fullmetal Alchemist, steamed pork buns, and the ocean breeze. I don't like candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                   <img src={stinkyTofu} className="about-me-img" />
-                  <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5;</span>just ate a mushroom, probably, i don't know. friend appears very happy about it.</span>
+                  <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5; </span>just ate a mushroom, probably, i don't know. friend appears very happy about it.</span>
                </div>
+
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
-                     When I'm not busy butchering sketches of Haworth projections or <a className="blue-n-purple-link" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a> I spend my time programming, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
+                     I enjoy <a className="blue-n-purple-link" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a>, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
@@ -374,7 +379,7 @@ function SiteInfoPage(props) {
             <h1 className="text-white mb-5 px-2">
                Site Info
             </h1>
-            <p className="about-me-paragraph text-black">I built this site using React, mostly. I learned about React from ECS 162 - Web Programming, a course I took in Spring Quarter 2021 at UC Davis. I've been enthralled since.</p>
+            <p className="about-me-paragraph text-black">I built this site using React, mostly. I learned about React from <span className="italic">ECS 162: Web Programming</span>, a course I took at UC Davis during Spring Quarter 2021. I've been enthralled since.</p>
             <p className="about-me-paragraph">To put it all together, I enlisted the help of vitejs, svg-loaders-react, react-transition-group, react-spring, and tailwindcss.</p>
             <p className="about-me-paragraph text-black">Building the site took me a couple weeks of on-and-off work. Much of it was spent teaching myself how to use the technologies listed above. I struggled a lot with react-spring in particular, spending hours staring at my laptop screen in the dark cabin of an airplane wondering what was going wrong.</p>
             <p className="about-me-paragraph">If you're reading this right now, I'm still building the site, so I guess the first sentence of the previous paragraph was a lie, since I'm not done yet and I don't know how long it'll take me to finish. Welcome to my in-progress personal website. How the hell did you get here? I haven't told anyone about this site or advertised it anywhere...</p>
