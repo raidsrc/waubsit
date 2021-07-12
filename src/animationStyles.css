@@ -16,7 +16,7 @@
     left: 0;
     transform: translate(0px, 0px);
     transition: opacity 300ms ease-in-out, transform 300ms ease-out;
-    transition-delay: 300ms;
+    transition-delay: 200ms;
 }
 
 .fade-exit {
@@ -31,6 +31,7 @@
 .fade-exit-active {
     /* from beginning of leave animation to end of leave animation */
     opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 300ms ease, transform 300ms ease-in;
+    transform-origin: 50% 60px;
+    transform: scale(0.75);
+    transition: opacity 200ms ease, transform 200ms ease-in;
 }

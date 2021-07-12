@@ -275,6 +275,9 @@ function ResumePage(props) {
       <div className="resume-page">
          <div>
             <CenteredFullPageFlexContainer>
+               <h1 className="mb-5 px-2 ">
+                  Résumé
+               </h1>
                <SiteConstructionBanner />
                {/* <div className="flex justify-center h-80vh">
                   <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" 
