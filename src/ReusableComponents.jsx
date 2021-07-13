@@ -151,10 +151,10 @@ function smoothScrollToTop() {
    window.scrollBy({
       top: -10000,
       left: 0,
-      behavior: "smooth",
+      behavior: "smooth", 
    }) // IT LOOKS LIKE IT FUCKING WORKS!!!!!!!!!!!!!!!!!!!!!
    // just fucking kidding. tested again and it doesn't work. god fucking dammit. fuck. at least i'm certain it only appears in firefox and not in chrome
-}
+} 
 
 export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner }
 

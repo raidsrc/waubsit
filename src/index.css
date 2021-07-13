@@ -52,6 +52,10 @@ html {
   nav {
     font-family: 'Yantramanav', "Open Sans", sans-serif;
   }
+  h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    @apply text-lg sm:text-xl 2xl:text-2xl
+  }
 }
 
 @layer components {
