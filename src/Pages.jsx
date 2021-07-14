@@ -300,7 +300,7 @@ function ResumePage(props) {
                   </object>
                </div> */}
 
-               <div className="flex justify-center h-75vh sm:h-70vh md:h-65vh">
+               <div className="flex justify-center h-112 sm:h-128 md:h-144 lg:h-160 xl:h-176">
                   {iframeLoaded ? "" : // this curly braced pocket of code controls the loading bars animation 
                      <div className="w-5/12 flex flex-col justify-center items-center tiny-screen:w-4/12 sm:w-2/5 max-w-2xs">
                         <div className=" flex w-2/4 sm:3/4 justify-center items-center">
@@ -311,7 +311,7 @@ function ResumePage(props) {
                         </div>
                      </div>
                   }
-                  {putIframeOnPage ? <iframe className={iframeClassName} src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" allow="autoplay" onLoad={whenIframeLoaded} /> : ""}
+                  {putIframeOnPage ? <iframe className={iframeClassName} src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="90%" height="auto" allow="autoplay" onLoad={whenIframeLoaded} /> : ""}
                </div>
 
             </CenteredFullPageFlexContainer>
