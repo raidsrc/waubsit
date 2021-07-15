@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         'gray-450': 'rgb(140, 150, 160)',
         'gray-449': 'rgb(145, 155, 165)',
+        "karkat-blood-red": 'rgb(255,0,0)'
       },
       width: {
         '400px': '400px',
@@ -46,6 +47,7 @@ module.exports = {
       // => @media (min-width: 640px) { ... }
       "tiny-screen": "440px",
       "sm": "600px",
+      "smmd": "660px",
       "md": "768px",
       "lg": "1024px",
       "xl": "1280px",
@@ -57,6 +59,7 @@ module.exports = {
     extend: {
       textColor: ["active", "visited"],
       brightness: ["active", "hover"],
+      borderOpacity: ["active", "hover"],
       filter: ["active"],
     },
   },

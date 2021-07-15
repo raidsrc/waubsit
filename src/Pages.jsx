@@ -58,7 +58,7 @@ function HomePage(props) {
                   <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">H</span>ey. I'm Ray, and this is my personal website. Welcome.
                </h1>
                <p className="homepage-paragraph text-black">
-                  I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a little space out of the Web that belongs completely to me (mostly).
+                  It's not gonna win any design awards, but I'm still very proud of it. I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a little space out of the Web that belongs completely to me (mostly).
                </p>
                <p className="homepage-paragraph">
                   Have a look around! I know you'll find something worth your time. You can read a little about me in the "About" section. You can view my résumé in the "Résumé" section. Check out "Find Me" if you want to know where you can contact me. I've got links to this site's subdomains and some of my work in "Links." And if you want to know how I built this site, check out "Site Info."
@@ -207,6 +207,9 @@ function AboutPage(props) {
 
                <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
+                     {
+                        //I am a student, teacher, musician, computer programmer, biologist,
+                     }
                      I'm from the San Francisco Bay Area. I was born here and I've lived most of my life here. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
                   </p>
                </div>
@@ -252,7 +255,7 @@ function AboutPage(props) {
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={rayPiano2017} className="about-me-img" />
-                  <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6;</span> c. 2017. performing a piece from the homestuck discography in front of a few hundred people. his palms are sweaty, knees weak, arms are heavy,,,, </span>
+                  <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6;</span> c. 2017. performing some homestuck music for a few hundred people. yes really. </span>
                </div>
             </div>
          </CenteredFullPageFlexContainer>
@@ -270,6 +273,13 @@ function ResumePage(props) {
    const [iframeClassName, setIframeClassName] = useState("hidden")
    useEffect(() => {
       setFirstRender(false)
+      // setTimeout(() => {
+      //    window.scrollBy({
+      //       top: -10000,
+      //       left: 0,
+      //       behavior: "smooth",
+      //    })
+      // }, 1200 )
       setTimeout(() => { setPutIframeOnPage(true) }, 1500)
    }, [firstRender])
    function whenIframeLoaded() {
