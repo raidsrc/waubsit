@@ -61,7 +61,7 @@ function HomePage(props) {
                   It's not gonna win any design awards, but I'm still very proud of it. I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a little space out of the Web that belongs completely to me (mostly).
                </p>
                <p className="homepage-paragraph">
-                  Have a look around! I know you'll find something worth your time. You can read a little about me in the "About" section. You can view my résumé in the "Résumé" section. Check out "Find Me" if you want to know where you can contact me. I've got links to this site's subdomains and some of my work in "Links." And if you want to know how I built this site, check out "Site Info."
+                  Have a look around! I know you'll find something worth your time. You can read a little bit about me in the "About" section. You can view my résumé in the "Résumé" section. Check out "Find Me" if you want to know where you can contact me. I've got links to some of my work in "Links." And if you want to know how I built this site, check out "Site Info."
                </p>
                <p className="homepage-paragraph text-black">
                   Enjoy your stay.
@@ -381,11 +381,16 @@ function LinksPage(props) {
             <h1 className="mb-5 px-2">
                Links
             </h1>
-            <h2 className="mb-4 px-2 pt-4">A Showcase of My Work</h2>
-            <p className="about-me-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatibus accusantium iste, quis nam expedita labore laborum blanditiis at ex!</p>
-            <p className="about-me-paragraph text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem recusandae aliquid reprehenderit, illum impedit dicta rerum. Dolorum eius possimus cum asperiores aliquid? Magni non eligendi doloremque enim recusandae provident ducimus?</p>
-            <p className="about-me-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo sed facere veniam odio pariatur voluptates? Illum repellendus est nisi incidunt, ut placeat nihil? Asperiores, provident.</p>
-
+            <h2 className="mb-4 px-2 pt-4"></h2>
+            <p className="about-me-paragraph">An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I examine the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects.</p>
+            <p className="about-me-paragraph text-black">A fitness-tracking web application I developed for <span className="italic">ECS 162 - Web Programming</span>. This application supports Google sign-in using OAuth 2.0, logging of past and future activity, and data visualization of recorded progress.</p>
+            <p className="about-me-paragraph">My final project for <span className="italic">ECS 162 - Web Programming</span>; a web application I developed for the exhibit <span className="italic">Education Should Be Free</span> at the Manetti Shrem Museum at the University of California, Davis. Use this web application to estimate the cost of education at various public universities in California using data drawn from the U.S. Department of Education's College Scorecard.</p>
+            <p className="about-me-paragraph text-black">A workflow/procedure for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision.</p>
+            <p className="about-me-paragraph">The website for Virovek, a Hayward-based gene therapy company. I played a major role in debugging the stylesheets. It's built on WordPress, which I'm not very familiar with, but I managed to work my magic all the same. </p>
+            <p className="about-me-paragraph text-black">A webpage I designed on my own, just for fun. I wanted to try my hand at designing a sleek, beautiful, majestic, responsive webpage. This is the result of that work.</p>
+            {
+               // include uwp101y, tractivity, shop til you drop, slippi sampler, a cool sick design showcase, virovek.com 
+            }
          </CenteredFullPageFlexContainer>
       </div>
    )
