@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch, NavLink } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import "./index.css"
 import raidsrcLogoUrl from "./static/raid handwritten alone thick very white no padding.png"
@@ -10,8 +10,8 @@ function Navbar(props) {
    const [showRightSideMenu, setShowRightSideMenu] = useState(false)
    return (
       <nav className="bg-gray-800 shadow-xl flex fixed justify-center w-full z-10">
-         <div className="flex flex-row text-white top-0 w-full justify-between py-3 px-5 items-center max-w-yuge tiny-screen:px-7 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
-            <ClickableRaidsrcIcon to="/" setShowRightSideMenu={setShowRightSideMenu} />
+         <div className="flex flex-row text-white tracking-wide top-0 w-full justify-between py-3 px-5 items-center max-w-yuge tiny-screen:px-7 sm:px-10 md:px-16 md:text-lg md:h-20 lg:h-20">
+            <ClickableRaidsrcIcon to="/home" setShowRightSideMenu={setShowRightSideMenu} />
             <HamburgerMenu className="smmd:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
             {showRightSideMenu ? <RightSideMenuThatAppearsWhenYouClickTheHamburger setShowRightSideMenu={setShowRightSideMenu} /> : ""}
             <TheNavButtonsAllTogether setShowRightSideMenu={setShowRightSideMenu} className="hidden flex-row justify-around space-x-4 smmd:flex tiny-screen:visible smmd:space-x-7 md:space-x-9 lg:space-x-12" />
@@ -32,7 +32,7 @@ function NavButton(props) {
       setShowRightSideMenu(false)
    }
    return (
-      <Link className={theClass} to={props.to} onClick={() => wheneverNavButtonClicked()}>{props.children}</Link>
+      <NavLink activeClassName="opacity-40" className={theClass} to={props.to} onClick={() => wheneverNavButtonClicked()}>{props.children}</NavLink>
    )
 }
 
@@ -45,9 +45,9 @@ function ClickableRaidsrcIcon(props) {
    }
    return (
       <div className="w-12">     
-         <Link className={theClass} onClick={() => { scrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
+         <NavLink activeClassName="opacity-40" className={theClass} onClick={() => { scrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
             <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
-         </Link>
+         </NavLink>
       </div>
    )
 }
@@ -143,7 +143,7 @@ function SiteConstructionBanner(props) {
 
 function NewTab(props) {
    return (
-      <a target="_blank" rel="noreferrer noopener" href={props.href} className={props.className + " underline hover:opacity-50"}>{props.children}</a>
+      <a target="_blank" rel="noreferrer noopener" href={props.href} className={props.className + " underline hover:opacity-80 active:opacity-60"}>{props.children}</a>
    )
 }
 

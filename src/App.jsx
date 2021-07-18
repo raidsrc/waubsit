@@ -24,7 +24,7 @@ function App() {
             //might need to make this timeout prop above more accurate to the lengths of the css transitions in animationStyles.css
           }
             <Switch location={location}>
-              <Route exact path="/">
+              <Route exact path="/home">
                 <HomePage />
               </Route>
               <Route exact path="/about">

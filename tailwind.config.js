@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         'gray-450': 'rgb(140, 150, 160)',
         'gray-449': 'rgb(145, 155, 165)',
-        "karkat-blood-red": 'rgb(255,0,0)'
+        "karkat-blood-red": 'rgb(255,0,0)',
+        "brighter-red": 'rgb(255,70,70)',
       },
       width: {
         '400px': '400px',
@@ -64,6 +65,7 @@ module.exports = {
       borderStyle: ["focus"],
       borderWidth: ["focus"],
       filter: ["active"],
+      opacity: ["active"],
     },
   },
   plugins: [],

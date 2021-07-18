@@ -60,7 +60,8 @@ html {
 
 @layer components {
   .navbutton-style {
-    @apply w-auto border-2 border-opacity-20 rounded-md px-2 hover:text-gray-400 hover:border-opacity-10 active:text-gray-600 active:border-opacity-5 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl 
+    @apply w-auto border-opacity-20 px-2 hover:opacity-80 hover:border-opacity-10 active:opacity-60 active:border-opacity-5 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl;
+    text-shadow: 1px 1px rgba(255,255,255,0.2);
   }
   .navbutton-rightsidemenu-style {
     @apply navbutton-style text-lg tiny-screen:text-xl
