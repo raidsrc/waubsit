@@ -17,10 +17,17 @@ function SiteInfoPage(props) {
                 <p className="about-me-paragraph text-black">Building this site took me a couple weeks of on-and-off work. Much of it was spent teaching myself how to use the technologies listed above. I struggled a lot with react-spring in particular, spending hours staring at my laptop screen in the dark cabin of an airplane wondering what was going wrong. Programming is confusing, dawg.</p>
 
                 <p className="about-me-paragraph">If you're reading this right now, I'm still building the site, so I guess the first sentence of the previous paragraph was a lie, since I'm not done yet and I don't know how long it'll take me to finish. Welcome to my in-progress personal website. How the hell did you get here? I haven't told anyone about this site or advertised it anywhere...</p>
-                <div className="flex justify-center mt-28">
-                    <a href="https://icons8.com/icon/83195/menu" className="blue-n-purple-link mb-1 text-center text-xs font-semibold">
-                        mobile hamburger menu icon © Icons8
-                    </a>
+                <div className="flex flex-col items-center justify-center mt-28 text-xs 2xl:text-base">
+                    <div>
+                        <NewTab href="https://icons8.com/icon/83195/menu">
+                            mobile hamburger menu icon © Icons8
+                        </NewTab>
+                    </div>
+                    <div>
+                        <NewTab href="https://iconmonstr.com">
+                            twitter, youtube, email icons © 2021 iconmonstr
+                        </NewTab>
+                    </div>
                 </div>
             </CenteredFullPageFlexContainer>
         </div>

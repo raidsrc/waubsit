@@ -6,7 +6,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group"
 import HomePage from "./Pages/HomePage"
 import AboutPage from './Pages/AboutPage'
 import ResumePage from './Pages/ResumePage'
-import FindMePage from './Pages/FindMePage'
+import ContactPage from './Pages/ContactPage'
 import LinksPage from './Pages/LinksPage'
 import SiteInfoPage from './Pages/SiteInfoPage.jsx'
 
@@ -38,7 +38,7 @@ function App() {
                 <ResumePage />
               </Route>
               <Route exact path="/contact">
-                <FindMePage />
+                <ContactPage />
               </Route>
               <Route exact path="/links">
                 <LinksPage />
