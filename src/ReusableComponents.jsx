@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Route, Switch, NavLink } from "react-router-dom"
 import { useLocation } from "react-router-dom"
-import "./index.css"
 import raidsrcLogoSvgUrl from "./static/raid_logo_thick_white.svg"
 
 function Navbar(props) {

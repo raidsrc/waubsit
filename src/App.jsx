@@ -2,9 +2,7 @@ import React, { useState, useEffect, useContextjj, useContext } from 'react'
 import { Navbar } from './ReusableComponents'
 import { Route, Switch, useLocation } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-import "./animationStyles.css"
-import "./otherStyles.css"
-import "./index.css"
+
 import HomePage from "./Pages/HomePage"
 import AboutPage from './Pages/AboutPage'
 import ResumePage from './Pages/ResumePage'
