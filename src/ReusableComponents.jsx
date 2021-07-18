@@ -28,7 +28,7 @@ function NavButton(props) {
       theClass += " disabled-link"
    }
    function wheneverNavButtonClicked() {
-      smoothScrollToTop()
+      scrollToTop()
       setShowRightSideMenu(false)
    }
    return (
@@ -45,7 +45,7 @@ function ClickableRaidsrcIcon(props) {
    }
    return (
       <div className="w-12">
-         <Link className={theClass} onClick={() => { smoothScrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
+         <Link className={theClass} onClick={() => { scrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
             <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
       </div>
@@ -147,7 +147,7 @@ function NewTab(props) {
    )
 }
 
-function smoothScrollToTop() {
+function scrollToTop() {
    // window.scroll({ 
    //    top: 0, 
    //    left: 0, 
@@ -160,7 +160,7 @@ function smoothScrollToTop() {
          left: 0,
          behavior: "auto",
       })
-   }, 201)
+   }, 250)
    // IT LOOKS LIKE IT FUCKING WORKS!!!!!!!!!!!!!!!!!!!!!
    // just fucking kidding. tested again and it doesn't work. god fucking dammit. fuck. at least i'm certain it only appears in firefox and not in chrome
    // i found a workaround. i set the scroll to be sharp (auto), not smooth, and time the scroll to occur right when the pages are invisible so the transition looks totally smooth. let's fucking go. this is the path forward. this is the way. 

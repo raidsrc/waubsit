@@ -191,7 +191,7 @@ function AboutPage(props) {
                }
                <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
-                     Yo. In case you don't know me, I'm Raymond Chen. I usually go by Ray, but people have known me by many names. Some of these names were given to me. Some of them I chose myself. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
+                     I'm Raymond. I usually go by Ray, but people have known me by many names. Some of these names were given to me. Some of them I chose myself. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
@@ -204,7 +204,7 @@ function AboutPage(props) {
                      {
                         //I am a student, teacher, musician, computer programmer, biologist,
                      }
-                     I'm from the San Francisco Bay Area. I was born here and I've lived most of my life here. I've been all around the world and seen all sorts of things; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
+                     I'm from the San Francisco Bay Area. I was born here and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
@@ -214,7 +214,7 @@ function AboutPage(props) {
 
                <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
-                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been genetics, protein structure and function, bioinformatics, the ethics of technology, full-stack web development, and the neuroscience of music. I'm also pretty interested in writing, editing, teaching, and activism.
+                     Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been full-stack web development, bioinformatics, genetics, the ethics of technology, and the neuroscience of music. I'm also kind of interested in writing, editing, teaching, and activism.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
@@ -244,12 +244,12 @@ function AboutPage(props) {
 
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
-                     In my free time, I enjoy programming, working out, cooking, learning all sorts of new things, editing videos, and composing/arranging/producing/playing music.
+                     In my free time, I enjoy programming, working out, cooking, learning new things, editing videos, and playing, composing, arranging, and producing music. I'm quite the novice at skiing, snowboarding, and skateboarding, but I find those activites really fun, too.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                   <img src={rayPiano2017} className="about-me-img" />
-                  <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6;</span> c. 2017. performing some homestuck music for a few hundred people. yes really. </span>
+                  <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6;</span> c. 2017. performing some banger homestuck piano music for a few hundred people. </span>
                </div>
             </div>
          </CenteredFullPageFlexContainer>
