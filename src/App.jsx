@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContextjj, useContext } from 'react'
 import { Navbar } from './ReusableComponents'
-import { Route, Switch, useLocation } from "react-router-dom"
+import { Redirect, Route, Switch, useLocation } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 
 import HomePage from "./Pages/HomePage"
@@ -28,7 +28,7 @@ function App() {
             //might need to make this timeout prop above more accurate to the lengths of the css transitions in animationStyles.css
           }
             <Switch location={location}>
-              <Route exact path="/home">
+              <Route path="/home">
                 <HomePage />
               </Route>
               <Route exact path="/about">
@@ -46,6 +46,7 @@ function App() {
               <Route exact path="/siteinfo">
                 <SiteInfoPage />
               </Route>
+              <Redirect exact from="/" to="/home" />
             </Switch>
           </CSSTransition>
         </TransitionGroup>
