@@ -77,7 +77,7 @@ function TheNavButtonsAllTogether(props) {
          </NavButton>
          <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
             to="/links" setShowRightSideMenu={props.setShowRightSideMenu}>
-            Work
+            Links
          </NavButton>
          <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
             to="/siteinfo" setShowRightSideMenu={props.setShowRightSideMenu}>
