@@ -58,8 +58,11 @@ module.exports = {
   variants: {
     extend: {
       textColor: ["active", "visited"],
+      textOpacity: ["hover"],
       brightness: ["active", "hover"],
       borderOpacity: ["active", "hover"],
+      borderStyle: ["focus"],
+      borderWidth: ["focus"],
       filter: ["active"],
     },
   },

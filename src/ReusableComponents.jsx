@@ -44,7 +44,7 @@ function ClickableRaidsrcIcon(props) {
       theClass += " disabled-link"
    }
    return (
-      <div className="w-12">
+      <div className="w-12">     
          <Link className={theClass} onClick={() => { scrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
             <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
          </Link>
@@ -143,7 +143,7 @@ function SiteConstructionBanner(props) {
 
 function NewTab(props) {
    return (
-      <a target="_blank" rel="noreferrer noopener" href={props.href} className={props.className + " underline"}>{props.children}</a>
+      <a target="_blank" rel="noreferrer noopener" href={props.href} className={props.className + " underline hover:opacity-50"}>{props.children}</a>
    )
 }
 
