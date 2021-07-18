@@ -4,8 +4,6 @@ import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer,
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { useSpring, animated, config } from "react-spring"
 import { Bars } from "svg-loaders-react"
-//import "./animationStyles.css"
-//import bananasJpg from "./static/bananas.jpg"
 import bananas2Jpg from "./static/bananas2.jpg"
 import rayShiprock from "./static/ray atop shiprock.jpg"
 import rayShiprockWide from "./static/ray atop shiprock wide.jpeg"
@@ -250,7 +248,7 @@ function AboutPage(props) {
 
                <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                   <p className="about-me-paragraph md:text-right">
-                     I enjoy <a className="blue-n-purple-link" target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=supYVmjGi50">presenting lectures on Super Smash Bros. Melee,</a>, working out, cooking, teaching myself things, editing videos, and composing/arranging/producing/playing music.
+                     In my free time, I enjoy programming, working out, cooking, learning all sorts of new things, editing videos, and composing/arranging/producing/playing music.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
@@ -296,20 +294,6 @@ function ResumePage(props) {
                   Résumé
                </h1>
                <SiteConstructionBanner />
-               {/* <div className="flex justify-center h-80vh">
-                  <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto" 
-                  allow="autoplay" />
-               </div> */}
-               {/* <div className="flex justify-center h-80vh">
-                  <object data="https://firebasestorage.googleapis.com/v0/b/raidsrc-me.appspot.com/o/some%20static%20site%20assets%2FInternet%20connection%20log%201.pdf?alt=media&token=10ec7b0c-8251-40d2-91f4-0b98bb1bf2a6" type="application/pdf" width="100%" height="auto">
-                     <div className="flex justify-center h-80vh">
-                        <iframe src="https://drive.google.com/file/d/1s9PB0FQxfU37sWj9wIOjnX5I3KpWtocF/preview" width="100%" height="auto"
-                           allow="autoplay" />
-                     </div>
-                     <p>It appears your browser cannot display this PDF. Here's a <a href="https://firebasestorage.googleapis.com/v0/b/raidsrc-me.appspot.com/o/some%20static%20site%20assets%2FInternet%20connection%20log%201.pdf?alt=media&token=10ec7b0c-8251-40d2-91f4-0b98bb1bf2a6" className="blue-n-purple-link">link to it!</a></p>
-                  </object>
-               </div> */}
-
                <div className="flex justify-center h-112 sm:h-128 md:h-144 lg:h-160 xl:h-176">
                   {iframeLoaded ? "" : // this curly braced pocket of code controls the loading bars animation 
                      <div className="w-5/12 flex flex-col justify-center items-center tiny-screen:w-4/12 sm:w-2/5 max-w-2xs">
@@ -382,12 +366,19 @@ function LinksPage(props) {
                Links
             </h1>
             <h2 className="mb-4 px-2 pt-4"></h2>
-            <p className="about-me-paragraph">An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I examine the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects.</p>
+            <p className="about-me-paragraph">An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects.</p>
+
             <p className="about-me-paragraph text-black">A fitness-tracking web application I developed for <span className="italic">ECS 162 - Web Programming</span>. This application supports Google sign-in using OAuth 2.0, logging of past and future activity, and data visualization of recorded progress.</p>
+
             <p className="about-me-paragraph">My final project for <span className="italic">ECS 162 - Web Programming</span>; a web application I developed for the exhibit <span className="italic">Education Should Be Free</span> at the Manetti Shrem Museum at the University of California, Davis. Use this web application to estimate the cost of education at various public universities in California using data drawn from the U.S. Department of Education's College Scorecard.</p>
-            <p className="about-me-paragraph text-black">A workflow/procedure for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision.</p>
-            <p className="about-me-paragraph">The website for Virovek, a Hayward-based gene therapy company. I played a major role in debugging the stylesheets. It's built on WordPress, which I'm not very familiar with, but I managed to work my magic all the same. </p>
-            <p className="about-me-paragraph text-black">A webpage I designed on my own, just for fun. I wanted to try my hand at designing a sleek, beautiful, majestic, responsive webpage. This is the result of that work.</p>
+
+            <p className="about-me-paragraph text-black">A video about a procedure I devised for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision.</p>
+
+            <p className="about-me-paragraph">The website for Virovek, a Hayward-based gene therapy company. I played a major role in debugging the website's stylesheets. It's built on WordPress, which I'm not very familiar with, but I managed to work my magic all the same. </p>
+
+            <p className="about-me-paragraph text-black">A lecture on Super Smash Bros. Melee that I presented for <span className="italic">CTS 172 - Metagaming</span>, a course all about "examining the community histories and material practices that have evolved alongside videogames as a mass medium, cultural commodity, and digital technology." This class just might be one of the most enjoyable university courses I've ever taken.</p>
+
+            <p className="about-me-paragraph">A webpage I designed on my own, just for fun. I wanted to try my hand at designing a sleek, beautiful, majestic, responsive webpage. This is the result of that work.</p>
             {
                // include uwp101y, tractivity, shop til you drop, slippi sampler, a cool sick design showcase, virovek.com 
             }
