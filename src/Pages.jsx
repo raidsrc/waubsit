@@ -15,7 +15,6 @@ function HomePage(props) {
    const [reverse, setReverse] = useState(false)
    const [cancel, setCancel] = useState(false)
 
-
    useEffect(() => {
       setCancel(false)
       return () => {
@@ -24,7 +23,7 @@ function HomePage(props) {
    })
    const animatedStyles = useSpring({
       from: { opacity: 0.5, color: "#FF69B4", },
-      to: { opacity: 1, color: "#124563", },
+      to: { opacity: 0.8, color: "#124563", },
       reverse: reverse,
       cancel: cancel,
       onRest: () => { setReverse(!reverse) },
@@ -46,12 +45,9 @@ function HomePage(props) {
             </div>
             <HomepageCenteredFullPageFlexContainer>
                <SiteConstructionBanner />
-               { /*
                <animated.div style={animatedStyles}>
                   <span className="text-2xl">This is the Home Page!!!!!!! !!!!!!!!!!!!! !!!!!!!!!! !!!!!!!!!! !!!!!!!</span>
                </animated.div>
-               */
-               }
                <h1 className="text-xl sm:text-2xl 2xl:text-3xl text-white mb-5">
                   <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">H</span>ey. I'm Ray, and this is my personal website. Welcome.
                </h1>
@@ -378,7 +374,7 @@ function LinksPage(props) {
 
             <p className="about-me-paragraph text-black">A lecture on Super Smash Bros. Melee that I presented for <span className="italic">CTS 172 - Metagaming</span>, a course all about "examining the community histories and material practices that have evolved alongside videogames as a mass medium, cultural commodity, and digital technology." This class just might be one of the most enjoyable university courses I've ever taken.</p>
 
-            <p className="about-me-paragraph">A webpage I designed on my own, just for fun. I wanted to try my hand at designing a sleek, beautiful, majestic, responsive webpage. This is the result of that work.</p>
+            <p className="about-me-paragraph">A webpage I designed on my own, just for fun. I wanted to try my hand at designing a sleek, beautiful, majestic, responsive, super sick cool-ass webpage. This is the result of that work.</p>
             {
                // include uwp101y, tractivity, shop til you drop, slippi sampler, a cool sick design showcase, virovek.com 
             }
