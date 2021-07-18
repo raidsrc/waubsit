@@ -1,7 +1,7 @@
 import React, { useState, useContextjj, useContext } from 'react'
 import { HomePage, AboutPage, ResumePage, FindMePage, LinksPage, SiteInfoPage } from './Pages'
 import { Navbar } from './ReusableComponents'
-import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom"
+import { Route, Switch, useLocation } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import "./animationStyles.css"
 import "./otherStyles.css"

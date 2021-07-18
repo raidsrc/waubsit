@@ -41,6 +41,9 @@ module.exports = {
         '8': 'repeat(8, minmax(0, 1fr))',
         '9': 'repeat(9, minmax(0, 1fr))',
         '10': 'repeat(10, minmax(0, 1fr))',
+      },
+      dropShadow: {
+        'raid-icon': '2px 3px 1px rgba(255, 0, 0, 0.3)',
       }
     },
     screens: {

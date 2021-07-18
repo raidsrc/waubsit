@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Route, Switch, NavLink } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import "./index.css"
-import raidsrcLogoUrl from "./static/raid handwritten alone thick very white no padding.png"
 import raidsrcLogoSvgUrl from "./static/raid_logo_thick_white.svg"
 
 function Navbar(props) {
@@ -46,7 +45,7 @@ function ClickableRaidsrcIcon(props) {
    return (
       <div className="w-12">     
          <NavLink activeClassName="opacity-40" className={theClass} onClick={() => { scrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
-            <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50" ></img>
+            <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50 drop-shadow-raid-icon"></img>
          </NavLink>
       </div>
    )
@@ -78,7 +77,7 @@ function TheNavButtonsAllTogether(props) {
          </NavButton>
          <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
             to="/links" setShowRightSideMenu={props.setShowRightSideMenu}>
-            Links
+            Work
          </NavButton>
          <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
             to="/siteinfo" setShowRightSideMenu={props.setShowRightSideMenu}>
@@ -166,5 +165,5 @@ function scrollToTop() {
    // i found a workaround. i set the scroll to be sharp (auto), not smooth, and time the scroll to occur right when the pages are invisible so the transition looks totally smooth. let's fucking go. this is the path forward. this is the way. 
 }
 
-export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab }
+export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab, scrollToTop }
 

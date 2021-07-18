@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import './index.css'
-import { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab, } from './ReusableComponents'
-import { TransitionGroup, CSSTransition } from "react-transition-group"
+import { CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab, scrollToTop } from './ReusableComponents'
 import { useSpring, animated, config } from "react-spring"
 import { Bars } from "svg-loaders-react"
+import { Link } from "react-router-dom"
 import bananas2Jpg from "./static/bananas2.jpg"
 import rayShiprock from "./static/ray atop shiprock.jpg"
 import rayShiprockWide from "./static/ray atop shiprock wide.jpeg"
@@ -35,9 +35,6 @@ function HomePage(props) {
    })
    return (
       <div className="homepage">
-         {
-            // TODO: ADD COOL DIAGONAL LINE COLORED SHIT ON THE HOMEPAGE FROM TOP LEFT TO BOTTOM RIGHT SLIGHT INCLINE GREY BELOW COLORED ABOVE 
-         }
          <div className="mb-20">
             <div className="w-full py-12 md:py-16 lg:py-0">
                <img className="h-112 w-full object-cover sm:h-50vh md:h-60vh lg:hidden" src={rayShiprock} />
@@ -45,9 +42,9 @@ function HomePage(props) {
             </div>
             <HomepageCenteredFullPageFlexContainer>
                <SiteConstructionBanner />
-               <animated.div style={animatedStyles}>
+               {/* <animated.div style={animatedStyles}>
                   <span className="text-2xl">This is the Home Page!!!!!!! !!!!!!!!!!!!! !!!!!!!!!! !!!!!!!!!! !!!!!!!</span>
-               </animated.div>
+               </animated.div> */}
                <h1 className="text-xl sm:text-2xl 2xl:text-3xl text-white mb-5">
                   <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">H</span>ey. I'm Ray, and this is my personal website. Welcome.
                </h1>
@@ -55,7 +52,7 @@ function HomePage(props) {
                   It's not gonna win any design awards, but I'm still very proud of it. I built it myself, with the help of some modern web development technologies and a generous serving of elbow grease. The work was worth it. I have now carved a little space out of the Web that belongs completely to me (mostly).
                </p>
                <p className="homepage-paragraph">
-                  Have a look around! I know you'll find something worth your time. You can read a little bit about me in the "About" section. You can view my résumé in the "Résumé" section. Check out "Find Me" if you want to know where you can contact me. I've got links to some of my work in "Links." And if you want to know how I built this site, check out "Site Info."
+                  Have a look around! I know you'll find something worth your time. You can read a little bit about me in the <span className="inline-red-bg-link"><Link to="/about" onClick={scrollToTop}>About</Link></span> section. You can view my résumé in the <span className="inline-red-bg-link"><Link to="/resume" onClick={scrollToTop}>Résumé</Link></span> section. Check out <span className="inline-red-bg-link"><Link to="contact" onClick={scrollToTop}>Find Me</Link></span> if you want to know where you can contact me. I've got links to my work in <span className="inline-red-bg-link"><Link to="links" onClick={scrollToTop}>Links</Link></span>. And if you want to learn about how I built this site, check out <span className="inline-red-bg-link"><Link to="siteinfo" onClick={scrollToTop}>Site Info</Link></span>.
                </p>
                <p className="homepage-paragraph text-black">
                   Enjoy your stay.
@@ -359,27 +356,41 @@ function LinksPage(props) {
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
             <h1 className="mb-5 px-2">
-               Links
+               Links to Projects & Work
             </h1>
             {/* <h2 className="mb-4 px-2 pt-4"></h2> */}
-            <p className="about-me-paragraph">An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects.</p>
+            <div className="mb-20">
+               <p className="about-me-paragraph">An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects.</p>
 
-            <p className="about-me-paragraph text-black">A fitness-tracking web application I developed for <span className="italic">ECS 162 - Web Programming</span>. This application supports Google sign-in using OAuth 2.0, logging of past and future activity, and data visualization of recorded progress.</p>
+               <p className="about-me-paragraph text-black">A fitness-tracking web application I developed for <span className="italic">ECS 162 - Web Programming</span>. This application supports Google sign-in using OAuth 2.0, logging of past and future activity, and data visualization of recorded progress.</p>
 
-            <p className="about-me-paragraph">My final project for <span className="italic">ECS 162 - Web Programming</span>; a web application I developed for the exhibit <span className="italic">Education Should Be Free</span> at the Manetti Shrem Museum at the University of California, Davis. Use this web application to estimate the cost of education at various public universities in California using data drawn from the U.S. Department of Education's College Scorecard.</p>
+               <p className="about-me-paragraph">My final project for <span className="italic">ECS 162 - Web Programming</span>; a web application I developed for the exhibit <span className="italic">Education Should Be Free</span> at the Manetti Shrem Museum at the University of California, Davis. Use this web application to estimate the cost of education at various public universities in California using data drawn from the U.S. Department of Education's College Scorecard.</p>
 
-            <p className="about-me-paragraph text-black">A video about a procedure I devised for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision.</p>
+               <p className="about-me-paragraph text-black">A video about a procedure I devised for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision.</p>
 
-            <p className="about-me-paragraph">The website for Virovek, a Hayward-based gene therapy company. I played a major role in debugging the website's stylesheets. It's built on WordPress, which I'm not very familiar with, but I managed to work my magic all the same. </p>
+               <p className="about-me-paragraph">The website for Virovek, a Hayward-based gene therapy company. I played a major role in debugging the website's stylesheets. It's built on WordPress, which I'm not very familiar with, but I managed to work my magic all the same. </p>
 
-            <p className="about-me-paragraph text-black">A lecture on Super Smash Bros. Melee that I presented for <span className="italic">CTS 172 - Metagaming</span>, a course all about "examining the community histories and material practices that have evolved alongside videogames as a mass medium, cultural commodity, and digital technology." This class just might be one of the most enjoyable university courses I've ever taken.</p>
+               <p className="about-me-paragraph text-black">A lecture on Super Smash Bros. Melee that I presented for <span className="italic">CTS 172 - Metagaming</span>, a course all about "examining the community histories and material practices that have evolved alongside videogames as a mass medium, cultural commodity, and digital technology." This class just might be one of the most enjoyable university courses I've ever taken.</p>
 
-            <p className="about-me-paragraph">A webpage I designed on my own, just for fun. I wanted to try my hand at designing a sleek, beautiful, majestic, responsive, super sick cool-ass webpage. This is the result of that work.</p>
-            {
-               // include uwp101y, tractivity, shop til you drop, slippi sampler, a cool sick design showcase, virovek.com 
-            }
+               <p className="about-me-paragraph">A webpage I designed on my own, just for fun. I wanted to try my hand at designing a sleek, beautiful, majestic, responsive, super sick cool-ass webpage. This is the result of that work.</p>
+               {
+                  // include uwp101y, tractivity, shop til you drop, slippi sampler, a cool sick design showcase, virovek.com
+               }
+            </div>
+
+            <h1 className="mt-5 mb-5 px-2">
+               Links to Site Subdomains
+            </h1>
+            <div className="mb-20">
+               <p className="about-me-paragraph">The obligatory "blog section" of my website. I really don't plan on writing much here. But setting this subdomain up gave me an excuse to learn Jekyll and deploy a statically-generated blog.
+                  <br />blog.raidsrc.me </p>
+
+               <p className="about-me-paragraph text-black">
+                  A subdomain of my site that's more of an experimental design sandbox than anything else.
+                  <br />raid.raidsrc.me</p>
+            </div>
          </CenteredFullPageFlexContainer>
-      </div>
+      </div >
    )
 }
 
@@ -389,7 +400,7 @@ function SiteInfoPage(props) {
          <CenteredFullPageFlexContainer>
             <SiteConstructionBanner />
             <h1 className="text-white mb-5 px-2">
-               Site Info
+               About This Site
             </h1>
             <p className="about-me-paragraph text-black">This site is a <NewTab href="https://reactjs.org/">React</NewTab> app. I got my first taste of React from <span className="italic">ECS 162: Web Programming</span>, a course I took at UC Davis during Spring Quarter 2021. I now think React is really cool. Like, super cool.</p>
 
