@@ -234,7 +234,7 @@ function AboutPage(props) {
 
                <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
                   <p className="about-me-paragraph text-black">
-                     I like Kendrick Lamar, Fullmetal Alchemist, steamed pork buns, and the ocean breeze. I don't like candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
+                     I like Kendrick Lamar, Fullmetal Alchemist, 小笼包, and the ocean breeze. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
                   </p>
                </div>
                <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
