@@ -141,6 +141,12 @@ function SiteConstructionBanner(props) {
    )
 }
 
+function NewTab(props) {
+   return (
+      <a target="_blank" rel="noreferrer noopener" href={props.href} className={props.className + " underline"}>{props.children}</a>
+   )
+}
+
 function smoothScrollToTop() {
    // window.scroll({ 
    //    top: 0, 
@@ -160,5 +166,5 @@ function smoothScrollToTop() {
    // i found a workaround. i set the scroll to be sharp (auto), not smooth, and time the scroll to occur right when the pages are invisible so the transition looks totally smooth. let's fucking go. this is the path forward. this is the way. 
 }
 
-export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner }
+export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab }
 
