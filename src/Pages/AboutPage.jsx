@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
-import { CenteredFullPageFlexContainer, SiteConstructionBanner } from '../ReusableComponents'
+import { CenteredFullPageFlexContainer, SiteConstructionBanner, NewTab } from '../ReusableComponents'
 import bananas2Jpg from "../static/bananas2.jpg"
-import goldenGate from "../static/20151225_132800_cropped_4x3.jpg"
+import goldenGate from "../static/goldengate.jpg"
+import eggheads from "../static/eggheads.jpg"
+import virovek from "../static/virovek_front.jpg"
 import rayPiano2017 from "../static/IMG_8031.MOV_snapshot_00.35_[2020.04.09_10.03.38].jpg"
 import rayDrummingMonochrome from "../static/20200913_185258-01.jpeg"
 import stinkyTofu from "../static/stinky_tofu_lol.jpg"
@@ -158,18 +160,18 @@ function AboutPage(props) {
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
-                   <img src={bananas2Jpg} className="about-me-img" />
-                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 3</span> banaba.</span>
+                   <img src={eggheads} className="about-me-img" />
+                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 3</span> Egghead - Yin & Yang, outside the music building on the Davis campus. </span>
                 </div>
  
                 <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
                    <p className="about-me-paragraph md:text-right">
-                      My career aspirations are simple. I'll cure cancer at the age of 26, then be a busker in San Francisco for a decade, and then retire to a log cabin deep in the Sierra Nevadas with my crossbow and my Siberian Husky.<br /><span className="text-gray-449">(just joking. i'm hoping to make a career out of being a freelance science + technology + music tutor for society's disadvantaged)</span>
+                      After I graduate, I'm headed to <NewTab href="https://www.virovek.com">Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. Both of them are dinosaurs when it comes to modern web, communications, and business technology. I will assume control of that department and boost company productivity by orders of magnitude. It's going to be a lot of work, but I firmly believe that this is a crucially important task and that there's no one better suited for it than me.
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
-                   <img src={bananas2Jpg} className="about-me-img lg:col-end-3" />
-                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 4</span> something else lol banaba bananb bananana.</span>
+                   <img src={virovek} className="about-me-img lg:col-end-3" />
+                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 4 </span>the front of Virovek's office.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
@@ -185,7 +187,7 @@ function AboutPage(props) {
  
                 <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                    <p className="about-me-paragraph md:text-right">
-                      In my free time, I enjoy programming, working out, cooking, learning new things, editing videos, and playing, composing, arranging, and producing music. I'm quite the novice at skiing, snowboarding, and skateboarding, but I find those activites really fun, too.
+                      In my free time, I enjoy programming, lifting weights, cooking, learning new things, editing videos, and composing, arranging, producing, and performing music. I don't ski, snowboard, or skateboard much, but I find those activites really fun, too.
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
