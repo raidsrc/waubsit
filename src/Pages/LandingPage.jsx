@@ -17,15 +17,19 @@ function LandingPage(props) {
             <CenteredFullPageFlexContainer>
                <SiteConstructionBanner />
                {/* the plan: centered circle image of me. big text below that say Raid. or Bite Me. or Ray Louis. below that have links to where i be at. youtube, spotify, apple music, etc. have them arranged like linktree has it but different. wide buttons with off-white colored backgrounds. black text. icons on the buttons.*/}
-               <div className="flex flex-row justify-center pt-7 sm:pt-0">
-                  <img src={me2021dec} className="rounded-full w-10/12 tiny-screen:w-9/12 sm:w-6/12 md:w-4/12 lg:w-3/12" />
+               <div className="flex flex-row justify-center pt-7 sm:pt-4 md:pt-0">
+                  <img src={me2021dec} className="rounded-full w-9/12 
+                  tiny-screen:w-8/12 
+                  sm:w-6/12 
+                  md:w-4/12 
+                  lg:w-3/12" />
                </div>
-               <div className="flex flex-row justify-center pt-7 pb-4">
+               <div className="flex flex-row justify-center py-6">
                   <h1>
-                     Raid. Bite Me. Ray Louis. etc etc etc. names go here. bold them or something
+                     Raid  /  Bite Me  /  Ray Louis
                   </h1>
                </div>
-               <LandingPageLinkButton href="https://youtube.com/c/raidsrc">Youtube</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://youtube.com/c/raidsrc">YouTube</LandingPageLinkButton>
                <LandingPageLinkButton href="https://spotify.com">Spotify</LandingPageLinkButton>
                <LandingPageLinkButton href="https://apple.com">Apple Music</LandingPageLinkButton>
                <LandingPageLinkButton href="https://twitter.com/raidsrc">Twitter</LandingPageLinkButton>

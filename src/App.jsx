@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContextjj, useContext } from 'react'
-import { Navbar } from './ReusableComponents'
-import { Redirect, Route, Switch, useLocation } from "react-router-dom"
+import { Navbar, scrollToTop } from './ReusableComponents'
+import { Redirect, Route, Switch, useLocation, useHistory } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 
 import LandingPage from "./Pages/LandingPage"
@@ -14,11 +14,20 @@ import SupPage from './Pages/SupPage'
 
 function App() {
   let location = useLocation()
+  let history = useHistory()
   const [alerted, setAlerted] = useState(false)
   if (!alerted) {
     setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
     setAlerted(true)
   }
+
+  useEffect(() => {
+    return () => {
+      if (history.action === "POP") { // if i press the fwd or back buttons... or even do a hot reload......
+        scrollToTop()
+      }
+    }
+  })
 
   return (
     <div className="whole-app">
