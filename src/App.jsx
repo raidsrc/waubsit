@@ -3,6 +3,7 @@ import { Navbar } from './ReusableComponents'
 import { Redirect, Route, Switch, useLocation } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 
+import LandingPage from "./Pages/LandingPage"
 import HomePage from "./Pages/HomePage"
 import AboutPage from './Pages/AboutPage'
 import ResumePage from './Pages/ResumePage'
@@ -28,6 +29,9 @@ function App() {
             //might need to make this timeout prop above more accurate to the lengths of the css transitions in animationStyles.css
           }
             <Switch location={location}>
+              <Route path="/landing">
+                <LandingPage />
+              </Route>
               <Route path="/home">
                 <HomePage />
               </Route>
