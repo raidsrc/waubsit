@@ -167,8 +167,8 @@ function scrollToTop() {
 function LandingPageLinkButton(props) {
    return (
       <div className="flex flex-row justify-center py-2">
-         <a target="_blank" rel="noreferrer noopener" href={props.href} className="bg-gray-200 border-2 border-gray-800 w-full py-2 md:w-8/12 md:py-3 lg:w-6/12 hover:bg-gray-300 duration-200 hover:ease-in">
-            <button className="flex flex-row justify-center">
+         <a target="_blank" rel="noreferrer noopener" href={props.href} className="flex justify-center bg-gray-200 border-2 border-gray-800 w-full py-2 md:w-8/12 md:py-3 lg:w-6/12 hover:bg-gray-300 duration-200 hover:ease-in">
+            <button>
                {props.children}
             </button>
          </a>

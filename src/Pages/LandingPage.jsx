@@ -25,13 +25,13 @@ function LandingPage(props) {
                      Raid. Bite Me. Ray Louis. etc etc etc. names go here. bold them or something
                   </h1>
                </div>
-               <LandingPageLinkButton href="https://youtube.com">Youtube</LandingPageLinkButton>
-               <LandingPageLinkButton>Spotify</LandingPageLinkButton>
-               <LandingPageLinkButton>Apple Music</LandingPageLinkButton>
-               <LandingPageLinkButton>Twitter</LandingPageLinkButton>
-               <LandingPageLinkButton>Github, Personal</LandingPageLinkButton>
-               <LandingPageLinkButton>Github, School</LandingPageLinkButton>
-               <LandingPageLinkButton>SoundCloud</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://youtube.com/c/raidsrc">Youtube</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://spotify.com">Spotify</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://apple.com">Apple Music</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://twitter.com/raidsrc">Twitter</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://github.com/raidsrc">Github, Personal</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://github.com/rsrchen">Github, School</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://soundcloud.com/raidsrc">SoundCloud</LandingPageLinkButton>
                <div className="flex flex-row justify-center py-4">
                   <span className="inline-red-bg-link text-white">
                      <NewTab href="/sup">
