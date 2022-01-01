@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { CenteredFullPageFlexContainer, SiteConstructionBanner } from '../ReusableComponents'
 import bananas2Jpg from "../static/bananas2.jpg"
-import leonaQuarry from "../static/20210114_123451.jpg"
+import goldenGate from "../static/20151225_132800_cropped_4x3.jpg"
 import rayPiano2017 from "../static/IMG_8031.MOV_snapshot_00.35_[2020.04.09_10.03.38].jpg"
 import rayDrummingMonochrome from "../static/20200913_185258-01.jpeg"
 import stinkyTofu from "../static/stinky_tofu_lol.jpg"
@@ -148,8 +148,8 @@ function AboutPage(props) {
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
-                   <img src={bananas2Jpg} className="about-me-img" />
-                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 2</span> bananana.</span>
+                   <img src={goldenGate} className="about-me-img" />
+                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 2</span> the Golden Gate Bridge.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
@@ -159,7 +159,7 @@ function AboutPage(props) {
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                    <img src={bananas2Jpg} className="about-me-img" />
-                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 3;</span> banaba.</span>
+                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 3</span> banaba.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
@@ -169,7 +169,7 @@ function AboutPage(props) {
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                    <img src={bananas2Jpg} className="about-me-img lg:col-end-3" />
-                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 4;</span> something else lol banaba bananb bananana.</span>
+                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 4</span> something else lol banaba bananb bananana.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
@@ -180,7 +180,7 @@ function AboutPage(props) {
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                    <img src={stinkyTofu} className="about-me-img" />
-                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5; </span>just ate a mushroom, probably, i don't know. friend appears very happy about it.</span>
+                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5 </span>trying stinky tofu. it wasn't bad.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
