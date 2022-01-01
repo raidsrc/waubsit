@@ -42,7 +42,7 @@ function ClickableRaidsrcIcon(props) {
       theClass += " disabled-link"
    }
    return (
-      <div className="w-12">     
+      <div className="w-12">
          <NavLink activeClassName="opacity-40" className={theClass} onClick={() => { scrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
             <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50 drop-shadow-raid-icon"></img>
          </NavLink>
@@ -164,5 +164,17 @@ function scrollToTop() {
    // i found a workaround. i set the scroll to be sharp (auto), not smooth, and time the scroll to occur right when the pages are invisible so the transition looks totally smooth. let's fucking go. this is the path forward. this is the way. 
 }
 
-export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab, scrollToTop }
+function LandingPageLinkButton(props) {
+   return (
+      <div className="flex flex-row justify-center py-2">
+         <a target="_blank" rel="noreferrer noopener" href={props.href} className="bg-gray-200 border-2 border-gray-800 w-full py-2 md:w-8/12 md:py-3 lg:w-6/12 hover:bg-gray-300 duration-200 hover:ease-in">
+            <button className="flex flex-row justify-center">
+               {props.children}
+            </button>
+         </a>
+      </div>
+   )
+}
+
+export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab, scrollToTop, LandingPageLinkButton }
 

@@ -10,24 +10,25 @@ import ResumePage from './Pages/ResumePage'
 import ContactPage from './Pages/ContactPage'
 import LinksPage from './Pages/LinksPage'
 import SiteInfoPage from './Pages/SiteInfoPage.jsx'
+import SupPage from './Pages/SupPage'
 
 function App() {
   let location = useLocation()
   const [alerted, setAlerted] = useState(false)
-   if (!alerted) {
-      setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
-      setAlerted(true)
-   }
+  if (!alerted) {
+    setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
+    setAlerted(true)
+  }
 
   return (
     <div className="whole-app">
       <Navbar />
       <div className="content">
         <TransitionGroup>
-          <CSSTransition key={location.key} classNames="fade" timeout={1000}> 
-          {
-            //might need to make this timeout prop above more accurate to the lengths of the css transitions in animationStyles.css
-          }
+          <CSSTransition key={location.key} classNames="fade" timeout={1000}>
+            {
+              //might need to make this timeout prop above more accurate to the lengths of the css transitions in animationStyles.css
+            }
             <Switch location={location}>
               <Route path="/landing">
                 <LandingPage />
@@ -50,7 +51,10 @@ function App() {
               <Route exact path="/siteinfo">
                 <SiteInfoPage />
               </Route>
-              <Redirect exact from="/" to="/home" />
+              <Route exact path="/sup">
+                <SupPage />
+              </Route>
+              <Redirect exact from="/" to="/landing" />
             </Switch>
           </CSSTransition>
         </TransitionGroup>
