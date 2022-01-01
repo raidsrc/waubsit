@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { CenteredFullPageFlexContainer, SiteConstructionBanner } from '../ReusableComponents'
 import bananas2Jpg from "../static/bananas2.jpg"
+import leonaQuarry from "../static/20210114_123451.jpg"
 import rayPiano2017 from "../static/IMG_8031.MOV_snapshot_00.35_[2020.04.09_10.03.38].jpg"
 import rayDrummingMonochrome from "../static/20200913_185258-01.jpeg"
 import stinkyTofu from "../static/stinky_tofu_lol.jpg"
@@ -135,7 +136,7 @@ function AboutPage(props) {
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                    <img src={rayDrummingMonochrome} className="about-me-img" />
-                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 1;</span> me, in my basement, drumming very intensely as I read a text message from my neighbor telling me to quiet down. yeah, they complain a lot.</span>
+                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 1</span> me drumming in my basement. my neighbors are outside my window screaming at me to quiet down.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-start-3 lg:col-end-6">
@@ -148,7 +149,7 @@ function AboutPage(props) {
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                    <img src={bananas2Jpg} className="about-me-img" />
-                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 2;</span> bananana.</span>
+                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 2</span> bananana.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
