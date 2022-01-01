@@ -6,7 +6,6 @@ import { HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab, 
 import { Link } from "react-router-dom"
 
 function HomePage(props) {
-   let a
    const [reverse, setReverse] = useState(false)
    const [cancel, setCancel] = useState(false)
 
