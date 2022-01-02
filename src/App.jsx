@@ -30,6 +30,7 @@ function App() {
     <div className="whole-app">
       <Navbar />
       <div className="content">
+        {/* now i need to find a way to map thru the routes list and make this code more dry */}
         <Route exact path="/home">
           {({ match }) => (
             <CSSTransition in={match != null} classNames="fade" unmountOnExit timeout={1000}>
