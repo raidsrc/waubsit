@@ -25,6 +25,7 @@ function App() {
     { path: '/siteinfo', name: 'Site Info', Component: SiteInfoPage },
   ]
 
+  
   return (
     <div className="whole-app">
       <Navbar />
@@ -32,7 +33,7 @@ function App() {
         {routes.map(({ path, name, Component }) => (
           <Route exact path={path}>
             {({ match }) => (
-              <CSSTransition in={match != null} classNames="fade" unmountOnExit timeout={500}>
+              <CSSTransition in={match != null} classNames="fade" unmountOnExit timeout={2000}>
                 {/* the value of timeout just needs to be longer than the amount of time it takes for the enter and exit animations to finish. else they'll look choppy. timeout is how long a component stays in the 'entering' state before it switches over to 'entered' */}
                 <div className='fade'>
                   <Component />
