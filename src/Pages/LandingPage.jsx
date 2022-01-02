@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 function LandingPage(props) {
 
    // i didn't really plan this out. i don't want this to be a page on raidsrc.me. i want this to be a whole ass other subdomain. landing.raidsrc.me. or something like that. how the fuck do i do that?
-   // i'll need to host this page somewhere else, i think. 
+   // i'll need to host this page somewhere else, i think. that's the only way.
 
    return (
       <div className="homepage">
