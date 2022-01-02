@@ -175,8 +175,7 @@ function AboutPage(props) {
  
                 <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
                    <p className="about-me-paragraph text-black">
-                      I like Kendrick Lamar, Chinese food, ice cold water, and successfully troubleshooting difficult problems. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
-                      {/* have modal that pops up when you click the first "like" that talks about more stuff i like and don't like */}
+                      I like Kendrick Lamar, Chinese food, ice cold spring water, and exploring the unknown. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it. I've tried a lot of mushrooms and they all suck. 
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
