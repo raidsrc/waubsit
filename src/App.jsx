@@ -31,7 +31,21 @@ function App() {
       <Navbar />
       <div className="content">
         {/* now i need to find a way to map thru the routes list and make this code more dry */}
-        <Route exact path="/home">
+
+
+        {routes.map(({ path, name, Component }) => (
+          <Route exact path={path}>
+            {({ match }) => (
+              <CSSTransition in={match != null} classNames="fade" unmountOnExit timeout={500}> 
+              {/* the value of timeout just needs to be longer than the amount of time it takes for the enter and exit animations to finish. else they'll look choppy. timeout is how long a component stays in the 'entering' state before it switches over to 'entered' */}
+                <div className='fade'>
+                  <Component />
+                </div>
+              </CSSTransition>
+            )}
+          </Route>
+        ))}
+        {/* <Route exact path="/home">
           {({ match }) => (
             <CSSTransition in={match != null} classNames="fade" unmountOnExit timeout={1000}>
               <HomePage />
@@ -77,7 +91,7 @@ function App() {
               <SiteInfoPage />
             </CSSTransition>
           )}
-        </Route>
+        </Route> */}
         <Redirect exact from="/" to="/home" />
       </div>
     </div>
