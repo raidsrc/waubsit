@@ -19,7 +19,8 @@ function App() {
 
   useEffect(() => {
     window.history.scrollRestoration = "manual"
-  }, [])
+    console.log("sup")
+  }, []) // since the dependencies array is empty, this effect will only be activate and clean up once. after this component mounts aka after app begins and then when component unmounts aka when app is closed. 
 
   const routes = [
     { path: '/home', name: 'Home', Component: HomePage },
@@ -34,7 +35,7 @@ function App() {
     <div className="whole-app">
       <Navbar />
       <div className="content">
-        {routes.map(({ path, name, Component }) => (
+        {routes.map(({ path, Component }) => (
           <Route exact path={path}>
             {({ match }) => (
               <CSSTransition in={match != null} classNames="fade" unmountOnExit onExited={() => {

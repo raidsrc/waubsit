@@ -22,31 +22,8 @@
   color: black;
 }
 
-/*
-.no-scroll-bruh::-webkit-scrollbar {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-
-/*display: none;
-}
-
-.no-scroll-bruh {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-
-/*scrollbar-width: none;
-  /* Firefox (it doesn't work lol) */
-
-/*
-}
-/*
-html {
-  /* this here makes the scrollbar vanish on firefox while still allowing for scrolling. why the fuck we need to apply this shit to body in the later versions of firefox? i don't fucking know. but it works. */
-
-/*overflow-y: scroll;
-  scrollbar-width: none;
-}*/
-
-@layer base {
+/* the base layer is where default styles go for specific html elements */
+@layer base { 
   h1 {
     font-family: 'IBM Plex Sans', sans-serif;
     @apply italic text-2xl sm:text-3xl 2xl:text-4xl
@@ -63,6 +40,7 @@ html {
   }
 }
 
+/* the components layer is where more complex classes go. whole ass classes with a bunch of styles attached to them. @apply is used to stick existing utility classes into your newly minted component  */
 @layer components {
   .navbutton-style {
     @apply w-auto border-opacity-20 px-2 hover:opacity-80 hover:border-opacity-10 active:opacity-60 active:border-opacity-5 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl;
@@ -98,6 +76,8 @@ html {
   }
 }
 
+/* custom utilities go here. i don't even know what a utility is.
+alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. make your own and put them here. */
 @layer utilities {
   .open-sans {
     font-family: 'Open Sans', sans-serif;
