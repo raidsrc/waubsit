@@ -3,7 +3,6 @@ import { Navbar, scrollToTop } from './ReusableComponents'
 import { Redirect, Route, Switch, useLocation } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 
-import LandingPage from "./Pages/LandingPage"
 import HomePage from "./Pages/HomePage"
 import AboutPage from './Pages/AboutPage'
 import ResumePage from './Pages/ResumePage'
@@ -19,8 +18,6 @@ function App() {
     setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
     setAlerted(true)
   }
-
-
 
   return (
     <div className="whole-app">
@@ -49,9 +46,6 @@ function App() {
               </Route>
               <Route exact path="/siteinfo">
                 <SiteInfoPage />
-              </Route>
-              <Route path="/landing">
-                <LandingPage />
               </Route>
               <Route exact path="/sup">
                 <SupPage />

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { CenteredFullPageFlexContainer, SiteConstructionBanner, NewTab } from '../ReusableComponents'
-import bananas2Jpg from "../static/bananas2.jpg"
 import goldenGate from "../static/goldengate.jpg"
 import eggheads from "../static/eggheads.jpg"
 import virovek from "../static/virovek_front.jpg"
@@ -192,7 +191,7 @@ function AboutPage(props) {
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                    <img src={rayPiano2017} className="about-me-img" />
-                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6;</span> c. 2017. performing some banger homestuck piano music for a few hundred people. </span>
+                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6</span> c. 2017. performing some banger homestuck piano music for a few hundred people. </span>
                 </div>
              </div>
           </CenteredFullPageFlexContainer>
