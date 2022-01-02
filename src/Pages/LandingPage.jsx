@@ -25,17 +25,31 @@ function LandingPage(props) {
                   lg:w-3/12" />
                </div>
                <div className="flex flex-row justify-center py-6">
-                  <h1>
-                     Raid  /  Bite Me  /  Ray Louis
+                  <h1 className="text-white mild-text-shadow-left-down">
+                     Raid  //  Bite Me  //  Ray Louis
                   </h1>
                </div>
-               <LandingPageLinkButton href="https://youtube.com/c/raidsrc">YouTube</LandingPageLinkButton>
-               <LandingPageLinkButton href="https://spotify.com">Spotify</LandingPageLinkButton>
-               <LandingPageLinkButton href="https://apple.com">Apple Music</LandingPageLinkButton>
-               <LandingPageLinkButton href="https://twitter.com/raidsrc">Twitter</LandingPageLinkButton>
-               <LandingPageLinkButton href="https://github.com/raidsrc">Github, Personal</LandingPageLinkButton>
-               <LandingPageLinkButton href="https://github.com/rsrchen">Github, School</LandingPageLinkButton>
-               <LandingPageLinkButton href="https://soundcloud.com/raidsrc">SoundCloud</LandingPageLinkButton>
+               <LandingPageLinkButton href="https://youtube.com/c/raidsrc">
+                  YouTube
+               </LandingPageLinkButton>
+               <LandingPageLinkButton href="https://spotify.com">
+                  Spotify
+               </LandingPageLinkButton>
+               <LandingPageLinkButton href="https://apple.com">
+                  Apple Music
+               </LandingPageLinkButton>
+               <LandingPageLinkButton href="https://twitter.com/raidsrc">
+                  Twitter
+               </LandingPageLinkButton>
+               <LandingPageLinkButton href="https://github.com/raidsrc">
+                  Github, Personal
+               </LandingPageLinkButton>
+               <LandingPageLinkButton href="https://github.com/rsrchen">
+                  Github, School
+               </LandingPageLinkButton>
+               <LandingPageLinkButton href="https://soundcloud.com/raidsrc">
+                  SoundCloud
+               </LandingPageLinkButton>
                <div className="flex flex-row justify-center py-4">
                   <span className="inline-red-bg-link text-white">
                      <NewTab href="/sup">
