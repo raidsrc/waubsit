@@ -26,7 +26,7 @@ function NavButton(props) {
       theClass += " disabled-link"
    }
    function wheneverNavButtonClicked() {
-      scrollToTop()
+      // scrollToTop()
       setShowRightSideMenu(false)
    }
    return (
@@ -43,7 +43,9 @@ function ClickableRaidsrcIcon(props) {
    }
    return (
       <div className="w-12">
-         <NavLink activeClassName="opacity-40" className={theClass} onClick={() => { scrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
+         <NavLink activeClassName="opacity-40" className={theClass} onClick={() => { 
+            //scrollToTop()
+            setShowRightSideMenu(false) }} to={props.to}>
             <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50 drop-shadow-raid-icon"></img>
          </NavLink>
       </div>

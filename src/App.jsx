@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContextjj, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Navbar } from './ReusableComponents'
 import { Redirect, Route } from "react-router-dom"
-import { TransitionGroup, CSSTransition } from "react-transition-group"
+import { CSSTransition } from "react-transition-group"
 
 import HomePage from "./Pages/HomePage"
 import AboutPage from './Pages/AboutPage'
@@ -16,6 +16,11 @@ function App() {
     setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
     setAlerted(true)
   }
+
+  useEffect(() => {
+    window.history.scrollRestoration = "manual"
+  }, [])
+
   const routes = [
     { path: '/home', name: 'Home', Component: HomePage },
     { path: '/about', name: 'About', Component: AboutPage },
@@ -25,7 +30,6 @@ function App() {
     { path: '/siteinfo', name: 'Site Info', Component: SiteInfoPage },
   ]
 
-  
   return (
     <div className="whole-app">
       <Navbar />
@@ -33,8 +37,10 @@ function App() {
         {routes.map(({ path, name, Component }) => (
           <Route exact path={path}>
             {({ match }) => (
-              <CSSTransition in={match != null} classNames="fade" unmountOnExit timeout={2000}>
-                {/* the value of timeout just needs to be longer than the amount of time it takes for the enter and exit animations to finish. else they'll look choppy. timeout is how long a component stays in the 'entering' state before it switches over to 'entered' */}
+              <CSSTransition in={match != null} classNames="fade" unmountOnExit onExited={() => {
+                scroll(0, 0)
+              }} timeout={200}>
+                {/* the value of timeout just needs to be longer than the amount of time it takes for the exit animation to finish. else they'll look choppy. timeout is how long a component stays in the 'entering' state before it switches over to 'entered' */}
                 <div className='fade'>
                   <Component />
                 </div>
