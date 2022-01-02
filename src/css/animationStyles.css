@@ -20,7 +20,7 @@
 }
 
 .fade-exit {
-    /* as it's leaving */
+    /* right as it's leaving */
     opacity: 1;
     position: absolute;
     left: 0;

@@ -35,7 +35,7 @@ function AboutPage(props) {
  
        function randomlyPickName() { // returns a random name string from this namesList
           const namesList = [
-             "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "raymawn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Drummer @ Sonar Alchemy", "1337+", "Big Head", "Rayon",
+             "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "raymawn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Drummer @ Sonar Alchemy", "1337+", "Big Head", "Rayon", "Ray C"
           ]
           function getRandomInt(min, max) {
              min = Math.ceil(min);
@@ -132,12 +132,12 @@ function AboutPage(props) {
                 }
                 <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-4">
                    <p className="about-me-paragraph text-black">
-                      I'm Raymond. I usually go by Ray, but people have known me by many names. Some of these names were given to me. Some of them I chose myself. Some of them are funny, and some I think are pretty cool. Some of them I like. Others, not so much. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
+                      I'm Raymond. I usually go by Ray, but people have known me by many names. Some of these names were given to me. Some of them I chose myself. Some of them are silly, and some I think are pretty cool. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                    <img src={rayDrummingMonochrome} className="about-me-img" />
-                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 1</span> me drumming in my basement. my neighbors are outside my window screaming at me to quiet down.</span>
+                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 1</span> me, drumming. </span>
                 </div>
  
                 <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-start-3 lg:col-end-6">
@@ -175,23 +175,23 @@ function AboutPage(props) {
  
                 <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
                    <p className="about-me-paragraph text-black">
-                      I like Kendrick Lamar, Fullmetal Alchemist, 小笼包, and grilled salmon. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
+                      I like Kendrick Lamar, Chinese food, ice cold water, and successfully troubleshooting difficult problems. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it.
                       {/* have modal that pops up when you click the first "like" that talks about more stuff i like and don't like */}
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                    <img src={stinkyTofu} className="about-me-img" />
-                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5 </span>trying stinky tofu. it wasn't bad.</span>
+                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5 </span>trying stinky tofu. it was alright.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                    <p className="about-me-paragraph md:text-right">
-                      In my free time, I enjoy programming, lifting weights, cooking, learning new things, editing videos, and composing, arranging, producing, and performing music. I don't ski, snowboard, or skateboard much, but I find those activites really fun, too.
+                      In my free time, I enjoy programming, lifting weights, cooking, learning new things, editing videos, and making music. I also really enjoy skiing, snowboarding, and skateboarding, even though I don't get to do those things very often.
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                    <img src={rayPiano2017} className="about-me-img" />
-                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6</span> c. 2017. performing some banger homestuck piano music for a few hundred people. </span>
+                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6</span> me, performing. a few hundred people were there. i was playing "Showtime - Piano Refrain" from Homestuck, in case you're wondering.</span>
                 </div>
              </div>
           </CenteredFullPageFlexContainer>

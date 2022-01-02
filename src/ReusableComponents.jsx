@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { BrowserRouter as Router, Route, Switch, NavLink } from "react-router-dom"
+import React, { useState } from "react"
+import { NavLink } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import raidsrcLogoSvgUrl from "./static/raid_logo_thick_white.svg"
 
@@ -26,7 +26,7 @@ function NavButton(props) {
       theClass += " disabled-link"
    }
    function wheneverNavButtonClicked() {
-      scrollToTop()
+      // scrollToTop()
       setShowRightSideMenu(false)
    }
    return (
@@ -43,7 +43,10 @@ function ClickableRaidsrcIcon(props) {
    }
    return (
       <div className="w-12">
-         <NavLink activeClassName="opacity-40" className={theClass} onClick={() => { scrollToTop(); setShowRightSideMenu(false) }} to={props.to}>
+         <NavLink activeClassName="opacity-40" className={theClass} onClick={() => {
+            //scrollToTop()
+            setShowRightSideMenu(false)
+         }} to={props.to}>
             <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50 drop-shadow-raid-icon"></img>
          </NavLink>
       </div>
@@ -167,8 +170,8 @@ function scrollToTop() {
 function LandingPageLinkButton(props) {
    return (
       <div className="flex flex-row justify-center py-2">
-         <a target="_blank" rel="noreferrer noopener" href={props.href} 
-         className="flex justify-center border-2 bg-gray-200 w-full py-2 md:w-8/12 md:py-3 lg:w-6/12 hover:bg-gray-300 duration-150 hover:ease-in hover:border-gray-800 ">
+         <a target="_blank" rel="noreferrer noopener" href={props.href}
+            className="flex justify-center border-2 bg-gray-200 w-full py-2 md:w-8/12 md:py-3 lg:w-6/12 hover:bg-gray-300 duration-150 hover:ease-in hover:border-gray-800 ">
             <button>
                {props.children}
             </button>
