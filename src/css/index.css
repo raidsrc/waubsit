@@ -94,7 +94,7 @@ html {
     @apply hover:opacity-80 active:opacity-60;
   }
   .mild-text-shadow-left-down {
-    text-shadow: -1px 1px rgba(0, 0, 0, 0.4);
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
   }
 }
 
