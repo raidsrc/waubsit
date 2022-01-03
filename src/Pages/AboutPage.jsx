@@ -185,7 +185,7 @@ function AboutPage(props) {
  
                 <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
                    <p className="about-me-paragraph md:text-right">
-                      In my free time, I enjoy programming, lifting weights, cooking, learning new things, editing videos, and making music. I also really enjoy skiing, snowboarding, and skateboarding, even though I don't get to do those things very often.
+                      In my free time, I enjoy programming, lifting weights, cooking, learning new things, editing videos, and making music. I also really enjoy skiing, snowboarding, and skateboarding, even though I don't typically get to do those things very often.
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">

@@ -29,7 +29,7 @@ function ContactPage(props) {
             <div className="text-center py-5 px-2 text-base md:text-lg">
                Alternatively, you could email me at the address below. Only if it's urgent.
             </div>
-            <div className="grid grid-cols-3 grid-rows-6">
+            <div className="grid grid-cols-3 grid-rows-4">
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center">
                   <a href="mailto:rsrchen@ucdavis.edu" className=" hover:opacity-60 active:opacity-40">
                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" /></svg>
