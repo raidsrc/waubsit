@@ -8,11 +8,11 @@ function Navbar(props) {
    const [showRightSideMenu, setShowRightSideMenu] = useState(false)
    return (
       <nav className="bg-gray-800 shadow-xl flex fixed justify-center w-full z-10">
-         <div className="flex flex-row text-white tracking-wide top-0 w-full justify-between py-3 px-5 items-center max-w-yuge tiny-screen:px-7 sm:px-10 smmd:px-7 md:px-12 md:text-lg md:h-20 lg:px-16 lg:h-20">
+         <div className="flex flex-row text-white tracking-wide top-0 w-full justify-between py-3 px-5 items-center max-w-yuge tiny-screen:px-7 sm:px-10 smmd:px-6 md:px-12 md:text-lg md:h-20 lg:px-16 lg:h-20">
             <ClickableRaidsrcIcon to="/home" setShowRightSideMenu={setShowRightSideMenu} />
             <HamburgerMenu className="smmd:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
             {showRightSideMenu ? <RightSideMenuThatAppearsWhenYouClickTheHamburger setShowRightSideMenu={setShowRightSideMenu} /> : ""}
-            <TheNavButtonsAllTogether setShowRightSideMenu={setShowRightSideMenu} className="hidden flex-row justify-around space-x-4 smmd:flex tiny-screen:visible smmd:space-x-6 md:space-x-9 lg:space-x-12" />
+            <TheNavButtonsAllTogether setShowRightSideMenu={setShowRightSideMenu} className="hidden flex-row justify-around space-x-4 smmd:flex tiny-screen:visible smmd:space-x-3 md:space-x-9 lg:space-x-12" />
          </div>
       </nav>
    )
@@ -79,7 +79,7 @@ function TheNavButtonsAllTogether(props) {
          </NavButton>
          <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
             to="/links" setShowRightSideMenu={props.setShowRightSideMenu}>
-            More Stuff
+            Stuff I've Made
          </NavButton>
          <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
             to="/siteinfo" setShowRightSideMenu={props.setShowRightSideMenu}>

@@ -19,9 +19,11 @@ function LinksPage(props) {
                </p>
 
                <p className="about-me-paragraph text-black">
-                  <NewTab className="no-underline" href="https://uwp101y.raidsrc.me">
+                  <NewTab className="no-underline" href="http://uwp101y.raidsrc.me">
                      <span className="underline">Rewrite, Rebuild, Repeat</span><br />
-                     An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects.
+                     An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects. There's a chance they'll ask you for a password if you want to gain entry. Email me for that. 
+
+                     {/* it's aggies2021 lol */}
                   </NewTab>
                </p>
 
@@ -42,7 +44,7 @@ function LinksPage(props) {
                <p className="about-me-paragraph">
                   <NewTab className="no-underline">
                      <span className="underline">The Slippi Sampler</span><br />
-                     A video about a procedure I devised for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision. (coming soon!)
+                     A video about a procedure I devised for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision. <span className="bg-gray-600">(coming soon!)</span>
                   </NewTab>
                </p>
 
