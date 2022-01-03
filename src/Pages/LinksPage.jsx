@@ -69,13 +69,13 @@ function LinksPage(props) {
             </div>
 
             <h1 className="mt-5 mb-5 px-2">
-               Links That Lead Elsewhere
+               Other Links to Other Stuff
             </h1>
             <div className="mb-20">
                <p className="about-me-paragraph">
                   <NewTab className="no-underline" href="https://landing.raidsrc.me">
                      <span className="underline">raidsrc.me Landing Page</span><br />
-                     This page is usually the first point of contact for random people who are searching for me on the internet. It's a sparse webpage with a list of links to where I'm at. The YT channel, Twitter, music providers, my main site here, etc. It's also got a brief "About Me" section.
+                     This page is often the first point of contact for random people who are searching for me on the internet. I usually put a link to this page in my bio or elsewhere on my profile on whatever site I'm on. It's a sparse webpage with a list of links to where I'm at. The YT channel, Twitter, music providers, my main site here, etc. It's also got a brief "About Me" section.
                   </NewTab>
                </p>
                <p className="about-me-paragraph text-black">
