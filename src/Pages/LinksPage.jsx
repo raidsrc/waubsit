@@ -13,7 +13,7 @@ function LinksPage(props) {
             <div className="mb-20">
                <p className="about-me-paragraph">
                   <NewTab className="no-underline" href="https://www.youtube.com/c/raidsrc">
-                     <span className="underline">www.youtube.com/c/raidsrc</span><br />
+                     <span className="underline">Raid</span><br />
                      My YouTube channel, where I upload musical content and other short videos on various topics. Musical content includes covers, rearrangements, original compositions, and tutorials. Other short videos include school projects, expository content, guides, and cinematic TV features.
                   </NewTab>
                </p>
@@ -21,7 +21,7 @@ function LinksPage(props) {
                <p className="about-me-paragraph text-black">
                   <NewTab className="no-underline" href="http://uwp101y.raidsrc.me">
                      <span className="underline">Rewrite, Rebuild, Repeat</span><br />
-                     An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects. There's a chance they'll ask you for a password if you want to gain entry. Email me for that. 
+                     An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects. There's a chance they'll ask you for a password if you want to gain entry. Email me for that.
 
                      {/* it's aggies2021 lol */}
                   </NewTab>
@@ -44,7 +44,7 @@ function LinksPage(props) {
                <p className="about-me-paragraph">
                   <NewTab className="no-underline">
                      <span className="underline">The Slippi Sampler</span><br />
-                     A video about a procedure I devised for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision. <span className="bg-gray-600">(coming soon!)</span>
+                     A mechanism I engineered for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision. <span className="bg-gray-600">(coming soon!)</span>
                   </NewTab>
                </p>
 
@@ -68,17 +68,30 @@ function LinksPage(props) {
                }
             </div>
 
-            {/* <h1 className="mt-5 mb-5 px-2">
-                Links to Site Subdomains
-             </h1>
-             <div className="mb-20">
-                <p className="about-me-paragraph">The obligatory "blog section" of my website. I really don't plan on writing much here. But setting this subdomain up gave me an excuse to learn Jekyll and deploy a statically-generated blog.
+            <h1 className="mt-5 mb-5 px-2">
+               Links That Lead Elsewhere
+            </h1>
+            <div className="mb-20">
+               <p className="about-me-paragraph">
+                  <NewTab className="no-underline" href="https://landing.raidsrc.me">
+                     <span className="underline">raidsrc.me Landing Page</span><br />
+                     This page is usually the first point of contact for random people who are searching for me on the internet. It's a sparse webpage with a list of links to where I'm at. The YT channel, Twitter, music providers, my main site here, etc. It's also got a brief "About Me" section.
+                  </NewTab>
+               </p>
+               <p className="about-me-paragraph text-black">
+                  <NewTab className="no-underline">
+                     <span className="underline"></span><br />
+                     
+                  </NewTab>
+               </p>
+
+               {/* <p className="about-me-paragraph">The obligatory "blog section" of my website. I really don't plan on writing much here. But setting this subdomain up gave me an excuse to learn Jekyll and deploy a statically-generated blog.
                    <br />blog.raidsrc.me </p>
  
                 <p className="about-me-paragraph text-black">
                    A subdomain of my site that's more of an experimental design sandbox than anything else.
-                   <br />raid.raidsrc.me</p>
-             </div> */}
+                   <br />raid.raidsrc.me</p> */}
+            </div>
          </CenteredFullPageFlexContainer>
       </div >
    )
