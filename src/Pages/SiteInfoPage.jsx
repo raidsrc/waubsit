@@ -9,7 +9,7 @@ function SiteInfoPage(props) {
                 <h1 className="text-white mb-5 px-2">
                     About This Site
                 </h1>
-                <p className="about-me-paragraph text-black">This site is a <NewTab href="https://reactjs.org/">React</NewTab> app. I got my first taste of React from <span className="italic">ECS 162: Web Programming</span>, a course I took at UC Davis during Spring Quarter 2021. I now think React is really cool.</p>
+                <p className="about-me-paragraph text-black">This site is a <NewTab href="https://reactjs.org/">React</NewTab> app. I got my first taste of React from <span className="italic">ECS 162: Web Programming</span>, a course I took at UC Davis during Spring Quarter 2021. I'm never going back to vanilla JavaScript.</p>
 
                 <p className="about-me-paragraph">To put this site together, I enlisted the help of <NewTab href="https://vitejs.dev/">vitejs</NewTab>, <NewTab href="https://reactrouter.com/">react-router-dom</NewTab>, <NewTab href="https://github.com/ajwann/svg-loaders-react">svg-loaders-react</NewTab>, <NewTab href="https://reactcommunity.org/react-transition-group/">react-transition-group</NewTab>, <NewTab href="https://react-spring.io/">react-spring</NewTab>, and <NewTab href="https://tailwindcss.com/">tailwindcss</NewTab>.
                 </p>

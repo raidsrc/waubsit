@@ -131,7 +131,7 @@ function AboutPage(props) {
                    // LARGE AND UP: 3 COLUMNS, TEXT TAKES UP 2 COLUMNS WORTH OF SPACE
                 }
                 <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-4">
-                   <p className="about-me-paragraph text-black">
+                   <p className="about-me-paragraph text-black pt-4">
                       I'm Raymond. I usually go by Ray, but people have known me by many names. Some of these names were given to me. Some of them I chose myself. Some of them are silly, and some I think are pretty cool. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
                    </p>
                 </div>
@@ -165,7 +165,7 @@ function AboutPage(props) {
  
                 <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
                    <p className="about-me-paragraph md:text-right">
-                      After I graduate, I'm headed to <NewTab href="https://www.virovek.com">Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. Both of them are dinosaurs when it comes to modern web, communications, and business technology. I will assume control of that department and boost company productivity by orders of magnitude. It's going to be a lot of work, but I firmly believe that this is a crucially important task and that there's no one better suited for it than me.
+                      After I graduate, I'm headed to <NewTab href="https://www.virovek.com">Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. I'm going to manage web, communications, and business technology, and help out with the biotech manufacturing pipeline when needed. People ask me if it's reassuring, knowing that I have a place to work right out of college. I tell them no. Because it's not what I really want to do. I'd rather be a full-time musician. Haha. I'll figure out a way to make it work somehow. 
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
@@ -180,7 +180,7 @@ function AboutPage(props) {
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
                    <img src={stinkyTofu} className="about-me-img" />
-                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5 </span>trying stinky tofu. it was alright.</span>
+                   <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5 </span>trying stinky tofu, a Chinese fermented tofu. it was alright, I suppose.</span>
                 </div>
  
                 <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
