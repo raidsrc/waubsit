@@ -165,7 +165,7 @@ function AboutPage(props) {
  
                 <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
                    <p className="about-me-paragraph md:text-right">
-                      After I graduate, I'm headed to <NewTab href="https://www.virovek.com">Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. I'm going to manage web, communications, and business technology, and help out with the biotech manufacturing pipeline when needed. People ask me if it's reassuring, knowing that I have a place to work right out of college. I tell them no. Because it's not what I really want to do. I'd rather be a full-time musician. Haha. I'll figure out a way to make it work somehow. 
+                      After I graduate, I'm headed to <NewTab href="https://www.virovek.com">Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. I'm going to manage web, communications, and business technology, and help out with the biotech manufacturing pipeline when needed. People ask me if it's reassuring, knowing that I have a place to work right out of college. I tell them no, I'd rather be a full-time musician. Haha. I'll make that happen. Just you wait. 
                    </p>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
@@ -190,7 +190,7 @@ function AboutPage(props) {
                 </div>
                 <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
                    <img src={rayPiano2017} className="about-me-img" />
-                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6</span> me, performing. a few hundred people were there. i was playing "Showtime - Piano Refrain" from Homestuck, in case you're wondering.</span>
+                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6</span> me in 2017, performing a piano piece for a talent show. a few hundred people were there. i was playing "Showtime - Piano Refrain" from Homestuck, in case you're wondering.</span>
                 </div>
              </div>
           </CenteredFullPageFlexContainer>
