@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { CenteredFullPageFlexContainer, SiteConstructionBanner, NewTab } from '../ReusableComponents'
 import goldenGate from "../static/goldengate.jpg"
-import eggheads from "../static/eggheads.jpg"
-import virovek from "../static/virovek_front.jpg"
+import eggheads from "../static/eggheads (Small).jpg"
+import virovek from "../static/virovek_front (Small).jpg"
 import rayPiano2017 from "../static/IMG_8031.MOV_snapshot_00.35_[2020.04.09_10.03.38].jpg"
 import rayDrummingMonochrome from "../static/20200913_185258-01.jpeg"
 import stinkyTofu from "../static/stinky_tofu_lol.jpg"
@@ -35,7 +35,7 @@ function AboutPage(props) {
  
        function randomlyPickName() { // returns a random name string from this namesList
           const namesList = [
-             "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "raymawn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Drummer @ Sonar Alchemy", "1337+", "Big Head", "Rayon", "Ray C"
+             "Raymond", "Ray", "Raymond Louis Chen", "陈睿明", "Ray Louis", "Ramón", "Lemon", "弟弟", "Lei Mung", "Waymon Zen", "Roy", "Mistah Chen", "Razor", "Raimund", "Raymie", "Ramin D", "Raid", "raidsrc", "big raid from the 510", "Raymond's Dictionary", "raymawn", "Golden Dragon", "Fire Feet", "Chico", "Bite Me", "A Drop of Golden Sun ☀️", "Drummer @ Sonar Alchemy", "1337+", "Big Head", "Rayon", "Ray C", "Rude Custard", 
           ]
           function getRandomInt(min, max) {
              min = Math.ceil(min);
