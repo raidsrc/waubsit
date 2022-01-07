@@ -72,10 +72,10 @@ function TheNavButtonsAllTogether(props) {
             to="/about" setShowRightSideMenu={props.setShowRightSideMenu}>
             About
          </NavButton>
-         <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
-            to="/resume" setShowRightSideMenu={props.setShowRightSideMenu}>
+         <a className="navbutton-rightsidemenu-style smmd:navbutton-style"
+            href="https://raidsrc.github.io/Davis_Bike_Map.pdf" setShowRightSideMenu={props.setShowRightSideMenu}>
             Résumé
-         </NavButton>
+         </a>
          <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
             to="/contact" setShowRightSideMenu={props.setShowRightSideMenu}>
             Find Me
