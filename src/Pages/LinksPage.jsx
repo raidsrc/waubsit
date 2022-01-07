@@ -85,7 +85,7 @@ function LinksPage(props) {
                   </NewTab>
                </p>
 
-               {/* <p className="about-me-paragraph">The obligatory "blog section" of my website. I really don't plan on writing much here. But setting this subdomain up gave me an excuse to learn Jekyll and deploy a statically-generated blog.
+               {/* <p className="about-me-paragraph">The obligatory "blog section" of my website. I really don't plan on posting here very much. But setting this subdomain up gave me an excuse to learn to use Hugo/Jekyll and deploy a statically-generated blog.
                    <br />blog.raidsrc.me </p>
  
                 <p className="about-me-paragraph text-black">

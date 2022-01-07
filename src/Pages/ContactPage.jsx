@@ -10,7 +10,7 @@ function ContactPage(props) {
                Contact
             </h1>
             <div className="text-center py-5 px-2 text-base md:text-lg">
-               I'm not really on social media. It's better that way. But if you must, leave me a message or a comment on either of these platforms and I'll get back to you within the month, maybe.
+               I'm not really on social media. Life is better that way. But if you must, leave me a message or a comment on either of these platforms and I'll get back to you within the month, maybe.
             </div>
             <div className="grid grid-cols-3 grid-rows-5">
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center">
@@ -27,7 +27,7 @@ function ContactPage(props) {
                </div>
             </div>
             <div className="text-center py-5 px-2 text-base md:text-lg">
-               Alternatively, you could email me at the address below. Only if it's urgent.
+               Alternatively, you could email me at the address below. Save this channel of communication for urgent matters. 
             </div>
             <div className="grid grid-cols-3 grid-rows-4">
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center">
