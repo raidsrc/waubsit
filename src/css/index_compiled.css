@@ -779,62 +779,38 @@ h2 {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px){
-  .links-paragraph{
-    padding-top: 2rem;
-  }
+.links-page-link-container-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
+  --tw-border-opacity: 0;
+  padding: 0.25rem;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.other-links-paragraph{
-  grid-column-start: 1;
-  padding-bottom: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 3rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-@media (min-width: 600px){
-  .other-links-paragraph{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
+.links-page-link-container-div:hover{
+  border-color: rgb(255 0 0 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.5;
 }
 
 @media (min-width: 768px){
-  .other-links-paragraph{
-    padding-top: 1rem;
+  .links-page-link-container-div > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .links-page-link-container-div{
+    padding: 1.5rem;
   }
 }
 
-@media (min-width: 1536px){
-  .other-links-paragraph{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-.other-links-paragraph{
-  padding-top: 1rem;
-}
-
-.other-links-paragraph:nth-child(odd){
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.other-links-paragraph:nth-child(even){
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-@media (min-width: 768px){
-  .other-links-paragraph{
-    padding-top: 2rem;
-  }
+.visible{
+  visibility: visible;
 }
 
 .invisible{
@@ -903,14 +879,6 @@ h2 {
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mb-6{
-  margin-bottom: 1.5rem;
-}
-
-.mt-24{
-  margin-top: 6rem;
 }
 
 .mb-5{
@@ -1001,7 +969,27 @@ h2 {
   width: 100vw;
 }
 
+.w-9\/12{
+  width: 75%;
+}
+
+.w-64{
+  width: 16rem;
+}
+
 .w-2\/4{
+  width: 50%;
+}
+
+.w-10{
+  width: 2.5rem;
+}
+
+.w-20{
+  width: 5rem;
+}
+
+.w-6\/12{
   width: 50%;
 }
 
@@ -1101,11 +1089,6 @@ h2 {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
-.bg-red-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-gray-200{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1179,17 +1162,16 @@ h2 {
   padding-top: 1rem;
 }
 
+.text-left{
+  text-align: left;
+}
+
 .text-center{
   text-align: center;
 }
 
 .font-serif{
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-xl{
@@ -1255,6 +1237,14 @@ h2 {
 .no-underline{
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
+}
+
+.underline-offset-1{
+  text-underline-offset: 1px;
+}
+
+.underline-offset-2{
+  text-underline-offset: 2px;
 }
 
 .opacity-40{
@@ -1402,6 +1392,10 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     width: 40%;
   }
 
+  .sm\:w-4\/12{
+    width: 33.333333%;
+  }
+
   .sm\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -1493,6 +1487,10 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     display: none;
   }
 
+  .smmd\:w-4\/12{
+    width: 33.333333%;
+  }
+
   .smmd\:space-x-3 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -1550,8 +1548,20 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-bottom: 5rem;
   }
 
+  .md\:inline-block{
+    display: inline-block;
+  }
+
+  .md\:flex{
+    display: flex;
+  }
+
   .md\:grid{
     display: grid;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-20{
