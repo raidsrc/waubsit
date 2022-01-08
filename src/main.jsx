@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import "./css/animationStyles.css"
 import "./css/otherStyles.css"
-import "./css/index.css"
+import "./css/index_compiled.css"
 import { BrowserRouter as Router } from "react-router-dom"
 
 ReactDOM.render(

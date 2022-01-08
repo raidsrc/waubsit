@@ -1,10 +1,9 @@
 module.exports = {
-  purge: [
+  content: [
     "./src/**/*.jsx",
     "./src/**/*.html",
     "./index.html"
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -58,18 +57,6 @@ module.exports = {
       "2xl": "1536px",
     },
 
-  },
-  variants: {
-    extend: {
-      textColor: ["active", "visited"],
-      textOpacity: ["hover"],
-      brightness: ["active", "hover"],
-      borderOpacity: ["active", "hover"],
-      borderStyle: ["focus"],
-      borderWidth: ["focus"],
-      filter: ["active"],
-      opacity: ["active"],
-    },
   },
   plugins: [],
 }

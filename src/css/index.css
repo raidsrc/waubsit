@@ -74,6 +74,9 @@
   .mild-text-shadow-left-down {
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
   }
+  .links-paragraph {
+    @apply about-me-paragraph pt-4 md:pt-8
+  }
 }
 
 /* custom utilities go here. i don't even know what a utility is.
