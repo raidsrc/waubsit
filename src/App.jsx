@@ -11,16 +11,10 @@ import LinksPage from './Pages/LinksPage'
 import SiteInfoPage from './Pages/SiteInfoPage.jsx'
 
 function App() {
-  const [alerted, setAlerted] = useState(false)
-  if (!alerted) {
-    setTimeout(() => alert("i'm not done constructing the website yet. please excuse the presence of any wack shit"), 420)
-    setAlerted(true)
-  }
-
   useEffect(() => {
     window.history.scrollRestoration = "manual"
-    console.log("sup")
-  }, []) // since the dependencies array is empty, this effect will only be activate and clean up once. after this component mounts aka after app begins and then when component unmounts aka when app is closed. 
+    setTimeout(() => alert("Website construction in progress. Pardon my dust.", 420))
+  }, []) // since the dependencies array is empty, this effect will only be activated and cleaned up once. after this component mounts aka after app begins and then when component unmounts aka when app is closed. 
 
   const routes = [
     { path: '/home', name: 'Home', Component: HomePage },

@@ -56,14 +56,9 @@ function LinksPage(props) {
           Other Links to Other Stuff
         </h1>
         <div className="mb-10 md:mb-20">
-          <OtherLinkBlock title="raidsrc.me Landing Page" href="https://landing.raidsrc.me">This page is often the first point of contact for random people who are searching for me on the internet. I usually put a link to this page in my bio or elsewhere on my profile on whatever site I'm on. It's a sparse webpage with a list of links to where I'm at. The YT channel, Twitter, music providers, my main site here, etc. It's also got a brief "About Me" section.
+          <OtherLinkBlock title="raidsrc.me Landing Page" href="https://landing.raidsrc.me">This page is often the first point of contact for random people who are searching for me on the internet. I usually put a link to this page somewhere on my profile on whatever site/platform I'm on. It's a sparse webpage with a list of links to where people can find me. It's also got a brief "About Me" section. Why not click and check it out for yourself?
           </OtherLinkBlock>
-          {/* <p className="links-paragraph text-black">
-            <NewTab className="no-underline">
-              <span className="underline"></span><br />
 
-            </NewTab>
-          </p> */}
           <OtherLinkBlock title="Blog" href="https://blog.raidsrc.me" >The obligatory "blog section" of my website, because everyone has a blog. I don't really plan on posting here very much. But setting this subdomain up gave me an excuse to learn to use Hugo and deploy a statically-generated blog.
           </OtherLinkBlock>
 
