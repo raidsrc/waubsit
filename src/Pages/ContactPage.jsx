@@ -1,11 +1,10 @@
 import React from "react"
-import { CenteredFullPageFlexContainer, SiteConstructionBanner } from '../ReusableComponents'
+import { CenteredFullPageFlexContainer } from '../ReusableComponents'
 
 function ContactPage(props) {
    return (
       <div className="find-me-page">
          <CenteredFullPageFlexContainer>
-            <SiteConstructionBanner />
             <h1 className="mb-5 px-2 text-white">
                Contact
             </h1>

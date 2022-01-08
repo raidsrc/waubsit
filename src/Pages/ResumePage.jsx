@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { CenteredFullPageFlexContainer, SiteConstructionBanner } from '../ReusableComponents'
+import { CenteredFullPageFlexContainer } from '../ReusableComponents'
 import { Bars } from "svg-loaders-react"
 
 function ResumePage(props) {
@@ -31,7 +31,6 @@ function ResumePage(props) {
                 <h1 className="mb-5 px-2 ">
                    Résumé
                 </h1>
-                <SiteConstructionBanner />
                 <div className="flex justify-center h-112 sm:h-128 md:h-144 lg:h-160 xl:h-176">
                    {iframeLoaded ? "" : // this curly braced pocket of code controls the loading bars animation 
                       <div className="w-5/12 flex flex-col justify-center items-center tiny-screen:w-4/12 sm:w-2/5 max-w-2xs">

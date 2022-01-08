@@ -1,5 +1,5 @@
 import React from "react"
-import { CenteredFullPageFlexContainer, NewTab, SiteConstructionBanner } from '../ReusableComponents'
+import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 
 function LinkBlock(props) {
   return (

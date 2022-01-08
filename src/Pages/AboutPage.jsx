@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { CenteredFullPageFlexContainer, SiteConstructionBanner, NewTab } from '../ReusableComponents'
+import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import goldenGate from "../static/goldengate.jpg"
 import eggheads from "../static/eggheads (Small).jpg"
 import virovek from "../static/virovek_front (Small).jpg"
@@ -113,7 +113,6 @@ function AboutPage(props) {
              // TODO: IMPLEMENT HAMBURGER MENU FOR MOBILE SMALL SCREEN
           }
           <CenteredFullPageFlexContainer>
-             <SiteConstructionBanner />
              <h1 className="mb-5 px-2 text-white">
                 About Me
              </h1>

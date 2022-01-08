@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useSpring } from "react-spring"
 import rayShiprock from "../static/ray atop shiprock.jpg"
 import rayShiprockWide from "../static/ray atop shiprock wide.jpeg"
-import { HomepageCenteredFullPageFlexContainer, SiteConstructionBanner, NewTab, scrollToTop } from '../ReusableComponents'
+import { HomepageCenteredFullPageFlexContainer, NewTab, scrollToTop } from '../ReusableComponents'
 import { Link } from "react-router-dom"
 
 function HomePage(props) {
@@ -35,7 +35,6 @@ function HomePage(props) {
                <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center" src={rayShiprockWide} />
             </div>
             <HomepageCenteredFullPageFlexContainer>
-               <SiteConstructionBanner />
                {/* <animated.div style={animatedStyles}>
                    <span className="text-2xl">This is the Home Page!!!!!!! !!!!!!!!!!!!! !!!!!!!!!! !!!!!!!!!! !!!!!!!</span>
                 </animated.div> */}

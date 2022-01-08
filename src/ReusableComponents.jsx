@@ -130,21 +130,6 @@ function HomepageCenteredFullPageFlexContainer(props) {
    )
 }
 
-function SiteConstructionBanner(props) {
-   return (
-      <div>
-         { /*
-      <div className="mb-6 mt-24">
-      <span className="text-5xl bg-red-600">
-      site construction in progress BE PATIENT
-      </span>
-      </div>
-      */
-         }
-      </div>
-   )
-}
-
 function NewTab(props) {
    return (
       <a target="_blank" rel="noreferrer noopener" href={props.href} className={props.className + " underline hover:opacity-80 active:opacity-60"}>{props.children}</a>
