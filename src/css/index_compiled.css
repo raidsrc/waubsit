@@ -769,8 +769,70 @@ h2 {
   padding-top: 1rem;
 }
 
+.links-paragraph:nth-child(odd){
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.links-paragraph:nth-child(even){
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px){
   .links-paragraph{
+    padding-top: 2rem;
+  }
+}
+
+.other-links-paragraph{
+  grid-column-start: 1;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 3rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 600px){
+  .other-links-paragraph{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px){
+  .other-links-paragraph{
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 1536px){
+  .other-links-paragraph{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.other-links-paragraph{
+  padding-top: 1rem;
+}
+
+.other-links-paragraph:nth-child(odd){
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.other-links-paragraph:nth-child(even){
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .other-links-paragraph{
     padding-top: 2rem;
   }
 }
@@ -861,10 +923,6 @@ h2 {
 
 .mb-20{
   margin-bottom: 5rem;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
 }
 
 .mb-10{
@@ -1058,9 +1116,9 @@ h2 {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.bg-gray-600{
+.bg-red-400{
   --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .object-cover{
@@ -1157,11 +1215,6 @@ h2 {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-bold{
@@ -1267,10 +1320,6 @@ h2 {
 
 /* custom utilities go here. i don't even know what a utility is.
 alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. make your own and put them here. */
-
-.odd\:text-right:nth-child(odd){
-  text-align: right;
-}
 
 .hover\:border-gray-800:hover{
   --tw-border-opacity: 1;
