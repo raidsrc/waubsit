@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
+import { CSSTransition } from "react-transition-group"
 
 function DesktopLinkBlockWordsDiv(props) {
   return (
-    <div className="md:inline-block w-9/12">
+    <div className=" w-9/12">
       <DesktopLinkBlockTitleSpan title={props.title} />
       <br />
       {props.children}
@@ -13,17 +14,18 @@ function DesktopLinkBlockWordsDiv(props) {
 }
 function DesktopLinkBlockImgDiv(props) {
   return (
-    <div className="md:flex w-64 flex-col justify-center ">
+    <div className="flex w-64 flex-col justify-center ">
       <img src={props.imgSrc} className={"w-full " + props.imgClassName} />
     </div>
   )
 }
 function DesktopLinkBlockTitleSpan(props) {
   return (
-    <span className="md:inline-block underline ">{props.title}</span>
+    <span className="underline ">{props.title}</span>
   )
 }
 function MobileLinkBlockModal(props) {
+  const showModal = props.showModal
   const setShowModal = props.setShowModal
   const modalRef = useRef()
 
@@ -41,18 +43,17 @@ function MobileLinkBlockModal(props) {
   }
 
   return (
-    <div ref={modalRef} className="md:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-30" onClick={closeModal}>
+    <div ref={modalRef} className="smmd:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-30" onClick={closeModal}>
       <div className="p-9 w-10/12 h-80vh z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
         <div className="flex justify-between">
           <div>
           </div>
           <button className="text-3xl" onClick={() => setShowModal(false)}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="3 3 10 10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x" viewBox="3 3 10 10">
               <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
             </svg>
           </button>
         </div>
-
         {props.children}
       </div>
     </div>
@@ -65,7 +66,7 @@ function LinkBlock(props) {
     <p className="links-paragraph ">
 
       {/* this NewTab component is only visible on desktop */}
-      <NewTab className="no-underline hidden md:inline-block " href={props.href}>
+      <NewTab className="no-underline hidden smmd:inline-block " href={props.href}>
         <div className="links-page-link-container-div">
           <DesktopLinkBlockWordsDiv title={props.title}>{props.children}</DesktopLinkBlockWordsDiv>
           <DesktopLinkBlockImgDiv imgSrc={props.imgSrc} imgClassName={props.imgClassName} />
@@ -73,26 +74,26 @@ function LinkBlock(props) {
       </NewTab>
 
       {/* whereas this div here is only visible smaller than desktop */}
-      <div className="text-xl md:hidden">
+      <div className="text-xl smmd:hidden">
         <button className="underline underline-offset-2 text-left" onClick={() => { setShowModal(true) }}>
           {props.title}
         </button>
       </div>
       {/* MODAL PLAN: just the title text, a little larger than normal. e.g. "Raid." when user clicks the title text, a modal pops up. modal contains the image up top and the description below. and inside the modal is an <a> that goes there. when click outside modal we close it. when click X in the top right we close it. showModal, setShowModal. wrapped in a csstransition. transition the entering of the modal as a drop from the top. transition the exiting of the modal as a drop out to the bottom. */}
 
-      {showModal ?
-        <MobileLinkBlockModal setShowModal={setShowModal}>
+      <CSSTransition timeout={300} in={showModal} unmountOnExit classNames="modal-transitions">
+        <MobileLinkBlockModal showModal={showModal} setShowModal={setShowModal}>
           <div className="text-center underline underline-offset-2">
             {props.title}
           </div>
-          <div>
-            <img src={props.imgSrc} imgClassName={props.imgClassName} />
+          <div className="flex justify-center py-4">
+            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
           </div>
-          <div>
+          <div className="text-center">
             {props.children}
           </div>
         </MobileLinkBlockModal>
-        : ""}
+      </CSSTransition>
 
     </p>
   )

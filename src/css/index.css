@@ -81,7 +81,7 @@
     @apply about-me-paragraph pt-4 even:text-black odd:text-white
   }
   .links-page-link-container-div {
-    @apply flex flex-row md:space-x-8 justify-between p-1 md:p-6 border-gray-800 border border-opacity-0 hover:border-opacity-50 rounded-sm hover:border-karkat-blood-red duration-200 ease-out 
+    @apply flex flex-row smmd:space-x-8 md:space-x-11 justify-between p-1 smmd:p-3 lg:p-6 border-gray-800 border border-opacity-0 hover:border-opacity-50 rounded-sm hover:border-karkat-blood-red duration-200 ease-out 
   }
 }
 

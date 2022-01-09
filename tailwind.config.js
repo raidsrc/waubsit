@@ -15,6 +15,7 @@ module.exports = {
       width: {
         '400px': '400px',
         '900px': '900px',
+        'huge': '10000px'
       },
       height: {
         '112': '28rem',
@@ -29,6 +30,7 @@ module.exports = {
         '75vh': '75vh',
         '80vh': '80vh',
         '90vh': '90vh',
+        'huge': '10000px'
       },
       maxWidth: {
         '2xs': '280px',

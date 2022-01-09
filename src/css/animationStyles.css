@@ -1,4 +1,4 @@
-/* this shit below here is needed for react transition group and css transition*/
+/* this shit below here is needed for react transition group's css transition*/
 
 .fade-enter {
     /* right before it comes in */
@@ -9,7 +9,6 @@
     right: 0;
     transform: translate(0px, 60px);
 }
-
 .fade-enter-active {
     /* from beginning of come-in animation to end of come-in animation */
     opacity: 1;
@@ -18,7 +17,6 @@
     transition: opacity 170ms ease-in-out, transform 170ms ease-out;
     transition-delay: 210ms;
 }
-
 .fade-exit {
     /* right as it's leaving */
     opacity: 1;
@@ -27,11 +25,47 @@
     right: 0;
     z-index: 0;
 }
-
 .fade-exit-active {
     /* from beginning of leave animation to end of leave animation */
     opacity: 0;
     transform-origin: 50% 60px;
     transform: scale(0.85);
     transition: opacity 200ms ease, transform 170ms cubic-bezier(.92,.13,.95,.65);
+}
+
+
+.modal-transitions-enter {
+  /* right before it comes in */
+  opacity: 0;
+  z-index: 50;
+  position: fixed;
+  left: 0;
+  right: 0;
+  transform: scale(110%)
+}
+.modal-transitions-enter-active {
+  /* from beginning of come-in animation to end of come-in animation */
+  opacity: 1;
+  z-index: 50;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translate(0px, 0px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+.modal-transitions-exit {
+  /* right as it's leaving */
+  opacity: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.modal-transitions-exit-active {
+  /* from beginning of leave animation to end of leave animation */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 300ms ease, transform 300ms cubic-bezier(.92,.13,.95,.65);
 }
