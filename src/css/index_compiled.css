@@ -899,6 +899,11 @@ h2 {
   grid-row-start: 4;
 }
 
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mt-14{
   margin-top: 3.5rem;
 }
@@ -929,6 +934,10 @@ h2 {
 
 .mt-28{
   margin-top: 7rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
 }
 
 .inline-block{
@@ -963,8 +972,8 @@ h2 {
   height: 100vh;
 }
 
-.h-80vh{
-  height: 80vh;
+.h-auto{
+  height: auto;
 }
 
 .w-full{
@@ -1095,8 +1104,16 @@ h2 {
   border-radius: 0.125rem;
 }
 
+.rounded-full{
+  border-radius: 9999px;
+}
+
 .border-2{
   border-width: 2px;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .border-karkat-blood-red{
@@ -1107,6 +1124,11 @@ h2 {
 .border-red-800{
   --tw-border-opacity: 1;
   border-color: rgb(153 27 27 / var(--tw-border-opacity));
+}
+
+.border-gray-800{
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .bg-gray-450{
@@ -1142,6 +1164,21 @@ h2 {
 .bg-red-400{
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-30{
@@ -1209,6 +1246,16 @@ h2 {
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pt-4{
@@ -1338,6 +1385,18 @@ h2 {
   transition-duration: 150ms;
 }
 
+.duration-300{
+  transition-duration: 300ms;
+}
+
+.duration-75{
+  transition-duration: 75ms;
+}
+
+.duration-100{
+  transition-duration: 100ms;
+}
+
 .open-sans {
   font-family: 'Open Sans', sans-serif;
 }
@@ -1375,12 +1434,63 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-red-700:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-500:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-slate-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-slate-300:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-200:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
+.hover\:to-white:hover{
+  --tw-gradient-to: #fff;
+}
+
+.hover\:fill-white:hover{
+  fill: #fff;
+}
+
 .hover\:opacity-80:hover{
   opacity: 0.8;
 }
 
 .hover\:opacity-60:hover{
   opacity: 0.6;
+}
+
+.hover\:opacity-50:hover{
+  opacity: 0.5;
+}
+
+.hover\:opacity-100:hover{
+  opacity: 1;
 }
 
 .hover\:brightness-75:hover{
@@ -1392,12 +1502,36 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+.active\:bg-red-800:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+
+.active\:bg-red-900:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+
+.active\:bg-red-600:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.active\:bg-red-300:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .active\:opacity-60:active{
   opacity: 0.6;
 }
 
 .active\:opacity-40:active{
   opacity: 0.4;
+}
+
+.active\:opacity-100:active{
+  opacity: 1;
 }
 
 .active\:brightness-50:active{
