@@ -36,47 +36,24 @@
   transition: opacity 200ms ease, transform 170ms cubic-bezier(.92, .13, .95, .65);
 }
 
-.modal-bg-enter {
+.expanding-link-block-text-enter {
+  max-height: 0;
   opacity: 0;
 }
 
-.modal-bg-enter-active {
+.expanding-link-block-text-enter-active {
+  max-height: 300px;
   opacity: 1;
-  transition: opacity 200ms ease-out;
+  transition: all 200ms ease-in;
 }
 
-.modal-bg-exit {
+.expanding-link-block-text-exit {
+  max-height: 300px;
   opacity: 1;
 }
 
-.modal-bg-exit-active {
+.expanding-link-block-text-exit-active {
+  max-height: 0;
   opacity: 0;
-  transition: opacity 200ms ease-in 100ms;
-}
-
-
-.modal-window-enter {
-  opacity: 0;
-  z-index: 50;
-  transform: translateY(-40px);
-}
-
-.modal-window-enter-active {
-  opacity: 1;
-  z-index: 50;
-  position: fixed;
-  transform: translate(0px, 0px);
-  transition: opacity 200ms ease-out 100ms, transform 200ms ease-out 100ms;
-}
-
-.modal-window-exit {
-  opacity: 1;
-  position: fixed;
-  z-index: 0;
-}
-
-.modal-window-exit-active {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 300ms ease, transform 280ms cubic-bezier(.92, .13, .95, .65);
+  transition: all 200ms ease-out;
 }

@@ -66,9 +66,11 @@ function MobileLinkBlockModal(props) {
   )
 }
 
+// these fucking modals are ugly as hell. not good. too crowded on mobile. time to write an expanding text area. here we go. 
+
 function LinkBlock(props) {
-  const [showModal, setShowModal] = useState(false)
-  const [showModalBg, setShowModalBg] = useState(false)
+  const [expand, setExpand] = useState(false)
+
   return (
     <p className="links-paragraph ">
 
@@ -82,33 +84,17 @@ function LinkBlock(props) {
 
       {/* whereas this div here is only visible smaller than desktop */}
       <div className="text-lg smmd:hidden">
-        <button className="underline underline-offset-2 text-left" onClick={() => { setShowModalBg(true) }}>
+        <button className="underline underline-offset-2 text-left" onClick={() => { setExpand((previousValue) => !previousValue) }}>
           {props.title}
         </button>
       </div>
-      {/* MODAL PLAN: just the title text, a little larger than normal. e.g. "Raid." when user clicks the title text, a modal pops up. modal contains the image up top and the description below. and inside the modal is an <a> that goes there. when click outside modal we close it. when click X in the top right we close it. showModal, setShowModal. wrapped in a csstransition. transition the entering of the modal as a drop from the top. transition the exiting of the modal as a drop out to the bottom. */}
-
-      {/* this CSSTransition is for the background dimming */}
-      <CSSTransition timeout={300} in={showModalBg} unmountOnExit classNames="modal-bg" onEntering={() => { setShowModal(true) }}>
-        <MobileLinkBlockModal showModal={showModal} setShowModal={setShowModal} showModalBg={showModalBg} setShowModalBg={setShowModalBg}>
-          <div className="text-center underline underline-offset-2">
-            {props.title}
-          </div>
-          <div className="flex justify-center py-4">
-            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
-          </div>
-          <div className="text-center">
-            {props.children}
-          </div>
-          <div className="mt-6 mb-2 text-center">
-            <button>
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100  px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
-                Go
-              </NewTab>
-            </button>
-          </div>
-        </MobileLinkBlockModal>
+      <CSSTransition in={expand} timeout={500} unmountOnExit classNames="expanding-link-block-text" >
+        <div>
+          <img src={props.imgSrc} className={"w-2/3 " + props.imgClassName} />
+          {props.children}
+        </div>
       </CSSTransition>
+
 
     </p>
   )
