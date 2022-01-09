@@ -27,6 +27,8 @@ function DesktopLinkBlockTitleSpan(props) {
 function MobileLinkBlockModal(props) {
   const showModal = props.showModal
   const setShowModal = props.setShowModal
+  const showModalBg = props.showModalBg
+  const setShowModalBg = props.setShowModalBg
   const modalRef = useRef()
 
   useEffect(() => {
@@ -44,24 +46,29 @@ function MobileLinkBlockModal(props) {
 
   return (
     <div ref={modalRef} className="smmd:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-30" onClick={closeModal}>
-      <div className="p-9 w-10/12 h-80vh z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
-        <div className="flex justify-between">
-          <div>
+      <CSSTransition in={showModal} timeout={300} unmountOnExit classNames="modal-window" onExiting={() => { setShowModalBg(false) }}>
+        <div className="p-9 w-10/12 h-auto z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
+          <div className="flex justify-between mb-4">
+            <div>
+            </div>
+            <button className="text-3xl hover:bg-red-500 duration-150 active:bg-red-900" onClick={() => setShowModal(false)}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x hover:fill-white duration-100" viewBox="3 3 10 10">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </button>
           </div>
-          <button className="text-3xl" onClick={() => setShowModal(false)}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x" viewBox="3 3 10 10">
-              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-            </svg>
-          </button>
+          <div>
+            {props.children}
+          </div>
         </div>
-        {props.children}
-      </div>
+      </CSSTransition>
     </div>
   )
 }
 
 function LinkBlock(props) {
   const [showModal, setShowModal] = useState(false)
+  const [showModalBg, setShowModalBg] = useState(false)
   return (
     <p className="links-paragraph ">
 
@@ -75,14 +82,15 @@ function LinkBlock(props) {
 
       {/* whereas this div here is only visible smaller than desktop */}
       <div className="text-xl smmd:hidden">
-        <button className="underline underline-offset-2 text-left" onClick={() => { setShowModal(true) }}>
+        <button className="underline underline-offset-2 text-left" onClick={() => { setShowModalBg(true) }}>
           {props.title}
         </button>
       </div>
       {/* MODAL PLAN: just the title text, a little larger than normal. e.g. "Raid." when user clicks the title text, a modal pops up. modal contains the image up top and the description below. and inside the modal is an <a> that goes there. when click outside modal we close it. when click X in the top right we close it. showModal, setShowModal. wrapped in a csstransition. transition the entering of the modal as a drop from the top. transition the exiting of the modal as a drop out to the bottom. */}
 
-      <CSSTransition timeout={300} in={showModal} unmountOnExit classNames="modal-transitions">
-        <MobileLinkBlockModal showModal={showModal} setShowModal={setShowModal}>
+      {/* this CSSTransition is for the background dimming */}
+      <CSSTransition timeout={300} in={showModalBg} unmountOnExit classNames="modal-bg" onEntering={() => { setShowModal(true) }}>
+        <MobileLinkBlockModal showModal={showModal} setShowModal={setShowModal} showModalBg={showModalBg} setShowModalBg={setShowModalBg}>
           <div className="text-center underline underline-offset-2">
             {props.title}
           </div>
@@ -91,6 +99,11 @@ function LinkBlock(props) {
           </div>
           <div className="text-center">
             {props.children}
+          </div>
+          <div className="my-8 text-center ">
+            <button className="border border-gray-800 rounded-full px-3 py-1 hover:bg-red-200 duration-300 active:bg-red-300">
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100">Click me to visit the link!</NewTab>
+            </button>
           </div>
         </MobileLinkBlockModal>
       </CSSTransition>
