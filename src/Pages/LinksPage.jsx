@@ -24,37 +24,6 @@ function DesktopLinkBlockTitleSpan(props) {
     <span className="underline ">{props.title}</span>
   )
 }
-function MobileLinkBlockModal(props) {
-  const showModal = props.showModal
-  const setShowModal = props.setShowModal
-  const showModalBg = props.showModalBg
-  const setShowModalBg = props.setShowModalBg
-
-  function closeModal(e) {
-    if (modalRef.current === e.target) {
-      setShowModal(false)
-    }
-  }
-
-  return (
-    <div ref={modalRef} className="smmd:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-50" onClick={closeModal}>
-      <div className="p-7 w-10/12 h-auto z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
-        <div className="flex justify-between">
-          <div>
-          </div>
-          <button className="hover:bg-red-500 duration-150 active:bg-red-900" onClick={() => setShowModal(false)}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x hover:fill-white duration-100" viewBox="3 3 10 10">
-              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-            </svg>
-          </button>
-        </div>
-        <div>
-          {props.children}
-        </div>
-      </div>
-    </div>
-  )
-}
 
 function WithinMobileLinkBlock(props) {
 
