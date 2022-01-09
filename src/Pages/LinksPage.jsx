@@ -27,6 +27,13 @@ function MobileLinkBlockModal(props) {
   const setShowModal = props.setShowModal
   const modalRef = useRef()
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return (() => {
+      document.body.style.overflow = 'auto'
+    })
+  }, [])
+
   function closeModal(e) {
     if (modalRef.current === e.target) {
       setShowModal(false)
@@ -35,10 +42,9 @@ function MobileLinkBlockModal(props) {
 
   return (
     <div ref={modalRef} className="md:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-30" onClick={closeModal}>
-      <div className="p-10 w-9/12 h-80vh z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
+      <div className="p-9 w-10/12 h-80vh z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
         <div className="flex justify-between">
           <div>
-
           </div>
           <button className="text-3xl" onClick={() => setShowModal(false)}>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="3 3 10 10">
@@ -74,9 +80,19 @@ function LinkBlock(props) {
       </div>
       {/* MODAL PLAN: just the title text, a little larger than normal. e.g. "Raid." when user clicks the title text, a modal pops up. modal contains the image up top and the description below. and inside the modal is an <a> that goes there. when click outside modal we close it. when click X in the top right we close it. showModal, setShowModal. wrapped in a csstransition. transition the entering of the modal as a drop from the top. transition the exiting of the modal as a drop out to the bottom. */}
 
-      {showModal ? <MobileLinkBlockModal setShowModal={setShowModal}>
-        sup
-      </MobileLinkBlockModal> : ""}
+      {showModal ?
+        <MobileLinkBlockModal setShowModal={setShowModal}>
+          <div className="text-center underline underline-offset-2">
+            {props.title}
+          </div>
+          <div>
+            <img src={props.imgSrc} imgClassName={props.imgClassName} />
+          </div>
+          <div>
+            {props.children}
+          </div>
+        </MobileLinkBlockModal>
+        : ""}
 
     </p>
   )
@@ -91,6 +107,7 @@ function OtherLinkBlock(props) {
 }
 
 function LinksPage(props) {
+
   return (
     <div className="links-page">
 

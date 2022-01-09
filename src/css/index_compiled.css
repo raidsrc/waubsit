@@ -957,6 +957,10 @@ h2 {
   height: 70vh;
 }
 
+.h-90vh{
+  height: 90vh;
+}
+
 .w-full{
   width: 100%;
 }
@@ -1190,6 +1194,14 @@ h2 {
 
 .p-4{
   padding: 1rem;
+}
+
+.p-7{
+  padding: 1.75rem;
+}
+
+.p-9{
+  padding: 2.25rem;
 }
 
 .py-3{
