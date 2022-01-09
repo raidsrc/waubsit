@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
 import { Transition, CSSTransition } from "react-transition-group"
-import { Redirect } from "react-router-dom"
 
 function DesktopLinkBlockWordsDiv(props) {
   return (
@@ -30,14 +29,6 @@ function MobileLinkBlockModal(props) {
   const setShowModal = props.setShowModal
   const showModalBg = props.showModalBg
   const setShowModalBg = props.setShowModalBg
-  const modalRef = useRef()
-
-  useEffect(() => {
-    document.body.style.overflow = 'hidden'
-    return (() => {
-      document.body.style.overflow = 'auto'
-    })
-  }, [])
 
   function closeModal(e) {
     if (modalRef.current === e.target) {
@@ -47,87 +38,46 @@ function MobileLinkBlockModal(props) {
 
   return (
     <div ref={modalRef} className="smmd:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-50" onClick={closeModal}>
-      <CSSTransition in={showModal} timeout={300} unmountOnExit classNames="modal-window" onExiting={() => { setShowModalBg(false) }}>
-        <div className="p-7 w-10/12 h-auto z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
-          <div className="flex justify-between">
-            <div>
-            </div>
-            <button className="hover:bg-red-500 duration-150 active:bg-red-900" onClick={() => setShowModal(false)}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x hover:fill-white duration-100" viewBox="3 3 10 10">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-              </svg>
-            </button>
-          </div>
+      <div className="p-7 w-10/12 h-auto z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
+        <div className="flex justify-between">
           <div>
-            {props.children}
           </div>
+          <button className="hover:bg-red-500 duration-150 active:bg-red-900" onClick={() => setShowModal(false)}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x hover:fill-white duration-100" viewBox="3 3 10 10">
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
         </div>
-      </CSSTransition>
+        <div>
+          {props.children}
+        </div>
+      </div>
     </div>
   )
 }
 
 function WithinMobileLinkBlock(props) {
-  const innardsRef = useRef()
-  const [innardsHeight, setInnardsHeight] = useState(0)
-  useEffect(() => {
-    console.log(innardsRef.current.scrollHeight)
-    setInnardsHeight(innardsRef.current.scrollHeight)
-  }, [])
-
-  const duration = 500;
-
-  const defaultStyle = {
-    transition: `opacity ${duration}ms ease-in-out`,
-    opacity: 0,
-  }
-
-  const transitionStyles = {
-    entering: { opacity: 1 },
-    entered: { opacity: 1 },
-    exiting: { opacity: 0 },
-    exited: { opacity: 0 },
-  };
-
-  const Fade = () => (
-    <Transition in={props.expand} timeout={duration}>
-      {state => (
-        <div style={{
-          ...defaultStyle,
-          ...transitionStyles[state]
-        }}>
-          I'm a fade Transition!
-        </div>
-      )}
-    </Transition>
-  );
-
 
   return (
-    <div ref={innardsRef}>
-      <Fade />
-      {/* <div className="py-4">
-            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
-          </div>
-          <div className="">
-            {props.children}
-          </div>
-          <div className="mt-6 mb-2 text-center">
-            <button>
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
-                Go
-              </NewTab>
-            </button>
-          </div> */}
+    <div>
+      <div className="py-4">
+        <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
+      </div>
+      <div className="">
+        {props.children}
+      </div>
+      <div className="mt-6 mb-2 text-center">
+        <button>
+          <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
+            Go
+          </NewTab>
+        </button>
+      </div>
     </div>
   )
 }
 
 function LinkBlock(props) {
-  const [expand, setExpand] = useState(false)
-  useEffect(() => {
-  }, [])
-
 
   // i need to get the height of the thing before doing our transition. 
   return (
@@ -143,12 +93,12 @@ function LinkBlock(props) {
 
       {/* whereas this div here is only visible smaller than desktop */}
       <div className="text-lg smmd:hidden">
-        <button className="underline underline-offset-2 text-left" onClick={() => setExpand(prev => !prev)}>
+        <button className="underline underline-offset-2 text-left" >
           {props.title}
         </button>
       </div>
 
-      <WithinMobileLinkBlock href={props.href} imgSrc={props.imgSrc} expand={expand} setExpand={setExpand}>
+      <WithinMobileLinkBlock href={props.href} imgSrc={props.imgSrc}>
         {props.children}
       </WithinMobileLinkBlock>
     </p>
