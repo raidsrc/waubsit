@@ -45,13 +45,13 @@ function MobileLinkBlockModal(props) {
   }
 
   return (
-    <div ref={modalRef} className="smmd:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-30" onClick={closeModal}>
+    <div ref={modalRef} className="smmd:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-50" onClick={closeModal}>
       <CSSTransition in={showModal} timeout={300} unmountOnExit classNames="modal-window" onExiting={() => { setShowModalBg(false) }}>
-        <div className="p-9 w-10/12 h-auto z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
-          <div className="flex justify-between mb-4">
+        <div className="p-7 w-10/12 h-auto z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
+          <div className="flex justify-between">
             <div>
             </div>
-            <button className="text-3xl hover:bg-red-500 duration-150 active:bg-red-900" onClick={() => setShowModal(false)}>
+            <button className="hover:bg-red-500 duration-150 active:bg-red-900" onClick={() => setShowModal(false)}>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x hover:fill-white duration-100" viewBox="3 3 10 10">
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
               </svg>
@@ -81,7 +81,7 @@ function LinkBlock(props) {
       </NewTab>
 
       {/* whereas this div here is only visible smaller than desktop */}
-      <div className="text-xl smmd:hidden">
+      <div className="text-lg smmd:hidden">
         <button className="underline underline-offset-2 text-left" onClick={() => { setShowModalBg(true) }}>
           {props.title}
         </button>
@@ -100,9 +100,11 @@ function LinkBlock(props) {
           <div className="text-center">
             {props.children}
           </div>
-          <div className="my-8 text-center ">
-            <button className="border border-gray-800 rounded-full px-6 py-3 hover:bg-red-200 duration-300 active:bg-red-300">
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100">Go</NewTab>
+          <div className="mt-6 mb-2 text-center">
+            <button>
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100  px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
+                Go
+              </NewTab>
             </button>
           </div>
         </MobileLinkBlockModal>
