@@ -101,8 +101,8 @@ function LinkBlock(props) {
             {props.children}
           </div>
           <div className="my-8 text-center ">
-            <button className="border border-gray-800 rounded-full px-3 py-1 hover:bg-red-200 duration-300 active:bg-red-300">
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100">Click me to visit the link!</NewTab>
+            <button className="border border-gray-800 rounded-full px-6 py-3 hover:bg-red-200 duration-300 active:bg-red-300">
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100">Go</NewTab>
             </button>
           </div>
         </MobileLinkBlockModal>
