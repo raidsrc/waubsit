@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react"
 import { NavLink } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import raidsrcLogoSvgUrl from "./static/raid_logo_thick_white.svg"
+import { CSSTransition } from "react-transition-group"
 
 function Navbar(props) {
   //const [hamburgerVisible, setHamburgerVisible] = useState(false)
@@ -12,7 +13,7 @@ function Navbar(props) {
         <ClickableRaidsrcIcon to="/home" setShowRightSideMenu={setShowRightSideMenu} />
         <HamburgerMenu className="smmd:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
 
-        {showRightSideMenu ? <RightSideMenuThatAppearsWhenYouClickTheHamburger setShowRightSideMenu={setShowRightSideMenu} /> : ""}
+        <RightSideMenuThatAppearsWhenYouClickTheHamburger showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
 
         <TheNavButtonsAllTogether setShowRightSideMenu={setShowRightSideMenu}
           className="hidden flex-row justify-around space-x-4 smmd:flex tiny-screen:visible smmd:space-x-3 md:space-x-6 lg:space-x-12 xl:space-x-16" />
@@ -57,6 +58,7 @@ function ClickableRaidsrcIcon(props) {
 }
 
 function RightSideMenuThatAppearsWhenYouClickTheHamburger(props) {
+  const showRightSideMenu = props.showRightSideMenu
   const setShowRightSideMenu = props.setShowRightSideMenu
   const menuRef = useRef()
   const closeMenu = (e) => {
@@ -64,11 +66,13 @@ function RightSideMenuThatAppearsWhenYouClickTheHamburger(props) {
       setShowRightSideMenu(false)
   }
   return (
-    <div className="w-screen h-screen fixed top-0 left-0" onClick={closeMenu}>
-      <div ref={menuRef} className="fixed bg-gray-700 smmd:hidden right-4 top-20 w-6/12 h-60 flex items-center justify-center">
-        <TheNavButtonsAllTogether className="flex flex-col space-y-3 text-center" setShowRightSideMenu={setShowRightSideMenu} />
+    <CSSTransition in={showRightSideMenu} timeout={200} classNames="right-side-menu-transitions" unmountOnExit>
+      <div className="w-screen h-screen fixed top-0 left-0" onClick={closeMenu}>
+        <div ref={menuRef} className="fixed bg-gray-700 smmd:hidden right-4 top-20 w-6/12 h-60 flex items-center justify-center">
+          <TheNavButtonsAllTogether className="flex flex-col space-y-3 text-center" setShowRightSideMenu={setShowRightSideMenu} />
+        </div>
       </div>
-    </div>
+    </CSSTransition>
   )
 }
 
@@ -80,7 +84,7 @@ function TheNavButtonsAllTogether(props) {
         About
       </NavButton>
       <a className="navbutton-rightsidemenu-style smmd:navbutton-style" target="_blank" rel="noreferrer noopener"
-        href="https://raidsrc.github.io/static/Davis_Bike_Map.pdf" setShowRightSideMenu={props.setShowRightSideMenu}>
+        href="https://raidsrc.github.io/static/Davis_Bike_Map.pdf">
         Résumé
       </a>
       <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"

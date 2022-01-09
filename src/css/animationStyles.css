@@ -57,3 +57,24 @@
   opacity: 0;
   transition: all 500ms ease-out;
 }
+
+.right-side-menu-transitions-enter {
+  opacity: 0;
+  transform: translate(5px, -20px);
+}
+
+.right-side-menu-transitions-enter-active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 200ms ease-out ;
+}
+
+.right-side-menu-transitions-exit {
+  opacity: 1;
+}
+
+.right-side-menu-transitions-exit-active {
+  opacity: 0;
+  transform: translate(5px, -20px);
+  transition: all 200ms ease-in;
+}
