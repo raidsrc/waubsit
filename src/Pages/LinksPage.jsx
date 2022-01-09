@@ -36,18 +36,19 @@ function WithinMobileLinkBlock(props) {
   const defaultHeight = props.defaultHeight
   const openUpProps = useSpring({
     height: openUp ? `${contentHeight}px` : defaultHeight,
+    marginBottom: openUp ? 60 : 10,
     config: {
       mass: 1,
-      tension: 100,
-      friction: 26,
+      tension: openUp ? 100 : 70,
+      friction: 25,
     },
   })
   const opacityProps = useSpring({
-    opacity: openUp ? 0.99 : 0,
+    opacity: openUp ? 1 : 0,
     config: {
       mass: 0.1,
-      tension: 40,
-      friction: 42,
+      tension: openUp ? 40 : 120,
+      friction: openUp ? 40 : 15,
     },
   })
   useEffect(() => {
@@ -66,13 +67,13 @@ function WithinMobileLinkBlock(props) {
           <div className="">
             {props.children}
           </div>
-          <div className="mt-6 mb-2 text-center">
-            <button>
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200 ">
-                Go
-              </NewTab>
-            </button>
-          </div>
+        </div>
+        <div className="mt-6 mb-2 text-center">
+          <button>
+            <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200 ">
+              Go
+            </NewTab>
+          </button>
         </div>
       </animated.div>
     </animated.div>
@@ -81,7 +82,7 @@ function WithinMobileLinkBlock(props) {
 
 function LinkBlock(props) {
   const [openUp, setOpenUp] = useState(false)
-  const defaultHeight = "20px"
+  const defaultHeight = "0px"
   const [contentHeight, setContentHeight] = useState(defaultHeight)
 
   return (

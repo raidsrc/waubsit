@@ -766,7 +766,7 @@ h2 {
 }
 
 .links-paragraph{
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .links-paragraph:nth-child(odd){
@@ -777,6 +777,12 @@ h2 {
 .links-paragraph:nth-child(even){
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .links-paragraph{
+    padding-top: 1rem;
+  }
 }
 
 .links-page-link-container-div{
