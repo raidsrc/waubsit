@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
-import { CSSTransition } from "react-transition-group"
+import { Transition, CSSTransition } from "react-transition-group"
 import { Redirect } from "react-router-dom"
 
 function DesktopLinkBlockWordsDiv(props) {
@@ -67,46 +67,67 @@ function MobileLinkBlockModal(props) {
   )
 }
 
-// these fucking modals are ugly as hell. not good. too crowded on mobile. time to write an expanding text area. here we go. 
+function WithinMobileLinkBlock(props) {
+  const innardsRef = useRef()
+  const [innardsHeight, setInnardsHeight] = useState(0)
+  useEffect(() => {
+    console.log(innardsRef.current.scrollHeight)
+    setInnardsHeight(innardsRef.current.scrollHeight)
+  }, [])
+
+  const duration = 500;
+
+  const defaultStyle = {
+    transition: `opacity ${duration}ms ease-in-out`,
+    opacity: 0,
+  }
+
+  const transitionStyles = {
+    entering: { opacity: 1 },
+    entered: { opacity: 1 },
+    exiting: { opacity: 0 },
+    exited: { opacity: 0 },
+  };
+
+  const Fade = () => (
+    <Transition in={props.expand} timeout={duration}>
+      {state => (
+        <div style={{
+          ...defaultStyle,
+          ...transitionStyles[state]
+        }}>
+          I'm a fade Transition!
+        </div>
+      )}
+    </Transition>
+  );
+
+
+  return (
+    <div ref={innardsRef}>
+      <Fade />
+      {/* <div className="py-4">
+            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
+          </div>
+          <div className="">
+            {props.children}
+          </div>
+          <div className="mt-6 mb-2 text-center">
+            <button>
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
+                Go
+              </NewTab>
+            </button>
+          </div> */}
+    </div>
+  )
+}
 
 function LinkBlock(props) {
   const [expand, setExpand] = useState(false)
-  const defaultStyle = {
-    transition: `opacity 500ms ease-in-out`,
-    opacity: 0,
-  }
-  const transitionStyles = {
-    enter: { opacity: 0, backgroundColor: "red" },
-    enterActive: { opacity: 1, backgroundColor: "blue" },
-    exit: { opacity: 0, backgroundColor: "green" },
-    exitActive: { opacity: 0, backgroundColor: "yellow" },
-  };
+  useEffect(() => {
+  }, [])
 
-  const styles = {
-    "test": {
-      "background-color": "red"
-    },
-    "bruh": {
-      "bruh-enter": {
-        "opacity": "0",
-        "background-color": "red"
-      },
-      "bruh-enter-active": {
-        "opacity": "1",
-        "background-color": "blue",
-        "transition": "all 200ms ease-in"
-      },
-      "exit": {
-        "opacity": "0",
-        "background-color": "green"
-      },
-      "exit-active": {
-        "opacity": "0",
-        "background-color": "yellow",
-        "transition": "all 200ms ease-in"
-      },
-    }
-  }
 
   // i need to get the height of the thing before doing our transition. 
   return (
@@ -122,30 +143,14 @@ function LinkBlock(props) {
 
       {/* whereas this div here is only visible smaller than desktop */}
       <div className="text-lg smmd:hidden">
-        <button className="underline underline-offset-2 text-left" onClick={() => {
-          setExpand((previousValue) => !previousValue)
-        }}>
+        <button className="underline underline-offset-2 text-left" onClick={() => setExpand(prev => !prev)}>
           {props.title}
         </button>
       </div>
 
-      <CSSTransition in={expand} timeout={500} unmountOnExit classNames="bruh" style={styles.bruh}>
-        <div style={styles.test}>
-          <div className="py-4">
-            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
-          </div>
-          <div className="">
-            {props.children}
-          </div>
-          <div className="mt-6 mb-2 text-center">
-            <button>
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100  px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
-                Go
-              </NewTab>
-            </button>
-          </div>
-        </div>
-      </CSSTransition>
+      <WithinMobileLinkBlock href={props.href} imgSrc={props.imgSrc} expand={expand} setExpand={setExpand}>
+        {props.children}
+      </WithinMobileLinkBlock>
     </p>
   )
 }
