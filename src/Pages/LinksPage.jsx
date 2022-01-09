@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
-import { Transition, CSSTransition } from "react-transition-group"
+import { useSpring, animated } from "react-spring"
+import { config } from "react-transition-group"
+import { useMeasure } from "react-use"
 
 function DesktopLinkBlockWordsDiv(props) {
   return (
@@ -26,29 +28,62 @@ function DesktopLinkBlockTitleSpan(props) {
 }
 
 function WithinMobileLinkBlock(props) {
+  const [ref, { height }] = useMeasure()
+  const openUp = props.openUp
+  const setOpenUp = props.setOpenUp
+  const contentHeight = props.contentHeight
+  const setContentHeight = props.setContentHeight
+  const defaultHeight = props.defaultHeight
+  const openUpProps = useSpring({
+    height: openUp ? `${contentHeight}px` : defaultHeight,
+    config: {
+      mass: 1,
+      tension: 100,
+      friction: 26,
+    },
+  })
+  const opacityProps = useSpring({
+    opacity: openUp ? 0.99 : 0,
+    config: {
+      mass: 0.1,
+      tension: 40,
+      friction: 42,
+    },
+  })
+  useEffect(() => {
+    setContentHeight(height)
+    window.addEventListener("resize", setContentHeight(height))
+    return window.removeEventListener("resize", setContentHeight(height))
+  }, [height])
 
   return (
-    <div>
-      <div className="py-4">
-        <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
-      </div>
-      <div className="">
-        {props.children}
-      </div>
-      <div className="mt-6 mb-2 text-center">
-        <button>
-          <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
-            Go
-          </NewTab>
-        </button>
-      </div>
-    </div>
+    <animated.div style={openUpProps}>
+      <animated.div style={opacityProps}>
+        <div ref={ref} className="-z-10 relative">
+          <div className="py-4">
+            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
+          </div>
+          <div className="">
+            {props.children}
+          </div>
+          <div className="mt-6 mb-2 text-center">
+            <button>
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200 ">
+                Go
+              </NewTab>
+            </button>
+          </div>
+        </div>
+      </animated.div>
+    </animated.div>
   )
 }
 
 function LinkBlock(props) {
+  const [openUp, setOpenUp] = useState(false)
+  const defaultHeight = "20px"
+  const [contentHeight, setContentHeight] = useState(defaultHeight)
 
-  // i need to get the height of the thing before doing our transition. 
   return (
     <p className="links-paragraph ">
 
@@ -61,13 +96,13 @@ function LinkBlock(props) {
       </NewTab>
 
       {/* whereas this div here is only visible smaller than desktop */}
-      <div className="text-lg smmd:hidden">
-        <button className="underline underline-offset-2 text-left" >
+      <div className="text-lg smmd:hidden relative">
+        <button className="underline underline-offset-2 text-left z-30 relative" onClick={() => { setOpenUp(prev => !prev) }}>
           {props.title}
         </button>
       </div>
 
-      <WithinMobileLinkBlock href={props.href} imgSrc={props.imgSrc}>
+      <WithinMobileLinkBlock href={props.href} imgSrc={props.imgSrc} openUp={openUp} setOpenUp={setOpenUp} contentHeight={contentHeight} setContentHeight={setContentHeight} defaultHeight={defaultHeight}>
         {props.children}
       </WithinMobileLinkBlock>
     </p>

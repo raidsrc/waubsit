@@ -7,7 +7,7 @@ function Navbar(props) {
    //const [hamburgerVisible, setHamburgerVisible] = useState(false)
    const [showRightSideMenu, setShowRightSideMenu] = useState(false)
    return (
-      <nav className="bg-gray-800 shadow-xl flex fixed justify-center w-full z-10">
+      <nav className="bg-gray-800 shadow-xl flex fixed justify-center w-full z-50">
          <div className="flex flex-row text-white tracking-wide top-0 w-full justify-between py-3 px-5 items-center max-w-yuge tiny-screen:px-7 sm:px-10 smmd:px-6 md:px-12 md:text-lg md:h-20 lg:px-16 lg:h-20">
             <ClickableRaidsrcIcon to="/home" setShowRightSideMenu={setShowRightSideMenu} />
             <HamburgerMenu className="smmd:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />

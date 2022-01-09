@@ -10,8 +10,9 @@
     "react-animate-height": "^2.0.23",
     "react-dom": "^17.0.0",
     "react-router-dom": "^5.2.0",
-    "react-spring": "^9.2.3",
+    "react-spring": "^9.4.1",
     "react-transition-group": "^4.4.2",
+    "react-use": "^17.3.2",
     "svg-loaders-react": "^2.2.1"
   },
   "devDependencies": {
