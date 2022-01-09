@@ -976,6 +976,10 @@ h2 {
   height: auto;
 }
 
+.h-80vh{
+  height: 80vh;
+}
+
 .w-full{
   width: 100%;
 }
