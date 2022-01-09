@@ -103,13 +103,7 @@ function LinkBlock(props) {
         </button>
       </div>
 
-      <AnimateHeight
-        duration={500}
-        height={expand} >
-        
-      </AnimateHeight>
-
-      <CSSTransition in={expand} timeout={300} classNames="" unmountOnExit>
+      <AnimateHeight duration={500} height={expand} >
         <div className="">
           <div className="py-4">
             <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
@@ -125,9 +119,7 @@ function LinkBlock(props) {
             </button>
           </div>
         </div>
-      </CSSTransition>
-
-
+      </AnimateHeight>
     </p>
   )
 }
