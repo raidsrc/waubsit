@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
 
@@ -24,7 +24,33 @@ function DesktopLinkBlockTitleSpan(props) {
   )
 }
 function MobileLinkBlockModal(props) {
+  const setShowModal = props.setShowModal
+  const modalRef = useRef()
 
+  function closeModal(e) {
+    if (modalRef.current === e.target) {
+      setShowModal(false)
+    }
+  }
+
+  return (
+    <div ref={modalRef} className="md:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-30" onClick={closeModal}>
+      <div className="p-10 w-9/12 h-80vh z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
+        <div className="flex justify-between">
+          <div>
+
+          </div>
+          <button className="text-3xl" onClick={() => setShowModal(false)}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="3 3 10 10">
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+        </div>
+
+        {props.children}
+      </div>
+    </div>
+  )
 }
 
 function LinkBlock(props) {
@@ -39,14 +65,18 @@ function LinkBlock(props) {
           <DesktopLinkBlockImgDiv imgSrc={props.imgSrc} imgClassName={props.imgClassName} />
         </div>
       </NewTab>
-      
+
       {/* whereas this div here is only visible smaller than desktop */}
       <div className="text-xl md:hidden">
-        <button className="underline underline-offset-2 text-left" onClick={() => {setShowModal(true)}}>
+        <button className="underline underline-offset-2 text-left" onClick={() => { setShowModal(true) }}>
           {props.title}
         </button>
       </div>
       {/* MODAL PLAN: just the title text, a little larger than normal. e.g. "Raid." when user clicks the title text, a modal pops up. modal contains the image up top and the description below. and inside the modal is an <a> that goes there. when click outside modal we close it. when click X in the top right we close it. showModal, setShowModal. wrapped in a csstransition. transition the entering of the modal as a drop from the top. transition the exiting of the modal as a drop out to the bottom. */}
+
+      {showModal ? <MobileLinkBlockModal setShowModal={setShowModal}>
+        sup
+      </MobileLinkBlockModal> : ""}
 
     </p>
   )
@@ -63,6 +93,7 @@ function OtherLinkBlock(props) {
 function LinksPage(props) {
   return (
     <div className="links-page">
+
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2">
           Links to Projects & Work
