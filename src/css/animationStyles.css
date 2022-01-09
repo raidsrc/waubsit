@@ -42,13 +42,13 @@
 }
 
 .expanding-link-block-text-enter-active {
-  max-height: 300px;
+  max-height: 500px;
   opacity: 1;
   transition: all 200ms ease-in;
 }
 
 .expanding-link-block-text-exit {
-  max-height: 300px;
+  max-height: 500px;
   opacity: 1;
 }
 

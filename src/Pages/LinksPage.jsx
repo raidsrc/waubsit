@@ -90,8 +90,19 @@ function LinkBlock(props) {
       </div>
       <CSSTransition in={expand} timeout={500} unmountOnExit classNames="expanding-link-block-text" >
         <div>
-          <img src={props.imgSrc} className={"w-2/3 " + props.imgClassName} />
-          {props.children}
+          <div className="py-4">
+            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
+          </div>
+          <div className="">
+            {props.children}
+          </div>
+          <div className="mt-6 mb-2 text-center">
+            <button>
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100  px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
+                Go
+              </NewTab>
+            </button>
+          </div>
         </div>
       </CSSTransition>
 
