@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
 import { CSSTransition } from "react-transition-group"
+import AnimateHeight from "react-animate-height"
 
 function DesktopLinkBlockWordsDiv(props) {
   return (
@@ -69,8 +70,19 @@ function MobileLinkBlockModal(props) {
 // these fucking modals are ugly as hell. not good. too crowded on mobile. time to write an expanding text area. here we go. 
 
 function LinkBlock(props) {
-  const [expand, setExpand] = useState(false)
+  const [expand, setExpand] = useState(0)
+  const defaultStyle = {
+    transition: `opacity 500ms ease-in-out`,
+    opacity: 0,
+  }
+  const transitionStyles = {
+    entering: { opacity: 0 },
+    entered: { opacity: 1 },
+    exiting: { opacity: 0 },
+    exited: { opacity: 0 },
+  };
 
+  // i need to get the height of the thing before doing our transition. 
   return (
     <p className="links-paragraph ">
 
@@ -84,12 +96,21 @@ function LinkBlock(props) {
 
       {/* whereas this div here is only visible smaller than desktop */}
       <div className="text-lg smmd:hidden">
-        <button className="underline underline-offset-2 text-left" onClick={() => { setExpand((previousValue) => !previousValue) }}>
+        <button className="underline underline-offset-2 text-left" onClick={() => {
+          setExpand((previousValue) => previousValue === 'auto' ? 0 : 'auto')
+        }}>
           {props.title}
         </button>
       </div>
-      <CSSTransition in={expand} timeout={500} unmountOnExit classNames="expanding-link-block-text" >
-        <div>
+
+      <AnimateHeight
+        duration={500}
+        height={expand} >
+        
+      </AnimateHeight>
+
+      <CSSTransition in={expand} timeout={300} classNames="" unmountOnExit>
+        <div className="">
           <div className="py-4">
             <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
           </div>
