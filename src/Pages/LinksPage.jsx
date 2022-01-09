@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
 import { CSSTransition } from "react-transition-group"
+import AnimateHeight from "react-animate-height"
 
 function DesktopLinkBlockWordsDiv(props) {
   return (
@@ -66,9 +67,22 @@ function MobileLinkBlockModal(props) {
   )
 }
 
+// these fucking modals are ugly as hell. not good. too crowded on mobile. time to write an expanding text area. here we go. 
+
 function LinkBlock(props) {
-  const [showModal, setShowModal] = useState(false)
-  const [showModalBg, setShowModalBg] = useState(false)
+  const [expand, setExpand] = useState(0)
+  const defaultStyle = {
+    transition: `opacity 500ms ease-in-out`,
+    opacity: 0,
+  }
+  const transitionStyles = {
+    entering: { opacity: 0 },
+    entered: { opacity: 1 },
+    exiting: { opacity: 0 },
+    exited: { opacity: 0 },
+  };
+
+  // i need to get the height of the thing before doing our transition. 
   return (
     <p className="links-paragraph ">
 
@@ -82,22 +96,19 @@ function LinkBlock(props) {
 
       {/* whereas this div here is only visible smaller than desktop */}
       <div className="text-lg smmd:hidden">
-        <button className="underline underline-offset-2 text-left" onClick={() => { setShowModalBg(true) }}>
+        <button className="underline underline-offset-2 text-left" onClick={() => {
+          setExpand((previousValue) => previousValue === 'auto' ? 0 : 'auto')
+        }}>
           {props.title}
         </button>
       </div>
-      {/* MODAL PLAN: just the title text, a little larger than normal. e.g. "Raid." when user clicks the title text, a modal pops up. modal contains the image up top and the description below. and inside the modal is an <a> that goes there. when click outside modal we close it. when click X in the top right we close it. showModal, setShowModal. wrapped in a csstransition. transition the entering of the modal as a drop from the top. transition the exiting of the modal as a drop out to the bottom. */}
 
-      {/* this CSSTransition is for the background dimming */}
-      <CSSTransition timeout={300} in={showModalBg} unmountOnExit classNames="modal-bg" onEntering={() => { setShowModal(true) }}>
-        <MobileLinkBlockModal showModal={showModal} setShowModal={setShowModal} showModalBg={showModalBg} setShowModalBg={setShowModalBg}>
-          <div className="text-center underline underline-offset-2">
-            {props.title}
-          </div>
-          <div className="flex justify-center py-4">
+      <AnimateHeight duration={500} height={expand} >
+        <div className="">
+          <div className="py-4">
             <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
           </div>
-          <div className="text-center">
+          <div className="">
             {props.children}
           </div>
           <div className="mt-6 mb-2 text-center">
@@ -107,9 +118,8 @@ function LinkBlock(props) {
               </NewTab>
             </button>
           </div>
-        </MobileLinkBlockModal>
-      </CSSTransition>
-
+        </div>
+      </AnimateHeight>
     </p>
   )
 }
