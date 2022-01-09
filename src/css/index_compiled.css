@@ -1053,6 +1053,10 @@ h2 {
   max-width: 280px;
 }
 
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .resize{
   resize: both;
 }
@@ -1085,8 +1089,28 @@ h2 {
   flex-direction: column;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
+.items-end{
+  align-items: flex-end;
+}
+
 .items-center{
   align-items: center;
+}
+
+.items-baseline{
+  align-items: baseline;
+}
+
+.items-stretch{
+  align-items: stretch;
+}
+
+.justify-start{
+  justify-content: flex-start;
 }
 
 .justify-center{
@@ -1111,6 +1135,10 @@ h2 {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }
 
 .rounded-md{
@@ -1233,6 +1261,11 @@ h2 {
   padding-right: 1.5rem;
 }
 
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -1243,6 +1276,10 @@ h2 {
 
 .text-center{
   text-align: center;
+}
+
+.align-middle{
+  vertical-align: middle;
 }
 
 .font-serif{
