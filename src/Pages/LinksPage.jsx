@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
 import { CSSTransition } from "react-transition-group"
-import AnimateHeight from "react-animate-height"
+import { Redirect } from "react-router-dom"
 
 function DesktopLinkBlockWordsDiv(props) {
   return (
@@ -70,17 +70,43 @@ function MobileLinkBlockModal(props) {
 // these fucking modals are ugly as hell. not good. too crowded on mobile. time to write an expanding text area. here we go. 
 
 function LinkBlock(props) {
-  const [expand, setExpand] = useState(0)
+  const [expand, setExpand] = useState(false)
   const defaultStyle = {
     transition: `opacity 500ms ease-in-out`,
     opacity: 0,
   }
   const transitionStyles = {
-    entering: { opacity: 0 },
-    entered: { opacity: 1 },
-    exiting: { opacity: 0 },
-    exited: { opacity: 0 },
+    enter: { opacity: 0, backgroundColor: "red" },
+    enterActive: { opacity: 1, backgroundColor: "blue" },
+    exit: { opacity: 0, backgroundColor: "green" },
+    exitActive: { opacity: 0, backgroundColor: "yellow" },
   };
+
+  const styles = {
+    "test": {
+      "background-color": "red"
+    },
+    "bruh": {
+      "bruh-enter": {
+        "opacity": "0",
+        "background-color": "red"
+      },
+      "bruh-enter-active": {
+        "opacity": "1",
+        "background-color": "blue",
+        "transition": "all 200ms ease-in"
+      },
+      "exit": {
+        "opacity": "0",
+        "background-color": "green"
+      },
+      "exit-active": {
+        "opacity": "0",
+        "background-color": "yellow",
+        "transition": "all 200ms ease-in"
+      },
+    }
+  }
 
   // i need to get the height of the thing before doing our transition. 
   return (
@@ -97,14 +123,14 @@ function LinkBlock(props) {
       {/* whereas this div here is only visible smaller than desktop */}
       <div className="text-lg smmd:hidden">
         <button className="underline underline-offset-2 text-left" onClick={() => {
-          setExpand((previousValue) => previousValue === 'auto' ? 0 : 'auto')
+          setExpand((previousValue) => !previousValue)
         }}>
           {props.title}
         </button>
       </div>
 
-      <AnimateHeight duration={500} height={expand} >
-        <div className="">
+      <CSSTransition in={expand} timeout={500} unmountOnExit classNames="bruh" style={styles.bruh}>
+        <div style={styles.test}>
           <div className="py-4">
             <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
           </div>
@@ -119,7 +145,7 @@ function LinkBlock(props) {
             </button>
           </div>
         </div>
-      </AnimateHeight>
+      </CSSTransition>
     </p>
   )
 }
