@@ -68,7 +68,7 @@ function RightSideMenuThatAppearsWhenYouClickTheHamburger(props) {
   return (
     <CSSTransition in={showRightSideMenu} timeout={200} classNames="right-side-menu-transitions" unmountOnExit>
       <div className="w-screen h-screen fixed top-0 left-0" onClick={closeMenu}>
-        <div ref={menuRef} className="fixed bg-gray-700 smmd:hidden right-4 top-20 w-6/12 h-60 flex items-center justify-center">
+        <div ref={menuRef} className="fixed bg-gray-700 px-1 smmd:hidden right-4 top-20 w-6/12 h-60 flex items-center justify-center">
           <TheNavButtonsAllTogether className="flex flex-col space-y-3 text-center" setShowRightSideMenu={setShowRightSideMenu} />
         </div>
       </div>
