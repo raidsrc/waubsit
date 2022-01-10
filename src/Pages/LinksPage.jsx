@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import bananas from "../static/bananas2.jpg"
-import { CSSTransition } from "react-transition-group"
-import AnimateHeight from "react-animate-height"
+import { useSpring, animated } from "react-spring"
+import { config } from "react-transition-group"
+import { useMeasure } from "react-use"
 
 function DesktopLinkBlockWordsDiv(props) {
   return (
@@ -25,64 +26,74 @@ function DesktopLinkBlockTitleSpan(props) {
     <span className="underline ">{props.title}</span>
   )
 }
-function MobileLinkBlockModal(props) {
-  const showModal = props.showModal
-  const setShowModal = props.setShowModal
-  const showModalBg = props.showModalBg
-  const setShowModalBg = props.setShowModalBg
-  const modalRef = useRef()
 
+function WithinMobileLinkBlock(props) {
+  const [ref, { height }] = useMeasure()
+  const openUp = props.openUp
+  const setOpenUp = props.setOpenUp
+  const contentHeight = props.contentHeight
+  const setContentHeight = props.setContentHeight
+  const defaultHeight = props.defaultHeight
+  const openUpProps = useSpring({
+    height: openUp ? `${contentHeight + 20}px` : defaultHeight,
+    marginBottom: openUp ? 10 : 5,
+    config: {
+      mass: 1,
+      tension: openUp ? 100 : 70,
+      friction: 25,
+    },
+  })
+  const opacityProps = useSpring({
+    opacity: openUp ? 1 : 0,
+    config: {
+      mass: 0.1,
+      tension: openUp ? 40 : 120,
+      friction: openUp ? 20 : 15,
+    },
+  })
   useEffect(() => {
-    document.body.style.overflow = 'hidden'
-    return (() => {
-      document.body.style.overflow = 'auto'
-    })
-  }, [])
-
-  function closeModal(e) {
-    if (modalRef.current === e.target) {
-      setShowModal(false)
-    }
-  }
+    setContentHeight(height)
+    window.addEventListener("resize", setContentHeight(height))
+    return window.removeEventListener("resize", setContentHeight(height))
+  }, [height])
 
   return (
-    <div ref={modalRef} className="smmd:hidden fixed flex flex-row justify-center top-0 left-0 items-center w-screen h-screen z-20 bg-black bg-opacity-50" onClick={closeModal}>
-      <CSSTransition in={showModal} timeout={300} unmountOnExit classNames="modal-window" onExiting={() => { setShowModalBg(false) }}>
-        <div className="p-7 w-10/12 h-auto z-30 border-2 border-karkat-blood-red rounded-sm bg-gray-200 text-black">
-          <div className="flex justify-between">
-            <div>
-            </div>
-            <button className="hover:bg-red-500 duration-150 active:bg-red-900" onClick={() => setShowModal(false)}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x hover:fill-white duration-100" viewBox="3 3 10 10">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-              </svg>
-            </button>
+    <animated.div className="overflow-hidden " style={openUpProps}>
+      <animated.div style={opacityProps}>
+        <div ref={ref} >
+          <div className="py-4">
+            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
           </div>
-          <div>
+          <div className="">
             {props.children}
           </div>
+          <div className="mt-6 mb-2 text-center">
+            <button>
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200 ">
+                Go
+              </NewTab>
+            </button>
+          </div>
         </div>
-      </CSSTransition>
-    </div>
+      </animated.div>
+    </animated.div>
   )
 }
 
-// these fucking modals are ugly as hell. not good. too crowded on mobile. time to write an expanding text area. here we go. 
-
 function LinkBlock(props) {
-  const [expand, setExpand] = useState(0)
-  const defaultStyle = {
-    transition: `opacity 500ms ease-in-out`,
-    opacity: 0,
-  }
-  const transitionStyles = {
-    entering: { opacity: 0 },
-    entered: { opacity: 1 },
-    exiting: { opacity: 0 },
-    exited: { opacity: 0 },
-  };
+  const [openUp, setOpenUp] = useState(false)
+  const defaultHeight = "0px"
+  const [contentHeight, setContentHeight] = useState(defaultHeight)
+  const [rotated, setRotated] = useState(false)
+  const caretRotationProps = useSpring({
+    transform: rotated ? "rotate(90deg)" : "rotate(0deg)",
+    config: {
+      mass: 1,
+      tension: 120,
+      friction: 20,
+    },
+  })
 
-  // i need to get the height of the thing before doing our transition. 
   return (
     <p className="links-paragraph ">
 
@@ -95,31 +106,26 @@ function LinkBlock(props) {
       </NewTab>
 
       {/* whereas this div here is only visible smaller than desktop */}
-      <div className="text-lg smmd:hidden">
-        <button className="underline underline-offset-2 text-left" onClick={() => {
-          setExpand((previousValue) => previousValue === 'auto' ? 0 : 'auto')
-        }}>
-          {props.title}
+      <div className="text-lg smmd:hidden relative">
+        <button className="underline underline-offset-2 text-left z-30 relative" onClick={() => { setOpenUp(prev => !prev); setRotated(prev => !prev) }}>
+          <div className="flex justify-start items-center">
+            <animated.div style={caretRotationProps}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+              </svg>
+            </animated.div>
+            <div className="px-1">
+              {props.title}
+            </div>
+          </div>
         </button>
       </div>
 
-      <AnimateHeight duration={500} height={expand} >
-        <div className="">
-          <div className="py-4">
-            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
-          </div>
-          <div className="">
-            {props.children}
-          </div>
-          <div className="mt-6 mb-2 text-center">
-            <button>
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100  px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200">
-                Go
-              </NewTab>
-            </button>
-          </div>
-        </div>
-      </AnimateHeight>
+      <div className="smmd:hidden">
+        <WithinMobileLinkBlock href={props.href} imgSrc={props.imgSrc} openUp={openUp} setOpenUp={setOpenUp} contentHeight={contentHeight} setContentHeight={setContentHeight} defaultHeight={defaultHeight}>
+          {props.children}
+        </WithinMobileLinkBlock>
+      </div>
     </p>
   )
 }
