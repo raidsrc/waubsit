@@ -45,10 +45,10 @@ function ClickableRaidsrcIcon(props) {
   if (location.pathname === props.to) {
     theClass += " disabled-link"
   }
-  return (
+  return ( 
     <div className="w-12">
       <NavLink activeClassName="opacity-40" className={theClass} onClick={() => {setShowRightSideMenu(false)}} to={props.to}>
-        <img src={raidsrcLogoSvgUrl} className="hover:brightness-75 active:brightness-50 drop-shadow-raid-icon " />
+        <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50 drop-shadow-raid-icon" />
       </NavLink>
     </div>
   )

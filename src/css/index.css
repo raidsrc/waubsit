@@ -83,6 +83,9 @@
   .links-page-link-container-div {
     @apply flex flex-row smmd:space-x-8 md:space-x-11 justify-between p-1 smmd:p-3 lg:p-6 border-gray-800 border border-opacity-0 hover:border-opacity-50 rounded-sm hover:border-karkat-blood-red duration-200 ease-out 
   }
+  .drop-shadow-raid-icon-2 {
+    filter: drop-shadow(2px 3px 1px rgba(255, 0, 0, 0.3));
+  }
 }
 
 /* custom utilities go here. i don't even know what a utility is.
