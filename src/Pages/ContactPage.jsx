@@ -8,7 +8,7 @@ function ContactPage(props) {
             <h1 className="mb-5 px-2 text-white">
                Contact
             </h1>
-            <div className="text-center py-5 px-2 text-base md:text-lg">
+            <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg">
                I'm not really on social media. Life is better that way. But if you must, leave me a message on Twitter and I'll get back to you within the month. No guarantees.
             </div>
             <div className="grid grid-cols-3 grid-rows-3 md:grid-rows-5">
@@ -25,7 +25,7 @@ function ContactPage(props) {
                   <span className="px-4 text-lg font-semibold text-white">/c/raidsrc</span>
                </div> */} 
             </div>
-            <div className="text-center py-5 px-2 text-base md:text-lg">
+            <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg">
                Alternatively, you could email me at the address below. Save this channel of communication for urgent matters. 
             </div>
             <div className="grid grid-cols-3 grid-rows-3 md:grid-rows-4">
