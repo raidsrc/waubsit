@@ -117,7 +117,7 @@ function AboutPage(props) {
                 About Me
              </h1>
              <div className="flex justify-center">
-                <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-sm tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl xl:mb-4 2xl:text-5xl" >
+                <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-md tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl xl:mb-4 2xl:text-5xl" >
                    <NameInputTypingEffectBox className="px-2 py-2 " onLoad={setTimeout(() => doNameShit(), 420)} timeToSelect={timeToSelect} />
                 </div>
              </div>

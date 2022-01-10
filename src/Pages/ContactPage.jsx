@@ -5,11 +5,11 @@ function ContactPage(props) {
    return (
       <div className="find-me-page">
          <CenteredFullPageFlexContainer>
-            <h1 className="mb-5 px-2 text-white">
+            <h1 className="mb-5 px-2 text-white ">
                Contact
             </h1>
-            <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg">
-               I'm not really on social media. Life is better that way. But if you must, leave me a message on Twitter and I'll get back to you within the month. No guarantees.
+            <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg ">
+               I'm not really on social media. It's better that way. But if you must, leave me a message on Twitter and I'll get back to you within the month, maybe. No guarantees.
             </div>
             <div className="grid grid-cols-3 grid-rows-3 md:grid-rows-5">
                <div className="row-start-2 col-start-2 flex flex-row items-center justify-center">

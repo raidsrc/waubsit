@@ -47,10 +47,8 @@ function ClickableRaidsrcIcon(props) {
   }
   return (
     <div className="w-12">
-      <NavLink activeClassName="opacity-40" className={theClass} onClick={() => {
-        setShowRightSideMenu(false)
-      }} to={props.to}>
-        <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50 drop-shadow-raid-icon"></img>
+      <NavLink activeClassName="opacity-40" className={theClass} onClick={() => {setShowRightSideMenu(false)}} to={props.to}>
+        <img src={raidsrcLogoSvgUrl} className="hover:brightness-75 active:brightness-50 drop-shadow-raid-icon " />
       </NavLink>
     </div>
   )
@@ -112,7 +110,7 @@ function HamburgerMenu(props) {
   return (
     <div className={props.className}>
       <button onClick={() => setShowRightSideMenu(!showRightSideMenu)}>
-        <div className="w-6"><img src="https://img.icons8.com/material-rounded/192/ffffff/menu--v1.png" /></div>
+        <div className="w-6 "><img src="https://img.icons8.com/material-rounded/192/ffffff/menu--v1.png" /></div>
       </button>
     </div>
   )

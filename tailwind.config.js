@@ -1,8 +1,11 @@
 module.exports = {
   content: [
-    "./src/**/*.jsx",
-    "./src/**/*.html",
-    "./index.html"
+    "./src/**/*.{js,jsx,html}",
+    "./src/ReusableComponents.jsx",
+    "./index.html",
+  ],
+  safelist: [
+    'drop-shadow-raid-icon'
   ],
   theme: {
     extend: {
@@ -58,7 +61,6 @@ module.exports = {
       "xl": "1280px",
       "2xl": "1536px",
     },
-
   },
   plugins: [],
 }
