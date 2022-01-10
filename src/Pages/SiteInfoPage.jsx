@@ -16,7 +16,7 @@ function SiteInfoPage(props) {
                 <p className="about-me-paragraph text-black py-3 lg:py-5">Building the foundation of this site took me a few weeks of on-and-off work throughout the summer of 2021. Much of it was spent teaching myself how to use the technologies listed above. I struggled a lot with react-spring in particular, spending hours staring at my laptop screen in the dark cabin of an airplane wondering what was going wrong. Programming is confusing.</p>
 
                 <p className="about-me-paragraph py-3 lg:py-5">I still like to update the site a little every now and then. Whenever I notice an optimization that could be done, I do it, time permitting. Maintaining this site is really fun. I get to assemble and preserve a massive, beautiful, complex digital creation, one with my signature on it, with many intricate parts all functioning together perfectly, available all over the world, and all I need is a chair and a laptop. And most importantly, it's something I made myself. It's my creation. It feels good to create, you know.</p>
-                <div className="flex flex-col items-center justify-center mt-28 text-xs 2xl:text-sm">
+                <div className="flex flex-col items-center justify-center mt-28 md:mt-44 text-xs 2xl:text-sm">
                     <div>
                         <NewTab href="https://icons8.com/icon/83195/menu">
                             mobile hamburger menu icon © Icons8
@@ -24,7 +24,12 @@ function SiteInfoPage(props) {
                     </div>
                     <div>
                         <NewTab href="https://iconmonstr.com">
-                            twitter, youtube, email icons © 2021 iconmonstr
+                            twitter, email icons © 2021 iconmonstr
+                        </NewTab>
+                    </div>
+                    <div>
+                        <NewTab href="https://icons.getbootstrap.com">
+                            caret icon © 2021 bootstrap
                         </NewTab>
                     </div>
                 </div>

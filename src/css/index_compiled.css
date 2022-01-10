@@ -941,6 +941,14 @@ h2 {
   margin-top: 7rem;
 }
 
+.mt-32{
+  margin-top: 8rem;
+}
+
+.mt-36{
+  margin-top: 9rem;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -1644,6 +1652,10 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
 
   .md\:mb-20{
     margin-bottom: 5rem;
+  }
+
+  .md\:mt-44{
+    margin-top: 11rem;
   }
 
   .md\:grid{

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useSpring } from "react-spring"
 import rayShiprock from "../static/ray atop shiprock.jpg"
-import rayShiprockWide from "../static/ray atop shiprock wide.jpeg"
+// import rayShiprockWide from "../static/ray atop shiprock wide.jpeg"
 import { HomepageCenteredFullPageFlexContainer, NewTab, scrollToTop } from '../ReusableComponents'
 import { Link } from "react-router-dom"
 
@@ -32,7 +32,7 @@ function HomePage(props) {
          <div className="mb-20">
             <div className="w-full py-12 md:py-16 lg:py-0">
                <img className="h-112 w-full object-cover sm:h-50vh md:h-60vh lg:hidden" src={rayShiprock} />
-               <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center" src={rayShiprockWide} />
+               <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center" src={rayShiprock} />
             </div>
             <HomepageCenteredFullPageFlexContainer>
                {/* <animated.div style={animatedStyles}>
@@ -45,7 +45,7 @@ function HomePage(props) {
                   Through a combination of obsessive self-teaching and university instruction, I learned a ton about web development and built this site myself during the summer of 2021 with the help of some modern web dev technology and a generous serving of elbow grease. The work was worth it. I have now carved a little space out of the Web that belongs completely to me (mostly).
                </p>
                <p className="homepage-paragraph">
-                  Have a look around! I'm sure you'll find something worth your time. You can read a little bit about me in the <span className="inline-red-bg-link"><Link to="/about" onClick={scrollToTop}>About</Link></span> section. You can view my résumé in the <span className="inline-red-bg-link"><Link to="/resume" onClick={scrollToTop}>Résumé</Link></span> section. Check out <span className="inline-red-bg-link"><Link to="contact" onClick={scrollToTop}>Find Me</Link></span> if you want to know where you can contact me. I've got links to stuff I've made in <span className="inline-red-bg-link"><Link to="links" onClick={scrollToTop}>Stuff I've Made</Link></span>. And if you want to learn about how I built this site, check out <span className="inline-red-bg-link"><Link to="siteinfo" onClick={scrollToTop}>Site Info</Link></span>.
+                  Have a look around! I'm sure you'll find something worth your time. You can read through a short autobiographical exhibit about me on the <span className="inline-red-bg-link"><Link to="/about" onClick={scrollToTop}>About</Link></span> page. You can view my résumé on the <span className="inline-red-bg-link"><Link to="/resume" onClick={scrollToTop}>Résumé</Link></span> page. If you want to know where you can contact me, head over to the <span className="inline-red-bg-link"><Link to="contact" onClick={scrollToTop}>Find Me</Link></span> page. You can look at my work on the <span className="inline-red-bg-link"><Link to="links" onClick={scrollToTop}>Stuff I've Made</Link></span> page. And if you want to learn about how I built this site, check out the <span className="inline-red-bg-link"><Link to="siteinfo" onClick={scrollToTop}>Site Info</Link></span> page.
                </p>
                <p className="homepage-paragraph text-black">
                   Enjoy your stay.
