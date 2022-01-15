@@ -33,11 +33,13 @@ module.exports = {
         '75vh': '75vh',
         '80vh': '80vh',
         '90vh': '90vh',
-        'huge': '10000px'
       },
       maxWidth: {
         '2xs': '280px',
         'yuge': '1700px',
+      },
+      maxHeight: {
+        'h-fhd': '1080px',
       },
       gridTemplateRows: {
         // Simple 8 row grid
@@ -60,6 +62,8 @@ module.exports = {
       "lg": "1024px",
       "xl": "1280px",
       "2xl": "1536px",
+      "w-fhd": "1920px",
+      "w-wqhd": "2560px",
     },
   },
   plugins: [],
