@@ -1355,25 +1355,8 @@ h2 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-sm{
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .drop-shadow-raid-icon{
   --tw-drop-shadow: drop-shadow(2px 3px 1px rgba(255, 0, 0, 0.3));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.drop-shadow-2xl{
-  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1610,6 +1593,10 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     text-shadow: 1px 1px rgba(255, 0, 0, 0.3);
   }
 
+  .smmd\:block{
+    display: block;
+  }
+
   .smmd\:inline-block{
     display: inline-block;
   }
@@ -1626,6 +1613,16 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .smmd\:object-cover{
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .smmd\:object-center{
+    -o-object-position: center;
+       object-position: center;
   }
 
   .smmd\:px-6{
@@ -1687,8 +1684,16 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-top: 11rem;
   }
 
+  .md\:block{
+    display: block;
+  }
+
   .md\:grid{
     display: grid;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-20{
@@ -1733,6 +1738,16 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:object-cover{
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .md\:object-center{
+    -o-object-position: center;
+       object-position: center;
+  }
+
   .md\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1751,6 +1766,15 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
   .md\:py-16{
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .md\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .md\:pt-0{
+    padding-top: 0px;
   }
 
   .md\:text-right{

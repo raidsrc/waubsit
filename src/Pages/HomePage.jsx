@@ -30,9 +30,9 @@ function HomePage(props) {
   return (
     <div className="homepage">
       <div className="mb-20">
-        <div className="w-full py-12 md:py-16 lg:py-0 flex justify-center">
-          <img className="h-112 w-full object-cover sm:h-50vh md:h-60vh lg:hidden" src={rayShiprock} />
-          <img className="hidden w-screen h-screen lg:block lg:object-cover lg:object-center max-h-h-wqhd w-wqhd:hidden " src={rayShiprock} />
+        <div className="w-full py-12 md:py-16 md:pt-0 lg:py-0 flex justify-center">
+          <img className="h-112 w-full object-cover sm:h-50vh smmd:hidden" src={rayShiprock} />
+          <img className="hidden w-screen h-screen smmd:block smmd:object-cover smmd:object-center max-h-h-wqhd w-wqhd:hidden " src={rayShiprock} />
         </div>
         <HomepageCenteredFullPageFlexContainer>
           <img className="hidden w-wqhd:block object-cover object-center w-full my-20 shadow-lg " src={rayShiprock} />
