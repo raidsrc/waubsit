@@ -12,17 +12,17 @@ function AboutPage(props) {
   const [nameBoxContents, setNameBoxContents] = useState("")
   const [timeToSelect, setTimeToSelect] = useState(false)
   const [abort, setAbort] = useState(false)
-  let firstRun = true // this ensures that we always show the name "Raymond" first 
+  let runNumber = 0 // i'll use this number to always ensure that i show the names "Raymond" "Ray" and "陈睿明" first 
   let prevFiveNames = [".", ".", ".", ".", "."]
   let newName = "sup"
 
   useEffect(() => {
-    setAbort(false) // i hope this'll set abort to false when we first render + re-render the page, then set abort to true when we hop off
+    setAbort(false)
     return function cleanThatShitUpDawg() {
       setNameStage("stop")
       setAbort(true)
     }
-  })
+  }, [])
 
   function doNameShit() {
     if (nameStage == "empty" && abort == false) { // if we ain't run yet
@@ -42,19 +42,24 @@ function AboutPage(props) {
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
       }
-      // if (firstRun) {
-      //    let index = 0
-      // } else {
-      //    let index = getRandomInt(0, namesList.length)
-      // }
       prevFiveNames.shift()
       prevFiveNames.push(newName)
       while (prevFiveNames.includes(newName)) {
-        let index = firstRun ? 0 : getRandomInt(0, namesList.length)
+        let index = 0
+        if (runNumber === 0) {
+          index = 0
+          runNumber = 1
+        } else if (runNumber === 1) {
+          index = 1
+          runNumber = 2
+        } else if (runNumber === 2) {
+          index = 3
+          runNumber = 420
+        } else {
+          index = getRandomInt(0, namesList.length)
+        }
         newName = namesList[index]
       }
-      firstRun = false
-      // console.log(prevFiveNames)
       return newName
     }
 

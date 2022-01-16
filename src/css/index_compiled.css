@@ -901,10 +901,6 @@ h2 {
   grid-row-start: 4;
 }
 
-.m-20{
-  margin: 5rem;
-}
-
 .my-20{
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -950,10 +946,6 @@ h2 {
   margin-top: 7rem;
 }
 
-.mt-20{
-  margin-top: 5rem;
-}
-
 .inline-block{
   display: inline-block;
 }
@@ -988,6 +980,10 @@ h2 {
 
 .max-h-h-fhd{
   max-height: 1080px;
+}
+
+.max-h-h-wqhd{
+  max-height: 1440px;
 }
 
 .w-full{
@@ -1048,10 +1044,6 @@ h2 {
 
 .max-w-screen-xl{
   max-width: 1280px;
-}
-
-.max-w-screen-w-fhd{
-  max-width: 1920px;
 }
 
 .max-w-sm{
@@ -1260,11 +1252,6 @@ h2 {
   padding-right: 1.5rem;
 }
 
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .pt-4{
   padding-top: 1rem;
 }
@@ -1363,12 +1350,6 @@ h2 {
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1928,18 +1909,13 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
   .w-fhd\:hidden{
     display: none;
   }
-
-  .w-fhd\:w-40{
-    width: 10rem;
-  }
-
-  .w-fhd\:object-cover{
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
 
 @media (min-width: 2560px){
+  .w-wqhd\:block{
+    display: block;
+  }
+
   .w-wqhd\:hidden{
     display: none;
   }

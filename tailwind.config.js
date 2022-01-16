@@ -40,6 +40,7 @@ module.exports = {
       },
       maxHeight: {
         'h-fhd': '1080px',
+        'h-wqhd': '1440px',
       },
       gridTemplateRows: {
         // Simple 8 row grid
