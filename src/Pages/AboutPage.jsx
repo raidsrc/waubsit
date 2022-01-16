@@ -162,7 +162,7 @@ function AboutPage(props) {
 
           <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
             <p className="about-me-paragraph md:text-right">
-              After I graduate, I'm headed to <NewTab href="https://www.virovek.com">Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. I'm going to manage web, communications, and business technology, and help out with the biotech manufacturing pipeline when needed. People ask me if it's reassuring, knowing that I have a place to work right out of college. I tell them no, I'd rather be a full-time musician. Haha. I'll make that happen. Just you wait.
+              After I graduate, I plan to spearhead a web and communications technology advancement initiative at <NewTab href="https://www.virovek.com">Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. Also gonna help out with the biological manufacturing pipeline when needed. People ask me if it's reassuring, knowing that I have a place to work right out of college. And I am very grateful for this position. But honestly, I'd rather be a full-time street musician. Haha. I'll make that happen. Just you wait.
             </p>
           </div>
           <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
