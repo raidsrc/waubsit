@@ -11,7 +11,6 @@ import tractivityImg from "../static/sneak_img_tractivity.png"
 import virovekImg from "../static/sneak_img_virovek_1.png"
 import ytImg from "../static/sneak_img_yt.png"
 import { useSpring, animated } from "react-spring"
-import { config } from "react-transition-group"
 import { useMeasure } from "react-use"
 
 function DesktopLinkBlockWordsDiv(props) {
@@ -26,7 +25,7 @@ function DesktopLinkBlockWordsDiv(props) {
 function DesktopLinkBlockImgDiv(props) {
   return (
     <div className="flex w-64 flex-col justify-center ">
-      <img src={props.imgSrc} className={"w-full " + props.imgClassName} />
+      <img src={props.imgSrc} className={"w-full shadow-md " + props.imgClassName} />
     </div>
   )
 }
@@ -71,7 +70,7 @@ function WithinMobileLinkBlock(props) {
       <animated.div style={opacityProps}>
         <div ref={ref} >
           <div className="py-4">
-            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm" />
+            <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm shadow-md " />
           </div>
           <div className="">
             {props.children}
