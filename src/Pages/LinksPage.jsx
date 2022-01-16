@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import comingSoon from "../static/coming_soon.png"
+import bandcampImg from "../static/bandcamp_screenie.png"
 import blogImg from "../static/sneak_img_blog.png"
 import landingImg from "../static/sneak_img_landing.png"
 import lectureImg from "../static/sneak_img_lecture (Small).png"
@@ -146,8 +147,6 @@ function OtherLinkBlock(props) {
   )
 }
 
-// i need to add images finally now lmao
-
 function LinksPage(props) {
 
   return (
@@ -162,7 +161,7 @@ function LinksPage(props) {
           <LinkBlock title="Raid" href="https://www.youtube.com/c/raidsrc" imgSrc={ytImg}>My YouTube channel, where I upload music content and other short videos. Music content includes covers, rearrangements, original compositions, and tutorials. Other short videos include school projects, expository content, guides, and cinematic TV features.
           </LinkBlock>
 
-          <LinkBlock title="Rude Custard" imgSrc={comingSoon} >My BandCamp page, where I release music officially. I play piano and drums and know my way around a DAW. Expect an eclectic blend of jazz, hip-hop, rock, VGM, and dubstep. My music is available on almost all popular music platforms (Spotify, Apple Music, YouTube Music, etc.) but I'm linking my BandCamp page because BandCamp is <span className="font-bold">simply better.</span> <span className="bg-red-400">(coming soon!)</span></LinkBlock>
+          <LinkBlock title="Rude Custard" href="https://rudecustard.bandcamp.com" imgSrc={bandcampImg} >My BandCamp page, where I release music officially. I play piano and drums and know my way around a DAW. Expect an eclectic blend of jazz, hip-hop, rock, VGM, and dubstep. My music is available on almost all popular music platforms (Spotify, Apple Music, YouTube Music, etc.) but I'm linking my BandCamp page because BandCamp is <span className="font-bold">simply better.</span></LinkBlock>
 
           <LinkBlock title="Rewrite, Rebuild, Repeat" href="http://uwp101y.raidsrc.me" imgSrc={rewriteImg}>An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects. There's a chance they'll ask you for a password if you want to gain entry. Email me for that.</LinkBlock>
 
