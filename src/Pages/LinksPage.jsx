@@ -1,17 +1,18 @@
 import React, { useEffect, useRef, useState } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
 import comingSoon from "../static/coming_soon.png"
-import bandcampImg from "../static/bandcamp_screenie.png"
+import bandcampImg from "../static/bandcamp_screenie.jpg"
 import blogImg from "../static/sneak_img_blog.png"
-import landingImg from "../static/sneak_img_landing.png"
-import lectureImg from "../static/sneak_img_lecture (Small).png"
+import landingImg from "../static/sneak_img_landing.jpg"
+import lectureImg from "../static/sneak_img_lecture (Small).jpg"
 import rewriteImg from "../static/sneak_img_rewrite_1.jpg"
-import shopImg from "../static/sneak_img_shop.png"
-import tractivityImg from "../static/sneak_img_tractivity.png"
-import virovekImg from "../static/sneak_img_virovek_1.png"
-import ytImg from "../static/sneak_img_yt.png"
+import shopImg from "../static/sneak_img_shop.jpg"
+import tractivityImg from "../static/sneak_img_tractivity.jpg"
+import virovekImg from "../static/sneak_img_virovek_1.jpeg"
+import ytImg from "../static/sneak_img_yt.jpg"
 import { useSpring, animated } from "react-spring"
 import { useMeasure } from "react-use"
+import { Helmet } from "react-helmet"
 
 function DesktopLinkBlockWordsDiv(props) {
   return (
@@ -150,7 +151,11 @@ function LinksPage(props) {
 
   return (
     <div className="links-page">
-
+      <Helmet>
+        <meta charset="utf-8" />
+        <title>Stuff I've Made</title>
+        <meta name="description" content="Stuff I've Made. Explore a showcase of projects I've worked on." />
+      </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2">
           Links to Selected Projects & Work

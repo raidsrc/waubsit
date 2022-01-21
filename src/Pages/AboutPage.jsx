@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { CenteredFullPageFlexContainer, NewTab } from '../ReusableComponents'
-import goldenGate from "../static/goldengate.jpg"
+import goldenGate from "../static/goldengate (Large).jpg"
 import eggheads from "../static/eggheads (Small).jpg"
 import virovek from "../static/virovek_front (Small).jpg"
 import rayPiano2017 from "../static/IMG_8031.MOV_snapshot_00.35_[2020.04.09_10.03.38].jpg"
-import rayDrummingMonochrome from "../static/20200913_185258-01.jpeg"
+import rayDrummingMonochrome from "../static/me_drumming.jpeg"
 import stinkyTofu from "../static/stinky_tofu_lol.jpg"
+import { Helmet } from "react-helmet"
 
 function AboutPage(props) {
   const [nameStage, setNameStage] = useState("empty")
@@ -117,6 +118,11 @@ function AboutPage(props) {
       {
         // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY 
       }
+      <Helmet>
+        <meta charset="utf-8" />
+        <title>About Me</title>
+        <meta name="description" content="About Me. Learn a little about who I am, where I'm from, and what I'm like." />
+      </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2 text-white">
           About Me
