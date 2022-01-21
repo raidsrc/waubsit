@@ -1684,24 +1684,12 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-top: 11rem;
   }
 
-  .md\:block{
-    display: block;
-  }
-
   .md\:grid{
     display: grid;
   }
 
-  .md\:hidden{
-    display: none;
-  }
-
   .md\:h-20{
     height: 5rem;
-  }
-
-  .md\:h-60vh{
-    height: 60vh;
   }
 
   .md\:h-144{
@@ -1738,16 +1726,6 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .md\:object-cover{
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .md\:object-center{
-    -o-object-position: center;
-       object-position: center;
-  }
-
   .md\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1766,11 +1744,6 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
   .md\:py-16{
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .md\:py-0{
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .md\:pt-0{
@@ -1820,14 +1793,6 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-top: 1.5rem;
   }
 
-  .lg\:block{
-    display: block;
-  }
-
-  .lg\:hidden{
-    display: none;
-  }
-
   .lg\:h-20{
     height: 5rem;
   }
@@ -1848,16 +1813,6 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     --tw-space-x-reverse: 0;
     margin-right: calc(3rem * var(--tw-space-x-reverse));
     margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:object-cover{
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .lg\:object-center{
-    -o-object-position: center;
-       object-position: center;
   }
 
   .lg\:px-16{

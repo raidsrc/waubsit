@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "serve": "vite preview --host"
+    "serve": "vite preview --host",
+    "tailwindjit": "npx tailwindcss -i ./src/css/index.css -o ./src/css/index_compiled.css --watch"
   },
   "dependencies": {
     "react": "^17.0.0",
