@@ -9,6 +9,7 @@ function ContactPage(props) {
         <meta charSet="utf-8" />
         <title>Contact Me</title>
         <meta name="description" content="Contact Page. Find out how you can contact me." />
+        <meta name="robots" content="noindex" />
       </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2 text-white ">

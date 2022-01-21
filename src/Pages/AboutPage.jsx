@@ -122,6 +122,7 @@ function AboutPage(props) {
         <meta charset="utf-8" />
         <title>About Me</title>
         <meta name="description" content="About Me. Learn a little about who I am, where I'm from, and what I'm like." />
+        <meta name="robots" content="noindex" />
       </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2 text-white">

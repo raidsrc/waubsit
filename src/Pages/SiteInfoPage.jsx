@@ -9,6 +9,7 @@ function SiteInfoPage(props) {
         <meta charset="utf-8" />
         <title>Site Info</title>
         <meta name="description" content="Site Info. Learn about how and why I built this website." />
+        <meta name="robots" content="noindex" />
       </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="text-white mb-5 px-2">

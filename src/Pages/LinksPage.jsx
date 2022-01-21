@@ -155,6 +155,7 @@ function LinksPage(props) {
         <meta charset="utf-8" />
         <title>Stuff I've Made</title>
         <meta name="description" content="Stuff I've Made. Explore a showcase of projects I've worked on." />
+        <meta name="robots" content="noindex" />
       </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2">
