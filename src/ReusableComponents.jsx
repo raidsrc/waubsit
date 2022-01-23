@@ -81,7 +81,7 @@ function TheNavButtonsAllTogether(props) {
         About
       </NavButton>
       <a className="navbutton-rightsidemenu-style smmd:navbutton-style" target="_blank" rel="noreferrer noopener"
-        href="https://raidsrc.github.io/static/Davis_Bike_Map.pdf">
+        href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf">
         Résumé
       </a>
       <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
