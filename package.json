@@ -4,7 +4,8 @@
     "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview --host",
-    "tailwindjit": "npx tailwindcss -i ./src/css/index.css -o ./src/css/index_compiled.css --watch"
+    "tailwindjit": "npx tailwindcss -i ./src/css/index.css -o ./src/css/index_compiled.css --watch",
+    "minify": "node minify_using_esbuild.js"
   },
   "dependencies": {
     "nanoid": "^3.2.0",
