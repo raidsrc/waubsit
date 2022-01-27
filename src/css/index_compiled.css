@@ -1502,6 +1502,10 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     height: 32rem;
   }
 
+  .sm\:h-70vh{
+    height: 70vh;
+  }
+
   .sm\:w-6\/12{
     width: 50%;
   }

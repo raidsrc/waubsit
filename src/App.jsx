@@ -13,13 +13,12 @@ import SiteInfoPage from './Pages/SiteInfoPage.jsx'
 function App() {
   useEffect(() => {
     window.history.scrollRestoration = "manual"
-    setTimeout(() => alert("Website construction in progress. Pardon my dust.", 420))
+    // setTimeout(() => alert("Website construction in progress. Pardon my dust.", 420))
   }, []) // since the dependencies array is empty, this effect will only be activated and cleaned up once. after this component mounts aka after app begins and then when component unmounts aka when app is closed. 
 
   const routes = [
     { path: '/home', name: 'Home', Component: HomePage },
     { path: '/about', name: 'About', Component: AboutPage },
-    { path: '/resume', name: 'Resume', Component: ResumePage },
     { path: '/contact', name: 'Contact', Component: ContactPage },
     { path: '/links', name: 'More Stuff', Component: LinksPage },
     { path: '/siteinfo', name: 'Site Info', Component: SiteInfoPage },

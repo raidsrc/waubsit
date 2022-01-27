@@ -176,7 +176,7 @@ function LinksPage(props) {
 
           <LinkBlock title="The Slippi Sampler" imgSrc={comingSoon} >A mechanism I engineered for transforming Super Smash Bros. Melee inputs into music. This mechanism works with any valid Slippi replay file (.slp) and outputs MIDI notes with millisecond-perfect temporal precision. <span className="bg-red-400">(coming soon!)</span></LinkBlock>
 
-          <LinkBlock title="Virovek" href="https://virovek.com" imgSrc={virovekImg}>The website for Virovek, my family's Hayward-based gene therapy company. I played a major role in debugging the website's stylesheets. It's built on WordPress, which I'm not very familiar with, but I managed to work my magic all the same.</LinkBlock>
+          <LinkBlock title="Virovek" href="https://virovek.com" imgSrc={virovekImg}>The website for Virovek, my family's Hayward-based gene therapy company. I played a major role in debugging the website's stylesheets. It's built on WordPress, which I had no prior experience with, but I managed to work my magic all the same.</LinkBlock>
 
           <LinkBlock title="Professor Raid Schools the Masses on Smash Bros." href="https://www.youtube.com/watch?v=supYVmjGi50" imgSrc={lectureImg}>A lecture on Super Smash Bros. Melee that I presented for <span className="italic">CTS 172 - Metagaming</span>, a course all about "examining the community histories and material practices that have evolved alongside videogames as a mass medium, cultural commodity, and digital technology." This class just might be one of the most enjoyable university courses I've ever taken.</LinkBlock>
           {/* <p className="links-paragraph">A webpage I designed on my own, just for fun. I wanted to try my hand at designing a sleek, beautiful, majestic, responsive, super sick cool-ass webpage. This is the result of that work.</p> */}
@@ -191,7 +191,7 @@ function LinksPage(props) {
           <OtherLinkBlock title="raidsrc.me Landing Page" href="https://landing.raidsrc.me" imgSrc={landingImg}>This page is often the first point of contact for random people who are searching for me on the internet. I usually put a link to this page somewhere on my profile on whatever site/platform I'm on. It's a sparse webpage with a list of links to where people can find me. It's also got a brief "About Me" section. Why not click and check it out for yourself?
           </OtherLinkBlock>
 
-          <OtherLinkBlock title="Blog" href="https://blog.raidsrc.me" imgSrc={blogImg}>The obligatory "blog section" of my website, because everyone has a blog. I don't really plan on posting here very much. But setting this subdomain up gave me an excuse to learn to use Hugo and deploy a statically-generated blog.
+          <OtherLinkBlock title="Blog" href="https://blog.raidsrc.me" imgSrc={blogImg}>The obligatory "blog section" of my website, because everyone has a blog. I don't really plan on posting here very much. But setting this subdomain up gave me an excuse to learn the basics of Hugo and deploy a statically-generated blog.
           </OtherLinkBlock>
 
           {/* <p className="links-paragraph text-black">

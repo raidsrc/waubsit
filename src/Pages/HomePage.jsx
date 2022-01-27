@@ -37,7 +37,9 @@ function HomePage(props) {
       </Helmet>
       <div className="mb-20">
         <div className="w-full py-12 md:py-16 md:pt-0 lg:py-0 flex justify-center">
-          <img className="h-112 w-full object-cover sm:h-50vh smmd:hidden" src={rayShiprock} />
+          {/* the small one */}
+          <img className="h-112 w-full object-cover sm:h-70vh smmd:hidden" src={rayShiprock} />
+          {/* the big one */}
           <img className="hidden w-screen h-screen smmd:block smmd:object-cover smmd:object-center max-h-h-wqhd w-wqhd:hidden " src={rayShiprock} />
         </div>
         <HomepageCenteredFullPageFlexContainer>
