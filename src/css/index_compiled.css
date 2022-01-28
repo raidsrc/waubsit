@@ -771,12 +771,12 @@ h2 {
 
 .links-paragraph:nth-child(odd){
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .links-paragraph:nth-child(even){
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px){
@@ -1034,6 +1034,12 @@ h2 {
   width: 50%;
 }
 
+.min-w-max{
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
 .max-w-yuge{
   max-width: 1700px;
 }
@@ -1080,6 +1086,10 @@ h2 {
 
 .flex-col{
   flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
 }
 
 .items-center{
@@ -1465,6 +1475,12 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+@media (min-width: 360px){
+  .puny-ass-screen\:flex-nowrap{
+    flex-wrap: nowrap;
+  }
+}
+
 @media (min-width: 440px){
   .tiny-screen\:visible{
     visibility: visible;
@@ -1494,16 +1510,12 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
 }
 
 @media (min-width: 600px){
-  .sm\:h-50vh{
-    height: 50vh;
+  .sm\:h-70vh{
+    height: 70vh;
   }
 
   .sm\:h-128{
     height: 32rem;
-  }
-
-  .sm\:h-70vh{
-    height: 70vh;
   }
 
   .sm\:w-6\/12{

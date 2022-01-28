@@ -158,7 +158,7 @@ function LinksPage(props) {
         <meta name="robots" content="noindex" />
       </Helmet>
       <CenteredFullPageFlexContainer>
-        <h1 className="mb-5 px-2">
+        <h1 className="mb-5 px-2 text-white">
           Links to Selected Projects & Work
         </h1>
 
@@ -184,7 +184,7 @@ function LinksPage(props) {
             // include uwp101y, tractivity, shop til you drop, slippi sampler, a cool sick design showcase, virovek.com
           }
         </div>
-        <h1 className="mt-5 mb-5 px-2">
+        <h1 className="mt-5 mb-5 px-2 text-white">
           Other Links to Other Stuff
         </h1>
         <div className="mb-10 md:mb-20">

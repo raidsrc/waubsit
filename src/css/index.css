@@ -75,7 +75,7 @@
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
   }
   .links-paragraph {
-    @apply about-me-paragraph pt-2 md:pt-4 even:text-black odd:text-white
+    @apply about-me-paragraph pt-2 md:pt-4 even:text-white odd:text-black
   }
   .other-links-paragraph {
     @apply links-paragraph
