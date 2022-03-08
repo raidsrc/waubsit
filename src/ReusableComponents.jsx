@@ -16,7 +16,7 @@ function Navbar(props) {
         <RightSideMenuThatAppearsWhenYouClickTheHamburger showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
 
         <TheNavButtonsAllTogether setShowRightSideMenu={setShowRightSideMenu}
-          className="hidden flex-row justify-around space-x-4 smmd:flex tiny-screen:visible smmd:space-x-3 md:space-x-6 lg:space-x-12 xl:space-x-16" />
+          className="hidden flex-row justify-around space-x-4 smmd:flex tiny-screen:visible smmd:space-x-4 md:space-x-4 lg:space-x-12" />
       </div>
     </nav>
   )
@@ -46,7 +46,7 @@ function ClickableRaidsrcIcon(props) {
     theClass += " disabled-link"
   }
   return ( 
-    <div className="w-12">
+    <div className="w-9">
       <NavLink activeClassName="opacity-40" className={theClass} onClick={() => {setShowRightSideMenu(false)}} to={props.to}>
         <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50 drop-shadow-raid-icon" />
       </NavLink>
