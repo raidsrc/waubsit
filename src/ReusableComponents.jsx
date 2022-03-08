@@ -9,7 +9,7 @@ function Navbar(props) {
   const [showRightSideMenu, setShowRightSideMenu] = useState(false)
   return (
     <nav className="bg-gray-800 shadow-xl flex fixed justify-center w-full z-50">
-      <div className="flex flex-row text-white tracking-wide top-0 w-full justify-between py-3 px-5 items-center max-w-screen-xl tiny-screen:px-7 sm:px-10 smmd:px-10 md:px-12 md:text-lg md:h-20 lg:px-16 lg:h-20">
+      <div className="flex flex-row text-white tracking-wide top-0 w-full justify-between py-3 px-5 items-center max-w-screen-xl tiny-screen:px-7 sm:px-10 smmd:px-10 md:px-12 md:text-lg lg:px-16 h-min">
         <ClickableRaidsrcIcon to="/home" setShowRightSideMenu={setShowRightSideMenu} />
         <HamburgerMenu className="smmd:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
 

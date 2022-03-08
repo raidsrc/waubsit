@@ -978,6 +978,16 @@ h2 {
   height: 28rem;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
+.h-min{
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
 .max-h-h-wqhd{
   max-height: 1440px;
 }
