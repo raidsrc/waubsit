@@ -3,9 +3,38 @@ import { useSpring } from "react-spring"
 import rayShiprock from "../static/ray atop shiprock.jpg"
 import bananas2 from "../static/bananas2.jpg"
 // import rayShiprockWide from "../static/ray atop shiprock wide.jpeg"
-import { HomepageCenteredFullPageFlexContainer, NewTab, scrollToTop } from '../ReusableComponents'
+import { HomepageCenteredFullPageFlexContainer } from '../ReusableComponents'
 import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet"
+
+function HomePageImageGallery(props) {
+  return (
+    <div className="w-full flex flex-col md:flex-row justify-center items-center pt-24 pb-8 ">
+
+      {/* mobile view */}
+      <div className="md:hidden">
+        <div className="mb-6 w-full">
+          <img className="shadow-md w-full max-w-full" src={rayShiprock} />
+        </div>
+        <div className="flex flex-row justify-between space-x-4">
+          <img src={bananas2} className="w-2/4 object-contain shadow-md" />
+          <img src={bananas2} className="w-2/4 object-contain shadow-md" />
+        </div>
+      </div>
+
+      {/* tablet/desktop view */}
+      <div className="hidden md:flex w-full justify-between">
+        <div className="h-96 lg:h-128 w-8/12">
+          <img className="shadow-md w-full h-full object-cover object-center" src={rayShiprock} />
+        </div>
+        <div className="flex flex-col items-end justify-between w-3/12">
+          <div className="w-full"><img src={bananas2} className="w-full shadow-md" /></div>
+          <div className="w-full"><img src={bananas2} className="w-full shadow-md" /></div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function HomePage(props) {
   const [reverse, setReverse] = useState(false)
@@ -38,38 +67,18 @@ function HomePage(props) {
         <meta name="description" content="The personal website belonging to, built by, designed by, deployed by, and maintained by: raidsrc." />
       </Helmet>
       <div className="mb-20">
-        <div className="flex justify-center">
-          <div className="w-full flex flex-col md:flex-row justify-center items-center p-10 pt-24 lg:px-20 max-w-6xl">
 
-            <div className="mb-6 md:mb-0 md:h-96 w-full md:w-8/12">
-              <img className="shadow-md w-full max-w-full md:h-full md:object-cover md:object-center" src={rayShiprock} />
-            </div>
-
-            {/* this one shows smaller than medium */}
-            <div className="flex flex-row justify-between md:hidden w-full space-x-4">
-              <img src={bananas2} className="w-2/4 object-contain shadow-md" />
-              <img src={bananas2} className="w-2/4 object-contain shadow-md" />
-            </div>
-            {/* this one shows when larger than medium */}
-            <div className="hidden md:flex flex-col items-end justify-between h-96 md:w-4/12 lg:w-3/12 md:max-w-sm lg:max-w-md pl-10 lg:pl-16">
-              <img src={bananas2} className="w-full md:w-56 lg:w-72 object-contain shadow-md" />
-              <img src={bananas2} className="w-full md:w-56 lg:w-72 object-contain shadow-md" />
-            </div>
-
-          </div>
-        </div>
 
         <HomepageCenteredFullPageFlexContainer>
+          <HomePageImageGallery />
           <img className="hidden w-wqhd:block object-cover object-center w-full my-20 shadow-lg " src={rayShiprock} />
           {/* <animated.div style={animatedStyles}>
                    <span className="text-2xl">This is the Home Page!!!!!!! !!!!!!!!!!!!! !!!!!!!!!! !!!!!!!!!! !!!!!!!</span>
                 </animated.div> */}
           <h1 className="text-xl sm:text-2xl 2xl:text-3xl text-white mb-5">
-            <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">R</span>aymond Louis Chen is a molecular biologist, computer scientist, and musician from Oakland, CA.
+            <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">R</span>aymond Louis Chen is a molecular biologist, computer scientist, and musician from Oakland, California.
           </h1>
-          <p className="homepage-paragraph text-black">
-            asdfasdfasdfasdfasdfasdf. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, modi dicta suscipit eligendi consequatur recusandae repudiandae pariatur quaerat sunt maiores temporibus quae veniam totam inventore illo voluptatibus harum error cupiditate.
-          </p>
+          {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
           <p className="homepage-paragraph">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis ab velit nisi illum facere quaerat quod officiis similique ipsum sunt natus, accusantium nostrum aliquid excepturi dicta consequatur iure cumque quas.
           </p>
