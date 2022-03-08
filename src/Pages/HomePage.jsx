@@ -80,7 +80,7 @@ function HomePage(props) {
         </HomepageCenteredFullPageFlexContainer>
         <HomepageCenteredFullPageFlexContainer className="bg-gray-500 pt-10 lg:pt-0">
           <div className="text-white w-full mb-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium atque cumque suscipit reiciendis ea tempore adipisci perspiciatis vitae itaque error excepturi aspernatur quia soluta ad nostrum, eos quas delectus laborum corporis illo perferendis vero. Nemo dolorum accusamus explicabo ratione assumenda fugiat temporibus saepe. Sed sit blanditiis perspiciatis facilis, nulla rerum? Repudiandae placeat, earum a, tenetur perferendis veritatis expedita quia incidunt ex officiis illum eum nobis laboriosam exercitationem numquam at iure eos, eius asperiores esse aut ipsum nulla. Magnam, nobis ex. Dolore id vero, accusamus dolores inventore saepe sed. Nobis hic pariatur perferendis quo vel natus quae, autem rem explicabo est.
+          He is currently seeking to gain experience studying, working in, living in, and contributing to all three of those fields.
           </div>
         </HomepageCenteredFullPageFlexContainer>
         <HomepageCenteredFullPageFlexContainer>
@@ -91,10 +91,10 @@ function HomePage(props) {
                 </animated.div> */}
           {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
           <p className="homepage-paragraph">
-            He seeks to
+            Those interested can<a href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="navbutton-rightsidemenu-style">find his uncut, unedited resume here.</a>
           </p>
           <p className="homepage-paragraph ">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non animi quod repudiandae rem atque placeat doloremque, natus rerum voluptate dolores aliquam iste, ut praesentium illo velit sunt cum? Aut molestias quis officiis optio laborum, maiores accusantium itaque ipsam cum. Officiis sunt beatae dolor! Labore voluptatum nobis voluptates laborum laudantium repellendus?
+            
           </p>
 
 

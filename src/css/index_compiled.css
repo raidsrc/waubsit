@@ -721,6 +721,28 @@ h2 {
   }
 }
 
+.blue-n-purple-link{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.blue-n-purple-link:visited{
+  --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity));
+}
+
+.blue-n-purple-link:hover{
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.blue-n-purple-link:active{
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138 / var(--tw-text-opacity));
+}
+
 .links-paragraph{
   grid-column-start: 1;
   padding-bottom: 1rem;
