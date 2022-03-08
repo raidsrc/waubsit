@@ -926,6 +926,10 @@ h2 {
   margin-bottom: 5rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -944,6 +948,26 @@ h2 {
 
 .mt-28{
   margin-top: 7rem;
+}
+
+.mt-24{
+  margin-top: 6rem;
+}
+
+.mb-24{
+  margin-bottom: 6rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 
 .inline-block{
@@ -966,6 +990,12 @@ h2 {
   display: none;
 }
 
+.h-min{
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
 .h-screen{
   height: 100vh;
 }
@@ -974,22 +1004,42 @@ h2 {
   height: 15rem;
 }
 
+.h-96{
+  height: 24rem;
+}
+
 .h-112{
   height: 28rem;
 }
 
-.h-10{
-  height: 2.5rem;
+.h-48{
+  height: 12rem;
 }
 
-.h-min{
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+.h-64{
+  height: 16rem;
 }
 
-.max-h-h-wqhd{
-  max-height: 1440px;
+.h-72{
+  height: 18rem;
+}
+
+.h-auto{
+  height: auto;
+}
+
+.h-max{
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.max-h-96{
+  max-height: 24rem;
 }
 
 .w-full{
@@ -1024,6 +1074,10 @@ h2 {
   width: 900px;
 }
 
+.w-3\/4{
+  width: 75%;
+}
+
 .w-9\/12{
   width: 75%;
 }
@@ -1042,6 +1096,54 @@ h2 {
 
 .w-2\/4{
   width: 50%;
+}
+
+.w-5\/6{
+  width: 83.333333%;
+}
+
+.w-60{
+  width: 15rem;
+}
+
+.w-1\/3{
+  width: 33.333333%;
+}
+
+.w-1\/12{
+  width: 8.333333%;
+}
+
+.w-4\/12{
+  width: 33.333333%;
+}
+
+.w-auto{
+  width: auto;
+}
+
+.w-7\/12{
+  width: 58.333333%;
+}
+
+.w-1\/6{
+  width: 16.666667%;
+}
+
+.w-min{
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.w-fit{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-96{
+  width: 24rem;
 }
 
 .min-w-max{
@@ -1066,6 +1168,22 @@ h2 {
 
 .max-w-2xs{
   max-width: 280px;
+}
+
+.max-w-md{
+  max-width: 28rem;
+}
+
+.max-w-full{
+  max-width: 100%;
+}
+
+.max-w-5xl{
+  max-width: 64rem;
+}
+
+.max-w-6xl{
+  max-width: 72rem;
 }
 
 .transform{
@@ -1104,6 +1222,10 @@ h2 {
   flex-wrap: wrap;
 }
 
+.items-end{
+  align-items: flex-end;
+}
+
 .items-center{
   align-items: center;
 }
@@ -1134,6 +1256,12 @@ h2 {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden{
@@ -1196,6 +1324,11 @@ h2 {
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1208,6 +1341,18 @@ h2 {
 
 .p-5{
   padding: 1.25rem;
+}
+
+.p-32{
+  padding: 8rem;
+}
+
+.p-10{
+  padding: 2.5rem;
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .py-3{
@@ -1255,11 +1400,6 @@ h2 {
   padding-right: 1rem;
 }
 
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1270,8 +1410,34 @@ h2 {
   padding-right: 1.5rem;
 }
 
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .pt-4{
   padding-top: 1rem;
+}
+
+.pt-20{
+  padding-top: 5rem;
+}
+
+.pt-24{
+  padding-top: 6rem;
+}
+
+.pl-8{
+  padding-left: 2rem;
+}
+
+.pl-10{
+  padding-left: 2.5rem;
 }
 
 .text-left{
@@ -1280,6 +1446,10 @@ h2 {
 
 .text-center{
   text-align: center;
+}
+
+.align-middle{
+  vertical-align: middle;
 }
 
 .font-serif{
@@ -1621,10 +1791,6 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     text-shadow: 1px 1px rgba(255, 0, 0, 0.3);
   }
 
-  .smmd\:block{
-    display: block;
-  }
-
   .smmd\:inline-block{
     display: inline-block;
   }
@@ -1641,16 +1807,6 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .smmd\:object-cover{
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .smmd\:object-center{
-    -o-object-position: center;
-       object-position: center;
   }
 
   .smmd\:px-10{
@@ -1712,16 +1868,28 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-top: 11rem;
   }
 
+  .md\:flex{
+    display: flex;
+  }
+
   .md\:grid{
     display: grid;
   }
 
-  .md\:h-20{
-    height: 5rem;
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-144{
     height: 36rem;
+  }
+
+  .md\:h-96{
+    height: 24rem;
+  }
+
+  .md\:h-full{
+    height: 100%;
   }
 
   .md\:w-11\/12{
@@ -1730,6 +1898,42 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
 
   .md\:w-8\/12{
     width: 66.666667%;
+  }
+
+  .md\:w-3\/4{
+    width: 75%;
+  }
+
+  .md\:w-2\/4{
+    width: 50%;
+  }
+
+  .md\:w-4\/12{
+    width: 33.333333%;
+  }
+
+  .md\:w-3\/12{
+    width: 25%;
+  }
+
+  .md\:w-9\/12{
+    width: 75%;
+  }
+
+  .md\:w-96{
+    width: 24rem;
+  }
+
+  .md\:w-72{
+    width: 18rem;
+  }
+
+  .md\:w-56{
+    width: 14rem;
+  }
+
+  .md\:max-w-sm{
+    max-width: 24rem;
   }
 
   .md\:grid-cols-2{
@@ -1748,10 +1952,29 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:object-cover{
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .md\:object-fill{
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+
+  .md\:object-center{
+    -o-object-position: center;
+       object-position: center;
   }
 
   .md\:px-12{
@@ -1767,15 +1990,6 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
   .md\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .md\:py-16{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .md\:pt-0{
-    padding-top: 0px;
   }
 
   .md\:text-right{
@@ -1821,16 +2035,32 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-top: 1.5rem;
   }
 
-  .lg\:h-20{
-    height: 5rem;
-  }
-
   .lg\:h-160{
     height: 40rem;
   }
 
   .lg\:w-6\/12{
     width: 50%;
+  }
+
+  .lg\:w-9\/12{
+    width: 75%;
+  }
+
+  .lg\:w-10\/12{
+    width: 83.333333%;
+  }
+
+  .lg\:w-3\/12{
+    width: 25%;
+  }
+
+  .lg\:w-72{
+    width: 18rem;
+  }
+
+  .lg\:max-w-md{
+    max-width: 28rem;
   }
 
   .lg\:grid-cols-5{
@@ -1853,14 +2083,26 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     padding-bottom: 0.5rem;
   }
 
-  .lg\:py-0{
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
   .lg\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .lg\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .lg\:pl-0{
+    padding-left: 0px;
+  }
+
+  .lg\:pl-6{
+    padding-left: 1.5rem;
+  }
+
+  .lg\:pl-16{
+    padding-left: 4rem;
   }
 
   .lg\:text-3xl{
@@ -1924,9 +2166,5 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
 @media (min-width: 2560px){
   .w-wqhd\:block{
     display: block;
-  }
-
-  .w-wqhd\:hidden{
-    display: none;
   }
 }

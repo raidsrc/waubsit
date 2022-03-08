@@ -80,10 +80,10 @@ function TheNavButtonsAllTogether(props) {
         to="/about" setShowRightSideMenu={props.setShowRightSideMenu}>
         About
       </NavButton>
-      <a className="navbutton-rightsidemenu-style smmd:navbutton-style" target="_blank" rel="noreferrer noopener"
+      {/* <a className="navbutton-rightsidemenu-style smmd:navbutton-style" target="_blank" rel="noreferrer noopener"
         href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf">
         Résumé
-      </a>
+      </a> */}
       <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
         to="/contact" setShowRightSideMenu={props.setShowRightSideMenu}>
         Contact
@@ -92,10 +92,10 @@ function TheNavButtonsAllTogether(props) {
         to="/links" setShowRightSideMenu={props.setShowRightSideMenu}>
         Stuff I've Made
       </NavButton>
-      <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
+      {/* <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
         to="/siteinfo" setShowRightSideMenu={props.setShowRightSideMenu}>
         Site Info
-      </NavButton>
+      </NavButton> */}
     </div>
   )
 }
