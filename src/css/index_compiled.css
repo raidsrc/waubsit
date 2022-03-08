@@ -898,6 +898,11 @@ h2 {
   margin-bottom: 5rem;
 }
 
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mt-14{
   margin-top: 3.5rem;
 }
@@ -970,6 +975,14 @@ h2 {
   margin-top: 5rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-40{
+  margin-top: 10rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1022,6 +1035,14 @@ h2 {
 
 .h-full{
   height: 100%;
+}
+
+.h-48{
+  height: 12rem;
+}
+
+.h-44{
+  height: 11rem;
 }
 
 .w-full{
@@ -1078,6 +1099,34 @@ h2 {
 
 .w-5\/12{
   width: 41.666667%;
+}
+
+.w-28{
+  width: 7rem;
+}
+
+.w-52{
+  width: 13rem;
+}
+
+.w-60{
+  width: 15rem;
+}
+
+.w-4\/12{
+  width: 33.333333%;
+}
+
+.w-56{
+  width: 14rem;
+}
+
+.w-72{
+  width: 18rem;
+}
+
+.w-80{
+  width: 20rem;
 }
 
 .min-w-max{
@@ -1255,6 +1304,49 @@ h2 {
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
+.bg-gray-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 216 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 161 170 / var(--tw-bg-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
+.bg-gray-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-gray-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.bg-gray-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-50{
+  --tw-bg-opacity: 0.5;
+}
+
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
@@ -1369,6 +1461,14 @@ h2 {
   padding-right: 2.5rem;
 }
 
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
+.pt-10{
+  padding-top: 2.5rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1404,6 +1504,11 @@ h2 {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold{
@@ -1629,6 +1734,10 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     width: 40%;
   }
 
+  .sm\:w-8\/12{
+    width: 66.666667%;
+  }
+
   .sm\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -1642,6 +1751,11 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
   .sm\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .sm\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -1724,6 +1838,18 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     display: none;
   }
 
+  .smmd\:w-5\/12{
+    width: 41.666667%;
+  }
+
+  .smmd\:w-6\/12{
+    width: 50%;
+  }
+
+  .smmd\:w-8\/12{
+    width: 66.666667%;
+  }
+
   .smmd\:space-x-4 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -1797,6 +1923,18 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     margin-bottom: 9rem;
   }
 
+  .md\:mb-32{
+    margin-bottom: 8rem;
+  }
+
+  .md\:mb-28{
+    margin-bottom: 7rem;
+  }
+
+  .md\:mb-60{
+    margin-bottom: 15rem;
+  }
+
   .md\:flex{
     display: flex;
   }
@@ -1831,6 +1969,14 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
 
   .md\:w-5\/12{
     width: 41.666667%;
+  }
+
+  .md\:w-64{
+    width: 16rem;
+  }
+
+  .md\:w-3\/12{
+    width: 25%;
   }
 
   .md\:grid-cols-2{
@@ -1892,6 +2038,11 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     padding-bottom: 2rem;
   }
 
+  .md\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .md\:text-right{
     text-align: right;
   }
@@ -1947,8 +2098,16 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     width: 50%;
   }
 
+  .lg\:w-5\/12{
+    width: 41.666667%;
+  }
+
   .lg\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
   }
 
   .lg\:space-x-12 > :not([hidden]) ~ :not([hidden]){
@@ -1972,8 +2131,17 @@ alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or '
     padding-bottom: 1.25rem;
   }
 
+  .lg\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .lg\:pr-12{
     padding-right: 3rem;
+  }
+
+  .lg\:pt-0{
+    padding-top: 0px;
   }
 
   .lg\:text-3xl{

@@ -65,7 +65,7 @@ function RightSideMenuThatAppearsWhenYouClickTheHamburger(props) {
   return (
     <CSSTransition in={showRightSideMenu} timeout={200} classNames="right-side-menu-transitions" unmountOnExit>
       <div className="w-screen h-screen fixed top-0 left-0" onClick={closeMenu}>
-        <div ref={menuRef} className="fixed bg-gray-700 px-1 smmd:hidden right-4 top-20 w-6/12 h-60 flex items-center justify-center">
+        <div ref={menuRef} className="fixed bg-gray-700 px-1 smmd:hidden right-4 top-20 w-6/12 h-44 flex items-center justify-center">
           <TheNavButtonsAllTogether className="flex flex-col space-y-3 text-center" setShowRightSideMenu={setShowRightSideMenu} />
         </div>
       </div>
@@ -130,7 +130,7 @@ function CenteredFullPageFlexContainer(props) {
 
 function HomepageCenteredFullPageFlexContainer(props) {
   return (
-    <div className="flex justify-center w-full">
+    <div className={"flex justify-center w-full " + props.className}>
       <div className="w-10/12 max-w-screen-xl flex flex-col justify-center mt-2 py-0 md:w-11/12 tiny-screen:mt-3 md:mt-0 lg:mt-10">
         {props.children}
       </div>
