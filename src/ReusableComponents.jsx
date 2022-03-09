@@ -5,7 +5,6 @@ import raidsrcLogoSvgUrl from "./static/raid_logo_thick_white.svg"
 import { CSSTransition } from "react-transition-group"
 
 function Navbar(props) {
-  //const [hamburgerVisible, setHamburgerVisible] = useState(false)
   const [showRightSideMenu, setShowRightSideMenu] = useState(false)
   return (
     <nav className="bg-gray-800 shadow-xl flex fixed justify-center w-full z-50">
@@ -30,11 +29,10 @@ function NavButton(props) {
     theClass += " disabled-link"
   }
   function wheneverNavButtonClicked() {
-    // scrollToTop()
     setShowRightSideMenu(false)
   }
   return (
-    <NavLink activeClassName="opacity-40" className={theClass} to={props.to} onClick={() => wheneverNavButtonClicked()}>{props.children}</NavLink>
+    <NavLink activeClassName="opacity-60" className={theClass} to={props.to} onClick={() => wheneverNavButtonClicked()}>{props.children}</NavLink>
   )
 }
 
@@ -80,10 +78,6 @@ function TheNavButtonsAllTogether(props) {
         to="/about" setShowRightSideMenu={props.setShowRightSideMenu}>
         About
       </NavButton>
-      {/* <a className="navbutton-rightsidemenu-style smmd:navbutton-style" target="_blank" rel="noreferrer noopener"
-        href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf">
-        Résumé
-      </a> */}
       <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
         to="/contact" setShowRightSideMenu={props.setShowRightSideMenu}>
         Contact
@@ -92,10 +86,6 @@ function TheNavButtonsAllTogether(props) {
         to="/links" setShowRightSideMenu={props.setShowRightSideMenu}>
         Stuff I've Made
       </NavButton>
-      {/* <NavButton className="navbutton-rightsidemenu-style smmd:navbutton-style"
-        to="/siteinfo" setShowRightSideMenu={props.setShowRightSideMenu}>
-        Site Info
-      </NavButton> */}
     </div>
   )
 }
@@ -114,10 +104,18 @@ function HamburgerMenu(props) {
 
 function CenteredFullPageFlexContainer(props) {
   return (
-    <div className={"flex justify-center w-full " + props.className}>
-      <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-14 py-7 tiny-screen:mt-16 md:mt-20 ">
+    <div className="flex justify-center w-full ">
+      <div className="w-11/12 max-w-screen-xl flex flex-col justify-center my-14 py-7 tiny-screen:my-16 md:my-20 ">
         {props.children}
       </div>
+    </div>
+  )
+}
+
+function HomepageSection(props) {
+  return (
+    <div className={"flex justify-center w-full " + props.className}>
+      {props.children}
     </div>
   )
 }
@@ -161,5 +159,5 @@ function LandingPageLinkButton(props) {
   )
 }
 
-export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, NewTab, scrollToTop, LandingPageLinkButton }
+export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageSection, NewTab, scrollToTop, LandingPageLinkButton }
 

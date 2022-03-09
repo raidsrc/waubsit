@@ -18,7 +18,8 @@ module.exports = {
       width: {
         '400px': '400px',
         '900px': '900px',
-        'huge': '10000px'
+        'huge': '10000px',
+        "": ""
       },
       height: {
         '112': '28rem',

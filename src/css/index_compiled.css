@@ -452,6 +452,34 @@ h1 {
 
 p {
   font-family: 'Open Sans', sans-serif;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 3rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+@media (min-width: 600px){
+  p{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px){
+  p{
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 1536px){
+  p{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 nav {
@@ -585,34 +613,6 @@ h2 {
 
 .about-me-paragraph{
   grid-column-start: 1;
-  padding-bottom: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 3rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-@media (min-width: 600px){
-  .about-me-paragraph{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 768px){
-  .about-me-paragraph{
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width: 1536px){
-  .about-me-paragraph{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 .about-me-grid-item{
@@ -620,46 +620,6 @@ h2 {
   padding-bottom: 0.25rem;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.homepage-paragraph{
-  grid-column-start: 1;
-  padding-bottom: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 3rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-@media (min-width: 600px){
-  .homepage-paragraph{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 768px){
-  .homepage-paragraph{
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width: 1536px){
-  .homepage-paragraph{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-.homepage-paragraph{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 0px;
-  padding-right: 0px;
-  text-align: left;
 }
 
 .about-me-img{
@@ -735,37 +695,6 @@ h2 {
 
 .links-paragraph{
   grid-column-start: 1;
-  padding-bottom: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 3rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-@media (min-width: 600px){
-  .links-paragraph{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 768px){
-  .links-paragraph{
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width: 1536px){
-  .links-paragraph{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-.links-paragraph{
   padding-top: 0.5rem;
 }
 
@@ -833,10 +762,6 @@ h2 {
   visibility: visible;
 }
 
-.invisible{
-  visibility: hidden;
-}
-
 .fixed{
   position: fixed;
 }
@@ -901,13 +826,14 @@ h2 {
   grid-row-start: 4;
 }
 
+.my-14{
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
 .my-20{
   margin-top: 5rem;
   margin-bottom: 5rem;
-}
-
-.mt-14{
-  margin-top: 3.5rem;
 }
 
 .mt-2{
@@ -930,16 +856,16 @@ h2 {
   margin-bottom: 5rem;
 }
 
-.mb-10{
-  margin-bottom: 2.5rem;
-}
-
 .mt-6{
   margin-top: 1.5rem;
 }
 
 .mb-2{
   margin-bottom: 0.5rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .mt-5{
@@ -1038,6 +964,10 @@ h2 {
 
 .w-3\/12{
   width: 25%;
+}
+
+.w-56{
+  width: 14rem;
 }
 
 .w-64{
@@ -1245,6 +1175,10 @@ h2 {
   padding: 1.25rem;
 }
 
+.p-8{
+  padding: 2rem;
+}
+
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1293,6 +1227,11 @@ h2 {
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-4{
@@ -1407,6 +1346,10 @@ h2 {
   text-underline-offset: 2px;
 }
 
+.opacity-60{
+  opacity: 0.6;
+}
+
 .opacity-40{
   opacity: 0.4;
 }
@@ -1436,14 +1379,6 @@ h2 {
 
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.transition{
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .duration-150{
@@ -1551,8 +1486,9 @@ h2 {
     visibility: visible;
   }
 
-  .tiny-screen\:mt-16{
+  .tiny-screen\:my-16{
     margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .tiny-screen\:mt-3{
@@ -1674,10 +1610,6 @@ h2 {
     text-shadow: 1px 1px rgba(255, 0, 0, 0.3);
   }
 
-  .smmd\:inline-block{
-    display: inline-block;
-  }
-
   .smmd\:flex{
     display: flex;
   }
@@ -1731,8 +1663,9 @@ h2 {
     grid-row-start: 6;
   }
 
-  .md\:mt-20{
+  .md\:my-20{
     margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   .md\:mt-0{
@@ -1757,6 +1690,10 @@ h2 {
 
   .md\:mt-44{
     margin-top: 11rem;
+  }
+
+  .md\:inline-block{
+    display: inline-block;
   }
 
   .md\:flex{
@@ -1838,6 +1775,11 @@ h2 {
 
   .md\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-xl{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
@@ -1923,10 +1865,6 @@ h2 {
 
   .lg\:pr-12{
     padding-right: 3rem;
-  }
-
-  .lg\:pt-0{
-    padding-top: 0px;
   }
 
   .lg\:text-3xl{

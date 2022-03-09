@@ -108,7 +108,7 @@ function LinkBlock(props) {
     <p className="links-paragraph ">
 
       {/* this NewTab component is only visible on desktop */}
-      <NewTab className="no-underline hidden smmd:inline-block " href={props.href}>
+      <NewTab className="no-underline hidden md:inline-block " href={props.href}>
         <div className="links-page-link-container-div">
           <DesktopLinkBlockWordsDiv title={props.title}>{props.children}</DesktopLinkBlockWordsDiv>
           <DesktopLinkBlockImgDiv imgSrc={props.imgSrc} imgClassName={props.imgClassName} />
@@ -116,7 +116,7 @@ function LinkBlock(props) {
       </NewTab>
 
       {/* whereas this div here is only visible smaller than desktop */}
-      <div className="text-lg smmd:hidden relative">
+      <div className="text-lg md:hidden relative">
         <button className="underline underline-offset-2 text-left z-30 relative" onClick={() => { setOpenUp(prev => !prev); setRotated(prev => !prev) }}>
           <div className="flex justify-start items-center">
             <animated.div style={caretRotationProps}>
@@ -131,7 +131,7 @@ function LinkBlock(props) {
         </button>
       </div>
 
-      <div className="smmd:hidden">
+      <div className="md:hidden">
         <WithinMobileLinkBlock href={props.href} imgSrc={props.imgSrc} openUp={openUp} setOpenUp={setOpenUp} contentHeight={contentHeight} setContentHeight={setContentHeight} defaultHeight={defaultHeight}>
           {props.children}
         </WithinMobileLinkBlock>
