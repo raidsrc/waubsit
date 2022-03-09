@@ -876,6 +876,10 @@ h2 {
   margin-top: 7rem;
 }
 
+.mt-24{
+  margin-top: 6rem;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -1668,6 +1672,11 @@ h2 {
     margin-bottom: 5rem;
   }
 
+  .md\:my-80{
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+  }
+
   .md\:mt-0{
     margin-top: 0px;
   }
@@ -1690,6 +1699,10 @@ h2 {
 
   .md\:mt-44{
     margin-top: 11rem;
+  }
+
+  .md\:mt-64{
+    margin-top: 16rem;
   }
 
   .md\:inline-block{
@@ -1754,6 +1767,10 @@ h2 {
     padding: 0px;
   }
 
+  .md\:p-4{
+    padding: 1rem;
+  }
+
   .md\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1809,6 +1826,16 @@ h2 {
     grid-column-end: 3;
   }
 
+  .lg\:my-80{
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+  }
+
+  .lg\:my-72{
+    margin-top: 18rem;
+    margin-bottom: 18rem;
+  }
+
   .lg\:mt-10{
     margin-top: 2.5rem;
   }
@@ -1823,6 +1850,10 @@ h2 {
 
   .lg\:h-160{
     height: 40rem;
+  }
+
+  .lg\:h-auto{
+    height: auto;
   }
 
   .lg\:w-6\/12{
@@ -1841,6 +1872,26 @@ h2 {
     --tw-space-x-reverse: 0;
     margin-right: calc(3rem * var(--tw-space-x-reverse));
     margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:p-4{
+    padding: 1rem;
+  }
+
+  .lg\:p-8{
+    padding: 2rem;
   }
 
   .lg\:px-16{
@@ -1865,6 +1916,10 @@ h2 {
 
   .lg\:pr-12{
     padding-right: 3rem;
+  }
+
+  .lg\:pr-8{
+    padding-right: 2rem;
   }
 
   .lg\:text-3xl{

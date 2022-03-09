@@ -63,7 +63,6 @@ function HomePage(props) {
   })
   return (
     <div className="homepage">
-      {/* TODO: Put resume link on homepage */}
       <Helmet>
         <meta charset="utf-8" />
         <title>raidsrc.me</title>
@@ -71,7 +70,7 @@ function HomePage(props) {
       </Helmet>
       <div className="mb-20">
         <HomepageSection className="bg-gray-600">
-          <div className="md:p-0 h-screen md:h-auto md:mt-60 md:mb-60 flex flex-col lg:flex-row justify-center items-center">
+          <div className="lg:p-4 h-screen lg:h-auto lg:my-72 flex flex-col lg:flex-row justify-center items-center lg:space-x-8">
             <img src={jazzDrummingZoomed} className="w-56 md:hidden shadow-md" />
             <img src={jazzDrumming} className="w-72 hidden md:inline-block shadow-md" />
             <div className="w-72 sm:w-8/12 lg:w-6/12 px-8 pt-10 lg:py-20">
@@ -90,9 +89,6 @@ function HomePage(props) {
           <div className="p-8">
             <HomePageImageGallery />
             <img className="hidden w-wqhd:block object-cover object-center w-full my-20 shadow-lg " src={rayShiprock} />
-            {/* <animated.div style={animatedStyles}>
-                     <span className="text-2xl">This is the Home Page!!!!!!! !!!!!!!!!!!!! !!!!!!!!!! !!!!!!!!!! !!!!!!!</span>
-                  </animated.div> */}
             {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
             <div className="text-white text-lg md:text-xl">
               Interested parties may <a href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="inline-red-bg-link">find his uncut, unedited resume here</a>.
