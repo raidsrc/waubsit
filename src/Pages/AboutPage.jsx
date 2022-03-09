@@ -116,7 +116,7 @@ function AboutPage(props) {
   return (
     <div className="about-page">
       {
-        // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY 
+        // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY. make it a list javascript react shit
       }
       <Helmet>
         <meta charset="utf-8" />
@@ -149,7 +149,7 @@ function AboutPage(props) {
               {
                 //I am a student, teacher, musician, computer programmer, biologist,
               }
-              I'm from the San Francisco Bay Area. I was born here and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
+              I was born in the San Francisco Bay Area and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
             </p>
           </div>
           <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
@@ -194,7 +194,7 @@ function AboutPage(props) {
           </div>
           <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
             <img src={rayPiano2017} className="about-me-img" />
-            <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6</span> me in 2017, performing a piano piece for a talent show. a few hundred people were there. i was playing "Showtime - Piano Refrain" from Homestuck, in case you're wondering.</span>
+            <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6</span> me in 2017, performing Homestuck's "Showtime - Piano Refrain" for a few hundred people at a talent show.</span>
           </div>
         </div>
       </CenteredFullPageFlexContainer>

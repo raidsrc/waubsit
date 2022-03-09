@@ -120,16 +120,6 @@ function HomepageSection(props) {
   )
 }
 
-// function HomepageCenteredFullPageFlexContainer(props) {
-//   return (
-//     <div className={"flex justify-center w-full " + props.className}>
-//       <div className="w-10/12 max-w-screen-xl flex flex-col justify-center mt-2 py-0 md:w-11/12 tiny-screen:mt-3 md:mt-0 lg:mt-10 ">
-//         {props.children}
-//       </div>
-//     </div>
-//   )
-// }
-
 function NewTab(props) {
   return (
     <a target="_blank" rel="noreferrer noopener" href={props.href} className={props.className + " underline hover:opacity-80 active:opacity-60"}>{props.children}</a>

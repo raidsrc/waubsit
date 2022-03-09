@@ -42,6 +42,10 @@
 
 /* the components layer is where more complex classes go. whole ass classes with a bunch of styles attached to them. @apply is used to stick existing utility classes into your newly minted component. these can be overriden with utilities.  */
 @layer components {
+  .homepage-big-main-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    @apply italic
+  }
   .navbutton-style {
     @apply w-auto border-opacity-20 px-2 hover:opacity-80 hover:border-opacity-10 active:opacity-60 active:border-opacity-5 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl;
     text-shadow: 1px 1px rgba(255, 0, 0, 0.3);

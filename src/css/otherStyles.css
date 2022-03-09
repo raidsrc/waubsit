@@ -1,3 +1,4 @@
+/* this here selector is for links you can't click because you're on the page they lead to */
 .disabled-link {
     pointer-events: none;
 }
