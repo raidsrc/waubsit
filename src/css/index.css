@@ -6,16 +6,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* these 3 following styles are only for the About Page's text box */
 .the-big-nicknames-banner {
   font-family: 'Times New Roman', Times, serif;
   /*font-family: monospace;*/
 }
-
 .selected-effect {
   background-color: black;
   color: white;
 }
-
 .not-selected {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
@@ -40,7 +39,7 @@
   }
 }
 
-/* the components layer is where more complex classes go. whole ass classes with a bunch of styles attached to them. @apply is used to stick existing utility classes into your newly minted component  */
+/* the components layer is where more complex classes go. whole ass classes with a bunch of styles attached to them. @apply is used to stick existing utility classes into your newly minted component. these can be overriden with utilities.  */
 @layer components {
   .navbutton-style {
     @apply w-auto border-opacity-20 px-2 hover:opacity-80 hover:border-opacity-10 active:opacity-60 active:border-opacity-5 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl;
@@ -89,7 +88,7 @@
 }
 
 /* custom utilities go here. i don't even know what a utility is.
-alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. make your own and put them here. */
+alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. single-purpose classes that take precedence over any other classes. make your own and put them here. */
 @layer utilities {
   .open-sans {
     font-family: 'Open Sans', sans-serif;

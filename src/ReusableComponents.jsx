@@ -45,9 +45,9 @@ function ClickableRaidsrcIcon(props) {
   if (location.pathname === props.to) {
     theClass += " disabled-link"
   }
-  return ( 
+  return (
     <div className="w-9">
-      <NavLink activeClassName="opacity-40" className={theClass} onClick={() => {setShowRightSideMenu(false)}} to={props.to}>
+      <NavLink activeClassName="opacity-40" className={theClass} onClick={() => { setShowRightSideMenu(false) }} to={props.to}>
         <img src={raidsrcLogoSvgUrl} className="filter hover:brightness-75 active:brightness-50 drop-shadow-raid-icon" />
       </NavLink>
     </div>
@@ -101,10 +101,6 @@ function TheNavButtonsAllTogether(props) {
 }
 
 function HamburgerMenu(props) {
-  {
-    // TODO: put this somewhere <a href="https://icons8.com/icon/83195/menu">Menu icon by Icons8</a> in the site info section of the site to give them credit for the hamburger icon
-    // ALSO TODO: animate the swingin out of the hamburger menu and swingin back in from the right side using react-spring 
-  }
   let showRightSideMenu = props.showRightSideMenu
   let setShowRightSideMenu = props.setShowRightSideMenu
   return (

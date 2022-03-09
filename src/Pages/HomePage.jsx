@@ -91,7 +91,7 @@ function HomePage(props) {
                 </animated.div> */}
           {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
           <p className="homepage-paragraph">
-            Those interested can<a href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="navbutton-rightsidemenu-style">find his uncut, unedited resume here.</a>
+            Interested parties may <a href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="inline-red-bg-link">find his uncut, unedited resume here</a>.
           </p>
           <p className="homepage-paragraph ">
             

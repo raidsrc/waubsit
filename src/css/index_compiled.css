@@ -721,6 +721,18 @@ h2 {
   }
 }
 
+.inline-red-bg-link {
+  text-shadow: 1px 1px rgba(255, 0, 0, 0.2);
+}
+
+.inline-red-bg-link:hover{
+  opacity: 0.8;
+}
+
+.inline-red-bg-link:active{
+  opacity: 0.6;
+}
+
 .links-paragraph{
   grid-column-start: 1;
   padding-bottom: 1rem;
@@ -1446,6 +1458,8 @@ h2 {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* these 3 following styles are only for the About Page's text box */
+
 .the-big-nicknames-banner {
   font-family: 'Times New Roman', Times, serif;
   /*font-family: monospace;*/
@@ -1464,10 +1478,10 @@ h2 {
 
 /* the base layer is where default styles go for specific html elements */
 
-/* the components layer is where more complex classes go. whole ass classes with a bunch of styles attached to them. @apply is used to stick existing utility classes into your newly minted component  */
+/* the components layer is where more complex classes go. whole ass classes with a bunch of styles attached to them. @apply is used to stick existing utility classes into your newly minted component. these can be overriden with utilities.  */
 
 /* custom utilities go here. i don't even know what a utility is.
-alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. make your own and put them here. */
+alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. single-purpose classes that take precedence over any other classes. make your own and put them here. */
 
 .hover\:border-gray-800:hover{
   --tw-border-opacity: 1;
