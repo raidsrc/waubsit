@@ -79,7 +79,7 @@ function WithinMobileLinkBlock(props) {
           </div>
           <div className="mt-6 mb-2 text-center">
             <button>
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-800 rounded-full hover:bg-red-100 duration-300 active:bg-red-200 ">
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-200 rounded-full bg-stone-500 hover:bg-stone-600 duration-300 active:bg-stone-700 ">
                 Go
               </NewTab>
             </button>
@@ -151,7 +151,7 @@ function OtherLinkBlock(props) {
 function LinksPage(props) {
 
   return (
-    <div className="links-page">
+    <div className="links-page bg-neutral-500 text-white pb-32">
       <Helmet>
         <meta charset="utf-8" />
         <title>Stuff I've Made</title>
@@ -198,7 +198,7 @@ function LinksPage(props) {
           <OtherLinkBlock title="Blog" href="https://blog.raidsrc.me" imgSrc={blogImg}>The obligatory "blog section" of my website, because everyone has a blog. I don't really plan on posting here very much. But setting this subdomain up gave me an excuse to learn the basics of Hugo and deploy a statically-generated blog.
           </OtherLinkBlock>
 
-          {/* <p className="links-paragraph text-black">
+          {/* <p className="links-paragraph">
                    A subdomain of my site that's more of an experimental design sandbox than anything else.
                    <br />raid.raidsrc.me</p> */}
         </div>

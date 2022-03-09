@@ -8,7 +8,7 @@ function Navbar(props) {
   const [showRightSideMenu, setShowRightSideMenu] = useState(false)
   return (
     <nav className="bg-gray-800 shadow-xl flex fixed justify-center w-full z-50">
-      <div className="flex flex-row text-white tracking-wide top-0 w-full justify-between py-3 px-5 items-center max-w-screen-xl tiny-screen:px-7 sm:px-10 smmd:px-10 md:px-12 md:text-lg lg:px-16 h-min">
+      <div className="flex flex-row text-white tracking-wide top-0 w-11/12 max-w-screen-w-fhd justify-between py-3 items-center md:text-lg h-min">
         <ClickableRaidsrcIcon to="/home" setShowRightSideMenu={setShowRightSideMenu} />
         <HamburgerMenu className="smmd:hidden" showRightSideMenu={showRightSideMenu} setShowRightSideMenu={setShowRightSideMenu} />
 
@@ -63,7 +63,7 @@ function RightSideMenuThatAppearsWhenYouClickTheHamburger(props) {
   return (
     <CSSTransition in={showRightSideMenu} timeout={200} classNames="right-side-menu-transitions" unmountOnExit>
       <div className="w-screen h-screen fixed top-0 left-0" onClick={closeMenu}>
-        <div ref={menuRef} className="fixed bg-gray-700 px-1 smmd:hidden right-4 top-20 w-6/12 h-44 flex items-center justify-center">
+        <div ref={menuRef} className="fixed bg-gray-700 px-1 smmd:hidden right-4 top-20 w-48 h-44 flex items-center justify-center">
           <TheNavButtonsAllTogether className="flex flex-col space-y-3 text-center" setShowRightSideMenu={setShowRightSideMenu} />
         </div>
       </div>
@@ -105,7 +105,7 @@ function HamburgerMenu(props) {
 function CenteredFullPageFlexContainer(props) {
   return (
     <div className="flex justify-center w-full ">
-      <div className="w-11/12 max-w-screen-xl flex flex-col justify-center my-14 py-7 tiny-screen:my-16 md:my-20 ">
+      <div className="w-11/12 max-w-screen-w-fhd flex flex-col justify-center my-14 py-7 tiny-screen:my-16 md:my-20 ">
         {props.children}
       </div>
     </div>

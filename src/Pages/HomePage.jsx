@@ -16,7 +16,7 @@ function HomePageImageGallery(props) {
       {/* mobile view */}
       <div className="md:hidden">
         <div className="mb-6 w-full">
-          <img className="shadow-md h-96 object-cover w-full max-w-full" src={rayShiprock} />
+          <img className="shadow-md h-80 sm:h-96 object-cover w-full max-w-full" src={rayShiprock} />
         </div>
       </div>
 
@@ -82,14 +82,14 @@ function HomePage(props) {
             <img src={jazzDrumming} className="w-72 hidden md:inline-block shadow-md" />
             <div className="w-72 sm:w-8/12 lg:w-6/12 px-8 pt-10 lg:py-20">
               <div className="homepage-big-main-text text-2xl sm:text-3xl 2xl:text-4xl text-center text-zinc-200">
-                <span className="font-semibold text-3xl md:text-4xl 2xl:text-5xl">R</span>aymond Louis Chen is a molecular biologist, computer programmer, and musician from Oakland, California.
+                <span className="font-semibold text-3xl md:text-4xl 2xl:text-5xl">R</span>aymond Louis Chen is a molecular biologist, computer programmer, musician, and educator from Oakland, California.
               </div>
             </div>
           </div>
         </HomepageSection>
         <HomepageSection className="bg-gray-500">
           <div className="text-zinc-100 text-lg md:text-xl w-9/12 md:w-8/12 text-center py-12">
-            He is currently seeking to gain experience studying, working in, living in, and contributing to all three of these fields.
+            He is currently seeking to gain experience studying, working in, living in, and contributing to all four of these fields.
           </div>
         </HomepageSection>
         <HomepageSection>
@@ -97,12 +97,13 @@ function HomePage(props) {
             <HomePageImageGallery />
           </div>
         </HomepageSection>
-        <HomepageSection className="bg-gray-400">
-          <div className="p-8">
+        <HomepageSection className="bg-gray-300">
+          <div className="p-8 w-full">
             {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
-            <div className="text-white text-lg md:text-xl mt-2 lg:mt-8 mb-20">
-              Interested parties may find his uncut, unedited resume <NewTab href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="">here.
-              </NewTab>
+            <div className="text-lg md:text-xl mt-2 lg:mt-8 pb-32">
+              <span className="text-gray-800">He designed and built this website. </span>
+              <br/><br/>
+              <span className="text-gray-900">Interested parties may find his uncut, unedited resume <NewTab href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="">here.</NewTab></span>
             </div>
           </div>
         </HomepageSection>
