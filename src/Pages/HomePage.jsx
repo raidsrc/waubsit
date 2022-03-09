@@ -1,10 +1,50 @@
 import React, { useState, useEffect } from "react"
 import { useSpring } from "react-spring"
 import rayShiprock from "../static/ray atop shiprock.jpg"
+import moraineLake from "../static/20180630_103636 (2) (Medium).jpg"
+import jazzDrumming from "../static/jazz drumming.jpg"
+import jazzDrummingZoomed from "../static/jazz drumming zoomed.jpg"
+import meOnHill from "../static/me on hill (Medium).jpeg"
 // import rayShiprockWide from "../static/ray atop shiprock wide.jpeg"
-import { HomepageCenteredFullPageFlexContainer, NewTab, scrollToTop } from '../ReusableComponents'
-import { Link } from "react-router-dom"
+import { HomepageSection, NewTab } from '../ReusableComponents'
 import { Helmet } from "react-helmet"
+
+function HomePageImageGallery(props) {
+  return (
+    <div className="w-full flex flex-col md:flex-row justify-center items-center pb-8 pt-10">
+
+      {/* mobile view */}
+      <div className="md:hidden">
+        <div className="mb-6 w-full">
+          <img className="shadow-md h-80 sm:h-96 object-cover w-full max-w-full" src={rayShiprock} />
+        </div>
+      </div>
+
+      {/* tablet/desktop view */}
+      <div className="hidden md:flex w-full justify-between">
+
+        <div className="pr-10 w-10/12">
+          <div className="w-full">
+            <img src={rayShiprock} className="shadow-md w-full h-96 xl:h-128 object-cover" />
+          </div>
+        </div>
+
+        <div className="md:block w-4/12">
+          <div className="w-full">
+            <img src={meOnHill} className="w-full h-96 xl:h-128 shadow-md object-cover" />
+          </div>
+        </div>
+
+        <div className="hidden xl:block w-3/12 pl-10">
+          <div className="w-full">
+            <img src={moraineLake} className="w-full h-96 xl:h-128 shadow-md object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  )
+}
 
 function HomePage(props) {
   const [reverse, setReverse] = useState(false)
@@ -35,31 +75,38 @@ function HomePage(props) {
         <title>raidsrc.me</title>
         <meta name="description" content="The personal website belonging to, built by, designed by, deployed by, and maintained by: raidsrc." />
       </Helmet>
-      <div className="mb-20">
-        <div className="w-full py-12 md:py-16 md:pt-0 lg:py-0 flex justify-center">
-          {/* the small one */}
-          <img className="h-112 w-full object-cover sm:h-70vh smmd:hidden" src={rayShiprock} />
-          {/* the big one */}
-          <img className="hidden w-screen h-screen smmd:block smmd:object-cover smmd:object-center max-h-h-wqhd w-wqhd:hidden " src={rayShiprock} />
-        </div>
-        <HomepageCenteredFullPageFlexContainer>
-          <img className="hidden w-wqhd:block object-cover object-center w-full my-20 shadow-lg " src={rayShiprock} />
-          {/* <animated.div style={animatedStyles}>
-                   <span className="text-2xl">This is the Home Page!!!!!!! !!!!!!!!!!!!! !!!!!!!!!! !!!!!!!!!! !!!!!!!</span>
-                </animated.div> */}
-          <h1 className="text-xl sm:text-2xl 2xl:text-3xl text-white mb-5">
-            <span className="font-semibold text-2xl sm:text-3xl 2xl:font-bold 2xl:text-4xl">H</span>ey. I'm Ray, and this is my personal website. Welcome.
-          </h1>
-          <p className="homepage-paragraph text-black">
-            Through a combination of obsessive self-teaching and university instruction, I learned a ton about web development and built this site myself during the summer of 2021 with the help of some modern web dev technology and a generous serving of elbow grease. The work was worth it. I have now carved a little space out of the Web that belongs completely to me (mostly).
-          </p>
-          <p className="homepage-paragraph">
-            Have a look around! I'm sure you'll find something worth your time. You can read through a short autobiographical exhibit about me on the <span className="inline-red-bg-link"><Link to="/about" onClick={scrollToTop}>About</Link></span> page. You can view my résumé by clicking the <span className="inline-red-bg-link"><a target="_blank" rel="noreferrer noopener" href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf">Résumé</a></span> link. If you want to know where you can contact me, head over to the <span className="inline-red-bg-link"><Link to="contact" onClick={scrollToTop}>Contact</Link></span> page. You can look at my work on the <span className="inline-red-bg-link"><Link to="links" onClick={scrollToTop}>Stuff I've Made</Link></span> page. And if you want to learn about how I built this site, check out the <span className="inline-red-bg-link"><Link to="siteinfo" onClick={scrollToTop}>Site Info</Link></span> page.
-          </p>
-          <p className="homepage-paragraph text-black">
-            Enjoy your stay.
-          </p>
-        </HomepageCenteredFullPageFlexContainer>
+      <div className="mb-0">
+        <HomepageSection className="bg-gray-600">
+          <div className="lg:p-4 h-screen lg:h-auto lg:my-72 flex flex-col lg:flex-row justify-center items-center lg:space-x-8">
+            <img src={jazzDrummingZoomed} className="w-56 md:hidden shadow-md" />
+            <img src={jazzDrumming} className="w-72 hidden md:inline-block shadow-md" />
+            <div className="w-72 sm:w-8/12 lg:w-6/12 px-8 pt-10 lg:py-20">
+              <div className="homepage-big-main-text text-2xl sm:text-3xl 2xl:text-4xl text-center text-zinc-200">
+                <span className="font-semibold text-3xl md:text-4xl 2xl:text-5xl">R</span>aymond Louis Chen is a molecular biologist, computer programmer, musician, and educator from Oakland, California.
+              </div>
+            </div>
+          </div>
+        </HomepageSection>
+        <HomepageSection className="bg-gray-500">
+          <div className="text-zinc-100 text-lg md:text-xl w-9/12 md:w-8/12 text-center py-12">
+            He is currently seeking to gain experience studying, working in, living in, and contributing to all four of these fields.
+          </div>
+        </HomepageSection>
+        <HomepageSection>
+          <div className="p-8">
+            <HomePageImageGallery />
+          </div>
+        </HomepageSection>
+        <HomepageSection className="bg-gray-300">
+          <div className="p-8 w-full">
+            {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
+            <div className="text-lg md:text-xl mt-2 lg:mt-8 pb-32">
+              <span className="text-gray-800">He designed and built this website. </span>
+              <br/><br/>
+              <span className="text-gray-900">Interested parties may find his uncut, unedited resume <NewTab href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="">here.</NewTab></span>
+            </div>
+          </div>
+        </HomepageSection>
       </div>
     </div >
   )

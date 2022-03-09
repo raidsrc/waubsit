@@ -6,16 +6,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* these 3 following styles are only for the About Page's text box */
 .the-big-nicknames-banner {
   font-family: 'Times New Roman', Times, serif;
   /*font-family: monospace;*/
 }
-
 .selected-effect {
   background-color: black;
   color: white;
 }
-
 .not-selected {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
@@ -30,6 +29,7 @@
   }
   p {
     font-family: 'Open Sans', sans-serif;
+    @apply text-white py-4 pt-12 md:pt-4 px-2 text-base sm:text-lg 2xl:text-xl
   }
   nav {
     font-family: 'Yantramanav', "Open Sans", sans-serif;
@@ -40,8 +40,12 @@
   }
 }
 
-/* the components layer is where more complex classes go. whole ass classes with a bunch of styles attached to them. @apply is used to stick existing utility classes into your newly minted component  */
+/* the components layer is where more complex classes go. whole ass classes with a bunch of styles attached to them. @apply is used to stick existing utility classes into your newly minted component. these can be overriden with utilities.  */
 @layer components {
+  .homepage-big-main-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    @apply italic
+  }
   .navbutton-style {
     @apply w-auto border-opacity-20 px-2 hover:opacity-80 hover:border-opacity-10 active:opacity-60 active:border-opacity-5 text-sm tiny-screen:text-base sm:text-lg md:text-xl xl:text-2xl;
     text-shadow: 1px 1px rgba(255, 0, 0, 0.3);
@@ -50,13 +54,10 @@
     @apply navbutton-style text-lg tiny-screen:text-xl
   }
   .about-me-paragraph {
-    @apply text-white py-4 pt-12 md:pt-4 px-2 text-base sm:text-lg 2xl:text-xl col-start-1
+    @apply  col-start-1
   }
   .about-me-grid-item {
     @apply py-1 px-4
-  }
-  .homepage-paragraph {
-    @apply about-me-paragraph py-3 px-0 text-left
   }
   .about-me-img {
     @apply shadow-lg w-11/12 tiny-screen:w-4/5 sm:w-3/5 md:w-10/12 lg:w-11/12 xl:w-10/12
@@ -75,10 +76,7 @@
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
   }
   .links-paragraph {
-    @apply about-me-paragraph pt-2 md:pt-4 even:text-white odd:text-black
-  }
-  .other-links-paragraph {
-    @apply links-paragraph
+    @apply about-me-paragraph pt-2 md:pt-4 
   }
   .links-page-link-container-div {
     @apply flex flex-row smmd:space-x-8 md:space-x-11 justify-between p-1 smmd:p-3 lg:p-6 border-gray-800 border border-opacity-0 hover:border-opacity-50 rounded-sm hover:border-karkat-blood-red duration-200 ease-out 
@@ -88,8 +86,7 @@
   }
 }
 
-/* custom utilities go here. i don't even know what a utility is.
-alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. make your own and put them here. */
+/* custom utilities go here. one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. single-purpose classes that take precedence over any other classes. make your own and put them here. */
 @layer utilities {
   .open-sans {
     font-family: 'Open Sans', sans-serif;

@@ -114,9 +114,9 @@ function AboutPage(props) {
   }
 
   return (
-    <div className="about-page">
+    <div className="about-page bg-zinc-500 pb-32">
       {
-        // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY 
+        // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY. make it a list javascript react shit
       }
       <Helmet>
         <meta charset="utf-8" />
@@ -133,13 +133,13 @@ function AboutPage(props) {
             <NameInputTypingEffectBox className="px-2 py-2 " onLoad={setTimeout(() => doNameShit(), 420)} timeToSelect={timeToSelect} />
           </div>
         </div>
-        <div className="flex flex-col lg:mt-6 justify-center grid-cols-1 grid-rows-10 mb-12 items-center lg:py-2 md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-5">
+        <div className="flex flex-col lg:mt-6 justify-center grid-cols-1 grid-rows-10 mb-12 items-center lg:py-2 md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-5  text-white">
           <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-4">
-            <p className="about-me-paragraph text-black pt-4">
-              I'm Raymond. I usually go by Ray, but people have known me by many names. Most of these names were given to me. Some of them are silly, and some I think are pretty cool. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
+            <p className="about-me-paragraph  pt-4">
+              Hey. I'm Raymond. I usually go by Ray, but people have known me by many names. Most of these names were given to me. Some of them are silly, and some I think are pretty cool. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
+          <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6 ">
             <img src={rayDrummingMonochrome} className="about-me-img" />
             <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 1</span> me, drumming. </span>
           </div>
@@ -149,20 +149,20 @@ function AboutPage(props) {
               {
                 //I am a student, teacher, musician, computer programmer, biologist,
               }
-              I'm from the San Francisco Bay Area. I was born here and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
+              I was born in the San Francisco Bay Area and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
             </p>
           </div>
           <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
             <img src={goldenGate} className="about-me-img" />
-            <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 2</span> the Golden Gate Bridge.</span>
+            <span className="about-me-img-caption "><span className="not-italic font-semibold">Fig. 2</span> the Golden Gate Bridge.</span>
           </div>
 
           <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
-            <p className="about-me-paragraph text-black">
+            <p className="about-me-paragraph ">
               Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been full-stack web development, bioinformatics, genetics, the ethics of technology, and the neuroscience of music. I'm also kind of interested in writing, editing, teaching, and activism.
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
+          <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6  ">
             <img src={eggheads} className="about-me-img" />
             <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 3</span> Egghead - Yin & Yang, outside the music building on the Davis campus. </span>
           </div>
@@ -174,11 +174,11 @@ function AboutPage(props) {
           </div>
           <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
             <img src={virovek} className="about-me-img lg:col-end-3" />
-            <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 4 </span>the front of Virovek's office.</span>
+            <span className="about-me-img-caption "><span className="not-italic font-semibold">Fig. 4 </span>the front of Virovek's office.</span>
           </div>
 
           <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
-            <p className="about-me-paragraph text-black">
+            <p className="about-me-paragraph ">
               I like Kendrick Lamar, Chinese food, ice cold spring water, and exploring the unknown. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it. I've tried a lot of mushrooms and they all suck.
             </p>
           </div>
@@ -194,7 +194,7 @@ function AboutPage(props) {
           </div>
           <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
             <img src={rayPiano2017} className="about-me-img" />
-            <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. 6</span> me in 2017, performing a piano piece for a talent show. a few hundred people were there. i was playing "Showtime - Piano Refrain" from Homestuck, in case you're wondering.</span>
+            <span className="about-me-img-caption "><span className="not-italic font-semibold">Fig. 6</span> me in 2017, performing Homestuck's "Showtime - Piano Refrain" for a few hundred people at a talent show.</span>
           </div>
         </div>
       </CenteredFullPageFlexContainer>
