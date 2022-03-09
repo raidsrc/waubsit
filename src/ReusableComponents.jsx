@@ -114,25 +114,23 @@ function HamburgerMenu(props) {
 
 function CenteredFullPageFlexContainer(props) {
   return (
-    <div className="flex justify-center w-full"
-    //style={animationProps}
-    >
-      <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-14 py-7 tiny-screen:mt-16 md:mt-20 homepage-centeredfullpageflexcontainer-style">
+    <div className={"flex justify-center w-full " + props.className}>
+      <div className="w-11/12 max-w-screen-xl flex flex-col justify-center mt-14 py-7 tiny-screen:mt-16 md:mt-20 ">
         {props.children}
       </div>
     </div>
   )
 }
 
-function HomepageCenteredFullPageFlexContainer(props) {
-  return (
-    <div className={"flex justify-center w-full " + props.className}>
-      <div className="w-10/12 max-w-screen-xl flex flex-col justify-center mt-2 py-0 md:w-11/12 tiny-screen:mt-3 md:mt-0 lg:mt-10">
-        {props.children}
-      </div>
-    </div>
-  )
-}
+// function HomepageCenteredFullPageFlexContainer(props) {
+//   return (
+//     <div className={"flex justify-center w-full " + props.className}>
+//       <div className="w-10/12 max-w-screen-xl flex flex-col justify-center mt-2 py-0 md:w-11/12 tiny-screen:mt-3 md:mt-0 lg:mt-10 ">
+//         {props.children}
+//       </div>
+//     </div>
+//   )
+// }
 
 function NewTab(props) {
   return (
@@ -141,12 +139,6 @@ function NewTab(props) {
 }
 
 function scrollToTop() {
-  // window.scroll({ 
-  //    top: 0, 
-  //    left: 0, 
-  //    //behavior: "smooth",
-  // }) // the scrolling issue goes away when the behavior property is removed or set to auto
-  // what if i try scrollBy instead of scroll? and set the amount to some massive number that will always be greater than the height of the page?
   setTimeout(() => {
     window.scrollBy({
       top: -10000,
@@ -154,9 +146,6 @@ function scrollToTop() {
       behavior: "auto",
     })
   }, 250)
-  // IT LOOKS LIKE IT FUCKING WORKS!!!!!!!!!!!!!!!!!!!!!
-  // just fucking kidding. tested again and it doesn't work. god fucking dammit. fuck. at least i'm certain it only appears in firefox and not in chrome
-  // i found a workaround. i set the scroll to be sharp (auto), not smooth, and time the scroll to occur right when the pages are invisible so the transition looks totally smooth. let's fucking go. this is the path forward. this is the way. 
 }
 
 function LandingPageLinkButton(props) {
@@ -172,5 +161,5 @@ function LandingPageLinkButton(props) {
   )
 }
 
-export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, HomepageCenteredFullPageFlexContainer, NewTab, scrollToTop, LandingPageLinkButton }
+export { Navbar, NavButton, ClickableRaidsrcIcon, CenteredFullPageFlexContainer, NewTab, scrollToTop, LandingPageLinkButton }
 
