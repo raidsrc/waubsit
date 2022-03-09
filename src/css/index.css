@@ -87,8 +87,7 @@
   }
 }
 
-/* custom utilities go here. i don't even know what a utility is.
-alright a utility is one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. single-purpose classes that take precedence over any other classes. make your own and put them here. */
+/* custom utilities go here. one of those classes that go 'bg-white' or 'space-x-4' or 'flex' or anything like that. single-purpose classes that take precedence over any other classes. make your own and put them here. */
 @layer utilities {
   .open-sans {
     font-family: 'Open Sans', sans-serif;

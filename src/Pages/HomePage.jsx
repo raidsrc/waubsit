@@ -4,7 +4,7 @@ import rayShiprock from "../static/ray atop shiprock.jpg"
 import bananas2 from "../static/bananas2.jpg"
 import meOnHill from "../static/me on hill (Medium).jpeg"
 // import rayShiprockWide from "../static/ray atop shiprock wide.jpeg"
-import { HomepageCenteredFullPageFlexContainer } from '../ReusableComponents'
+import { CenteredFullPageFlexContainer } from '../ReusableComponents'
 import { Helmet } from "react-helmet"
 
 function HomePageImageGallery(props) {
@@ -68,7 +68,7 @@ function HomePage(props) {
         <meta name="description" content="The personal website belonging to, built by, designed by, deployed by, and maintained by: raidsrc." />
       </Helmet>
       <div className="mb-20">
-        <HomepageCenteredFullPageFlexContainer className="bg-gray-600">
+        <CenteredFullPageFlexContainer className="bg-gray-600">
           <div className="md:p-0 h-screen md:h-auto md:mt-60 md:mb-60 flex flex-col lg:flex-row justify-center items-center">
             <img src={bananas2} className="w-64" />
             <div className="w-72 sm:w-8/12 lg:w-6/12 px-8 pt-10 lg:py-20">
@@ -77,13 +77,13 @@ function HomePage(props) {
               </h1>
             </div>
           </div>
-        </HomepageCenteredFullPageFlexContainer>
-        <HomepageCenteredFullPageFlexContainer className="bg-gray-500 pt-10 lg:pt-0">
+        </CenteredFullPageFlexContainer>
+        <CenteredFullPageFlexContainer className="bg-gray-500 pt-10 lg:pt-0">
           <div className="text-white w-full mb-10">
           He is currently seeking to gain experience studying, working in, living in, and contributing to all three of those fields.
           </div>
-        </HomepageCenteredFullPageFlexContainer>
-        <HomepageCenteredFullPageFlexContainer>
+        </CenteredFullPageFlexContainer>
+        <CenteredFullPageFlexContainer>
           <HomePageImageGallery />
           <img className="hidden w-wqhd:block object-cover object-center w-full my-20 shadow-lg " src={rayShiprock} />
           {/* <animated.div style={animatedStyles}>
@@ -99,7 +99,7 @@ function HomePage(props) {
 
 
 
-        </HomepageCenteredFullPageFlexContainer>
+        </CenteredFullPageFlexContainer>
       </div>
     </div >
   )
