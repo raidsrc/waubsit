@@ -70,7 +70,7 @@ function HomePage(props) {
     },
   })
   return (
-    <div className="homepage h-screen bg-gray-300">
+    <div className="homepage bg-gray-300">
       <Helmet>
         <meta charset="utf-8" />
         <title>raidsrc.me</title>
@@ -79,8 +79,8 @@ function HomePage(props) {
       <div className="mb-0">
         <HomepageSection className="bg-gray-600">
           <div className="h-screen min-h-mobile-homepage-top-section pt-12 lg:p-4 lg:min-h-fit lg:h-auto lg:my-72 flex flex-col lg:flex-row justify-center items-center lg:space-x-8 ">
-            <img src={jazzDrummingZoomed} className="w-56 md:hidden shadow-md" />
-            <img src={jazzDrumming} className="w-72 hidden md:inline-block shadow-md" />
+            <img src={jazzDrummingZoomed} className="w-64 md:hidden shadow-md" />
+            <img src={jazzDrumming} className="w-96 hidden md:inline-block shadow-md" />
             <div className="w-72 sm:w-8/12 lg:w-6/12 px-8 pt-10 lg:py-20">
               <div className="homepage-big-main-text text-2xl sm:text-3xl 2xl:text-4xl text-center text-zinc-200">
                 <span className="font-semibold text-3xl md:text-4xl 2xl:text-5xl">R</span>aymond Louis Chen is a biologist, computer programmer, musician, and educator from Oakland, California.
@@ -104,7 +104,7 @@ function HomePage(props) {
             <div className="text-lg md:text-xl mt-2 lg:mt-8 pb-32">
               <span className="text-gray-800">He designed and built this website.</span>
               <br /><br />
-              <span className="text-gray-900">Interested parties may find his uncut, unedited resume <NewTab href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="">here.</NewTab></span>
+              <span className="text-gray-900">Interested parties may find his uncut, unedited resume <NewTab href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="blue-n-purple-link">here.</NewTab></span>
             </div>
           </div>
         </HomepageSection>

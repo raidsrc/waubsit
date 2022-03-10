@@ -151,7 +151,7 @@ function OtherLinkBlock(props) {
 function ProjectsPage(props) {
   
   return (
-    <div className="links-page bg-neutral-500 text-white pb-32 h-screen">
+    <div className="links-page bg-neutral-500 text-white pb-32">
       <Helmet>
         <meta charset="utf-8" />
         <title>Projects</title>

@@ -114,7 +114,7 @@ function AboutPage(props) {
   }
 
   return (
-    <div className="about-page bg-zinc-500 pb-32 h-screen">
+    <div className="about-page bg-zinc-500 pb-32">
       {
         // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY. make it a list javascript react shit
       }
@@ -135,7 +135,7 @@ function AboutPage(props) {
         </div>
         <div className="flex flex-col lg:mt-6 justify-center grid-cols-1 grid-rows-10 mb-12 items-center lg:py-2 md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-5  text-white">
           <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-4">
-            <p className="about-me-paragraph  pt-4">
+            <p className="about-me-paragraph pt-4">
               Hey. I'm Raymond. I usually go by Ray, but people have known me by many names. Most of these names were given to me. Some of them are silly, and some I think are pretty cool. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
             </p>
           </div>

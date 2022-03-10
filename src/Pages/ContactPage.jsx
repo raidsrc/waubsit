@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet"
 function ContactPage(props) {
   
   return (
-    <div className="find-me-page text-white bg-gray-500 pb-72 h-screen">
+    <div className="find-me-page text-white bg-gray-500 pb-32">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Contact</title>
