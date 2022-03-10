@@ -89,7 +89,7 @@ function HomePage(props) {
         </HomepageSection>
         <HomepageSection className="bg-gray-500">
           <div className="text-zinc-100 text-lg md:text-xl w-9/12 md:w-8/12 text-center py-12">
-            He is currently seeking to gain experience studying, working in, living in, and contributing to all four of these fields.
+            He seeks to gain experience studying, working in, living in, and contributing to all four of these fields.
           </div>
         </HomepageSection>
         <HomepageSection>
