@@ -149,7 +149,7 @@ function OtherLinkBlock(props) {
 }
 
 function ProjectsPage(props) {
-  
+
   return (
     <div className="links-page bg-neutral-500 text-white pb-32">
       <Helmet>
@@ -167,11 +167,11 @@ function ProjectsPage(props) {
           <LinkBlock title="Protein Structure Prediction Evaluator" href="https://github.com/rsrchen/ecs129-project" imgSrc={protStrucPredic}>A program I wrote for <span className="italic">ECS 129 - Computational Structural Bioinformatics</span>. It compares the prediction of a protein's 3-D structure (i.e. as made by AlphaFold) to the protein's empirically-determined true structure using the root-mean-square deviation of the two structures' alpha carbon backbones. It also outputs some pretty plots that give you that important information at a glance. This program allows you to evaluate just how accurate a protein structure prediction really is in the matter of a split-second.
           </LinkBlock>
 
-          <LinkBlock title="Rewrite, Rebuild, Repeat" href="http://uwp101y.raidsrc.me" imgSrc={rewriteImg}>An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects. There's a chance they'll ask you for a password if you want to gain entry. Email me for that.</LinkBlock>
-
           <LinkBlock title="Tractivity" href="https://tractivity.raidsrc.me" imgSrc={tractivityImg}>A fitness-tracking web application I developed for <span className="italic">ECS 162 - Web Programming</span>. This application supports Google sign-in using OAuth 2.0, logging of past and future activity, and data visualization of recorded progress.</LinkBlock>
 
           <LinkBlock title="Shop 'Til You Drop" href="https://shop-til-you-drop.raidsrc.me" imgSrc={shopImg}>My final project for <span className="italic">ECS 162 - Web Programming</span>; a web application I developed for the exhibit <span className="italic">Education Should Be Free</span> at the Manetti Shrem Museum at the University of California, Davis. Use this web application to estimate the cost of education at various public universities in California using data drawn from the U.S. Department of Education's College Scorecard.</LinkBlock>
+
+          <LinkBlock title="Rewrite, Rebuild, Repeat" href="http://uwp101y.raidsrc.me" imgSrc={rewriteImg}>An online portfolio of essays and blog posts I wrote for <span className="italic">UWP 101Y - Advanced Composition</span>. In this body of work, I investigate the history, geography, and circumstances of two urban redevelopment schemes in the San Francisco Bay Area and examine how money, location, and collective civic action have shaped the outcomes of both projects. There's a chance they'll ask you for a password if you want to gain entry. Email me for that.</LinkBlock>
 
           <LinkBlock title="Raid" href="https://www.youtube.com/c/raidsrc" imgSrc={ytImg}>My YouTube channel, where I upload music content and other short videos. Music content includes covers, rearrangements, original compositions, and tutorials. Other short videos include school projects, expository content, guides, and cinematic TV features.
           </LinkBlock>
@@ -189,7 +189,7 @@ function ProjectsPage(props) {
           }
         </div>
         <h1 className="mt-5 mb-5 px-2 text-white">
-          Etc.
+          Etc
         </h1>
         <div className="mb-10 md:mb-20">
           <OtherLinkBlock title="raidsrc.me Landing Page" href="https://landing.raidsrc.me" imgSrc={landingImg}>This page is often the first point of contact for random people who are searching for me on the internet. I usually put a link to this page somewhere on my profile on whatever site/platform I'm on. It's a sparse webpage with a list of links to where people can find me. It's also got a brief "About Me" section. Why not click and check it out for yourself?

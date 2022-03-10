@@ -1697,6 +1697,14 @@ h2 {
     flex-direction: row;
   }
 
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .md\:justify-end{
+    justify-content: flex-end;
+  }
+
   .md\:space-x-4 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -1708,8 +1716,22 @@ h2 {
     padding-bottom: 0.75rem;
   }
 
+  .md\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .md\:py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .md\:pt-0{
     padding-top: 0px;
+  }
+
+  .md\:text-left{
+    text-align: left;
   }
 
   .md\:text-right{
@@ -1841,6 +1863,10 @@ h2 {
 
   .xl\:w-6\/12{
     width: 50%;
+  }
+
+  .xl\:w-7\/12{
+    width: 58.333333%;
   }
 
   .xl\:text-4xl{
