@@ -1302,6 +1302,14 @@ h2 {
   padding-bottom: 6rem;
 }
 
+.pb-48{
+  padding-bottom: 12rem;
+}
+
+.pb-72{
+  padding-bottom: 18rem;
+}
+
 .text-left{
   text-align: left;
 }

@@ -77,9 +77,9 @@ function WithinMobileLinkBlock(props) {
           <div className="">
             {props.children}
           </div>
-          <div className="mt-6 mb-2 text-center">
+          <div className="mt-6 mb-2 ">
             <button>
-              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-200 rounded-full bg-stone-500 hover:bg-stone-600 duration-300 active:bg-stone-700 ">
+              <NewTab href={props.href} className="no-underline hover:opacity-100 active:opacity-100 px-6 py-3 border border-gray-200 rounded-md bg-stone-500 hover:bg-stone-600 duration-300 active:bg-stone-700 ">
                 Go
               </NewTab>
             </button>
@@ -149,8 +149,9 @@ function OtherLinkBlock(props) {
 }
 
 function ProjectsPage(props) {
+  
   return (
-    <div className="links-page bg-neutral-500 text-white pb-32">
+    <div className="links-page bg-neutral-500 text-white pb-32 h-screen">
       <Helmet>
         <meta charset="utf-8" />
         <title>Projects</title>

@@ -56,6 +56,7 @@ function HomePage(props) {
       setCancel(true)
     }
   })
+  
   const animatedStyles = useSpring({
     from: { opacity: 0.5, color: "#FF69B4", },
     to: { opacity: 0.8, color: "#124563", },
@@ -69,7 +70,7 @@ function HomePage(props) {
     },
   })
   return (
-    <div className="homepage">
+    <div className="homepage h-screen bg-gray-300">
       <Helmet>
         <meta charset="utf-8" />
         <title>raidsrc.me</title>
@@ -92,7 +93,7 @@ function HomePage(props) {
             He seeks to spend his life studying, working in, and contributing to all four of these fields.
           </div>
         </HomepageSection>
-        <HomepageSection>
+        <HomepageSection className="bg-gray-450">
           <div className="p-8">
             <HomePageImageGallery />
           </div>
@@ -102,7 +103,7 @@ function HomePage(props) {
             {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
             <div className="text-lg md:text-xl mt-2 lg:mt-8 pb-32">
               <span className="text-gray-800">He designed and built this website.</span>
-              <br/><br/>
+              <br /><br />
               <span className="text-gray-900">Interested parties may find his uncut, unedited resume <NewTab href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="">here.</NewTab></span>
             </div>
           </div>

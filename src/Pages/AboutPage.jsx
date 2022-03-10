@@ -114,7 +114,7 @@ function AboutPage(props) {
   }
 
   return (
-    <div className="about-page bg-zinc-500 pb-32">
+    <div className="about-page bg-zinc-500 pb-32 h-screen">
       {
         // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY. make it a list javascript react shit
       }
@@ -126,7 +126,7 @@ function AboutPage(props) {
       </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2 text-white">
-          About 
+          About
         </h1>
         <div className="flex justify-center">
           <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-md tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl xl:mb-4 2xl:text-5xl" >
