@@ -113,16 +113,11 @@ function AboutPage(props) {
     )
   }
 
-  const aboutSections = [
-    { statement: "Hey. I'm Raymond. I usually go by Ray, but people have known me by many names. Most of these names were given to me. Some of them are silly, and some I think are pretty cool. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.", image: rayDrummingMonochrome, figureNumber: 1, caption: "me, drumming." },
-    { statement: "I was born in the San Francisco Bay Area and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.", image: goldenGate, figureNumber: 2, caption: "the Golden Gate Bridge." },
-    { statement: "Currently, I'm a senior at the University of California, Davis. I'm majoring in biochemistry and molecular biology and minoring in computer science. My favorite subjects of study so far have been computational structural bioinformatics, full-stack web development, genomics, and the neuroscience of music. I'm also kind of interested in writing, editing, teaching, and activism.", image: eggheads, figureNumber: 3, caption: "Egghead - Yin & Yang, outside the music building on the Davis campus." },
-    { statement: "After I graduate, I plan to spearhead a web and communications technology advancement initiative at <NewTab href='https://www.virovek.com'>Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. Also gonna help out with the biological manufacturing pipeline when needed. People ask me if it's reassuring, knowing that I have a place to work right out of college. And I am very grateful for this position. But honestly, I'd rather be a full-time street musician. Haha. I'll make that happen. Just you wait.", image: virovek, figureNumber: 4, caption: "" },
-    { statement: "I like Kendrick Lamar, Chinese food, ice cold spring water, and exploring the unknown. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it. I've tried a lot of mushrooms and they all suck.", image: stinkyTofu, figureNumber: 5, caption: "trying stinky tofu, a Chinese fermented tofu. it was alright, I suppose." },
-    { statement: "In my free time, I enjoy programming, lifting weights, cooking, learning new things, editing videos, and making music. I also really enjoy skiing, snowboarding, and skateboarding, even though I don't typically get to do those things very often.", image: rayPiano2017, figureNumber: 6, caption: "me in 2017, performing Homestuck's \"Showtime - Piano Refrain\" for a few hundred people at a talent show." },
-  ]
   return (
     <div className="about-page bg-zinc-500 pb-32">
+      {
+        // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY. make it a list javascript react shit
+      }
       <Helmet>
         <meta charset="utf-8" />
         <title>About</title>
@@ -138,8 +133,6 @@ function AboutPage(props) {
             <NameInputTypingEffectBox className="px-2 py-2 " onLoad={setTimeout(() => doNameShit(), 420)} timeToSelect={timeToSelect} />
           </div>
         </div>
-
-
         <div className="flex flex-col lg:mt-6 justify-center grid-cols-1 grid-rows-10 mb-12 items-center lg:py-2 md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-5  text-white">
           <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-4">
             <p className="about-me-paragraph pt-4">
@@ -153,6 +146,9 @@ function AboutPage(props) {
 
           <div className="about-me-grid-item ">
             <p className="about-me-paragraph md:text-right">
+              {
+                //I am a student, teacher, musician, computer programmer, biologist,
+              }
               I was born in the San Francisco Bay Area and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
             </p>
           </div>
@@ -201,8 +197,8 @@ function AboutPage(props) {
             <span className="about-me-img-caption "><span className="not-italic font-semibold">Fig. 6</span> me in 2017, performing Homestuck's "Showtime - Piano Refrain" for a few hundred people at a talent show.</span>
           </div>
         </div>
-      </CenteredFullPageFlexContainer >
-    </div >
+      </CenteredFullPageFlexContainer>
+    </div>
   )
 }
 
