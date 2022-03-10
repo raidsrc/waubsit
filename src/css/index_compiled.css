@@ -834,10 +834,6 @@ h2 {
   margin-top: 0.5rem;
 }
 
-.mb-20{
-  margin-bottom: 5rem;
-}
-
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -892,6 +888,10 @@ h2 {
   height: 11rem;
 }
 
+.h-80{
+  height: 20rem;
+}
+
 .h-96{
   height: 24rem;
 }
@@ -900,8 +900,8 @@ h2 {
   height: 28rem;
 }
 
-.h-80{
-  height: 20rem;
+.min-h-mobile-homepage-top-section{
+  min-height: 48rem;
 }
 
 .w-full{
@@ -920,8 +920,8 @@ h2 {
   width: 100vw;
 }
 
-.w-6\/12{
-  width: 50%;
+.w-48{
+  width: 12rem;
 }
 
 .w-6{
@@ -970,22 +970,6 @@ h2 {
 
 .w-2\/4{
   width: 50%;
-}
-
-.w-7\/12{
-  width: 58.333333%;
-}
-
-.w-24{
-  width: 6rem;
-}
-
-.w-44{
-  width: 11rem;
-}
-
-.w-48{
-  width: 12rem;
 }
 
 .min-w-max{
@@ -1104,24 +1088,14 @@ h2 {
   border-width: 1px;
 }
 
-.border-gray-800{
+.border-gray-200{
   --tw-border-opacity: 1;
-  border-color: rgb(31 41 55 / var(--tw-border-opacity));
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .border-red-800{
   --tw-border-opacity: 1;
   border-color: rgb(153 27 27 / var(--tw-border-opacity));
-}
-
-.border-gray-400{
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
-}
-
-.border-gray-200{
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .bg-gray-800{
@@ -1164,9 +1138,14 @@ h2 {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
-.bg-gray-400{
+.bg-gray-300{
   --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-stone-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(120 113 108 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-500{
@@ -1177,21 +1156,6 @@ h2 {
 .bg-red-400{
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
-.bg-stone-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(120 113 108 / var(--tw-bg-opacity));
-}
-
-.bg-stone-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(168 162 158 / var(--tw-bg-opacity));
-}
-
-.bg-gray-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .object-cover{
@@ -1262,6 +1226,10 @@ h2 {
   padding-right: 1.5rem;
 }
 
+.pb-32{
+  padding-bottom: 8rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -1280,10 +1248,6 @@ h2 {
 
 .pl-10{
   padding-left: 2.5rem;
-}
-
-.pb-32{
-  padding-bottom: 8rem;
 }
 
 .text-left{
@@ -1363,24 +1327,19 @@ h2 {
   color: rgb(244 244 245 / var(--tw-text-opacity));
 }
 
-.text-black{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .text-gray-800{
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-.text-gray-700{
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1472,21 +1431,6 @@ h2 {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-red-100:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-slate-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-stone-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(120 113 108 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-stone-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(87 83 78 / var(--tw-bg-opacity));
@@ -1511,11 +1455,6 @@ h2 {
 
 .hover\:ease-in:hover{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-.active\:bg-red-200:active{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 .active\:bg-stone-700:active{
@@ -1567,12 +1506,12 @@ h2 {
 }
 
 @media (min-width: 600px){
-  .sm\:h-128{
-    height: 32rem;
-  }
-
   .sm\:h-96{
     height: 24rem;
+  }
+
+  .sm\:h-128{
+    height: 32rem;
   }
 
   .sm\:w-8\/12{
@@ -1853,6 +1792,12 @@ h2 {
 
   .lg\:h-160{
     height: 40rem;
+  }
+
+  .lg\:min-h-fit{
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
   }
 
   .lg\:w-6\/12{
