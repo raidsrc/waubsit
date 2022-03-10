@@ -148,19 +148,18 @@ function OtherLinkBlock(props) {
   )
 }
 
-function LinksPage(props) {
-
+function ProjectsPage(props) {
   return (
     <div className="links-page bg-neutral-500 text-white pb-32">
       <Helmet>
         <meta charset="utf-8" />
-        <title>Stuff I've Made</title>
-        <meta name="description" content="Stuff I've Made. Explore a showcase of projects I've worked on." />
+        <title>Projects</title>
+        <meta name="description" content="Projects. Explore a showcase of projects I've worked on." />
         <meta name="robots" content="noindex" />
       </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2 text-white">
-          Links to Selected Projects & Work
+          Projects
         </h1>
 
         <div className="mb-10 md:mb-20 ">
@@ -189,7 +188,7 @@ function LinksPage(props) {
           }
         </div>
         <h1 className="mt-5 mb-5 px-2 text-white">
-          Other Links to Other Stuff
+          Etc.
         </h1>
         <div className="mb-10 md:mb-20">
           <OtherLinkBlock title="raidsrc.me Landing Page" href="https://landing.raidsrc.me" imgSrc={landingImg}>This page is often the first point of contact for random people who are searching for me on the internet. I usually put a link to this page somewhere on my profile on whatever site/platform I'm on. It's a sparse webpage with a list of links to where people can find me. It's also got a brief "About Me" section. Why not click and check it out for yourself?
@@ -207,4 +206,4 @@ function LinksPage(props) {
   )
 }
 
-export default LinksPage
+export default ProjectsPage

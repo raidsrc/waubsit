@@ -82,14 +82,14 @@ function HomePage(props) {
             <img src={jazzDrumming} className="w-72 hidden md:inline-block shadow-md" />
             <div className="w-72 sm:w-8/12 lg:w-6/12 px-8 pt-10 lg:py-20">
               <div className="homepage-big-main-text text-2xl sm:text-3xl 2xl:text-4xl text-center text-zinc-200">
-                <span className="font-semibold text-3xl md:text-4xl 2xl:text-5xl">R</span>aymond Louis Chen is a molecular biologist, computer programmer, musician, and educator from Oakland, California.
+                <span className="font-semibold text-3xl md:text-4xl 2xl:text-5xl">R</span>aymond Louis Chen is a biologist, computer programmer, musician, and educator from Oakland, California.
               </div>
             </div>
           </div>
         </HomepageSection>
         <HomepageSection className="bg-gray-500">
           <div className="text-zinc-100 text-lg md:text-xl w-9/12 md:w-8/12 text-center py-12">
-            He seeks to gain experience studying, working in, living in, and contributing to all four of these fields.
+            He seeks to spend his life studying, working in, and contributing to all four of these fields.
           </div>
         </HomepageSection>
         <HomepageSection>
@@ -101,7 +101,7 @@ function HomePage(props) {
           <div className="p-8 w-full">
             {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
             <div className="text-lg md:text-xl mt-2 lg:mt-8 pb-32">
-              <span className="text-gray-800">He designed and built this website. </span>
+              <span className="text-gray-800">He designed and built this website.</span>
               <br/><br/>
               <span className="text-gray-900">Interested parties may find his uncut, unedited resume <NewTab href="https://raidsrc.github.io/static/resume-2022-jan-uncut.pdf" className="">here.</NewTab></span>
             </div>

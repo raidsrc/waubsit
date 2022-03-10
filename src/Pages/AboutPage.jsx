@@ -120,13 +120,13 @@ function AboutPage(props) {
       }
       <Helmet>
         <meta charset="utf-8" />
-        <title>About Me</title>
-        <meta name="description" content="About Me. Learn a little about who I am, where I'm from, and what I'm like." />
+        <title>About</title>
+        <meta name="description" content="About. Learn a little about who I am, where I'm from, and what I'm like." />
         <meta name="robots" content="noindex" />
       </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2 text-white">
-          About Me
+          About 
         </h1>
         <div className="flex justify-center">
           <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-md tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl xl:mb-4 2xl:text-5xl" >
@@ -159,7 +159,7 @@ function AboutPage(props) {
 
           <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
             <p className="about-me-paragraph ">
-              Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been full-stack web development, bioinformatics, genetics, the ethics of technology, and the neuroscience of music. I'm also kind of interested in writing, editing, teaching, and activism.
+              Currently, I'm a senior at the University of California, Davis. I'm majoring in biochemistry and molecular biology and minoring in computer science. My favorite subjects of study so far have been computational structural bioinformatics, full-stack web development, genomics, and the neuroscience of music. I'm also kind of interested in writing, editing, teaching, and activism.
             </p>
           </div>
           <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6  ">
