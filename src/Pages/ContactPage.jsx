@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 
 
 function ContactPage(props) {
-  
+
   return (
     <div className="find-me-page text-white bg-gray-500 pb-32">
       <Helmet>
@@ -17,7 +17,7 @@ function ContactPage(props) {
         <h1 className="mb-5 px-2 ">
           Contact
         </h1>
-        <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg ">
+        <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg w-wqhd:text-2xl">
           I'm not really on social media. It's better that way. But if you must, leave me a message on Twitter and I'll get back to you within the month, maybe. No guarantees.
         </div>
         <div className="grid grid-cols-3 grid-rows-3 md:grid-rows-5  ">
@@ -28,7 +28,7 @@ function ContactPage(props) {
             </a>
           </div>
         </div>
-        <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg ">
+        <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg  w-wqhd:text-2xl">
           Alternatively, you could email me at the address below. Save this channel of communication for urgent matters.
         </div>
         <div className="grid grid-cols-3 grid-rows-3 md:grid-rows-4  ">

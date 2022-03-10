@@ -807,6 +807,14 @@ h2 {
   margin-top: 7rem;
 }
 
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -1111,9 +1119,19 @@ h2 {
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .p-5{
@@ -1640,6 +1658,10 @@ h2 {
     height: 36rem;
   }
 
+  .md\:max-h-96{
+    max-height: 24rem;
+  }
+
   .md\:w-8\/12{
     width: 66.666667%;
   }
@@ -1654,6 +1676,10 @@ h2 {
 
   .md\:w-4\/12{
     width: 33.333333%;
+  }
+
+  .md\:max-w-lg{
+    max-width: 32rem;
   }
 
   .md\:grid-rows-5{
@@ -1740,6 +1766,14 @@ h2 {
     width: 50%;
   }
 
+  .lg\:w-8\/12{
+    width: 66.666667%;
+  }
+
+  .lg\:w-9\/12{
+    width: 75%;
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -1803,9 +1837,27 @@ h2 {
     height: 44rem;
   }
 
+  .xl\:w-8\/12{
+    width: 66.666667%;
+  }
+
+  .xl\:w-4\/12{
+    width: 33.333333%;
+  }
+
   .xl\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .xl\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -1823,5 +1875,24 @@ h2 {
   .\32xl\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .\32xl\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1920px){
+  .w-fhd\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 2560px){
+  .w-wqhd\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }

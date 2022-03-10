@@ -133,7 +133,7 @@ function AboutPage(props) {
         <h1 className="mb-5 px-2 text-white">
           About
         </h1>
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-8">
           <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-md tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl xl:mb-4 2xl:text-5xl" >
             <NameInputTypingEffectBox className="px-2 py-2 " onLoad={setTimeout(() => doNameShit(), 420)} timeToSelect={timeToSelect} />
           </div>
@@ -151,13 +151,13 @@ function AboutPage(props) {
             }
             return (
               <div className="flex flex-col md:flex-row py-8 w-full justify-between">
-                <div className={"order-last md:w-7/12 px-4 " + alterAlignment}>
-                  <p className="pt-6 md:pt-0">
+                <div className={"order-last md:w-7/12 xl:w-8/12 px-4 " + alterAlignment}>
+                  <p className="pt-6 md:pt-0 md:text-lg w-wqhd:text-2xl">
                     {statement}
                   </p>
                 </div>
-                <div className="flex flex-col justify-center items-center md:w-5/12 px-4 md:order-2">
-                  <img src={image} className="w-11/12 max-h-80 max-w-xs" />
+                <div className="flex flex-col justify-center items-center md:w-5/12 xl:w-4/12 px-4 md:order-2">
+                  <img src={image} className="w-11/12 max-h-80 max-w-xs md:max-h-96 md:max-w-lg object-contain" />
                   <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. {figureNumber} &nbsp; </span>{caption}</span>
                 </div>
               </div>
