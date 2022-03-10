@@ -36,7 +36,7 @@ module.exports = {
         '90vh': '90vh',
       },
       minHeight: {
-        'mobile-homepage-top-section': '48rem',
+        'mobile-homepage-top-section': '40rem',
       },
       maxWidth: {
         '2xs': '280px',

@@ -901,7 +901,7 @@ h2 {
 }
 
 .min-h-mobile-homepage-top-section{
-  min-height: 48rem;
+  min-height: 40rem;
 }
 
 .w-full{
@@ -1248,6 +1248,14 @@ h2 {
 
 .pl-10{
   padding-left: 2.5rem;
+}
+
+.pt-16{
+  padding-top: 4rem;
+}
+
+.pt-12{
+  padding-top: 3rem;
 }
 
 .text-left{
