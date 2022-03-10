@@ -143,16 +143,22 @@ function AboutPage(props) {
         {
           aboutSections.map(({ statement, image, figureNumber, caption }, index) => {
             let alterAlignment = ""
+            let alterFlexJustify = ""
+            let alterTextAlign = ""
             if (index % 2 === 0) {
               // image left text right
+              alterFlexJustify = "justify-start"
+              alterTextAlign = "text-left"
             } else {
               // image right text left 
               alterAlignment = "md:order-first"
+              alterFlexJustify = "justify-end"
+              alterTextAlign = "text-right"
             }
             return (
-              <div className="flex flex-col md:flex-row py-8 w-full justify-between">
-                <div className={"order-last md:w-7/12 xl:w-8/12 px-4 " + alterAlignment}>
-                  <p className="pt-6 md:pt-0 md:text-lg w-wqhd:text-2xl">
+              <div className={"flex flex-col md:flex-row py-8 w-full " + alterFlexJustify}>
+                <div className={"order-last md:w-6/12 lg:w-5/12 xl:w-6/12 px-4 " + alterAlignment}>
+                  <p className={"pt-6 md:pt-0 md:text-lg w-wqhd:text-2xl " + alterTextAlign}>
                     {statement}
                   </p>
                 </div>

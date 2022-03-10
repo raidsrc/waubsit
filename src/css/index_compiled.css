@@ -771,6 +771,10 @@ h2 {
   margin-bottom: 1.25rem;
 }
 
+.mb-8{
+  margin-bottom: 2rem;
+}
+
 .mb-12{
   margin-bottom: 3rem;
 }
@@ -805,14 +809,6 @@ h2 {
 
 .mt-28{
   margin-top: 7rem;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
-}
-
-.mb-8{
-  margin-bottom: 2rem;
 }
 
 .inline-block{
@@ -947,10 +943,6 @@ h2 {
   max-width: 1920px;
 }
 
-.max-w-2xl{
-  max-width: 42rem;
-}
-
 .max-w-xs{
   max-width: 20rem;
 }
@@ -971,6 +963,14 @@ h2 {
 
 .max-w-2xs{
   max-width: 280px;
+}
+
+.max-w-screen-2xl{
+  max-width: 1536px;
+}
+
+.max-w-screen-xl{
+  max-width: 1280px;
 }
 
 .transform{
@@ -1007,6 +1007,10 @@ h2 {
 
 .justify-start{
   justify-content: flex-start;
+}
+
+.justify-end{
+  justify-content: flex-end;
 }
 
 .justify-center{
@@ -1129,11 +1133,6 @@ h2 {
      object-fit: cover;
 }
 
-.object-fill{
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
 .p-5{
   padding: 1.25rem;
 }
@@ -1172,14 +1171,14 @@ h2 {
   padding-bottom: 2rem;
 }
 
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .px-8{
@@ -1240,6 +1239,10 @@ h2 {
 
 .text-center{
   text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .font-serif{
@@ -1609,16 +1612,12 @@ h2 {
 }
 
 @media (min-width: 768px){
-  .md\:order-1{
-    order: 1;
+  .md\:order-first{
+    order: -9999;
   }
 
   .md\:order-2{
     order: 2;
-  }
-
-  .md\:order-first{
-    order: -9999;
   }
 
   .md\:my-20{
@@ -1674,8 +1673,12 @@ h2 {
     width: 41.666667%;
   }
 
-  .md\:w-4\/12{
-    width: 33.333333%;
+  .md\:w-6\/12{
+    width: 50%;
+  }
+
+  .md\:w-96{
+    width: 24rem;
   }
 
   .md\:max-w-lg{
@@ -1703,11 +1706,6 @@ h2 {
   .md\:py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-
-  .md\:py-0{
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .md\:pt-0{
@@ -1766,12 +1764,8 @@ h2 {
     width: 50%;
   }
 
-  .lg\:w-8\/12{
-    width: 66.666667%;
-  }
-
-  .lg\:w-9\/12{
-    width: 75%;
+  .lg\:w-5\/12{
+    width: 41.666667%;
   }
 
   .lg\:flex-row{
@@ -1845,19 +1839,13 @@ h2 {
     width: 33.333333%;
   }
 
+  .xl\:w-6\/12{
+    width: 50%;
+  }
+
   .xl\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-
-  .xl\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .xl\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
@@ -1875,18 +1863,6 @@ h2 {
   .\32xl\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .\32xl\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width: 1920px){
-  .w-fhd\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
