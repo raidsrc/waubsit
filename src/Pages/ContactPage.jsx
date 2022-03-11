@@ -18,7 +18,7 @@ function ContactPage(props) {
           Contact
         </h1>
         <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg w-wqhd:text-2xl">
-          I'm not really on social media. It's better that way. But if you must, leave me a message on Twitter and I'll get back to you within the month, maybe. No guarantees.
+          I'm not really on social media. It's better that way. But if you must, leave me a message on Twitter and I'll get back to you the next time I open the app, which usually happens once every couple of months. 
         </div>
         <div className="grid grid-cols-3 grid-rows-3 md:grid-rows-5  ">
           <div className="row-start-2 col-start-2 flex justify-center">
@@ -29,7 +29,7 @@ function ContactPage(props) {
           </div>
         </div>
         <div className="text-left smmd:text-center py-5 px-2 text-base md:text-lg  w-wqhd:text-2xl">
-          Alternatively, you could email me at the address below. Save this channel of communication for urgent matters.
+          You can also email me at the address below. Save this channel of communication for urgent matters.
         </div>
         <div className="grid grid-cols-3 grid-rows-3 md:grid-rows-4  ">
           <div className="row-start-2 col-start-2 flex justify-center">
