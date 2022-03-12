@@ -74,7 +74,7 @@ function WithinMobileLinkBlock(props) {
           <div className="py-4">
             <img src={props.imgSrc} className="w-8/12 sm:w-6/12 max-w-sm shadow-md " />
           </div>
-          <div className="">
+          <div className="w-60 tiny-screen:w-96">
             {props.children}
           </div>
           <div className="mt-6 mb-2 ">
