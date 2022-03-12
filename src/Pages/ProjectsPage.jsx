@@ -105,9 +105,9 @@ function LinkBlock(props) {
   })
 
   return (
-    <p className="links-paragraph ">
+    <div className="pt-2 md:pt-4">
 
-      {/* this NewTab component is only visible on desktop */}
+      {/* this NewTab component and everything inside is only visible on desktop + tablet. this is the complete desktop link block. */}
       <NewTab className="no-underline hidden md:inline-block " href={props.href}>
         <div className="links-page-link-container-div">
           <DesktopLinkBlockWordsDiv title={props.title}>{props.children}</DesktopLinkBlockWordsDiv>
@@ -115,7 +115,7 @@ function LinkBlock(props) {
         </div>
       </NewTab>
 
-      {/* whereas this div here is only visible smaller than desktop */}
+      {/* whereas this div here is only visible smaller than tablet. this is the caret and title for the mobile link block. */}
       <div className="text-lg md:hidden relative">
         <button className="underline underline-offset-2 text-left z-30 relative" onClick={() => { setOpenUp(prev => !prev); setRotated(prev => !prev) }}>
           <div className="flex justify-start items-center">
@@ -131,20 +131,13 @@ function LinkBlock(props) {
         </button>
       </div>
 
+      {/* same with this fella */}
       <div className="md:hidden">
         <WithinMobileLinkBlock href={props.href} imgSrc={props.imgSrc} openUp={openUp} setOpenUp={setOpenUp} contentHeight={contentHeight} setContentHeight={setContentHeight} defaultHeight={defaultHeight}>
           {props.children}
         </WithinMobileLinkBlock>
       </div>
-    </p>
-  )
-}
-
-function OtherLinkBlock(props) {
-  return (
-    <LinkBlock title={props.title} href={props.href} imgSrc={props.imgSrc}>
-      {props.children}
-    </LinkBlock>
+    </div>
   )
 }
 
@@ -192,11 +185,11 @@ function ProjectsPage(props) {
           Etc
         </h1>
         <div className="mb-10 md:mb-20">
-          <OtherLinkBlock title="raidsrc.me Landing Page" href="https://landing.raidsrc.me" imgSrc={landingImg}>This page is often the first point of contact for random people who are searching for me on the internet. I usually put a link to this page somewhere on my profile on whatever site/platform I'm on. It's a sparse webpage with a list of links to where people can find me. It's also got a brief "About Me" section. Why not click and check it out for yourself?
-          </OtherLinkBlock>
+          <LinkBlock title="raidsrc.me Landing Page" href="https://landing.raidsrc.me" imgSrc={landingImg}>This page is often the first point of contact for random people who are searching for me on the internet. I usually put a link to this page somewhere on my profile on whatever site/platform I'm on. It's a sparse webpage with a list of links to where people can find me. It's also got a brief "About Me" section. Why not click and check it out for yourself?
+          </LinkBlock>
 
-          <OtherLinkBlock title="Blog" href="https://blog.raidsrc.me" imgSrc={blogImg}>The obligatory "blog section" of my website, because everyone has a blog. I don't really plan on posting here very much. But setting this subdomain up gave me an excuse to learn the basics of Hugo and deploy a statically-generated blog.
-          </OtherLinkBlock>
+          <LinkBlock title="Blog" href="https://blog.raidsrc.me" imgSrc={blogImg}>The obligatory "blog section" of my website, because everyone has a blog. I don't really plan on posting here very much. But setting this subdomain up gave me an excuse to learn the basics of Hugo and deploy a statically-generated blog.
+          </LinkBlock>
 
           {/* <p className="links-paragraph">
                    A subdomain of my site that's more of an experimental design sandbox than anything else.
