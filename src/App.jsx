@@ -25,7 +25,7 @@ function App() {
       <Navbar />
       <div className="content">
         {routes.map(({ path, Component }) => (
-          <Route exact path={path}>
+          <Route exact path={path} key={path}>
             {({ match }) => (
               <CSSTransition in={match != null} classNames="fade" unmountOnExit onExited={() => {
                 scroll(0, 0)
