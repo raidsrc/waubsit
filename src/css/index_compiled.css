@@ -959,6 +959,18 @@ h2 {
   max-width: 280px;
 }
 
+.max-w-screen-2xl{
+  max-width: 1536px;
+}
+
+.max-w-screen-w-fhd{
+  max-width: 1920px;
+}
+
+.max-w-screen-w-wqhd{
+  max-width: 2560px;
+}
+
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1103,6 +1115,11 @@ h2 {
 .bg-red-400{
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.bg-red-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .object-contain{

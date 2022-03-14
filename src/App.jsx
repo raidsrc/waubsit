@@ -7,6 +7,7 @@ import HomePage from "./Pages/HomePage"
 import AboutPage from './Pages/AboutPage'
 import ContactPage from './Pages/ContactPage'
 import ProjectsPage from './Pages/ProjectsPage'
+import SecretPage from './Pages/SecretPage'
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
     { path: '/about', name: 'About', Component: AboutPage },
     { path: '/contact', name: 'Contact', Component: ContactPage },
     { path: '/projects', name: 'Projects', Component: ProjectsPage },
+    { path: '/secret', name: 'Secret', Component: SecretPage },
   ]
 
   return (

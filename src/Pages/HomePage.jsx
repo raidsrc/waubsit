@@ -99,7 +99,7 @@ function HomePage(props) {
           </div>
         </HomepageSection>
         <HomepageSection className="bg-gray-300">
-          <div className="p-8 w-full">
+          <div className="p-8 w-full text-center">
             {/* TODO: refactor index.css, group shit into components, make everything easier to maintain */}
             <div className="text-lg md:text-xl mt-2 lg:mt-8 pb-32">
               <span className="text-gray-800">He designed and built this website.</span>
