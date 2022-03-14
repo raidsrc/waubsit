@@ -38,7 +38,9 @@ function App() {
             )}
           </Route>
         ))}
-        <Redirect exact from="/" to="/home" />
+        <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
       </div>
     </div>
   )
