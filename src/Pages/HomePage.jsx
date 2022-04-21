@@ -74,7 +74,7 @@ function HomePage(props) {
       <Helmet>
         <meta charset="utf-8" />
         <title>raidsrc.me</title>
-        <meta name="description" content="The personal website belonging to, built by, designed by, deployed by, and maintained by: raidsrc." />
+        <meta name="description" content="raidsrc's website." />
       </Helmet>
       <div className="mb-0">
         <HomepageSection className="bg-gray-600">
