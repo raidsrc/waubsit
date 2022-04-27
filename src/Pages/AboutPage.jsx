@@ -113,92 +113,64 @@ function AboutPage(props) {
     )
   }
 
+  const aboutSections = [
+    { statement: "Hey. I'm Raymond. I usually go by Ray, but people have known me by many names. Most of these names were given to me. Some of them are silly, and some I think are pretty cool. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.", image: rayDrummingMonochrome, figureNumber: 1, caption: "me, drumming." },
+    { statement: "I was born in the San Francisco Bay Area and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.", image: goldenGate, figureNumber: 2, caption: "the Golden Gate Bridge." },
+    { statement: "Currently, I'm a senior at the University of California, Davis. I'm majoring in biochemistry and molecular biology and minoring in computer science. My favorite subjects of study so far have been computational structural bioinformatics, full-stack web development, genomics, and the neuroscience of music. I'm also kind of interested in writing, editing, teaching, and activism.", image: eggheads, figureNumber: 3, caption: "Egghead - Yin & Yang, outside the music building on the Davis campus." },
+    { statement: "After I graduate, I plan to spearhead a web and communications technology advancement initiative at Virovek, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. Also gonna help out with the biological manufacturing pipeline when needed. I plan to continue doing musician stuff as well: street performing, arranging tunes, composing, stuff like that.", image: virovek, figureNumber: 4, caption: "the front of Virovek's office." },
+    { statement: "I like Kendrick Lamar, Chinese food, ice cold spring water, and exploring the unknown. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it. I've tried a lot of mushrooms and they all suck.", image: stinkyTofu, figureNumber: 5, caption: "trying stinky tofu, a Chinese fermented tofu. it was alright, I suppose." },
+    { statement: "In my free time, I enjoy programming, lifting weights, cooking, learning new things, editing videos, and making music. I also really enjoy skiing, snowboarding, and skateboarding, even though I don't typically get to do those things very often.", image: rayPiano2017, figureNumber: 6, caption: "me in 2017, performing Homestuck's \"Showtime - Piano Refrain\" for a few hundred people at a talent show." },
+  ]
   return (
     <div className="about-page bg-zinc-500 pb-32">
-      {
-        // TODO: REFACTOR THIS PAGE TO MAKE IT MORE DRY. make it a list javascript react shit
-      }
       <Helmet>
         <meta charset="utf-8" />
-        <title>About Me</title>
-        <meta name="description" content="About Me. Learn a little about who I am, where I'm from, and what I'm like." />
+        <title>About</title>
+        <meta name="description" content="About. Learn a little about who I am, where I'm from, and what I'm like." />
         <meta name="robots" content="noindex" />
       </Helmet>
       <CenteredFullPageFlexContainer>
         <h1 className="mb-5 px-2 text-white">
-          About Me
+          About
         </h1>
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-8">
           <div className="w-900px the-big-nicknames-banner rounded-md p-5 bg-gray-100 font-serif text-xl font-bold shadow-md tiny-screen:text-2xl sm:text-3xl lg:text-3xl xl:text-4xl xl:mb-4 2xl:text-5xl" >
             <NameInputTypingEffectBox className="px-2 py-2 " onLoad={setTimeout(() => doNameShit(), 420)} timeToSelect={timeToSelect} />
           </div>
         </div>
-        <div className="flex flex-col lg:mt-6 justify-center grid-cols-1 grid-rows-10 mb-12 items-center lg:py-2 md:mb-0 md:grid md:py-8 md:grid-rows-6 md:grid-cols-2 lg:grid-cols-5  text-white">
-          <div className="about-me-grid-item row-start-1 col-start-1 lg:col-end-4">
-            <p className="about-me-paragraph  pt-4">
-              Hey. I'm Raymond. I usually go by Ray, but people have known me by many names. Most of these names were given to me. Some of them are silly, and some I think are pretty cool. Regardless, I feel as though every single one of these names has become an important part of my identity—as much an essential part of who I am as my hometown, my date of birth, or my favorite color.
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6 ">
-            <img src={rayDrummingMonochrome} className="about-me-img" />
-            <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 1</span> me, drumming. </span>
-          </div>
 
-          <div className="about-me-grid-item row-start-3 md:row-start-2 md:col-start-2 lg:col-start-3 lg:col-end-6">
-            <p className="about-me-paragraph md:text-right">
-              {
-                //I am a student, teacher, musician, computer programmer, biologist,
-              }
-              I was born in the San Francisco Bay Area and I've lived most of my life here. I've been all around the world and experienced all sorts of different cultures and climates; still, the Bay is and has always been my favorite place. Not once have I grown weary of returning home to it.
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
-            <img src={goldenGate} className="about-me-img" />
-            <span className="about-me-img-caption "><span className="not-italic font-semibold">Fig. 2</span> the Golden Gate Bridge.</span>
-          </div>
-
-          <div className="about-me-grid-item row-start-5 md:row-start-3 md:col-start-1 lg:col-end-4">
-            <p className="about-me-paragraph ">
-              Currently, I'm a rising senior at the University of California, Davis, completing a major in Biochemistry and Molecular Biology and a minor in Computer Science. My favorite subjects of study so far have been full-stack web development, bioinformatics, genetics, the ethics of technology, and the neuroscience of music. I'm also kind of interested in writing, editing, teaching, and activism.
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6  ">
-            <img src={eggheads} className="about-me-img" />
-            <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 3</span> Egghead - Yin & Yang, outside the music building on the Davis campus. </span>
-          </div>
-
-          <div className="about-me-grid-item row-start-7 md:row-start-4 md:col-start-2 lg:col-start-3 lg:col-end-6">
-            <p className="about-me-paragraph md:text-right">
-              After I graduate, I plan to spearhead a web and communications technology advancement initiative at <NewTab href="https://www.virovek.com">Virovek</NewTab>, a small Hayward-based gene therapy manufacturing company founded and directed by my beloved mother and father. Also gonna help out with the biological manufacturing pipeline when needed. People ask me if it's reassuring, knowing that I have a place to work right out of college. And I am very grateful for this position. But honestly, I'd rather be a full-time street musician. Haha. I'll make that happen. Just you wait.
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
-            <img src={virovek} className="about-me-img lg:col-end-3" />
-            <span className="about-me-img-caption "><span className="not-italic font-semibold">Fig. 4 </span>the front of Virovek's office.</span>
-          </div>
-
-          <div className="about-me-grid-item row-start-9 md:row-start-5 md:col-start-1 lg:col-end-4">
-            <p className="about-me-paragraph ">
-              I like Kendrick Lamar, Chinese food, ice cold spring water, and exploring the unknown. I like driving fast with the windows down and viewing the world from high places. I dislike candy, soda, humid weather, and mushrooms. Everybody always tells me that mushrooms are amazing and that I simply haven't had a great-tasting mushroom. I doubt it. I've tried a lot of mushrooms and they all suck.
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center lg:col-start-4 lg:col-end-6">
-            <img src={stinkyTofu} className="about-me-img" />
-            <span className="about-me-img-caption"><span className="not-italic font-semibold">Fig. 5 </span>trying stinky tofu, a Chinese fermented tofu. it was alright, I suppose.</span>
-          </div>
-
-          <div className="about-me-grid-item row-start-11 md:row-start-6 md:col-start-2 lg:col-start-3 lg:col-end-6">
-            <p className="about-me-paragraph md:text-right">
-              In my free time, I enjoy programming, lifting weights, cooking, learning new things, editing videos, and making music. I also really enjoy skiing, snowboarding, and skateboarding, even though I don't typically get to do those things very often.
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center lg:col-start-1 lg:col-end-3">
-            <img src={rayPiano2017} className="about-me-img" />
-            <span className="about-me-img-caption "><span className="not-italic font-semibold">Fig. 6</span> me in 2017, performing Homestuck's "Showtime - Piano Refrain" for a few hundred people at a talent show.</span>
-          </div>
-        </div>
-      </CenteredFullPageFlexContainer>
-    </div>
+        {
+          aboutSections.map(({ statement, image, figureNumber, caption }, index) => {
+            let alterAlignment = ""
+            let alterFlexJustify = ""
+            let alterTextAlign = ""
+            if (index % 2 === 0) {
+              // image left text right
+              alterFlexJustify = "md:justify-start"
+              alterTextAlign = "md:text-left"
+            } else {
+              // image right text left 
+              alterAlignment = "md:order-first"
+              alterFlexJustify = "md:justify-end"
+              alterTextAlign = "md:text-right"
+            }
+            return (
+              <div className={"flex flex-col md:flex-row py-8 md:py-10 w-full " + alterFlexJustify} key={index}>
+                <div className={"order-last md:w-8/12 xl:w-7/12 px-4 " + alterAlignment}>
+                  <p className={"pt-6 md:pt-0 md:text-lg w-wqhd:text-2xl " + alterTextAlign}>
+                    {statement}
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center items-center md:w-5/12 xl:w-4/12 px-4 md:order-2">
+                  <img src={image} className="w-11/12 max-h-80 max-w-xs md:max-h-96 md:max-w-lg object-contain" />
+                  <span className="about-me-img-caption text-white"><span className="not-italic font-semibold">Fig. {figureNumber} &nbsp; </span>{caption}</span>
+                </div>
+              </div>
+            )
+          })
+        }
+      </CenteredFullPageFlexContainer >
+    </div >
   )
 }
 
