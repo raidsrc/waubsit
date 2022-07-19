@@ -78,7 +78,7 @@ function HomePage(props) {
       </Helmet>
       <div className="mb-0">
         <HomepageSection className="bg-gray-600">
-          <div className="h-screen min-h-mobile-homepage-top-section pt-12 lg:p-4 lg:min-h-fit lg:h-auto lg:my-72 flex flex-col lg:flex-row justify-center items-center lg:space-x-8 ">
+          <div className="h-screen min-h-mobile-homepage-top-section pt-12 lg:p-4 lg:min-h-fit lg:h-auto lg:my-40 flex flex-col lg:flex-row lg:space-x-8 xl:my-52 w-fhd:my-64 justify-center items-center ">
             <img src={jazzDrummingZoomed} className="w-64 md:hidden shadow-md" />
             <img src={jazzDrumming} className="w-96 hidden md:inline-block shadow-md" />
             <div className="w-72 sm:w-8/12 lg:w-6/12 px-8 pt-10 lg:py-20">

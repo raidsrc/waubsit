@@ -665,17 +665,9 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   border-radius: 0.125rem;
-  border-width: 1px;
-  border-color: rgb(31 41 55 / var(--tw-border-opacity));
-  --tw-border-opacity: 0;
   padding: 0.25rem;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.links-page-link-container-div:hover{
-  border-color: rgb(255 0 0 / var(--tw-border-opacity));
-  --tw-border-opacity: 0.5;
 }
 
 @media (min-width: 660px){
@@ -959,18 +951,6 @@ h2 {
   max-width: 280px;
 }
 
-.max-w-screen-2xl{
-  max-width: 1536px;
-}
-
-.max-w-screen-w-fhd{
-  max-width: 1920px;
-}
-
-.max-w-screen-w-wqhd{
-  max-width: 2560px;
-}
-
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1115,11 +1095,6 @@ h2 {
 .bg-red-400{
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
-.bg-red-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .object-contain{
@@ -1737,9 +1712,9 @@ h2 {
 }
 
 @media (min-width: 1024px){
-  .lg\:my-72{
-    margin-top: 18rem;
-    margin-bottom: 18rem;
+  .lg\:my-40{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
   }
 
   .lg\:mt-8{
@@ -1806,6 +1781,11 @@ h2 {
 }
 
 @media (min-width: 1280px){
+  .xl\:my-52{
+    margin-top: 13rem;
+    margin-bottom: 13rem;
+  }
+
   .xl\:mb-4{
     margin-bottom: 1rem;
   }
@@ -1850,6 +1830,13 @@ h2 {
   .\32xl\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1920px){
+  .w-fhd\:my-64{
+    margin-top: 16rem;
+    margin-bottom: 16rem;
   }
 }
 
